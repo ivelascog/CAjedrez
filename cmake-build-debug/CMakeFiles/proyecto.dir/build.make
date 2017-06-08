@@ -34,19 +34,19 @@ cmake_force:
 SHELL = /bin/sh
 
 # The CMake executable.
-CMAKE_COMMAND = /home/ivelascog/clion-2017.1.2/bin/cmake/bin/cmake
+CMAKE_COMMAND = /home/fer/Documents/clion-2017.1.2/bin/cmake/bin/cmake
 
 # The command to remove a file.
-RM = /home/ivelascog/clion-2017.1.2/bin/cmake/bin/cmake -E remove -f
+RM = /home/fer/Documents/clion-2017.1.2/bin/cmake/bin/cmake -E remove -f
 
 # Escaping for special characters.
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/ivelascog/CLionProjects/proyecto
+CMAKE_SOURCE_DIR = /home/fer/CLionProjects/CAjedrez
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/ivelascog/CLionProjects/proyecto/cmake-build-debug
+CMAKE_BINARY_DIR = /home/fer/CLionProjects/CAjedrez/cmake-build-debug
 
 # Include any dependencies generated for this target.
 include CMakeFiles/proyecto.dir/depend.make
@@ -59,16 +59,16 @@ include CMakeFiles/proyecto.dir/flags.make
 
 CMakeFiles/proyecto.dir/main.cpp.o: CMakeFiles/proyecto.dir/flags.make
 CMakeFiles/proyecto.dir/main.cpp.o: ../main.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/ivelascog/CLionProjects/proyecto/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/proyecto.dir/main.cpp.o"
-	/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/proyecto.dir/main.cpp.o -c /home/ivelascog/CLionProjects/proyecto/main.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/fer/CLionProjects/CAjedrez/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/proyecto.dir/main.cpp.o"
+	/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/proyecto.dir/main.cpp.o -c /home/fer/CLionProjects/CAjedrez/main.cpp
 
 CMakeFiles/proyecto.dir/main.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/proyecto.dir/main.cpp.i"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/ivelascog/CLionProjects/proyecto/main.cpp > CMakeFiles/proyecto.dir/main.cpp.i
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/fer/CLionProjects/CAjedrez/main.cpp > CMakeFiles/proyecto.dir/main.cpp.i
 
 CMakeFiles/proyecto.dir/main.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/proyecto.dir/main.cpp.s"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/ivelascog/CLionProjects/proyecto/main.cpp -o CMakeFiles/proyecto.dir/main.cpp.s
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/fer/CLionProjects/CAjedrez/main.cpp -o CMakeFiles/proyecto.dir/main.cpp.s
 
 CMakeFiles/proyecto.dir/main.cpp.o.requires:
 
@@ -81,17 +81,43 @@ CMakeFiles/proyecto.dir/main.cpp.o.provides: CMakeFiles/proyecto.dir/main.cpp.o.
 CMakeFiles/proyecto.dir/main.cpp.o.provides.build: CMakeFiles/proyecto.dir/main.cpp.o
 
 
+CMakeFiles/proyecto.dir/GenericUnit.cpp.o: CMakeFiles/proyecto.dir/flags.make
+CMakeFiles/proyecto.dir/GenericUnit.cpp.o: GenericUnit.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/fer/CLionProjects/CAjedrez/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/proyecto.dir/GenericUnit.cpp.o"
+	/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/proyecto.dir/GenericUnit.cpp.o -c /home/fer/CLionProjects/CAjedrez/cmake-build-debug/GenericUnit.cpp
+
+CMakeFiles/proyecto.dir/GenericUnit.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/proyecto.dir/GenericUnit.cpp.i"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/fer/CLionProjects/CAjedrez/cmake-build-debug/GenericUnit.cpp > CMakeFiles/proyecto.dir/GenericUnit.cpp.i
+
+CMakeFiles/proyecto.dir/GenericUnit.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/proyecto.dir/GenericUnit.cpp.s"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/fer/CLionProjects/CAjedrez/cmake-build-debug/GenericUnit.cpp -o CMakeFiles/proyecto.dir/GenericUnit.cpp.s
+
+CMakeFiles/proyecto.dir/GenericUnit.cpp.o.requires:
+
+.PHONY : CMakeFiles/proyecto.dir/GenericUnit.cpp.o.requires
+
+CMakeFiles/proyecto.dir/GenericUnit.cpp.o.provides: CMakeFiles/proyecto.dir/GenericUnit.cpp.o.requires
+	$(MAKE) -f CMakeFiles/proyecto.dir/build.make CMakeFiles/proyecto.dir/GenericUnit.cpp.o.provides.build
+.PHONY : CMakeFiles/proyecto.dir/GenericUnit.cpp.o.provides
+
+CMakeFiles/proyecto.dir/GenericUnit.cpp.o.provides.build: CMakeFiles/proyecto.dir/GenericUnit.cpp.o
+
+
 # Object files for target proyecto
 proyecto_OBJECTS = \
-"CMakeFiles/proyecto.dir/main.cpp.o"
+"CMakeFiles/proyecto.dir/main.cpp.o" \
+"CMakeFiles/proyecto.dir/GenericUnit.cpp.o"
 
 # External object files for target proyecto
 proyecto_EXTERNAL_OBJECTS =
 
 proyecto: CMakeFiles/proyecto.dir/main.cpp.o
+proyecto: CMakeFiles/proyecto.dir/GenericUnit.cpp.o
 proyecto: CMakeFiles/proyecto.dir/build.make
 proyecto: CMakeFiles/proyecto.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/ivelascog/CLionProjects/proyecto/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Linking CXX executable proyecto"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/fer/CLionProjects/CAjedrez/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Linking CXX executable proyecto"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/proyecto.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
@@ -100,6 +126,7 @@ CMakeFiles/proyecto.dir/build: proyecto
 .PHONY : CMakeFiles/proyecto.dir/build
 
 CMakeFiles/proyecto.dir/requires: CMakeFiles/proyecto.dir/main.cpp.o.requires
+CMakeFiles/proyecto.dir/requires: CMakeFiles/proyecto.dir/GenericUnit.cpp.o.requires
 
 .PHONY : CMakeFiles/proyecto.dir/requires
 
@@ -108,6 +135,6 @@ CMakeFiles/proyecto.dir/clean:
 .PHONY : CMakeFiles/proyecto.dir/clean
 
 CMakeFiles/proyecto.dir/depend:
-	cd /home/ivelascog/CLionProjects/proyecto/cmake-build-debug && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/ivelascog/CLionProjects/proyecto /home/ivelascog/CLionProjects/proyecto /home/ivelascog/CLionProjects/proyecto/cmake-build-debug /home/ivelascog/CLionProjects/proyecto/cmake-build-debug /home/ivelascog/CLionProjects/proyecto/cmake-build-debug/CMakeFiles/proyecto.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/fer/CLionProjects/CAjedrez/cmake-build-debug && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/fer/CLionProjects/CAjedrez /home/fer/CLionProjects/CAjedrez /home/fer/CLionProjects/CAjedrez/cmake-build-debug /home/fer/CLionProjects/CAjedrez/cmake-build-debug /home/fer/CLionProjects/CAjedrez/cmake-build-debug/CMakeFiles/proyecto.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : CMakeFiles/proyecto.dir/depend
 

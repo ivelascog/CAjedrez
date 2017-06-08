@@ -1,4 +1,4 @@
-# Install script for directory: /home/ivelascog/CLionProjects/proyecto
+# Install script for directory: /home/fer/CLionProjects/CAjedrez
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -40,5 +40,5 @@ endif()
 
 string(REPLACE ";" "\n" CMAKE_INSTALL_MANIFEST_CONTENT
        "${CMAKE_INSTALL_MANIFEST_FILES}")
-file(WRITE "/home/ivelascog/CLionProjects/proyecto/cmake-build-debug/${CMAKE_INSTALL_MANIFEST}"
+file(WRITE "/home/fer/CLionProjects/CAjedrez/cmake-build-debug/${CMAKE_INSTALL_MANIFEST}"
      "${CMAKE_INSTALL_MANIFEST_CONTENT}")

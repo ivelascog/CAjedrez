@@ -39,19 +39,19 @@ cmake_force:
 SHELL = /bin/sh
 
 # The CMake executable.
-CMAKE_COMMAND = /home/ivelascog/clion-2017.1.2/bin/cmake/bin/cmake
+CMAKE_COMMAND = /home/fer/Documents/clion-2017.1.2/bin/cmake/bin/cmake
 
 # The command to remove a file.
-RM = /home/ivelascog/clion-2017.1.2/bin/cmake/bin/cmake -E remove -f
+RM = /home/fer/Documents/clion-2017.1.2/bin/cmake/bin/cmake -E remove -f
 
 # Escaping for special characters.
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/ivelascog/CLionProjects/proyecto
+CMAKE_SOURCE_DIR = /home/fer/CLionProjects/CAjedrez
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/ivelascog/CLionProjects/proyecto/cmake-build-debug
+CMAKE_BINARY_DIR = /home/fer/CLionProjects/CAjedrez/cmake-build-debug
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -59,7 +59,7 @@ CMAKE_BINARY_DIR = /home/ivelascog/CLionProjects/proyecto/cmake-build-debug
 # Special rule for the target rebuild_cache
 rebuild_cache:
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running CMake to regenerate build system..."
-	/home/ivelascog/clion-2017.1.2/bin/cmake/bin/cmake -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
+	/home/fer/Documents/clion-2017.1.2/bin/cmake/bin/cmake -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
 .PHONY : rebuild_cache
 
 # Special rule for the target rebuild_cache
@@ -70,7 +70,7 @@ rebuild_cache/fast: rebuild_cache
 # Special rule for the target edit_cache
 edit_cache:
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "No interactive CMake dialog available..."
-	/home/ivelascog/clion-2017.1.2/bin/cmake/bin/cmake -E echo No\ interactive\ CMake\ dialog\ available.
+	/home/fer/Documents/clion-2017.1.2/bin/cmake/bin/cmake -E echo No\ interactive\ CMake\ dialog\ available.
 .PHONY : edit_cache
 
 # Special rule for the target edit_cache
@@ -80,9 +80,9 @@ edit_cache/fast: edit_cache
 
 # The main all target
 all: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/ivelascog/CLionProjects/proyecto/cmake-build-debug/CMakeFiles /home/ivelascog/CLionProjects/proyecto/cmake-build-debug/CMakeFiles/progress.marks
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/fer/CLionProjects/CAjedrez/cmake-build-debug/CMakeFiles /home/fer/CLionProjects/CAjedrez/cmake-build-debug/CMakeFiles/progress.marks
 	$(MAKE) -f CMakeFiles/Makefile2 all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/ivelascog/CLionProjects/proyecto/cmake-build-debug/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/fer/CLionProjects/CAjedrez/cmake-build-debug/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
@@ -123,6 +123,33 @@ proyecto/fast:
 	$(MAKE) -f CMakeFiles/proyecto.dir/build.make CMakeFiles/proyecto.dir/build
 .PHONY : proyecto/fast
 
+GenericUnit.o: GenericUnit.cpp.o
+
+.PHONY : GenericUnit.o
+
+# target to build an object file
+GenericUnit.cpp.o:
+	$(MAKE) -f CMakeFiles/proyecto.dir/build.make CMakeFiles/proyecto.dir/GenericUnit.cpp.o
+.PHONY : GenericUnit.cpp.o
+
+GenericUnit.i: GenericUnit.cpp.i
+
+.PHONY : GenericUnit.i
+
+# target to preprocess a source file
+GenericUnit.cpp.i:
+	$(MAKE) -f CMakeFiles/proyecto.dir/build.make CMakeFiles/proyecto.dir/GenericUnit.cpp.i
+.PHONY : GenericUnit.cpp.i
+
+GenericUnit.s: GenericUnit.cpp.s
+
+.PHONY : GenericUnit.s
+
+# target to generate assembly for a file
+GenericUnit.cpp.s:
+	$(MAKE) -f CMakeFiles/proyecto.dir/build.make CMakeFiles/proyecto.dir/GenericUnit.cpp.s
+.PHONY : GenericUnit.cpp.s
+
 main.o: main.cpp.o
 
 .PHONY : main.o
@@ -159,6 +186,9 @@ help:
 	@echo "... rebuild_cache"
 	@echo "... edit_cache"
 	@echo "... proyecto"
+	@echo "... GenericUnit.o"
+	@echo "... GenericUnit.i"
+	@echo "... GenericUnit.s"
 	@echo "... main.o"
 	@echo "... main.i"
 	@echo "... main.s"
