@@ -82,17 +82,17 @@ CMakeFiles/proyecto.dir/main.cpp.o.provides.build: CMakeFiles/proyecto.dir/main.
 
 
 CMakeFiles/proyecto.dir/GenericUnit.cpp.o: CMakeFiles/proyecto.dir/flags.make
-CMakeFiles/proyecto.dir/GenericUnit.cpp.o: GenericUnit.cpp
+CMakeFiles/proyecto.dir/GenericUnit.cpp.o: ../GenericUnit.cpp
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/fer/CLionProjects/CAjedrez/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/proyecto.dir/GenericUnit.cpp.o"
-	/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/proyecto.dir/GenericUnit.cpp.o -c /home/fer/CLionProjects/CAjedrez/cmake-build-debug/GenericUnit.cpp
+	/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/proyecto.dir/GenericUnit.cpp.o -c /home/fer/CLionProjects/CAjedrez/GenericUnit.cpp
 
 CMakeFiles/proyecto.dir/GenericUnit.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/proyecto.dir/GenericUnit.cpp.i"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/fer/CLionProjects/CAjedrez/cmake-build-debug/GenericUnit.cpp > CMakeFiles/proyecto.dir/GenericUnit.cpp.i
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/fer/CLionProjects/CAjedrez/GenericUnit.cpp > CMakeFiles/proyecto.dir/GenericUnit.cpp.i
 
 CMakeFiles/proyecto.dir/GenericUnit.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/proyecto.dir/GenericUnit.cpp.s"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/fer/CLionProjects/CAjedrez/cmake-build-debug/GenericUnit.cpp -o CMakeFiles/proyecto.dir/GenericUnit.cpp.s
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/fer/CLionProjects/CAjedrez/GenericUnit.cpp -o CMakeFiles/proyecto.dir/GenericUnit.cpp.s
 
 CMakeFiles/proyecto.dir/GenericUnit.cpp.o.requires:
 

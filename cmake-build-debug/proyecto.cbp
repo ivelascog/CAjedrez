@@ -84,10 +84,10 @@
 				</MakeCommands>
 			</Target>
 		</Build>
-		<Unit filename="/home/fer/CLionProjects/CAjedrez/cmake-build-debug/GenericUnit.cpp">
+		<Unit filename="/home/fer/CLionProjects/CAjedrez/GenericUnit.cpp">
 			<Option target="proyecto"/>
 		</Unit>
-		<Unit filename="/home/fer/CLionProjects/CAjedrez/cmake-build-debug/GenericUnit.h">
+		<Unit filename="/home/fer/CLionProjects/CAjedrez/GenericUnit.h">
 			<Option target="proyecto"/>
 		</Unit>
 		<Unit filename="/home/fer/CLionProjects/CAjedrez/main.cpp">
