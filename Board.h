@@ -8,12 +8,16 @@
 #include <vector>
 #include "Unit.h"
 
+enum Population { DEFAULT };
+
 class Board {
 private:
-public:
-    void init();
+    int teams;
+    vector<Army> armies;
 
-    void isValid();
+public:
+    void addUnit(Unit u, int team);
+    void populate(Population p);
 };
 
 

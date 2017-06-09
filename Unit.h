@@ -10,9 +10,9 @@
 
 using namespace std;
 
-virtual class Unit {
+class Unit {
 protected:
-    const int movm, health, damage, range;
+    int movm, health, damage, range;
     int posX, posY, cHealth, id, team, moveP, attP;
     string name;
 public:
@@ -38,7 +38,7 @@ public:
 
     virtual void setName(string n);
 
-    virtual string typeStats()= 0;
+    virtual string typeStats();
 
     const int getMovm() const;
 

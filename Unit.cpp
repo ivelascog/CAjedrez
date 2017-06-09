@@ -2,7 +2,6 @@
 // Created by fer on 8/06/17.
 //
 
-#include <bits/basic_string.h>
 #include "Unit.h"
 
 using namespace std;
@@ -39,7 +38,7 @@ int Unit::dealDamage(int d) {
 }
 
 string Unit::report() {
-    return "Unit: "name + "\tHealth: " + to_string(cHealth) + "/" + to_string(health) + "\tPos: (" + to_string(posX) +
+    return "Unit: " + name + "\tHealth: " + to_string(cHealth) + "/" + to_string(health) + "\tPos: (" + to_string(posX) +
            ", " + to_string(posY) + ")";
 }
 
@@ -110,4 +109,8 @@ void Unit::reduceAttP() {
 
 void Unit::reduceMovP() {
     moveP -= 1;
+}
+
+string Unit::typeStats() {
+    return "typeStats default message";
 }

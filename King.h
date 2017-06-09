@@ -7,9 +7,9 @@
 
 #include "Unit.h"
 
-class King : Unit {
+class King : public Unit {
 public:
-    King(int x, int y, int t) : movm(3), health(10), cHealth(10), damage(4), range(1), posX(x), posY(y), team(t) {}
+    King(int x, int y, int t);
 
     string typeStats();
 };

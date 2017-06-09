@@ -148,3 +148,4 @@ CTestTestfile.cmake
 /cmake-build-debug/proyecto.cbp
 /cmake-build-debug/CMakeFiles/
 /cmake-build-debug/
+/.idea/workspace.xml
