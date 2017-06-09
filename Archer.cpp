@@ -3,7 +3,6 @@
 //
 
 #include "Archer.h"
-using typedef stderr;
 
 string Archer::typeStats() {
     return "Archer Unit:\nMov:"+to_string(movm)+"\tHealth"+to_string(health)+"\tDamage"+to_string(damage)+"\tRange"+

@@ -96,6 +96,18 @@
 		<Unit filename="/home/fer/CLionProjects/CAjedrez/Board.h">
 			<Option target="proyecto"/>
 		</Unit>
+		<Unit filename="/home/fer/CLionProjects/CAjedrez/Horse.cpp">
+			<Option target="proyecto"/>
+		</Unit>
+		<Unit filename="/home/fer/CLionProjects/CAjedrez/Horse.h">
+			<Option target="proyecto"/>
+		</Unit>
+		<Unit filename="/home/fer/CLionProjects/CAjedrez/Soldier.cpp">
+			<Option target="proyecto"/>
+		</Unit>
+		<Unit filename="/home/fer/CLionProjects/CAjedrez/Soldier.h">
+			<Option target="proyecto"/>
+		</Unit>
 		<Unit filename="/home/fer/CLionProjects/CAjedrez/Unit.cpp">
 			<Option target="proyecto"/>
 		</Unit>

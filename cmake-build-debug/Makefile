@@ -177,6 +177,60 @@ Board.cpp.s:
 	$(MAKE) -f CMakeFiles/proyecto.dir/build.make CMakeFiles/proyecto.dir/Board.cpp.s
 .PHONY : Board.cpp.s
 
+Horse.o: Horse.cpp.o
+
+.PHONY : Horse.o
+
+# target to build an object file
+Horse.cpp.o:
+	$(MAKE) -f CMakeFiles/proyecto.dir/build.make CMakeFiles/proyecto.dir/Horse.cpp.o
+.PHONY : Horse.cpp.o
+
+Horse.i: Horse.cpp.i
+
+.PHONY : Horse.i
+
+# target to preprocess a source file
+Horse.cpp.i:
+	$(MAKE) -f CMakeFiles/proyecto.dir/build.make CMakeFiles/proyecto.dir/Horse.cpp.i
+.PHONY : Horse.cpp.i
+
+Horse.s: Horse.cpp.s
+
+.PHONY : Horse.s
+
+# target to generate assembly for a file
+Horse.cpp.s:
+	$(MAKE) -f CMakeFiles/proyecto.dir/build.make CMakeFiles/proyecto.dir/Horse.cpp.s
+.PHONY : Horse.cpp.s
+
+Soldier.o: Soldier.cpp.o
+
+.PHONY : Soldier.o
+
+# target to build an object file
+Soldier.cpp.o:
+	$(MAKE) -f CMakeFiles/proyecto.dir/build.make CMakeFiles/proyecto.dir/Soldier.cpp.o
+.PHONY : Soldier.cpp.o
+
+Soldier.i: Soldier.cpp.i
+
+.PHONY : Soldier.i
+
+# target to preprocess a source file
+Soldier.cpp.i:
+	$(MAKE) -f CMakeFiles/proyecto.dir/build.make CMakeFiles/proyecto.dir/Soldier.cpp.i
+.PHONY : Soldier.cpp.i
+
+Soldier.s: Soldier.cpp.s
+
+.PHONY : Soldier.s
+
+# target to generate assembly for a file
+Soldier.cpp.s:
+	$(MAKE) -f CMakeFiles/proyecto.dir/build.make CMakeFiles/proyecto.dir/Soldier.cpp.s
+.PHONY : Soldier.cpp.s
+
 Unit.o: Unit.cpp.o
 
 .PHONY : Unit.o
@@ -246,6 +300,12 @@ help:
 	@echo "... Board.o"
 	@echo "... Board.i"
 	@echo "... Board.s"
+	@echo "... Horse.o"
+	@echo "... Horse.i"
+	@echo "... Horse.s"
+	@echo "... Soldier.o"
+	@echo "... Soldier.i"
+	@echo "... Soldier.s"
 	@echo "... Unit.o"
 	@echo "... Unit.i"
 	@echo "... Unit.s"
