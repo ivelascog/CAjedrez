@@ -6,7 +6,7 @@
 #define PROYECTO_BOARD_H
 
 #include <vector>
-#include "GenericUnit.h"
+#include "Unit.h"
 
 class Board {
 private:
