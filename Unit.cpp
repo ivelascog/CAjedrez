@@ -4,10 +4,17 @@
 
 #include <bits/basic_string.h>
 #include "Unit.h"
+
 using namespace std;
 
 bool Unit::isDead() {
-    return (health <= 0);
+    return (cHealth <= 0);
+}
+
+void Unit::takeDamage(int damageTaken) {
+    cHealth -= damageTaken;
+    if (cHealth < 0)
+        cHealth = 0;
 }
 
 void Unit::setName(string n) {
@@ -32,8 +39,8 @@ int Unit::dealDamage(int d) {
 }
 
 string Unit::report() {
-    return "Unit: "name+"\tHealth: "+to_string(cHealth)+"/"+to_string(health)+"\tPos: ("+to_string(posX)+
-            ", "+to_string(posY)+")";
+    return "Unit: "name + "\tHealth: " + to_string(cHealth) + "/" + to_string(health) + "\tPos: (" + to_string(posX) +
+           ", " + to_string(posY) + ")";
 }
 
 const int Unit::getMovm() const {

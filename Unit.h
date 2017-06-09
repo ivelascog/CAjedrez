@@ -51,6 +51,8 @@ public:
     int getCHealth() const;
 
     const string &getName() const;
+
+    void takeDamage(int damageTaken);
 };
 
 
