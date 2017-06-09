@@ -18,6 +18,8 @@ public:
     void remove(Unit unit);
 
     void massRemove();
+
+    int size();
 };
 
 
