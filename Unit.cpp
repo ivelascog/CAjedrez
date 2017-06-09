@@ -82,3 +82,32 @@ int Unit::getCHealth() const {
 const string &Unit::getName() const {
     return name;
 }
+
+int Unit::getAttP() const {
+    return attP;
+}
+
+void Unit::setAttP(int attP) {
+    Unit::attP = attP;
+}
+
+int Unit::getMoveP() const {
+    return moveP;
+}
+
+void Unit::setMoveP(int moveP) {
+    Unit::moveP = moveP;
+}
+
+void Unit::resetAP() {
+    moveP = 1;
+    attP = 1;
+}
+
+void Unit::reduceAttP() {
+    attP -= 1;
+}
+
+void Unit::reduceMovP() {
+    moveP -= 1;
+}

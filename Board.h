@@ -10,12 +10,6 @@
 
 class Board {
 private:
-    Unit table[11][11];
-    int tableInt[11][11];
-    std::vector<Unit> peones;
-    std::vector<Unit> horseman;
-    std::vector<Unit> archers;
-    Unit king;
 public:
     void init();
 

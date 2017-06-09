@@ -13,9 +13,17 @@ using namespace std;
 virtual class Unit {
 protected:
     const int movm, health, damage, range;
-    int posX, posY, cHealth, id, team;
+    int posX, posY, cHealth, id, team, moveP, attP;
     string name;
 public:
+    int getMoveP() const;
+
+    void setMoveP(int moveP);
+
+    int getAttP() const;
+
+    void setAttP(int attP);
+
     virtual bool isDead();
 
     virtual int dealDamage(int d);
@@ -53,6 +61,12 @@ public:
     const string &getName() const;
 
     void takeDamage(int damageTaken);
+
+    void resetAP();
+
+    void reduceAttP();
+
+    void reduceMovP();
 };
 
 

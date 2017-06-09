@@ -1,0 +1,39 @@
+Class army:
+<vector<vector<unit>>>
+
+y : tipo ud
+z : lista uds team, type
+
+report
+add
+remove
+massRemove
+
+
+Class map:
+int teams
+init: armies, size
+populate() -> default
+vector<army>
+addUnit
+
+showRange(unit)
+checkValidMove
+checkValidAttack
+undoMove
+move(unit, x, y) (err if movP <1)
+attack (err if attP <1)
+moveAndAttack
+
+check end
+
+turn(int player)
+	do 2 veces
+		if hay peones moveP > 1
+			list peones moveP > 1
+			while attP > 1
+			moveAndAttack(peon)
+
+	lo mismo con los otros, 1 vez
+
+startGame
