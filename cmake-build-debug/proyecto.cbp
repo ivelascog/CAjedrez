@@ -84,10 +84,22 @@
 				</MakeCommands>
 			</Target>
 		</Build>
-		<Unit filename="/home/fer/CLionProjects/CAjedrez/GenericUnit.cpp">
+		<Unit filename="/home/fer/CLionProjects/CAjedrez/Archer.cpp">
 			<Option target="proyecto"/>
 		</Unit>
-		<Unit filename="/home/fer/CLionProjects/CAjedrez/GenericUnit.h">
+		<Unit filename="/home/fer/CLionProjects/CAjedrez/Archer.h">
+			<Option target="proyecto"/>
+		</Unit>
+		<Unit filename="/home/fer/CLionProjects/CAjedrez/Board.cpp">
+			<Option target="proyecto"/>
+		</Unit>
+		<Unit filename="/home/fer/CLionProjects/CAjedrez/Board.h">
+			<Option target="proyecto"/>
+		</Unit>
+		<Unit filename="/home/fer/CLionProjects/CAjedrez/Unit.cpp">
+			<Option target="proyecto"/>
+		</Unit>
+		<Unit filename="/home/fer/CLionProjects/CAjedrez/Unit.h">
 			<Option target="proyecto"/>
 		</Unit>
 		<Unit filename="/home/fer/CLionProjects/CAjedrez/main.cpp">

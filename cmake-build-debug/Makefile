@@ -123,32 +123,86 @@ proyecto/fast:
 	$(MAKE) -f CMakeFiles/proyecto.dir/build.make CMakeFiles/proyecto.dir/build
 .PHONY : proyecto/fast
 
-GenericUnit.o: GenericUnit.cpp.o
+Archer.o: Archer.cpp.o
 
-.PHONY : GenericUnit.o
+.PHONY : Archer.o
 
 # target to build an object file
-GenericUnit.cpp.o:
-	$(MAKE) -f CMakeFiles/proyecto.dir/build.make CMakeFiles/proyecto.dir/GenericUnit.cpp.o
-.PHONY : GenericUnit.cpp.o
+Archer.cpp.o:
+	$(MAKE) -f CMakeFiles/proyecto.dir/build.make CMakeFiles/proyecto.dir/Archer.cpp.o
+.PHONY : Archer.cpp.o
 
-GenericUnit.i: GenericUnit.cpp.i
+Archer.i: Archer.cpp.i
 
-.PHONY : GenericUnit.i
+.PHONY : Archer.i
 
 # target to preprocess a source file
-GenericUnit.cpp.i:
-	$(MAKE) -f CMakeFiles/proyecto.dir/build.make CMakeFiles/proyecto.dir/GenericUnit.cpp.i
-.PHONY : GenericUnit.cpp.i
+Archer.cpp.i:
+	$(MAKE) -f CMakeFiles/proyecto.dir/build.make CMakeFiles/proyecto.dir/Archer.cpp.i
+.PHONY : Archer.cpp.i
 
-GenericUnit.s: GenericUnit.cpp.s
+Archer.s: Archer.cpp.s
 
-.PHONY : GenericUnit.s
+.PHONY : Archer.s
 
 # target to generate assembly for a file
-GenericUnit.cpp.s:
-	$(MAKE) -f CMakeFiles/proyecto.dir/build.make CMakeFiles/proyecto.dir/GenericUnit.cpp.s
-.PHONY : GenericUnit.cpp.s
+Archer.cpp.s:
+	$(MAKE) -f CMakeFiles/proyecto.dir/build.make CMakeFiles/proyecto.dir/Archer.cpp.s
+.PHONY : Archer.cpp.s
+
+Board.o: Board.cpp.o
+
+.PHONY : Board.o
+
+# target to build an object file
+Board.cpp.o:
+	$(MAKE) -f CMakeFiles/proyecto.dir/build.make CMakeFiles/proyecto.dir/Board.cpp.o
+.PHONY : Board.cpp.o
+
+Board.i: Board.cpp.i
+
+.PHONY : Board.i
+
+# target to preprocess a source file
+Board.cpp.i:
+	$(MAKE) -f CMakeFiles/proyecto.dir/build.make CMakeFiles/proyecto.dir/Board.cpp.i
+.PHONY : Board.cpp.i
+
+Board.s: Board.cpp.s
+
+.PHONY : Board.s
+
+# target to generate assembly for a file
+Board.cpp.s:
+	$(MAKE) -f CMakeFiles/proyecto.dir/build.make CMakeFiles/proyecto.dir/Board.cpp.s
+.PHONY : Board.cpp.s
+
+Unit.o: Unit.cpp.o
+
+.PHONY : Unit.o
+
+# target to build an object file
+Unit.cpp.o:
+	$(MAKE) -f CMakeFiles/proyecto.dir/build.make CMakeFiles/proyecto.dir/Unit.cpp.o
+.PHONY : Unit.cpp.o
+
+Unit.i: Unit.cpp.i
+
+.PHONY : Unit.i
+
+# target to preprocess a source file
+Unit.cpp.i:
+	$(MAKE) -f CMakeFiles/proyecto.dir/build.make CMakeFiles/proyecto.dir/Unit.cpp.i
+.PHONY : Unit.cpp.i
+
+Unit.s: Unit.cpp.s
+
+.PHONY : Unit.s
+
+# target to generate assembly for a file
+Unit.cpp.s:
+	$(MAKE) -f CMakeFiles/proyecto.dir/build.make CMakeFiles/proyecto.dir/Unit.cpp.s
+.PHONY : Unit.cpp.s
 
 main.o: main.cpp.o
 
@@ -186,9 +240,15 @@ help:
 	@echo "... rebuild_cache"
 	@echo "... edit_cache"
 	@echo "... proyecto"
-	@echo "... GenericUnit.o"
-	@echo "... GenericUnit.i"
-	@echo "... GenericUnit.s"
+	@echo "... Archer.o"
+	@echo "... Archer.i"
+	@echo "... Archer.s"
+	@echo "... Board.o"
+	@echo "... Board.i"
+	@echo "... Board.s"
+	@echo "... Unit.o"
+	@echo "... Unit.i"
+	@echo "... Unit.s"
 	@echo "... main.o"
 	@echo "... main.i"
 	@echo "... main.s"

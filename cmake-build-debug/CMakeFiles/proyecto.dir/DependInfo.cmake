@@ -4,7 +4,9 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
-  "/home/fer/CLionProjects/CAjedrez/GenericUnit.cpp" "/home/fer/CLionProjects/CAjedrez/cmake-build-debug/CMakeFiles/proyecto.dir/GenericUnit.cpp.o"
+  "/home/fer/CLionProjects/CAjedrez/Archer.cpp" "/home/fer/CLionProjects/CAjedrez/cmake-build-debug/CMakeFiles/proyecto.dir/Archer.cpp.o"
+  "/home/fer/CLionProjects/CAjedrez/Board.cpp" "/home/fer/CLionProjects/CAjedrez/cmake-build-debug/CMakeFiles/proyecto.dir/Board.cpp.o"
+  "/home/fer/CLionProjects/CAjedrez/Unit.cpp" "/home/fer/CLionProjects/CAjedrez/cmake-build-debug/CMakeFiles/proyecto.dir/Unit.cpp.o"
   "/home/fer/CLionProjects/CAjedrez/main.cpp" "/home/fer/CLionProjects/CAjedrez/cmake-build-debug/CMakeFiles/proyecto.dir/main.cpp.o"
   )
 set(CMAKE_CXX_COMPILER_ID "GNU")
