@@ -19,3 +19,7 @@ Soldier::Soldier(int x, int y, int t) {
     posY = y;
     team = t;
 }
+
+string Soldier::getType() {
+    return "Soldier";
+}

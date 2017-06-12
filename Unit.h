@@ -16,6 +16,9 @@ protected:
     int posX, posY, cHealth, id, team, moveP, attP;
     string name;
 public:
+
+    virtual string getType();
+
     int getMoveP() const;
 
     void setMoveP(int moveP);

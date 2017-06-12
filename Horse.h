@@ -12,6 +12,8 @@ public:
     Horse(int x, int y, int t);
 
     string typeStats();
+
+    string getType();
 };
 
 #endif //PROYECTO_HORSE_H

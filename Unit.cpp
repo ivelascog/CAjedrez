@@ -114,3 +114,7 @@ void Unit::reduceMovP() {
 string Unit::typeStats() {
     return "typeStats default message";
 }
+
+string Unit::getType() {
+    return "No es ninguna unidad en concreto";
+}

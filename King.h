@@ -12,6 +12,8 @@ public:
     King(int x, int y, int t);
 
     string typeStats();
+
+    string getType();
 };
 
 

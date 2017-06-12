@@ -19,3 +19,7 @@ King::King(int x, int y, int t) {
     posY = y;
     team = t;
 }
+
+string King::getType() {
+    return "King";
+}
