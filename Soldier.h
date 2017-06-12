@@ -7,9 +7,9 @@
 
 #include "Unit.h"
 
-class Soldier : Unit {
+class Soldier : public Unit {
 public:
-    Soldier(int x, int y, int t) : movm(3), health(4), cHealth(4), damage(1), range(1), posX(x), posY(y), team(t) {}
+    Soldier(int x, int y, int t);
 
     string typeStats();
 };

@@ -9,7 +9,7 @@
 
 class Archer : public Unit {
 public:
-    Archer(int x, int y, int t) : movm(2), health(3), cHealth(3), damage(1), range(3), posX(x), posY(y), team(t) {}
+    Archer(int x, int y, int t);
 
     string typeStats();
 };
