@@ -9,15 +9,17 @@
 #include <string>
 
 using namespace std;
-
+enum Types {
+    king = 0, soldier = 1, archer = 2, horse = 3
+};
 class Unit {
 protected:
     int movm, health, damage, range;
     int posX, posY, cHealth, id, team, moveP, attP;
     string name;
+    Types type;
 public:
-
-    virtual string getType();
+    Types getType() const;
 
     int getMoveP() const;
 

@@ -18,8 +18,5 @@ Horse::Horse(int x, int y, int t) {
     posY = y;
     team = t;
     cHealth = 5;
-}
-
-string Horse::getType() {
-    return "Horse";
+    type = horse;
 }

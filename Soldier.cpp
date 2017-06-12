@@ -11,15 +11,12 @@ string Soldier::typeStats() {
 
 Soldier::Soldier(int x, int y, int t) {
     movm = 3;
-    health =4;
+    health = 4;
     cHealth = 4;
     damage = 1;
     range = 1;
     posX = x;
     posY = y;
     team = t;
-}
-
-string Soldier::getType() {
-    return "Soldier";
+    type = soldier;
 }

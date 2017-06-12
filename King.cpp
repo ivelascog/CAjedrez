@@ -18,8 +18,5 @@ King::King(int x, int y, int t) {
     posX = x;
     posY = y;
     team = t;
-}
-
-string King::getType() {
-    return "King";
+    type = king;
 }

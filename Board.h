@@ -7,6 +7,7 @@
 
 #include <vector>
 #include "Unit.h"
+#include "Army.h"
 
 enum Population { DEFAULT };
 
