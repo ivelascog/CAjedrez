@@ -6,6 +6,8 @@
 
 using namespace std;
 
+int Unit::uId = 0;
+
 bool Unit::isDead() {
     return (cHealth <= 0);
 }

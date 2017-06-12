@@ -14,7 +14,7 @@ enum Types {
 };
 class Unit {
 protected:
-    static int uId = 0;
+    static int uId;
     int movm, health, damage, range;
     int posX, posY, cHealth, id, team, moveP, attP;
     string name;

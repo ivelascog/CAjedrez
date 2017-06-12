@@ -6,21 +6,32 @@
 #define PROYECTO_ARMY_H
 
 #include "Unit.h"
-#include <list>
 #include <vector>
+#include <list>
 
 class Army {
-    vector<vector<Unit>> units;
+    vector<std::list<Unit>> ranks;
+    int team;
+    int size = 0;
+
 public:
+    Army(int team);
+
     string report();
 
-    void add(Unit unit);
+    bool add(Unit* ut);
 
-    void remove(Unit unit);
+    bool add(int x, int y, Types type);
+
+    bool remove(int id);
+
+    bool remove(Unit* ut);
 
     void massRemove();
 
-    int size();
+    int getSize();
+
+    Unit* getUnitByID(int id);
 };
 
 
