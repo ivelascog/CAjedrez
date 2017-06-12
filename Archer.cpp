@@ -19,3 +19,7 @@ Archer::Archer(int x, int y, int t) {
     posY = y;
     team = t;
 }
+
+string Archer::getType() {
+    return "Archer";
+}

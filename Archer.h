@@ -12,6 +12,8 @@ public:
     Archer(int x, int y, int t);
 
     string typeStats();
+
+    string getType();
 };
 
 
