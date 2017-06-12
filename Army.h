@@ -7,9 +7,10 @@
 
 #include "Unit.h"
 #include <list>
+#include <vector>
 
 class Army {
-    list <list<Unit>> units;
+    vector<vector<Unit>> units;
 public:
     string report();
 

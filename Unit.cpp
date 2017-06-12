@@ -2,7 +2,6 @@
 // Created by fer on 8/06/17.
 //
 
-#include <bits/basic_string.h>
 #include "Unit.h"
 
 using namespace std;
