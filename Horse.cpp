@@ -19,4 +19,5 @@ Horse::Horse(int x, int y, int t) {
     team = t;
     cHealth = 5;
     type = horse;
+
 }

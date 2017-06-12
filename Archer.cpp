@@ -19,4 +19,6 @@ Archer::Archer(int x, int y, int t) {
     posY = y;
     team = t;
     type = archer;
+    id = uId;
+    uId += 1;
 }

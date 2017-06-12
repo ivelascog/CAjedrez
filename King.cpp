@@ -19,4 +19,6 @@ King::King(int x, int y, int t) {
     posY = y;
     team = t;
     type = king;
+    id = uId;
+    uId += 1;
 }

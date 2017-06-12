@@ -19,4 +19,6 @@ Soldier::Soldier(int x, int y, int t) {
     posY = y;
     team = t;
     type = soldier;
+    id = uId;
+    uId += 1;
 }
