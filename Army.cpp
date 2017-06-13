@@ -12,8 +12,24 @@ Army::Army(int team) {
     this->team = team;
 }
 
-string Army::report() {
-    return "Implement";
+string Army::fullReport() {
+    string s = "Report of army " + to_string(team) + ":\n";
+    for (int t = 0; t < NUMUNITS; t++) {
+        if (!ranks[t].empty()) {
+            s += "\n" + typeReport(Types(t));
+        }
+    }
+    s += "\n";
+    return s;
+}
+
+
+string Army::typeReport(Types uType) {
+    string s = "\t\t//" + unitNames[uType] + "//\n";
+    for (Unit *ut : ranks[uType]) {
+        s += "\t" + ut->report() + "\n";
+    }
+    return s;
 }
 
 bool Army::add(int x, int y, Types type) {
@@ -56,7 +72,7 @@ int Army::massRemove() {
     int bodyCount = 0;
     for (std::list<Unit *> r : ranks) {
         for (Unit *ut : r) {
-            if (ut->getHealth() <= 0) {
+            if (ut->isDead()) {
                 remove(ut);
                 bodyCount++;
             }
@@ -77,4 +93,24 @@ Unit *Army::getUnitByID(int id) {
         }
     }
     return NULL;
+}
+
+bool Army::actionDown() {
+    if (availableActions > 0) {
+        availableActions--;
+        return true;
+    }
+    return false;
+}
+
+int Army::getAlliance() const {
+    return alliance;
+}
+
+void Army::setAlliance(int alliance) {
+    Army::alliance = alliance;
+}
+
+bool Army::actionReset() {
+    availableActions == size / 3;
 }

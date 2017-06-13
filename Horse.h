@@ -11,6 +11,7 @@ class Horse : public Unit {
 public:
     Horse(int x, int y, int t);
 
+    //devuelve stats de la clase (no ud)
     string typeStats();
 };
 

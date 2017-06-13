@@ -11,6 +11,7 @@ class Soldier : public Unit {
 public:
     Soldier(int x, int y, int t);
 
+    //devuelve stats de la clase (no ud)
     string typeStats();
 };
 

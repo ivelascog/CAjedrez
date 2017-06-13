@@ -9,6 +9,7 @@
 #include <string>
 
 using namespace std;
+
 enum Types {
     king = 0, soldier = 1, archer = 2, horse = 3
 };
@@ -35,6 +36,7 @@ public:
 
     virtual int dealDamage(int d);
 
+    //string con info ud
     virtual string report();
 
     virtual void setTeam(int team);
@@ -45,6 +47,7 @@ public:
 
     virtual void setName(string n);
 
+    //string con info de clase
     virtual string typeStats();
 
     const int getMovm() const;
@@ -69,10 +72,13 @@ public:
 
     void takeDamage(int damageTaken);
 
+    //devuelve puntos de atq y mov a 1
     void resetAP();
 
+    //reduce puntos de atq
     void reduceAttP();
 
+    //reduce puntos de mov
     void reduceMovP();
 };
 

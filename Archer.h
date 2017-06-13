@@ -11,6 +11,7 @@ class Archer : public Unit {
 public:
     Archer(int x, int y, int t);
 
+    //devuelve stats de la clase (no ud)
     string typeStats();
 };
 

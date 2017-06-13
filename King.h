@@ -11,6 +11,7 @@ class King : public Unit {
 public:
     King(int x, int y, int t);
 
+    //devuelve stats de la clase (no ud)
     string typeStats();
 };
 
