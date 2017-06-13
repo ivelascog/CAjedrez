@@ -10,7 +10,7 @@
 #include <list>
 
 class Army {
-    vector<std::list<Unit>> ranks;
+    vector<std::list<Unit *>> ranks;
     int team;
     int size = 0;
 
@@ -19,19 +19,19 @@ public:
 
     string report();
 
-    bool add(Unit* ut);
+    bool add(Unit *ut);
 
     bool add(int x, int y, Types type);
 
     bool remove(int id);
 
-    bool remove(Unit* ut);
+    bool remove(Unit *ut);
 
-    void massRemove();
+    int massRemove();
 
     int getSize();
 
-    Unit* getUnitByID(int id);
+    Unit *getUnitByID(int id);
 };
 
 

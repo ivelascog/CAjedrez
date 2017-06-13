@@ -12,6 +12,7 @@ using namespace std;
 enum Types {
     king = 0, soldier = 1, archer = 2, horse = 3
 };
+
 class Unit {
 protected:
     static int uId;

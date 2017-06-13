@@ -4,9 +4,9 @@
 #include "Army.h"
 
 int main() {
-    Soldier *napoopan = new Soldier(0, 0 , 1);
+    Soldier *napoopan = new Soldier(0, 0, 1);
     std::cout << napoopan->report() << std::endl;
     Army grandeArmee = Army(1);
-    grandeArmee.add(0,0,king);
+    grandeArmee.add(0, 0, king);
     return 0;
 }

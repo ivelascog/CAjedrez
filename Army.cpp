@@ -7,7 +7,7 @@
 
 Army::Army(int team) {
     for (int i = 0; i < NUMUNITS; i++) {
-        ranks.push_back(*new list<Unit>);
+        ranks.push_back(*new std::list<Unit *>);
     }
     this->team = team;
 }
@@ -30,9 +30,9 @@ bool Army::add(int x, int y, Types type) {
     return false;
 }
 
-bool Army::add(Unit* ut) {
-    if(ut->getTeam() == team){
-        ranks[ut->getType()].push_back(*ut);
+bool Army::add(Unit *ut) {
+    if (ut->getTeam() == team) {
+        ranks[ut->getType()].push_back(ut);
         size++;
         return true;
     }
@@ -43,27 +43,37 @@ bool Army::remove(int id) {
     return remove(getUnitByID(id));
 }
 
-bool Army::remove(Unit* ut) {
+bool Army::remove(Unit *ut) {
     if (ut != NULL) {
-        ranks[ut->getType()].remove(*ut);
+        ranks[ut->getType()].remove(ut);
+        size--;
         return true;
     }
     return false;
 }
 
-void Army::massRemove() {
-
+int Army::massRemove() {
+    int bodyCount = 0;
+    for (std::list<Unit *> r : ranks) {
+        for (Unit *ut : r) {
+            if (ut->getHealth() <= 0) {
+                remove(ut);
+                bodyCount++;
+            }
+        }
+    }
+    return bodyCount;
 }
 
 int Army::getSize() {
     return size;
 }
 
-Unit* Army::getUnitByID(int id) {
-    for (list<Unit> r : ranks) {
-        for (Unit ut : r) {
-            if (ut.getId() == id)
-                return &ut;
+Unit *Army::getUnitByID(int id) {
+    for (std::list<Unit *> r : ranks) {
+        for (Unit *ut : r) {
+            if (ut->getId() == id)
+                return ut;
         }
     }
     return NULL;

@@ -40,7 +40,8 @@ int Unit::dealDamage(int d) {
 }
 
 string Unit::report() {
-    return "Unit: " + name + "\tHealth: " + to_string(cHealth) + "/" + to_string(health) + "\tPos: (" + to_string(posX) +
+    return "Unit: " + name + "\tHealth: " + to_string(cHealth) + "/" + to_string(health) + "\tPos: (" +
+           to_string(posX) +
            ", " + to_string(posY) + ")";
 }
 

@@ -9,7 +9,9 @@
 #include "Unit.h"
 #include "Army.h"
 
-enum Population { DEFAULT };
+enum Population {
+    DEFAULT
+};
 
 class Board {
 private:
@@ -18,6 +20,7 @@ private:
 
 public:
     void addUnit(Unit u, int team);
+
     void populate(Population p);
 };
 
