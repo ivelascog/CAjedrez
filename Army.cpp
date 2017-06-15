@@ -62,6 +62,7 @@ bool Army::remove(int id) {
 bool Army::remove(Unit *ut) {
     if (ut != NULL) {
         ranks[ut->getType()].remove(ut);
+        delete (ut);
         size--;
         return true;
     }
@@ -76,6 +77,17 @@ int Army::massRemove() {
                 remove(ut);
                 bodyCount++;
             }
+        }
+    }
+    return bodyCount;
+}
+
+int Army::killAll() {
+    int bodyCount = 0;
+    for (std::list<Unit *> r : ranks) {
+        for (Unit *ut : r) {
+            ut->setCHealth(0);
+            bodyCount++;
         }
     }
     return bodyCount;
@@ -112,5 +124,20 @@ void Army::setAlliance(int alliance) {
 }
 
 bool Army::actionReset() {
-    availableActions == size / 3;
+    availableActions = size / 3;
+    for (std::list<Unit *> r : ranks) {
+        for (Unit *ut : r) {
+            ut->resetAP();
+        }
+    }
+}
+
+bool Army::actionsToZero() {
+    availableActions = 0;
+    for (std::list<Unit *> r : ranks) {
+        for (Unit *ut : r) {
+            ut->setAttP(0);
+            ut->setMoveP(0);
+        }
+    }
 }

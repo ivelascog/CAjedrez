@@ -22,6 +22,8 @@ protected:
     string name;
     Types type;
 public:
+    void setCHealth(int cHealth);
+
     Types getType() const;
 
     int getMoveP() const;
@@ -33,8 +35,6 @@ public:
     void setAttP(int attP);
 
     virtual bool isDead();
-
-    virtual int dealDamage(int d);
 
     //string con info ud
     virtual string report();

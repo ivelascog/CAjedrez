@@ -35,10 +35,6 @@ void Unit::setTeam(int team) {
     this->team = team;
 }
 
-int Unit::dealDamage(int d) {
-    return 0;
-}
-
 string Unit::report() {
     return "Unit " + to_string(id) + ": " + name + "\tHealth: " + to_string(cHealth) + "/" + to_string(health) +
            "\tPos: (" +
@@ -121,5 +117,9 @@ string Unit::typeStats() {
 
 Types Unit::getType() const {
     return type;
+}
+
+void Unit::setCHealth(int cHealth) {
+    Unit::cHealth = cHealth;
 }
 

@@ -14,7 +14,6 @@ class Army {
     int team;
     int availableActions = 0;
     int alliance = -1;
-private:
     int size = 0;
 
 public:
@@ -56,6 +55,10 @@ public:
     int getAlliance() const;
 
     void setAlliance(int alliance);
+
+    int killAll();
+
+    bool actionsToZero();
 };
 
 
