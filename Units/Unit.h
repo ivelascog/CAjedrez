@@ -7,6 +7,7 @@
 
 #include <stdlib.h>
 #include <string>
+#include "UnitNames.h"
 
 using namespace std;
 
@@ -48,7 +49,7 @@ public:
     virtual void setName(string n);
 
     //string con info de clase
-    virtual string typeStats();
+    string typeStats();
 
     const int getMovm() const;
 

@@ -4,12 +4,6 @@
 
 #include "Archer.h"
 
-string Archer::typeStats() {
-    return "Archer Unit:\nMov: " + to_string(movm) + "\tHealth: " + to_string(health) + "\tDamage: " +
-           to_string(damage) +
-           "\tRange: " + to_string(range);
-}
-
 Archer::Archer(int x, int y, int t) {
     movm = 2;
     health = 3;

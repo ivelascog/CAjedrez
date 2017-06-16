@@ -6,8 +6,20 @@
 #define PROYECTO_TERRAINMAP_H
 
 
-class terrainMap {
+#include "Terrain/TerrainList.h"
+#include "Terrain/Terrain.h"
+#include <vector>
 
+class TerrainMap {
+    vector<vector<Terrain *>> tMap;
+    int height;
+    int width;
+public:
+    void loadTerrainMap1();
+
+    Terrain *getTMap(int x, int y);
+
+    void setTMap(int x, int y, TerrainTypes type);
 };
 
 

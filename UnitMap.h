@@ -5,9 +5,8 @@
 #ifndef PROYECTO_UNITMAP_H
 #define PROYECTO_UNITMAP_H
 
-#include "Unit.h"
-#include "Army.h"
-#include <bitset>
+#include "Units/Unit.h"
+#include "Units/Army.h"
 
 class UnitMap {
     vector <vector<Unit *>> uMap;

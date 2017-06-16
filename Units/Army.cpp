@@ -42,8 +42,9 @@ bool Army::add(int x, int y, Types type) {
             return add(new Soldier(x, y, team));
         case archer:
             return add(new Archer(x, y, team));
+        default:
+            return false;
     }
-    return false;
 }
 
 bool Army::add(Unit *ut) {
