@@ -3,7 +3,8 @@
 #include "Board.h"
 
 int main() {
-    Terrain t = Plains();
-    std::cout << t.terrainStats() << endl;
+    TerrainMap tMap = TerrainMap();
+    tMap.loadTerrainMap1();
+    std::cout << tMap.showTMap() << endl;
     return 0;
 }

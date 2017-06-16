@@ -20,6 +20,8 @@ public:
     Terrain *getTMap(int x, int y);
 
     void setTMap(int x, int y, TerrainTypes type);
+
+    string showTMap();
 };
 
 

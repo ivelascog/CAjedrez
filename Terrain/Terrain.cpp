@@ -17,3 +17,7 @@ string Terrain::terrainStats() {
     }
     return s;
 }
+
+char Terrain::getIcon() const {
+    return icon;
+}

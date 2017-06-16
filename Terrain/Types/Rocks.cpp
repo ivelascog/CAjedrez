@@ -7,4 +7,5 @@
 Rocks::Rocks() {
     obstacle = true;
     type = rocks;
+    icon = 'r';
 }

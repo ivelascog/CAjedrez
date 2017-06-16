@@ -19,6 +19,10 @@ class Terrain {
 protected:
     bool obstacle;
     TerrainTypes type;
+    char icon = '?';
+public:
+    char getIcon() const;
+
 public:
     bool isObstacle() const;
 

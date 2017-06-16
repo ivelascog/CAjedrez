@@ -7,4 +7,5 @@
 Plains::Plains() {
     obstacle = false;
     type = plains;
+    icon = ' ';
 }
