@@ -18,6 +18,6 @@ string Terrain::terrainStats() {
     return s;
 }
 
-char Terrain::getIcon() const {
+char Terrain::getIcon() {
     return icon;
 }

@@ -16,4 +16,5 @@ Horse::Horse(int x, int y, int t) {
     type = horse;
     id = uId;
     uId += 1;
+    icon = 'H';
 }

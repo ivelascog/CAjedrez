@@ -22,6 +22,7 @@ protected:
     int posX, posY, cHealth, id, team, moveP, attP;
     string name;
     Types type;
+    char icon = '?';
 public:
     void setCHealth(int cHealth);
 
@@ -81,6 +82,8 @@ public:
 
     //reduce puntos de mov
     void reduceMovP();
+
+    char getIcon();
 };
 
 

@@ -23,7 +23,7 @@ public:
     bool add(Unit *ut);
 
     //crea y añade ud
-    bool add(int x, int y, Types type);
+    Unit *add(int x, int y, Types type);
 
     //sacar ud por id
     bool remove(int id);

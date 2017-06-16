@@ -125,3 +125,7 @@ void Unit::setCHealth(int cHealth) {
     Unit::cHealth = cHealth;
 }
 
+char Unit::getIcon() {
+    return icon;
+}
+

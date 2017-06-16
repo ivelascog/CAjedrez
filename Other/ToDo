@@ -1,10 +1,7 @@
-Class map:
-int teams
-init: armies, size
-populate() -> default
-vector<army>
-addUnit
+sacar de mapa muertos
+comprobar victorias, derrotas.
 
+board:
 showRange(unit)
 checkValidMove
 checkValidAttack

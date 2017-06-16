@@ -21,7 +21,7 @@ protected:
     TerrainTypes type;
     char icon = '?';
 public:
-    char getIcon() const;
+    char getIcon();
 
 public:
     bool isObstacle() const;

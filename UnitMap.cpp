@@ -19,37 +19,37 @@ void UnitMap::loadUnitMap1() {
     armies[1] = new Army(1);
 
     //Army 0
-    armies[0]->add(7, 9, king);
+    addUnit(7, 9, king, 0);
     essentials[0].push_back(getUMap(7, 9));
-    armies[0]->add(3, 8, soldier);
-    armies[0]->add(5, 8, soldier);
-    armies[0]->add(7, 8, soldier);
-    armies[0]->add(9, 8, soldier);
-    armies[0]->add(11, 8, soldier);
-    armies[0]->add(5, 9, archer);
-    armies[0]->add(9, 9, archer);
-    armies[0]->add(3, 9, horse);
-    armies[0]->add(11, 9, horse);
+    addUnit(3, 8, soldier, 0);
+    addUnit(5, 8, soldier, 0);
+    addUnit(7, 8, soldier, 0);
+    addUnit(9, 8, soldier, 0);
+    addUnit(11, 8, soldier, 0);
+    addUnit(5, 9, archer, 0);
+    addUnit(9, 9, archer, 0);
+    addUnit(3, 9, horse, 0);
+    addUnit(11, 9, horse, 0);
 
     //Army 1
-    armies[1]->add(7, 0, king);
+    addUnit(7, 0, king, 1);
     essentials[1].push_back(getUMap(7, 0));
-    armies[1]->add(3, 1, soldier);
-    armies[1]->add(5, 1, soldier);
-    armies[1]->add(7, 1, soldier);
-    armies[1]->add(9, 1, soldier);
-    armies[1]->add(11, 1, soldier);
-    armies[1]->add(5, 0, archer);
-    armies[1]->add(9, 0, archer);
-    armies[1]->add(3, 0, horse);
-    armies[1]->add(11, 0, horse);
+    addUnit(3, 1, soldier, 1);
+    addUnit(5, 1, soldier, 1);
+    addUnit(7, 1, soldier, 1);
+    addUnit(9, 1, soldier, 1);
+    addUnit(11, 1, soldier, 1);
+    addUnit(5, 0, archer, 1);
+    addUnit(9, 0, archer, 1);
+    addUnit(3, 0, horse, 1);
+    addUnit(11, 0, horse, 1);
 }
 
 bool UnitMap::forceMove(int x1, int y1, int x2, int y2) {
     if (0 <= x1 && 0 <= x2 && 0 <= y1 && 0 <= y2 &&
         x1 < uMap.size() && x2 < uMap.size() && y1 < uMap[0].size() && y2 < uMap[0].size()) {
         if (uMap[x2][y2] == NULL) {
-            uMap[x2][y2] = uMap[x1][y1];
+            uMap[x2][y2] = uMap[y1][x1];
             uMap[x1][y1] = NULL;
             uMap[x2][y2]->setPos(x2, y2);
             return true;
@@ -75,12 +75,10 @@ bool UnitMap::move(int x1, int y1, int x2, int y2) {
 }
 
 bool UnitMap::dealDamage(Unit *atta, Unit *defe) {
-    Unit att = *atta;
-    Unit def = *defe;
-    if (att.getTeam() != def.getTeam() && att.getAttP() > 0) {
-        if (!allianceActive || armies[att.getTeam()]->getAlliance() != armies[def.getTeam()]->getAlliance()) {
-            def.takeDamage(att.getDamage());
-            att.reduceAttP();
+    if (atta->getTeam() != defe->getTeam() && atta->getAttP() > 0) {
+        if (!allianceActive || armies[atta->getTeam()]->getAlliance() != armies[defe->getTeam()]->getAlliance()) {
+            defe->takeDamage(atta->getDamage());
+            atta->reduceAttP();
             return true;
         }
         return false;
@@ -186,4 +184,31 @@ void UnitMap::condInit() {
     unitIsEssential = vector<bool>((unsigned long) teams, false);
     lossAfterXTurns = vector<bool>((unsigned long) teams, false);
     defendPos = vector<bool>((unsigned long) teams, false);
+    teamActive = vector<bool>((unsigned long) teams, true);
+}
+
+string UnitMap::showUMap() {
+    string s = "";
+    for (int i = 0; i < height; i++) {
+        for (int j = 0; j < width; j++) {
+            s += "[";
+            if (uMap[j][i] != NULL) {
+                s += uMap[j][i]->getIcon();
+            } else {
+                s += " ";
+            }
+            s += "]";
+        }
+        s += "\n";
+    }
+    return s;
+}
+
+bool UnitMap::addUnit(int x, int y, Types type, int team) {
+    Unit *u = armies[team]->add(x, y, type);
+    if (u != NULL) {
+        uMap[x][y] = u;
+        return true;
+    }
+    return false;
 }

@@ -32,18 +32,27 @@ string Army::typeReport(Types uType) {
     return s;
 }
 
-bool Army::add(int x, int y, Types type) {
+Unit *Army::add(int x, int y, Types type) {
+    Unit *u;
     switch (type) {
         case king:
-            return add(new King(x, y, team));
+            u = new King(x, y, team);
+            add(u);
+            return u;
         case horse:
-            return add(new Horse(x, y, team));
+            u = new Horse(x, y, team);
+            add(u);
+            return u;
         case soldier:
-            return add(new Soldier(x, y, team));
+            u = new Soldier(x, y, team);
+            add(u);
+            return u;
         case archer:
-            return add(new Archer(x, y, team));
+            u = new Archer(x, y, team);
+            add(u);
+            return u;
         default:
-            return false;
+            return NULL;
     }
 }
 

@@ -16,4 +16,5 @@ King::King(int x, int y, int t) {
     type = king;
     id = uId;
     uId += 1;
+    icon = 'K';
 }

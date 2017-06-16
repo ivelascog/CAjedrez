@@ -16,4 +16,5 @@ Archer::Archer(int x, int y, int t) {
     type = archer;
     id = uId;
     uId += 1;
+    icon = 'A';
 }

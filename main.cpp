@@ -3,8 +3,11 @@
 #include "Board.h"
 
 int main() {
-    TerrainMap tMap = TerrainMap();
-    tMap.loadTerrainMap1();
-    std::cout << tMap.showTMap() << endl;
+    UnitMap *uMap = new UnitMap();
+    uMap->loadUnitMap1();
+    std::cout << uMap->showUMap() << endl;
+    uMap->getArmies(0)->killAll();
+    std::cout << to_string(uMap->checkWin()) << endl;
+    std::cout << uMap->showUMap() << endl;
     return 0;
 }
