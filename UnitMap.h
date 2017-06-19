@@ -7,10 +7,12 @@
 
 #include "Units/Unit.h"
 #include "Units/Army.h"
+#include <array>
 
 class UnitMap {
     vector <vector<Unit *>> uMap;
     vector<Army *> armies;
+    vector<Army *> cemetery;
     vector<bool> teamActive;
     int height;
     int width;
@@ -28,7 +30,7 @@ class UnitMap {
     vector<int> turnsToLose;
 
     vector<bool> defendPos;
-    vector <vector<int[2]>> posToDefend;
+    vector <vector<std::array<int, 2>>> posToDefend;
 
     //default cond init
     void condInit();
@@ -61,9 +63,22 @@ public:
     //comprueba si solo queda un army/alliance y le otorga la victoria si procede
     int checkWin();
 
+    //muestra mapa por consola
     string showUMap();
 
+    //añade ud al mapa y team correspondiente
     bool addUnit(int x, int y, Types type, int team);
+
+    //pasa los muertos de team al correspondiente cementerio y los quita del mapa
+    int massRemove(int team);
+
+    //pasa los muertos al correspondiente cementerio y los quita del mapa
+    int massRemoveComplete();
+
+    //pasa unit al correspondiente cementerio y
+    bool removeUnit(Unit *ut);
+
+    virtual ~UnitMap();
 };
 
 #endif //PROYECTO_UNITMAP_H

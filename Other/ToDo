@@ -1,8 +1,3 @@
-destructor
-cementerio
-sacar de mapa muertos
-comprobar victorias, derrotas
-
 board:
 showRange(unit)
 checkValidMove
@@ -24,3 +19,6 @@ turn(int player)
 	lo mismo con los otros, 1 vez
 
 startGame
+
+
+Board.loadArmy();

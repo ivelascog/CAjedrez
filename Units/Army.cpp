@@ -12,6 +12,10 @@ Army::Army(int team) {
     this->team = team;
 }
 
+vector<std::list<Unit *>> Army::getRanks() {
+    return ranks;
+}
+
 string Army::fullReport() {
     string s = "Report of army " + to_string(team) + ":\n";
     for (int t = 0; t < NUMUNITS; t++) {
@@ -22,7 +26,6 @@ string Army::fullReport() {
     s += "\n";
     return s;
 }
-
 
 string Army::typeReport(Types uType) {
     string s = "\t\t//" + unitNames[uType] + "//\n";
@@ -52,7 +55,7 @@ Unit *Army::add(int x, int y, Types type) {
             add(u);
             return u;
         default:
-            return NULL;
+            return nullptr;
     }
 }
 
@@ -65,31 +68,17 @@ bool Army::add(Unit *ut) {
     return false;
 }
 
-bool Army::remove(int id) {
+Unit *Army::remove(int id) {
     return remove(getUnitByID(id));
 }
 
-bool Army::remove(Unit *ut) {
-    if (ut != NULL) {
+Unit *Army::remove(Unit *ut) {
+    if (ut != nullptr) {
         ranks[ut->getType()].remove(ut);
-        delete (ut);
         size--;
-        return true;
+        return ut;
     }
-    return false;
-}
-
-int Army::massRemove() {
-    int bodyCount = 0;
-    for (std::list<Unit *> r : ranks) {
-        for (Unit *ut : r) {
-            if (ut->isDead()) {
-                remove(ut);
-                bodyCount++;
-            }
-        }
-    }
-    return bodyCount;
+    return nullptr;
 }
 
 int Army::killAll() {
@@ -114,7 +103,7 @@ Unit *Army::getUnitByID(int id) {
                 return ut;
         }
     }
-    return NULL;
+    return nullptr;
 }
 
 bool Army::actionDown() {
@@ -150,4 +139,15 @@ bool Army::actionsToZero() {
             ut->setMoveP(0);
         }
     }
+}
+
+Army::~Army() {
+    //destruimos ranks
+    for (std::list<Unit *> v : ranks) {
+        for (Unit *u : v) {
+            delete (u);
+        }
+        v.clear();
+    }
+    ranks.clear();
 }

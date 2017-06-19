@@ -26,13 +26,10 @@ public:
     Unit *add(int x, int y, Types type);
 
     //sacar ud por id
-    bool remove(int id);
+    Unit *remove(int id);
 
     //sacar ud por puntero
-    bool remove(Unit *ut);
-
-    //sacar uds muertas
-    int massRemove();
+    Unit *remove(Unit *ut);
 
     //devuelve numero de uds en army
     int getSize();
@@ -59,6 +56,10 @@ public:
     int killAll();
 
     bool actionsToZero();
+
+    vector<std::list<Unit *>> getRanks();
+
+    virtual ~Army();
 };
 
 

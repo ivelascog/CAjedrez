@@ -63,3 +63,14 @@ string TerrainMap::showTMap() {
     }
     return s;
 }
+
+TerrainMap::~TerrainMap() {
+    //destruimos tMap
+    for (vector<Terrain *> v : tMap) {
+        for (Terrain *t : v) {
+            delete (t);
+        }
+        v.clear();
+    }
+    tMap.clear();
+}

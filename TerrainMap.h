@@ -22,6 +22,8 @@ public:
     void setTMap(int x, int y, TerrainTypes type);
 
     string showTMap();
+
+    virtual ~TerrainMap();
 };
 
 
