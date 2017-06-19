@@ -1,5 +1,7 @@
+destructor
+cementerio
 sacar de mapa muertos
-comprobar victorias, derrotas.
+comprobar victorias, derrotas
 
 board:
 showRange(unit)
