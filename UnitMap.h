@@ -28,6 +28,10 @@ class UnitMap {
 
     vector<bool> lossAfterXTurns;
     vector<int> turnsToLose;
+public:
+    bool isAllianceActive() const;
+
+private:
 
     vector<bool> defendPos;
     vector <vector<std::array<int, 2>>> posToDefend;
@@ -79,6 +83,14 @@ public:
     bool removeUnit(Unit *ut);
 
     virtual ~UnitMap();
+
+    bool isHostile(Unit u1, Unit u2);
+
+    int getHeight() const;
+
+    int getWidth() const;
+
+    int getAlliance(int team);
 };
 
 #endif //PROYECTO_UNITMAP_H

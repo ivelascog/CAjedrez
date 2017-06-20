@@ -5,15 +5,30 @@
 #ifndef PROYECTO_BOARD_H
 #define PROYECTO_BOARD_H
 
-#include <vector>
+#define REDBG 41
+#define GREENBG 42
+#define YELLOWBG 43
+#define RED 31
+#define BLUE 34
+#define GREEN 32
+#define RESET 0
+
 #include "UnitMap.h"
 #include "TerrainMap.h"
 
 class Board {
 private:
-
+    int auxPos[2];
+    UnitMap *units;
+    TerrainMap *terrain;
+    int width;
+    int height;
 public:
+    Board();
 
+    void loadMap1();
+
+    string printMap(int team);
 };
 
 
