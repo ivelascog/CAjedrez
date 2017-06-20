@@ -21,3 +21,19 @@ string Terrain::terrainStats() {
 char Terrain::getIcon() {
     return icon;
 }
+
+int Terrain::getPenMov() const {
+    return penMov;
+}
+
+int Terrain::getHeight() const {
+    return height;
+}
+
+bool Terrain::isHorizontal() const {
+    return horizontal;
+}
+
+bool Terrain::isVertical() const {
+    return vertical;
+}

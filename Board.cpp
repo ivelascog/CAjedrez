@@ -45,6 +45,86 @@ string Board::printMap(int team) {
     return s;
 }
 
+vector<vector<int>> Board::accessible(Unit *u) {
+    int aux;
+
+    vector<vector<int>> map = std::vector<std::vector<int>>
+            ((unsigned long) width, vector<int>((unsigned long) height, 0));
+    for (int i = 0; i < height; i++) {
+        for (int j = 0; j < width; j++) {
+            if (terrain->getTMap(j, i)->isObstacle() == 1) {
+                map[j][i] = -1;
+            } else if (units->getUMap(j, i) != nullptr) {
+                map[j][i] = -2;
+            }
+        }
+    }
+
+    map[u->getPosX()][u->getPosY()] = u->getMovm() + 1;
+
+    for (int l = (u->getMovm() + 1); l > 1; l--) {
+        for (int i = 0; i < height; i++) {
+            for (int j = 0; j < width; j++) {
+                if (map[j][i] == l) {
+                    if (((j - 1) >= 0) && ((map[j - 1][i]) == 0)) {
+                        if ((abs(terrain->getTMap(j - 1, i)->getHeight() -
+                                 terrain->getTMap(j, i)->getHeight()) < 2) &&
+                            terrain->getTMap(j - 1, i)->isHorizontal() &&
+                            terrain->getTMap(j, i)->isHorizontal()) {
+                            aux = ((l - 1) - terrain->getTMap(j - 1, i)->getPenMov());
+                            map[j - 1][i] = max(aux, 1);
+                        }
+                    }
+                    if (((j + 1) < width) && ((map[j + 1][i]) == 0)) {
+                        if ((abs(terrain->getTMap(j + 1, i)->getHeight() -
+                                 terrain->getTMap(j, i)->getHeight()) < 2) &&
+                            terrain->getTMap(j + 1, i)->isHorizontal() &&
+                            terrain->getTMap(j, i)->isHorizontal()) {
+                            aux = ((l - 1) - terrain->getTMap(j + 1, i)->getPenMov());
+                            map[j + 1][i] = max(aux, 1);
+                        }
+                    }
+                    if (((i - 1) >= 0) && ((map[j][i - 1]) == 0)) {
+                        if ((abs(terrain->getTMap(j, i - 1)->getHeight() -
+                                 terrain->getTMap(j, i)->getHeight()) < 2) &&
+                            terrain->getTMap(j, i - 1)->isVertical() &&
+                            terrain->getTMap(j, i)->isVertical()) {
+                            aux = ((l - 1) - terrain->getTMap(j, i - 1)->getPenMov());
+                            map[j][i - 1] = max(aux, 1);
+                        }
+                    }
+                    if (((i + 1) < height) && ((map[j][i + 1]) == 0)) {
+                        if ((abs(terrain->getTMap(j, i + 1)->getHeight() -
+                                 terrain->getTMap(j, i)->getHeight()) < 2) &&
+                            terrain->getTMap(j, i + 1)->isVertical() &&
+                            terrain->getTMap(j, i)->isVertical()) {
+                            aux = ((l - 1) - terrain->getTMap(j, i + 1)->getPenMov());
+                            map[j][i + 1] = max(aux, 1);
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    string s = "";
+    for (int i = 0; i < height; i++) {
+        for (int j = 0; j < width; j++) {
+            s += "[";
+            if (map[j][i] != 0) {
+                s += to_string(map[j][i]);
+            } else {
+                s += " ";
+            }
+            s += "]";
+        }
+        s += "\n";
+    }
+
+    cout << s << endl;
+
+    return map;
+}
 
 vector<vector<int>> Board::inRange(Unit *u) {
     int ux = u->getPosX();
@@ -153,18 +233,6 @@ vector<vector<int>> Board::inRange(Unit *u) {
         }
     }
 
-    string s = "";
-    for (int i = 0; i < height; i++) {
-        for (int j = 0; j < width; j++) {
-            s += "[";
-            s += to_string(map[j][i]);
-            s += "]";
-        }
-        s += "\n";
-    }
-
-    cout << s << endl;
-
     return map;
 }
 
@@ -176,7 +244,7 @@ TerrainMap *Board::getTerrain() const {
     return terrain;
 }
 
-vector<vector<bool>> Board::inRangeHostil(Unit *u) {
+vector<vector<bool>> Board::inRangeHostile(Unit *u) {
     vector<vector<bool>> map = std::vector<std::vector<bool>>((unsigned long) width,
                                                               vector<bool>((unsigned long) height, false));
     vector<vector<int>> aux = inRange(u);

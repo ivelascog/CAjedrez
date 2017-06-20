@@ -20,10 +20,21 @@ protected:
     bool obstacle;
     TerrainTypes type;
     char icon = '?';
+    int penMov = 0;
+    int height = 0;
+    bool horizontal = true;
+    bool vertical = true;
 public:
+    bool isHorizontal() const;
+
+    bool isVertical() const;
+
+    int getHeight() const;
+
+    int getPenMov() const;
+
     char getIcon();
 
-public:
     bool isObstacle() const;
 
     string terrainStats();

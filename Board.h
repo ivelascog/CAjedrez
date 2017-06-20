@@ -36,7 +36,9 @@ public:
 
     vector<vector<int>> inRange(Unit *u);
 
-    vector<vector<bool >> inRangeHostil(Unit *u);
+    vector<vector<bool >> inRangeHostile(Unit *u);
+
+    vector<vector<int>> accessible(Unit *u);
 };
 
 
