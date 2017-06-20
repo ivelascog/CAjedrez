@@ -4,13 +4,8 @@ uMap
 tMap
 
 public:
-string printMap();
-string showRange(unit); //print checkValidMoves(); o print checkTargetsStatic();
-int[][] checkValidMoves(unit);  -1 para obstaculos y otras unidades,
-                                0 para el resto, contamos de mov hacia atrás hasta llegar a 1
-                                -2 para targets validos
-
-bool[][] checkTargetsStatic(unit);
+print sel unit
+int walk
 
 
 

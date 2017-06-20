@@ -15,6 +15,7 @@
 
 #include "UnitMap.h"
 #include "TerrainMap.h"
+#include <stack>
 
 class Board {
 private:
@@ -39,6 +40,10 @@ public:
     vector<vector<bool >> inRangeHostile(Unit *u);
 
     vector<vector<int>> accessible(Unit *u);
+
+    vector<vector<bool>> isAccessible(Unit *u);
+
+    stack<array<int, 2>> walk(Unit *u, int destX, int destY);
 };
 
 

@@ -6,6 +6,6 @@ int main() {
     b.loadMap1();
     cout << b.printMap(1) << endl;
     Unit *u = b.getUnits()->getUMap(3, 0);
-    b.accessible(u);
+    b.walk(u, 3, 3);
     return 0;
 }

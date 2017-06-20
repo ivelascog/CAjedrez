@@ -107,22 +107,6 @@ vector<vector<int>> Board::accessible(Unit *u) {
         }
     }
 
-    string s = "";
-    for (int i = 0; i < height; i++) {
-        for (int j = 0; j < width; j++) {
-            s += "[";
-            if (map[j][i] != 0) {
-                s += to_string(map[j][i]);
-            } else {
-                s += " ";
-            }
-            s += "]";
-        }
-        s += "\n";
-    }
-
-    cout << s << endl;
-
     return map;
 }
 
@@ -257,3 +241,40 @@ vector<vector<bool>> Board::inRangeHostile(Unit *u) {
     }
     return map;
 }
+
+vector<vector<bool>> Board::isAccessible(Unit *u) {
+    vector<vector<bool>> map = std::vector<std::vector<bool>>((unsigned long) width,
+                                                              vector<bool>((unsigned long) height, false));
+    vector<vector<int>> aux = accessible(u);
+    for (int i = 0; i < height; i++) {
+        for (int j = 0; j < width; j++) {
+            map[j][i] = (aux[j][i] > 0);
+        }
+    }
+    map[u->getPosX()][u->getPosY()] = false;
+    return map;
+}
+
+stack<array<int, 2>> Board::walk(Unit *u, int destX, int destY) {
+    if (!isAccessible(u)[destX][destY]) {
+        throw runtime_error("Not accessible or out of range");
+    }
+
+    stack<array<int, 2>> walk;
+    vector<vector<int>> map = accessible(u);
+    walk.push({destX, destY});
+    while (map[destX][destY] <= (u->getMovm())) {
+        if (map[destX + 1][destY] > map[destX][destY]) {
+            destX = destX + 1;
+        } else if (map[destX - 1][destY] > map[destX][destY]) {
+            destX = destX - 1;
+        } else if (map[destX][destY + 1] > map[destX][destY]) {
+            destY = destY + 1;
+        } else if (map[destX][destY - 1] > map[destX][destY]) {
+            destY = destY - 1;
+        }
+        walk.push({destX, destY});
+    }
+    return walk;
+}
+
