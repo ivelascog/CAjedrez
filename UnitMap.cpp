@@ -294,11 +294,11 @@ bool UnitMap::removeUnit(Unit *ut) {
     return false;
 }
 
-bool UnitMap::isHostile(Unit u1, Unit u2) {
+bool UnitMap::isHostile(Unit *u1, Unit *u2) {
     if (allianceActive) {
-        return (armies[u1.getTeam()]->getAlliance() != armies[u2.getTeam()]->getAlliance());
+        return (armies[u1->getTeam()]->getAlliance() != armies[u2->getTeam()]->getAlliance());
     } else {
-        return (u1.getTeam() != u2.getTeam());
+        return (u1->getTeam() != u2->getTeam());
     }
 }
 

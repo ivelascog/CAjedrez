@@ -28,7 +28,15 @@ public:
 
     void loadMap1();
 
+    UnitMap *getUnits() const;
+
+    TerrainMap *getTerrain() const;
+
     string printMap(int team);
+
+    vector<vector<int>> inRange(Unit *u);
+
+    vector<vector<bool >> inRangeHostil(Unit *u);
 };
 
 

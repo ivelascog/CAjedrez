@@ -84,7 +84,7 @@ public:
 
     virtual ~UnitMap();
 
-    bool isHostile(Unit u1, Unit u2);
+    bool isHostile(Unit *u1, Unit *u2);
 
     int getHeight() const;
 
