@@ -106,7 +106,7 @@ Unit *Army::getUnitByID(int id) {
     return nullptr;
 }
 
-bool Army::actionDown() {
+bool Army::reduceActions() {
     if (availableActions > 0) {
         availableActions--;
         return true;
@@ -123,7 +123,7 @@ void Army::setAlliance(int alliance) {
 }
 
 bool Army::actionReset() {
-    availableActions = size / 3;
+    availableActions = (size / 3) + 1;
     for (std::list<Unit *> r : ranks) {
         for (Unit *ut : r) {
             ut->resetAP();
@@ -150,4 +150,8 @@ Army::~Army() {
         v.clear();
     }
     ranks.clear();
+}
+
+int Army::getAvailableActions() const {
+    return availableActions;
 }

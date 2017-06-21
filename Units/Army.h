@@ -19,6 +19,8 @@ class Army {
 public:
     Army(int team);
 
+    int getAvailableActions() const;
+
     //añade ud por puntero; si team difiere, devuelve false y no hace nada
     bool add(Unit *ut);
 
@@ -44,7 +46,7 @@ public:
     string typeReport(Types uType);
 
     //reducir acciones
-    bool actionDown();
+    bool reduceActions();
 
     //resetear acciones
     bool actionReset();

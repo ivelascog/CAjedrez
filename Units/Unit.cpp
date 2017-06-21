@@ -39,7 +39,7 @@ string Unit::report() {
     return "Unit " + to_string(id) + ": " + name + "\tHealth: " + to_string(cHealth) + "/" + to_string(health) +
            "\tPos: (" +
            to_string(posX) +
-           ", " + to_string(posY) + ")";
+           ", " + to_string(posY) + ")  /   AP: Mov = " + to_string(moveP) + " Att = " + to_string(attP);
 }
 
 const int Unit::getMovm() const {
@@ -100,7 +100,7 @@ void Unit::setMoveP(int moveP) {
 
 void Unit::resetAP() {
     moveP = maxMoveP;
-    attP = maxMoveP;
+    attP = maxAttP;
 }
 
 void Unit::reduceAttP() {

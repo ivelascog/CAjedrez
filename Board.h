@@ -20,7 +20,6 @@
 
 class Board {
 private:
-    int auxPos[2];
     UnitMap *units;
     TerrainMap *terrain;
     int width;
@@ -66,6 +65,8 @@ public:
 
     //devuelve mapa con casillas hostiles a u en x, y para rango range
     vector<vector<bool>> rangeNoClipHostile(int x, int y, int range, Unit *u);
+
+    bool turn(int team);
 };
 
 

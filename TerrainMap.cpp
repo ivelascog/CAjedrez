@@ -16,7 +16,7 @@ void TerrainMap::loadTerrainMap1() {
         }
     }
 
-    setTMap(0, 4, rocks);
+    setTMap(2, 4, rocks);
     setTMap(0, 5, rocks);
     setTMap(1, 5, rocks);
     setTMap(2, 5, rocks);
@@ -30,7 +30,7 @@ void TerrainMap::loadTerrainMap1() {
     setTMap(0, 9, rocks);
     setTMap(14, 0, rocks);
     setTMap(14, 9, rocks);
-    setTMap(14, 5, rocks);
+    setTMap(12, 5, rocks);
     setTMap(14, 4, rocks);
     setTMap(13, 4, rocks);
     setTMap(12, 4, rocks);

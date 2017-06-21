@@ -330,3 +330,13 @@ bool UnitMap::attack(Unit *att, Unit *def) {
     }
     return false;
 }
+
+int UnitMap::getTeams() const {
+    return teams;
+}
+
+void UnitMap::checkLossAll() {
+    for (int i = 0; i < teams; i++) {
+        checkLoss(i);
+    }
+}

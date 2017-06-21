@@ -17,6 +17,10 @@ class UnitMap {
     int height;
     int width;
     int teams;
+public:
+    int getTeams() const;
+
+private:
     bool allianceActive = false;
     int currentTurn;
 
@@ -94,6 +98,8 @@ public:
     int getWidth() const;
 
     int getAlliance(int team);
+
+    void checkLossAll();
 };
 
 #endif //PROYECTO_UNITMAP_H
