@@ -17,4 +17,5 @@ Horse::Horse(int x, int y, int t) {
     id = uId;
     uId += 1;
     icon = 'H';
+    maxMoveP = 2;
 }

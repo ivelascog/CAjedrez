@@ -99,8 +99,8 @@ void Unit::setMoveP(int moveP) {
 }
 
 void Unit::resetAP() {
-    moveP = 1;
-    attP = 1;
+    moveP = maxMoveP;
+    attP = maxMoveP;
 }
 
 void Unit::reduceAttP() {

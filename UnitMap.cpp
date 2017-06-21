@@ -217,7 +217,6 @@ Army *UnitMap::getArmies(int n) {
     throw std::runtime_error("Index out of bounds exception");
 }
 
-
 Unit *UnitMap::getUMap(int x, int y) {
     if (x < width && y < height) {
         return uMap[x][y];
@@ -316,4 +315,18 @@ bool UnitMap::isAllianceActive() const {
 
 int UnitMap::getAlliance(int team) {
     return (armies[team]->getAlliance());
+}
+
+bool UnitMap::attack(Unit *att, Unit *def) {
+    if (att->getAttP() > 0) {
+        bool b = dealDamage(att, def);
+        if (b) {
+            att->reduceAttP();
+            if (att->getMoveP() > 0) {
+                att->reduceMovP();
+            }
+        }
+        return b;
+    }
+    return false;
 }

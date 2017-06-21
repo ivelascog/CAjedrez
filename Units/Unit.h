@@ -20,6 +20,8 @@ protected:
     static int uId;
     int movm, health, damage, range;
     int posX, posY, cHealth, id, team, moveP, attP;
+    int maxMoveP = 1;
+    int maxAttP = 1;
     string name;
     Types type;
     char icon = '?';

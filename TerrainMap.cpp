@@ -10,24 +10,35 @@ void TerrainMap::loadTerrainMap1() {
     height = 10;
     tMap = std::vector<std::vector<Terrain *>>((unsigned long) width,
                                                vector<Terrain *>((unsigned long) height));
-    for (int i = 0; i < width; i++) {
-        for (int j = 0; j < height; j++) {
+    for (int i = 0; i < height; i++) {
+        for (int j = 0; j < width; j++) {
             tMap[j][i] = new Plains();
         }
     }
 
     setTMap(0, 4, rocks);
+    setTMap(0, 5, rocks);
     setTMap(1, 5, rocks);
+    setTMap(2, 5, rocks);
     setTMap(6, 4, rocks);
-    setTMap(7, 5, rocks);
+    setTMap(6, 5, rocks);
+    setTMap(6, 6, rocks);
+    setTMap(8, 3, rocks);
     setTMap(8, 4, rocks);
-    setTMap(13, 4, rocks);
+    setTMap(8, 5, rocks);
+    setTMap(0, 0, rocks);
+    setTMap(0, 9, rocks);
+    setTMap(14, 0, rocks);
+    setTMap(14, 9, rocks);
     setTMap(14, 5, rocks);
+    setTMap(14, 4, rocks);
+    setTMap(13, 4, rocks);
+    setTMap(12, 4, rocks);
 }
 
 Terrain *TerrainMap::getTMap(int x, int y) {
     if (x < width && y < height) {
-        return tMap[y][x];
+        return tMap[x][y];
     }
     throw std::runtime_error("Index out of bounds exception");
 }
@@ -37,13 +48,13 @@ void TerrainMap::setTMap(int x, int y, TerrainTypes type) {
         delete (getTMap(x, y));
         switch (type) {
             case plains:
-                tMap[y][x] = new Plains();
+                tMap[x][y] = new Plains();
                 break;
             case rocks:
-                tMap[y][x] = new Rocks();
+                tMap[x][y] = new Rocks();
                 break;
             default:
-                tMap[y][x] = new Plains();
+                tMap[x][y] = new Plains();
                 break;
         }
     } else {

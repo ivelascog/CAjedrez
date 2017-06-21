@@ -1,11 +1,5 @@
-board:
-aux[2] pos;
-uMap
-tMap
-
-public:
-print sel unit
-int walk
+cambiar max movp max attp
+attack (uMap)
 
 
 

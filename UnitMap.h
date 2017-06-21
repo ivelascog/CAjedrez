@@ -50,8 +50,11 @@ public:
 
     void loadUnitMap1();
 
-    //comprueba rango, reduce attP y hace daño
+    //reduce attP y hace daño si corresponde
     bool dealDamage(Unit *att, Unit *def);
+
+    //comprueba rango,
+    bool attack(Unit *att, Unit *def);
 
     //mueve y reduce movP. rango comprobado a priori en board (check que no se salga del mapa)
     bool move(int x1, int y1, int x2, int y2);

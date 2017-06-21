@@ -111,9 +111,125 @@ vector<vector<int>> Board::accessible(Unit *u) {
 }
 
 vector<vector<int>> Board::inRange(Unit *u) {
-    int ux = u->getPosX();
-    int uy = u->getPosY();
-    int range = u->getRange();
+    return rangeNoClip(u->getPosX(), u->getPosY(), u->getRange());
+}
+
+UnitMap *Board::getUnits() const {
+    return units;
+}
+
+TerrainMap *Board::getTerrain() const {
+    return terrain;
+}
+
+vector<vector<bool>> Board::inRangeHostile(Unit *u) {
+    return rangeNoClipHostile(u->getPosX(), u->getPosY(), u->getRange(), u);
+}
+
+vector<vector<bool>> Board::isAccessible(Unit *u) {
+    vector<vector<bool>> map = std::vector<std::vector<bool>>((unsigned long) width,
+                                                              vector<bool>((unsigned long) height, false));
+    vector<vector<int>> aux = accessible(u);
+    for (int i = 0; i < height; i++) {
+        for (int j = 0; j < width; j++) {
+            map[j][i] = (aux[j][i] > 0);
+        }
+    }
+    map[u->getPosX()][u->getPosY()] = false;
+    return map;
+}
+
+stack<array<int, 2>> Board::walk(Unit *u, int destX, int destY) {
+    if (!isAccessible(u)[destX][destY]) {
+        throw runtime_error("Not accessible or out of range");
+    }
+
+    stack<array<int, 2>> walk;
+    vector<vector<int>> map = accessible(u);
+    walk.push({destX, destY});
+    while (map[destX][destY] <= (u->getMovm())) {
+        if (map[destX + 1][destY] > map[destX][destY]) {
+            destX = destX + 1;
+        } else if (map[destX - 1][destY] > map[destX][destY]) {
+            destX = destX - 1;
+        } else if (map[destX][destY + 1] > map[destX][destY]) {
+            destY = destY + 1;
+        } else if (map[destX][destY - 1] > map[destX][destY]) {
+            destY = destY - 1;
+        }
+        walk.push({destX, destY});
+    }
+    return walk;
+}
+
+string Board::printUnitActions(Unit *u) {
+    vector<vector<int>> acc = accessibleAttacks(u);
+    string s = "";
+    for (int i = 0; i < height; i++) {
+        for (int j = 0; j < width; j++) {
+            s += "[";
+            if (terrain->getTMap(j, i)->isObstacle()) {
+                s += "\033[" + to_string(YELLOWBG) + "m \033[0m";
+            } else if (acc[j][i] == -3 && units->getUMap(j, i) == nullptr) {
+                s += "\033[" + to_string(REDBG) + "m \033[0m";
+            } else if (units->getUMap(j, i) != nullptr) {
+                s += "\033[";
+                if (units->getUMap(j, i)->getTeam() == u->getTeam()) {
+                    s += to_string(GREEN);
+                } else if (units->isAllianceActive() &&
+                           units->getAlliance(u->getTeam()) == units->getAlliance(units->getUMap(j, i)->getTeam())) {
+                    s += to_string(BLUE);
+                } else {
+                    if (acc[j][i] == -3) {
+                        s += "1;";
+                        s += to_string(REDBG);
+                        s += ";";
+                        s += to_string(BLACK);
+                    } else {
+                        s += to_string(RED);
+                    }
+                }
+                s += "m";
+                s += units->getUMap(j, i)->getIcon();
+                s += "\033[" + to_string(RESET) + "m";
+            } else if (acc[j][i] > 0) {
+                s += "\033[" + to_string(GREENBG) + "m \033[0m";
+            } else {
+                s += " ";
+            }
+            s += "]";
+        }
+        s += "\n";
+    }
+    return s;
+}
+
+vector<vector<int>> Board::accessibleAttacks(Unit *u) {
+    vector<vector<int>> map = accessible(u);
+    vector<vector<int>> auxMap;
+
+    for (int i = 0; i < height; i++) {
+        for (int j = 0; j < width; j++) {
+            if (map[j][i] > 0 &&
+                ((j + 1 < width && map[j + 1][i] <= 0) || (j - 1 >= 0 && map[j - 1][i] <= 0) ||
+                 (i + 1 < height && map[j][i + 1] <= 0) || (i - 1 >= 0 && map[j][i - 1] <= 0))) {
+                auxMap = rangeNoClip(j, i, u->getRange());
+                for (int a = 0; a < height; a++) {
+                    for (int b = 0; b < width; b++) {
+                        if (auxMap[b][a] > 0 && map[b][a] <= 0) {
+                            map[b][a] = -3;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    return map;
+}
+
+vector<vector<int>> Board::rangeNoClip(int x, int y, int range) {
+    int ux = x;
+    int uy = y;
     vector<vector<int>> map = std::vector<std::vector<int>>((unsigned long) width, vector<int>((unsigned long) height));
     map[ux][uy] = 1;
 
@@ -220,18 +336,10 @@ vector<vector<int>> Board::inRange(Unit *u) {
     return map;
 }
 
-UnitMap *Board::getUnits() const {
-    return units;
-}
-
-TerrainMap *Board::getTerrain() const {
-    return terrain;
-}
-
-vector<vector<bool>> Board::inRangeHostile(Unit *u) {
+vector<vector<bool>> Board::rangeNoClipHostile(int x, int y, int range, Unit *u) {
     vector<vector<bool>> map = std::vector<std::vector<bool>>((unsigned long) width,
                                                               vector<bool>((unsigned long) height, false));
-    vector<vector<int>> aux = inRange(u);
+    vector<vector<int>> aux = rangeNoClip(x, y, range);
     for (int i = 0; i < height; i++) {
         for (int j = 0; j < width; j++) {
             if (aux[j][i] > 0 && units->getUMap(j, i) != nullptr) {
@@ -241,40 +349,3 @@ vector<vector<bool>> Board::inRangeHostile(Unit *u) {
     }
     return map;
 }
-
-vector<vector<bool>> Board::isAccessible(Unit *u) {
-    vector<vector<bool>> map = std::vector<std::vector<bool>>((unsigned long) width,
-                                                              vector<bool>((unsigned long) height, false));
-    vector<vector<int>> aux = accessible(u);
-    for (int i = 0; i < height; i++) {
-        for (int j = 0; j < width; j++) {
-            map[j][i] = (aux[j][i] > 0);
-        }
-    }
-    map[u->getPosX()][u->getPosY()] = false;
-    return map;
-}
-
-stack<array<int, 2>> Board::walk(Unit *u, int destX, int destY) {
-    if (!isAccessible(u)[destX][destY]) {
-        throw runtime_error("Not accessible or out of range");
-    }
-
-    stack<array<int, 2>> walk;
-    vector<vector<int>> map = accessible(u);
-    walk.push({destX, destY});
-    while (map[destX][destY] <= (u->getMovm())) {
-        if (map[destX + 1][destY] > map[destX][destY]) {
-            destX = destX + 1;
-        } else if (map[destX - 1][destY] > map[destX][destY]) {
-            destX = destX - 1;
-        } else if (map[destX][destY + 1] > map[destX][destY]) {
-            destY = destY + 1;
-        } else if (map[destX][destY - 1] > map[destX][destY]) {
-            destY = destY - 1;
-        }
-        walk.push({destX, destY});
-    }
-    return walk;
-}
-
