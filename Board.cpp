@@ -1,5 +1,6 @@
 #include <iostream>
 #include <cstring>
+#include <sstream>
 #include "Board.h"//
 // Created by ivelascog on 8/06/17.
 //
@@ -463,8 +464,12 @@ int Board::turn(int t) {
                                     int x;
                                     int y;
                                     getline(cin, input);
-                                    x = atoi(strtok((const_cast<char *>(input.c_str())), ","));
-                                    y = atoi(strtok(NULL, ","));
+                                    stringstream ss(input);
+                                    string tok;
+                                    getline(ss, tok, ',');
+                                    x = atoi(const_cast<char *>(tok.c_str()));
+                                    getline(ss, tok, ',');
+                                    y = atoi(const_cast<char *>(tok.c_str()));
                                     if (x < width && x >= 0 && y < height && y >= 0) {
                                         if (accessible(u)[x][y] > 0) {
                                             cout << "Path: " + walkAndPrint(u, x, y) << endl;
@@ -494,8 +499,12 @@ int Board::turn(int t) {
                                         int x;
                                         int y;
                                         getline(cin, input);
-                                        x = atoi(strtok((const_cast<char *>(input.c_str())), ","));
-                                        y = atoi(strtok(NULL, ","));
+                                        stringstream ss(input);
+                                        string tok;
+                                        getline(ss, tok, ',');
+                                        x = atoi(const_cast<char *>(tok.c_str()));
+                                        getline(ss, tok, ',');
+                                        y = atoi(const_cast<char *>(tok.c_str()));
                                         if (x < width && x >= 0 && y < height && y >= 0) {
                                             if (inRangeHostile(u)[x][y]) {
                                                 cout << units->placeboAttack(u, units->getUMap(x, y)) << endl;
