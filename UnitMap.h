@@ -44,14 +44,19 @@ private:
     void condInit();
 
 public:
+    //Devuelve la ud que hay en la pos enviada como atributo.
     Unit *getUMap(int x, int y);
 
+    //Devuelve el army enviada como atributo
     Army *getArmies(int n);
 
+    //Devuelve el turno actual
     int getCurrentTurn() const;
 
+    //Devuelve true si el team enviado está activo en ese momento.
     bool getTeamActive(int team);
 
+    //Inicializa el mapa de uds.
     void loadUnitMap1();
 
     //reduce attP y hace daño si corresponde
@@ -91,22 +96,32 @@ public:
 
     virtual ~UnitMap();
 
+    //Devuelve true si la u1 es hostil towards ud2.
     bool isHostile(Unit *u1, Unit *u2);
 
+    //Devuelve la altura del mapa de uds.
     int getHeight() const;
 
+    //Devuelve la anchura del mapa de uds.
     int getWidth() const;
 
+    //Devuelve la alianza del team enviado como atributo.
     int getAlliance(int team);
 
+    //Comprueba si ha perdido alguno de los teams.
     void checkLossAll();
 
+    //Comprueba si se han llevado a cabo el número máximo de turnos permitidos, y en ese caso, se da
+    //el juego por perdido.
     void checkTurnLoss();
 
+    //Devuelve un string con el minireport de todas las armys.
     string completeMiniReport();
 
+    //Te devuelve un report completo de la ud cuya id corresponde con la enviada como atributo.
     string consultUnitByID(int id);
 
+    //Devueelve un string con el estado de la unidad defensora tras haber recibido el ataque.
     string placeboAttack(Unit *att, Unit *def);
 };
 

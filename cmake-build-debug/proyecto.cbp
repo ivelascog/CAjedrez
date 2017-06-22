@@ -8,38 +8,38 @@
 		<Option virtualFolders="CMake Files\;"/>
 		<Build>
 			<Target title="all">
-				<Option working_dir="/home/fer/CLionProjects/CAjedrez/cmake-build-debug"/>
+				<Option working_dir="/home/alserrano/CLionProjects/CAjedrez/cmake-build-debug"/>
 				<Option type="4"/>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j8 -f &quot;/home/fer/CLionProjects/CAjedrez/cmake-build-debug/Makefile&quot;  VERBOSE=1 all"/>
-					<CompileFile command="/usr/bin/make -j8 -f &quot;/home/fer/CLionProjects/CAjedrez/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j8 -f &quot;/home/fer/CLionProjects/CAjedrez/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j8 -f &quot;/home/fer/CLionProjects/CAjedrez/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/bin/make -j4 -f &quot;/home/alserrano/CLionProjects/CAjedrez/cmake-build-debug/Makefile&quot;  VERBOSE=1 all"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/alserrano/CLionProjects/CAjedrez/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/home/alserrano/CLionProjects/CAjedrez/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/home/alserrano/CLionProjects/CAjedrez/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="rebuild_cache">
-				<Option working_dir="/home/fer/CLionProjects/CAjedrez/cmake-build-debug"/>
+				<Option working_dir="/home/alserrano/CLionProjects/CAjedrez/cmake-build-debug"/>
 				<Option type="4"/>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j8 -f &quot;/home/fer/CLionProjects/CAjedrez/cmake-build-debug/Makefile&quot;  VERBOSE=1 rebuild_cache"/>
-					<CompileFile command="/usr/bin/make -j8 -f &quot;/home/fer/CLionProjects/CAjedrez/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j8 -f &quot;/home/fer/CLionProjects/CAjedrez/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j8 -f &quot;/home/fer/CLionProjects/CAjedrez/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/bin/make -j4 -f &quot;/home/alserrano/CLionProjects/CAjedrez/cmake-build-debug/Makefile&quot;  VERBOSE=1 rebuild_cache"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/alserrano/CLionProjects/CAjedrez/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/home/alserrano/CLionProjects/CAjedrez/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/home/alserrano/CLionProjects/CAjedrez/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="edit_cache">
-				<Option working_dir="/home/fer/CLionProjects/CAjedrez/cmake-build-debug"/>
+				<Option working_dir="/home/alserrano/CLionProjects/CAjedrez/cmake-build-debug"/>
 				<Option type="4"/>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j8 -f &quot;/home/fer/CLionProjects/CAjedrez/cmake-build-debug/Makefile&quot;  VERBOSE=1 edit_cache"/>
-					<CompileFile command="/usr/bin/make -j8 -f &quot;/home/fer/CLionProjects/CAjedrez/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j8 -f &quot;/home/fer/CLionProjects/CAjedrez/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j8 -f &quot;/home/fer/CLionProjects/CAjedrez/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/bin/make -j4 -f &quot;/home/alserrano/CLionProjects/CAjedrez/cmake-build-debug/Makefile&quot;  VERBOSE=1 edit_cache"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/alserrano/CLionProjects/CAjedrez/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/home/alserrano/CLionProjects/CAjedrez/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/home/alserrano/CLionProjects/CAjedrez/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="proyecto">
-				<Option output="/home/fer/CLionProjects/CAjedrez/cmake-build-debug/proyecto" prefix_auto="0" extension_auto="0"/>
-				<Option working_dir="/home/fer/CLionProjects/CAjedrez/cmake-build-debug"/>
+				<Option output="/home/alserrano/CLionProjects/CAjedrez/cmake-build-debug/proyecto" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/alserrano/CLionProjects/CAjedrez/cmake-build-debug"/>
 				<Option object_output="./"/>
 				<Option type="1"/>
 				<Option compiler="gcc"/>
@@ -54,15 +54,15 @@
 					<Add directory="/usr/include"/>
 				</Compiler>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j8 -f &quot;/home/fer/CLionProjects/CAjedrez/cmake-build-debug/Makefile&quot;  VERBOSE=1 proyecto"/>
-					<CompileFile command="/usr/bin/make -j8 -f &quot;/home/fer/CLionProjects/CAjedrez/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j8 -f &quot;/home/fer/CLionProjects/CAjedrez/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j8 -f &quot;/home/fer/CLionProjects/CAjedrez/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/bin/make -j4 -f &quot;/home/alserrano/CLionProjects/CAjedrez/cmake-build-debug/Makefile&quot;  VERBOSE=1 proyecto"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/alserrano/CLionProjects/CAjedrez/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/home/alserrano/CLionProjects/CAjedrez/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/home/alserrano/CLionProjects/CAjedrez/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="proyecto/fast">
-				<Option output="/home/fer/CLionProjects/CAjedrez/cmake-build-debug/proyecto" prefix_auto="0" extension_auto="0"/>
-				<Option working_dir="/home/fer/CLionProjects/CAjedrez/cmake-build-debug"/>
+				<Option output="/home/alserrano/CLionProjects/CAjedrez/cmake-build-debug/proyecto" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/alserrano/CLionProjects/CAjedrez/cmake-build-debug"/>
 				<Option object_output="./"/>
 				<Option type="1"/>
 				<Option compiler="gcc"/>
@@ -77,101 +77,101 @@
 					<Add directory="/usr/include"/>
 				</Compiler>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j8 -f &quot;/home/fer/CLionProjects/CAjedrez/cmake-build-debug/Makefile&quot;  VERBOSE=1 proyecto/fast"/>
-					<CompileFile command="/usr/bin/make -j8 -f &quot;/home/fer/CLionProjects/CAjedrez/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j8 -f &quot;/home/fer/CLionProjects/CAjedrez/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j8 -f &quot;/home/fer/CLionProjects/CAjedrez/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/bin/make -j4 -f &quot;/home/alserrano/CLionProjects/CAjedrez/cmake-build-debug/Makefile&quot;  VERBOSE=1 proyecto/fast"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/alserrano/CLionProjects/CAjedrez/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/home/alserrano/CLionProjects/CAjedrez/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/home/alserrano/CLionProjects/CAjedrez/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 		</Build>
-		<Unit filename="/home/fer/CLionProjects/CAjedrez/Board.cpp">
+		<Unit filename="/home/alserrano/CLionProjects/CAjedrez/Board.cpp">
 			<Option target="proyecto"/>
 		</Unit>
-		<Unit filename="/home/fer/CLionProjects/CAjedrez/Board.h">
+		<Unit filename="/home/alserrano/CLionProjects/CAjedrez/Board.h">
 			<Option target="proyecto"/>
 		</Unit>
-		<Unit filename="/home/fer/CLionProjects/CAjedrez/Terrain/Terrain.cpp">
+		<Unit filename="/home/alserrano/CLionProjects/CAjedrez/Terrain/Terrain.cpp">
 			<Option target="proyecto"/>
 		</Unit>
-		<Unit filename="/home/fer/CLionProjects/CAjedrez/Terrain/Terrain.h">
+		<Unit filename="/home/alserrano/CLionProjects/CAjedrez/Terrain/Terrain.h">
 			<Option target="proyecto"/>
 		</Unit>
-		<Unit filename="/home/fer/CLionProjects/CAjedrez/Terrain/TerrainList.h">
+		<Unit filename="/home/alserrano/CLionProjects/CAjedrez/Terrain/TerrainList.h">
 			<Option target="proyecto"/>
 		</Unit>
-		<Unit filename="/home/fer/CLionProjects/CAjedrez/Terrain/TerrainNames.h">
+		<Unit filename="/home/alserrano/CLionProjects/CAjedrez/Terrain/TerrainNames.h">
 			<Option target="proyecto"/>
 		</Unit>
-		<Unit filename="/home/fer/CLionProjects/CAjedrez/Terrain/Types/Plains.cpp">
+		<Unit filename="/home/alserrano/CLionProjects/CAjedrez/Terrain/Types/Plains.cpp">
 			<Option target="proyecto"/>
 		</Unit>
-		<Unit filename="/home/fer/CLionProjects/CAjedrez/Terrain/Types/Plains.h">
+		<Unit filename="/home/alserrano/CLionProjects/CAjedrez/Terrain/Types/Plains.h">
 			<Option target="proyecto"/>
 		</Unit>
-		<Unit filename="/home/fer/CLionProjects/CAjedrez/Terrain/Types/Rocks.cpp">
+		<Unit filename="/home/alserrano/CLionProjects/CAjedrez/Terrain/Types/Rocks.cpp">
 			<Option target="proyecto"/>
 		</Unit>
-		<Unit filename="/home/fer/CLionProjects/CAjedrez/Terrain/Types/Rocks.h">
+		<Unit filename="/home/alserrano/CLionProjects/CAjedrez/Terrain/Types/Rocks.h">
 			<Option target="proyecto"/>
 		</Unit>
-		<Unit filename="/home/fer/CLionProjects/CAjedrez/TerrainMap.cpp">
+		<Unit filename="/home/alserrano/CLionProjects/CAjedrez/TerrainMap.cpp">
 			<Option target="proyecto"/>
 		</Unit>
-		<Unit filename="/home/fer/CLionProjects/CAjedrez/TerrainMap.h">
+		<Unit filename="/home/alserrano/CLionProjects/CAjedrez/TerrainMap.h">
 			<Option target="proyecto"/>
 		</Unit>
-		<Unit filename="/home/fer/CLionProjects/CAjedrez/UnitMap.cpp">
+		<Unit filename="/home/alserrano/CLionProjects/CAjedrez/UnitMap.cpp">
 			<Option target="proyecto"/>
 		</Unit>
-		<Unit filename="/home/fer/CLionProjects/CAjedrez/UnitMap.h">
+		<Unit filename="/home/alserrano/CLionProjects/CAjedrez/UnitMap.h">
 			<Option target="proyecto"/>
 		</Unit>
-		<Unit filename="/home/fer/CLionProjects/CAjedrez/Units/Army.cpp">
+		<Unit filename="/home/alserrano/CLionProjects/CAjedrez/Units/Army.cpp">
 			<Option target="proyecto"/>
 		</Unit>
-		<Unit filename="/home/fer/CLionProjects/CAjedrez/Units/Army.h">
+		<Unit filename="/home/alserrano/CLionProjects/CAjedrez/Units/Army.h">
 			<Option target="proyecto"/>
 		</Unit>
-		<Unit filename="/home/fer/CLionProjects/CAjedrez/Units/Classes/Archer.cpp">
+		<Unit filename="/home/alserrano/CLionProjects/CAjedrez/Units/Classes/Archer.cpp">
 			<Option target="proyecto"/>
 		</Unit>
-		<Unit filename="/home/fer/CLionProjects/CAjedrez/Units/Classes/Archer.h">
+		<Unit filename="/home/alserrano/CLionProjects/CAjedrez/Units/Classes/Archer.h">
 			<Option target="proyecto"/>
 		</Unit>
-		<Unit filename="/home/fer/CLionProjects/CAjedrez/Units/Classes/Horse.cpp">
+		<Unit filename="/home/alserrano/CLionProjects/CAjedrez/Units/Classes/Horse.cpp">
 			<Option target="proyecto"/>
 		</Unit>
-		<Unit filename="/home/fer/CLionProjects/CAjedrez/Units/Classes/Horse.h">
+		<Unit filename="/home/alserrano/CLionProjects/CAjedrez/Units/Classes/Horse.h">
 			<Option target="proyecto"/>
 		</Unit>
-		<Unit filename="/home/fer/CLionProjects/CAjedrez/Units/Classes/King.cpp">
+		<Unit filename="/home/alserrano/CLionProjects/CAjedrez/Units/Classes/King.cpp">
 			<Option target="proyecto"/>
 		</Unit>
-		<Unit filename="/home/fer/CLionProjects/CAjedrez/Units/Classes/King.h">
+		<Unit filename="/home/alserrano/CLionProjects/CAjedrez/Units/Classes/King.h">
 			<Option target="proyecto"/>
 		</Unit>
-		<Unit filename="/home/fer/CLionProjects/CAjedrez/Units/Classes/Soldier.cpp">
+		<Unit filename="/home/alserrano/CLionProjects/CAjedrez/Units/Classes/Soldier.cpp">
 			<Option target="proyecto"/>
 		</Unit>
-		<Unit filename="/home/fer/CLionProjects/CAjedrez/Units/Classes/Soldier.h">
+		<Unit filename="/home/alserrano/CLionProjects/CAjedrez/Units/Classes/Soldier.h">
 			<Option target="proyecto"/>
 		</Unit>
-		<Unit filename="/home/fer/CLionProjects/CAjedrez/Units/Unit.cpp">
+		<Unit filename="/home/alserrano/CLionProjects/CAjedrez/Units/Unit.cpp">
 			<Option target="proyecto"/>
 		</Unit>
-		<Unit filename="/home/fer/CLionProjects/CAjedrez/Units/Unit.h">
+		<Unit filename="/home/alserrano/CLionProjects/CAjedrez/Units/Unit.h">
 			<Option target="proyecto"/>
 		</Unit>
-		<Unit filename="/home/fer/CLionProjects/CAjedrez/Units/UnitList.h">
+		<Unit filename="/home/alserrano/CLionProjects/CAjedrez/Units/UnitList.h">
 			<Option target="proyecto"/>
 		</Unit>
-		<Unit filename="/home/fer/CLionProjects/CAjedrez/Units/UnitNames.h">
+		<Unit filename="/home/alserrano/CLionProjects/CAjedrez/Units/UnitNames.h">
 			<Option target="proyecto"/>
 		</Unit>
-		<Unit filename="/home/fer/CLionProjects/CAjedrez/main.cpp">
+		<Unit filename="/home/alserrano/CLionProjects/CAjedrez/main.cpp">
 			<Option target="proyecto"/>
 		</Unit>
-		<Unit filename="/home/fer/CLionProjects/CAjedrez/CMakeLists.txt">
+		<Unit filename="/home/alserrano/CLionProjects/CAjedrez/CMakeLists.txt">
 			<Option virtualFolder="CMake Files\"/>
 		</Unit>
 	</Project>

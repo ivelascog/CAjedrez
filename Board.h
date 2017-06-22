@@ -71,10 +71,13 @@ public:
     //devuelve mapa con casillas hostiles a u en x, y para rango range
     vector<vector<bool>> rangeNoClipHostile(int x, int y, int range, Unit *u);
 
+    //Función que gestiona el turno.
     int turn(int team);
 
+    //Devuelve true si la ud tiene algún target en rango.
     bool targetsExist(Unit *u);
 
+    //Devuelve un string con el camino seguido por la ud al moverse.
     string walkAndPrint(Unit *u, int destX, int destY);
 };
 

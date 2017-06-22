@@ -51,18 +51,23 @@ public:
     //resetear acciones
     void actionReset();
 
+    //Devuelve si hay alianza
     int getAlliance() const;
 
     void setAlliance(int alliance);
 
+    //Mata a todas las unidades del army invocante.
     int killAll();
 
+    //Sets las acciones de todas las unidades del army invocante a 0;
     void actionsToZero();
 
+    //Devuelve la lista de unidades del army.
     vector<std::list<Unit *>> getRanks();
 
     virtual ~Army();
 
+    //Realiza un minireport del army.
     string fullMiniReport();
 };
 

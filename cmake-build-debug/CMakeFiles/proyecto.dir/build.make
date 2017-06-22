@@ -34,19 +34,19 @@ cmake_force:
 SHELL = /bin/sh
 
 # The CMake executable.
-CMAKE_COMMAND = /home/fer/Documents/clion-2017.1.2/bin/cmake/bin/cmake
+CMAKE_COMMAND = /home/alserrano/Documentos/clion-2017.1.2/bin/cmake/bin/cmake
 
 # The command to remove a file.
-RM = /home/fer/Documents/clion-2017.1.2/bin/cmake/bin/cmake -E remove -f
+RM = /home/alserrano/Documentos/clion-2017.1.2/bin/cmake/bin/cmake -E remove -f
 
 # Escaping for special characters.
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/fer/CLionProjects/CAjedrez
+CMAKE_SOURCE_DIR = /home/alserrano/CLionProjects/CAjedrez
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/fer/CLionProjects/CAjedrez/cmake-build-debug
+CMAKE_BINARY_DIR = /home/alserrano/CLionProjects/CAjedrez/cmake-build-debug
 
 # Include any dependencies generated for this target.
 include CMakeFiles/proyecto.dir/depend.make
@@ -59,16 +59,16 @@ include CMakeFiles/proyecto.dir/flags.make
 
 CMakeFiles/proyecto.dir/main.cpp.o: CMakeFiles/proyecto.dir/flags.make
 CMakeFiles/proyecto.dir/main.cpp.o: ../main.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/fer/CLionProjects/CAjedrez/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/proyecto.dir/main.cpp.o"
-	/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/proyecto.dir/main.cpp.o -c /home/fer/CLionProjects/CAjedrez/main.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/alserrano/CLionProjects/CAjedrez/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/proyecto.dir/main.cpp.o"
+	/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/proyecto.dir/main.cpp.o -c /home/alserrano/CLionProjects/CAjedrez/main.cpp
 
 CMakeFiles/proyecto.dir/main.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/proyecto.dir/main.cpp.i"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/fer/CLionProjects/CAjedrez/main.cpp > CMakeFiles/proyecto.dir/main.cpp.i
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/alserrano/CLionProjects/CAjedrez/main.cpp > CMakeFiles/proyecto.dir/main.cpp.i
 
 CMakeFiles/proyecto.dir/main.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/proyecto.dir/main.cpp.s"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/fer/CLionProjects/CAjedrez/main.cpp -o CMakeFiles/proyecto.dir/main.cpp.s
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/alserrano/CLionProjects/CAjedrez/main.cpp -o CMakeFiles/proyecto.dir/main.cpp.s
 
 CMakeFiles/proyecto.dir/main.cpp.o.requires:
 
@@ -83,16 +83,16 @@ CMakeFiles/proyecto.dir/main.cpp.o.provides.build: CMakeFiles/proyecto.dir/main.
 
 CMakeFiles/proyecto.dir/Units/Classes/Archer.cpp.o: CMakeFiles/proyecto.dir/flags.make
 CMakeFiles/proyecto.dir/Units/Classes/Archer.cpp.o: ../Units/Classes/Archer.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/fer/CLionProjects/CAjedrez/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/proyecto.dir/Units/Classes/Archer.cpp.o"
-	/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/proyecto.dir/Units/Classes/Archer.cpp.o -c /home/fer/CLionProjects/CAjedrez/Units/Classes/Archer.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/alserrano/CLionProjects/CAjedrez/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/proyecto.dir/Units/Classes/Archer.cpp.o"
+	/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/proyecto.dir/Units/Classes/Archer.cpp.o -c /home/alserrano/CLionProjects/CAjedrez/Units/Classes/Archer.cpp
 
 CMakeFiles/proyecto.dir/Units/Classes/Archer.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/proyecto.dir/Units/Classes/Archer.cpp.i"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/fer/CLionProjects/CAjedrez/Units/Classes/Archer.cpp > CMakeFiles/proyecto.dir/Units/Classes/Archer.cpp.i
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/alserrano/CLionProjects/CAjedrez/Units/Classes/Archer.cpp > CMakeFiles/proyecto.dir/Units/Classes/Archer.cpp.i
 
 CMakeFiles/proyecto.dir/Units/Classes/Archer.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/proyecto.dir/Units/Classes/Archer.cpp.s"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/fer/CLionProjects/CAjedrez/Units/Classes/Archer.cpp -o CMakeFiles/proyecto.dir/Units/Classes/Archer.cpp.s
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/alserrano/CLionProjects/CAjedrez/Units/Classes/Archer.cpp -o CMakeFiles/proyecto.dir/Units/Classes/Archer.cpp.s
 
 CMakeFiles/proyecto.dir/Units/Classes/Archer.cpp.o.requires:
 
@@ -107,16 +107,16 @@ CMakeFiles/proyecto.dir/Units/Classes/Archer.cpp.o.provides.build: CMakeFiles/pr
 
 CMakeFiles/proyecto.dir/Units/Unit.cpp.o: CMakeFiles/proyecto.dir/flags.make
 CMakeFiles/proyecto.dir/Units/Unit.cpp.o: ../Units/Unit.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/fer/CLionProjects/CAjedrez/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/proyecto.dir/Units/Unit.cpp.o"
-	/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/proyecto.dir/Units/Unit.cpp.o -c /home/fer/CLionProjects/CAjedrez/Units/Unit.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/alserrano/CLionProjects/CAjedrez/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/proyecto.dir/Units/Unit.cpp.o"
+	/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/proyecto.dir/Units/Unit.cpp.o -c /home/alserrano/CLionProjects/CAjedrez/Units/Unit.cpp
 
 CMakeFiles/proyecto.dir/Units/Unit.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/proyecto.dir/Units/Unit.cpp.i"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/fer/CLionProjects/CAjedrez/Units/Unit.cpp > CMakeFiles/proyecto.dir/Units/Unit.cpp.i
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/alserrano/CLionProjects/CAjedrez/Units/Unit.cpp > CMakeFiles/proyecto.dir/Units/Unit.cpp.i
 
 CMakeFiles/proyecto.dir/Units/Unit.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/proyecto.dir/Units/Unit.cpp.s"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/fer/CLionProjects/CAjedrez/Units/Unit.cpp -o CMakeFiles/proyecto.dir/Units/Unit.cpp.s
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/alserrano/CLionProjects/CAjedrez/Units/Unit.cpp -o CMakeFiles/proyecto.dir/Units/Unit.cpp.s
 
 CMakeFiles/proyecto.dir/Units/Unit.cpp.o.requires:
 
@@ -131,16 +131,16 @@ CMakeFiles/proyecto.dir/Units/Unit.cpp.o.provides.build: CMakeFiles/proyecto.dir
 
 CMakeFiles/proyecto.dir/Units/Classes/Soldier.cpp.o: CMakeFiles/proyecto.dir/flags.make
 CMakeFiles/proyecto.dir/Units/Classes/Soldier.cpp.o: ../Units/Classes/Soldier.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/fer/CLionProjects/CAjedrez/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/proyecto.dir/Units/Classes/Soldier.cpp.o"
-	/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/proyecto.dir/Units/Classes/Soldier.cpp.o -c /home/fer/CLionProjects/CAjedrez/Units/Classes/Soldier.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/alserrano/CLionProjects/CAjedrez/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/proyecto.dir/Units/Classes/Soldier.cpp.o"
+	/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/proyecto.dir/Units/Classes/Soldier.cpp.o -c /home/alserrano/CLionProjects/CAjedrez/Units/Classes/Soldier.cpp
 
 CMakeFiles/proyecto.dir/Units/Classes/Soldier.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/proyecto.dir/Units/Classes/Soldier.cpp.i"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/fer/CLionProjects/CAjedrez/Units/Classes/Soldier.cpp > CMakeFiles/proyecto.dir/Units/Classes/Soldier.cpp.i
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/alserrano/CLionProjects/CAjedrez/Units/Classes/Soldier.cpp > CMakeFiles/proyecto.dir/Units/Classes/Soldier.cpp.i
 
 CMakeFiles/proyecto.dir/Units/Classes/Soldier.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/proyecto.dir/Units/Classes/Soldier.cpp.s"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/fer/CLionProjects/CAjedrez/Units/Classes/Soldier.cpp -o CMakeFiles/proyecto.dir/Units/Classes/Soldier.cpp.s
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/alserrano/CLionProjects/CAjedrez/Units/Classes/Soldier.cpp -o CMakeFiles/proyecto.dir/Units/Classes/Soldier.cpp.s
 
 CMakeFiles/proyecto.dir/Units/Classes/Soldier.cpp.o.requires:
 
@@ -155,16 +155,16 @@ CMakeFiles/proyecto.dir/Units/Classes/Soldier.cpp.o.provides.build: CMakeFiles/p
 
 CMakeFiles/proyecto.dir/Units/Classes/Horse.cpp.o: CMakeFiles/proyecto.dir/flags.make
 CMakeFiles/proyecto.dir/Units/Classes/Horse.cpp.o: ../Units/Classes/Horse.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/fer/CLionProjects/CAjedrez/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/proyecto.dir/Units/Classes/Horse.cpp.o"
-	/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/proyecto.dir/Units/Classes/Horse.cpp.o -c /home/fer/CLionProjects/CAjedrez/Units/Classes/Horse.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/alserrano/CLionProjects/CAjedrez/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/proyecto.dir/Units/Classes/Horse.cpp.o"
+	/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/proyecto.dir/Units/Classes/Horse.cpp.o -c /home/alserrano/CLionProjects/CAjedrez/Units/Classes/Horse.cpp
 
 CMakeFiles/proyecto.dir/Units/Classes/Horse.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/proyecto.dir/Units/Classes/Horse.cpp.i"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/fer/CLionProjects/CAjedrez/Units/Classes/Horse.cpp > CMakeFiles/proyecto.dir/Units/Classes/Horse.cpp.i
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/alserrano/CLionProjects/CAjedrez/Units/Classes/Horse.cpp > CMakeFiles/proyecto.dir/Units/Classes/Horse.cpp.i
 
 CMakeFiles/proyecto.dir/Units/Classes/Horse.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/proyecto.dir/Units/Classes/Horse.cpp.s"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/fer/CLionProjects/CAjedrez/Units/Classes/Horse.cpp -o CMakeFiles/proyecto.dir/Units/Classes/Horse.cpp.s
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/alserrano/CLionProjects/CAjedrez/Units/Classes/Horse.cpp -o CMakeFiles/proyecto.dir/Units/Classes/Horse.cpp.s
 
 CMakeFiles/proyecto.dir/Units/Classes/Horse.cpp.o.requires:
 
@@ -179,16 +179,16 @@ CMakeFiles/proyecto.dir/Units/Classes/Horse.cpp.o.provides.build: CMakeFiles/pro
 
 CMakeFiles/proyecto.dir/Units/Classes/King.cpp.o: CMakeFiles/proyecto.dir/flags.make
 CMakeFiles/proyecto.dir/Units/Classes/King.cpp.o: ../Units/Classes/King.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/fer/CLionProjects/CAjedrez/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object CMakeFiles/proyecto.dir/Units/Classes/King.cpp.o"
-	/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/proyecto.dir/Units/Classes/King.cpp.o -c /home/fer/CLionProjects/CAjedrez/Units/Classes/King.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/alserrano/CLionProjects/CAjedrez/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object CMakeFiles/proyecto.dir/Units/Classes/King.cpp.o"
+	/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/proyecto.dir/Units/Classes/King.cpp.o -c /home/alserrano/CLionProjects/CAjedrez/Units/Classes/King.cpp
 
 CMakeFiles/proyecto.dir/Units/Classes/King.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/proyecto.dir/Units/Classes/King.cpp.i"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/fer/CLionProjects/CAjedrez/Units/Classes/King.cpp > CMakeFiles/proyecto.dir/Units/Classes/King.cpp.i
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/alserrano/CLionProjects/CAjedrez/Units/Classes/King.cpp > CMakeFiles/proyecto.dir/Units/Classes/King.cpp.i
 
 CMakeFiles/proyecto.dir/Units/Classes/King.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/proyecto.dir/Units/Classes/King.cpp.s"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/fer/CLionProjects/CAjedrez/Units/Classes/King.cpp -o CMakeFiles/proyecto.dir/Units/Classes/King.cpp.s
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/alserrano/CLionProjects/CAjedrez/Units/Classes/King.cpp -o CMakeFiles/proyecto.dir/Units/Classes/King.cpp.s
 
 CMakeFiles/proyecto.dir/Units/Classes/King.cpp.o.requires:
 
@@ -203,16 +203,16 @@ CMakeFiles/proyecto.dir/Units/Classes/King.cpp.o.provides.build: CMakeFiles/proy
 
 CMakeFiles/proyecto.dir/Units/Army.cpp.o: CMakeFiles/proyecto.dir/flags.make
 CMakeFiles/proyecto.dir/Units/Army.cpp.o: ../Units/Army.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/fer/CLionProjects/CAjedrez/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object CMakeFiles/proyecto.dir/Units/Army.cpp.o"
-	/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/proyecto.dir/Units/Army.cpp.o -c /home/fer/CLionProjects/CAjedrez/Units/Army.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/alserrano/CLionProjects/CAjedrez/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object CMakeFiles/proyecto.dir/Units/Army.cpp.o"
+	/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/proyecto.dir/Units/Army.cpp.o -c /home/alserrano/CLionProjects/CAjedrez/Units/Army.cpp
 
 CMakeFiles/proyecto.dir/Units/Army.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/proyecto.dir/Units/Army.cpp.i"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/fer/CLionProjects/CAjedrez/Units/Army.cpp > CMakeFiles/proyecto.dir/Units/Army.cpp.i
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/alserrano/CLionProjects/CAjedrez/Units/Army.cpp > CMakeFiles/proyecto.dir/Units/Army.cpp.i
 
 CMakeFiles/proyecto.dir/Units/Army.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/proyecto.dir/Units/Army.cpp.s"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/fer/CLionProjects/CAjedrez/Units/Army.cpp -o CMakeFiles/proyecto.dir/Units/Army.cpp.s
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/alserrano/CLionProjects/CAjedrez/Units/Army.cpp -o CMakeFiles/proyecto.dir/Units/Army.cpp.s
 
 CMakeFiles/proyecto.dir/Units/Army.cpp.o.requires:
 
@@ -227,16 +227,16 @@ CMakeFiles/proyecto.dir/Units/Army.cpp.o.provides.build: CMakeFiles/proyecto.dir
 
 CMakeFiles/proyecto.dir/Board.cpp.o: CMakeFiles/proyecto.dir/flags.make
 CMakeFiles/proyecto.dir/Board.cpp.o: ../Board.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/fer/CLionProjects/CAjedrez/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Building CXX object CMakeFiles/proyecto.dir/Board.cpp.o"
-	/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/proyecto.dir/Board.cpp.o -c /home/fer/CLionProjects/CAjedrez/Board.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/alserrano/CLionProjects/CAjedrez/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Building CXX object CMakeFiles/proyecto.dir/Board.cpp.o"
+	/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/proyecto.dir/Board.cpp.o -c /home/alserrano/CLionProjects/CAjedrez/Board.cpp
 
 CMakeFiles/proyecto.dir/Board.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/proyecto.dir/Board.cpp.i"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/fer/CLionProjects/CAjedrez/Board.cpp > CMakeFiles/proyecto.dir/Board.cpp.i
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/alserrano/CLionProjects/CAjedrez/Board.cpp > CMakeFiles/proyecto.dir/Board.cpp.i
 
 CMakeFiles/proyecto.dir/Board.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/proyecto.dir/Board.cpp.s"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/fer/CLionProjects/CAjedrez/Board.cpp -o CMakeFiles/proyecto.dir/Board.cpp.s
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/alserrano/CLionProjects/CAjedrez/Board.cpp -o CMakeFiles/proyecto.dir/Board.cpp.s
 
 CMakeFiles/proyecto.dir/Board.cpp.o.requires:
 
@@ -251,16 +251,16 @@ CMakeFiles/proyecto.dir/Board.cpp.o.provides.build: CMakeFiles/proyecto.dir/Boar
 
 CMakeFiles/proyecto.dir/UnitMap.cpp.o: CMakeFiles/proyecto.dir/flags.make
 CMakeFiles/proyecto.dir/UnitMap.cpp.o: ../UnitMap.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/fer/CLionProjects/CAjedrez/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Building CXX object CMakeFiles/proyecto.dir/UnitMap.cpp.o"
-	/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/proyecto.dir/UnitMap.cpp.o -c /home/fer/CLionProjects/CAjedrez/UnitMap.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/alserrano/CLionProjects/CAjedrez/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Building CXX object CMakeFiles/proyecto.dir/UnitMap.cpp.o"
+	/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/proyecto.dir/UnitMap.cpp.o -c /home/alserrano/CLionProjects/CAjedrez/UnitMap.cpp
 
 CMakeFiles/proyecto.dir/UnitMap.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/proyecto.dir/UnitMap.cpp.i"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/fer/CLionProjects/CAjedrez/UnitMap.cpp > CMakeFiles/proyecto.dir/UnitMap.cpp.i
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/alserrano/CLionProjects/CAjedrez/UnitMap.cpp > CMakeFiles/proyecto.dir/UnitMap.cpp.i
 
 CMakeFiles/proyecto.dir/UnitMap.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/proyecto.dir/UnitMap.cpp.s"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/fer/CLionProjects/CAjedrez/UnitMap.cpp -o CMakeFiles/proyecto.dir/UnitMap.cpp.s
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/alserrano/CLionProjects/CAjedrez/UnitMap.cpp -o CMakeFiles/proyecto.dir/UnitMap.cpp.s
 
 CMakeFiles/proyecto.dir/UnitMap.cpp.o.requires:
 
@@ -275,16 +275,16 @@ CMakeFiles/proyecto.dir/UnitMap.cpp.o.provides.build: CMakeFiles/proyecto.dir/Un
 
 CMakeFiles/proyecto.dir/TerrainMap.cpp.o: CMakeFiles/proyecto.dir/flags.make
 CMakeFiles/proyecto.dir/TerrainMap.cpp.o: ../TerrainMap.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/fer/CLionProjects/CAjedrez/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_10) "Building CXX object CMakeFiles/proyecto.dir/TerrainMap.cpp.o"
-	/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/proyecto.dir/TerrainMap.cpp.o -c /home/fer/CLionProjects/CAjedrez/TerrainMap.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/alserrano/CLionProjects/CAjedrez/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_10) "Building CXX object CMakeFiles/proyecto.dir/TerrainMap.cpp.o"
+	/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/proyecto.dir/TerrainMap.cpp.o -c /home/alserrano/CLionProjects/CAjedrez/TerrainMap.cpp
 
 CMakeFiles/proyecto.dir/TerrainMap.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/proyecto.dir/TerrainMap.cpp.i"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/fer/CLionProjects/CAjedrez/TerrainMap.cpp > CMakeFiles/proyecto.dir/TerrainMap.cpp.i
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/alserrano/CLionProjects/CAjedrez/TerrainMap.cpp > CMakeFiles/proyecto.dir/TerrainMap.cpp.i
 
 CMakeFiles/proyecto.dir/TerrainMap.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/proyecto.dir/TerrainMap.cpp.s"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/fer/CLionProjects/CAjedrez/TerrainMap.cpp -o CMakeFiles/proyecto.dir/TerrainMap.cpp.s
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/alserrano/CLionProjects/CAjedrez/TerrainMap.cpp -o CMakeFiles/proyecto.dir/TerrainMap.cpp.s
 
 CMakeFiles/proyecto.dir/TerrainMap.cpp.o.requires:
 
@@ -299,16 +299,16 @@ CMakeFiles/proyecto.dir/TerrainMap.cpp.o.provides.build: CMakeFiles/proyecto.dir
 
 CMakeFiles/proyecto.dir/Terrain/Terrain.cpp.o: CMakeFiles/proyecto.dir/flags.make
 CMakeFiles/proyecto.dir/Terrain/Terrain.cpp.o: ../Terrain/Terrain.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/fer/CLionProjects/CAjedrez/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_11) "Building CXX object CMakeFiles/proyecto.dir/Terrain/Terrain.cpp.o"
-	/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/proyecto.dir/Terrain/Terrain.cpp.o -c /home/fer/CLionProjects/CAjedrez/Terrain/Terrain.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/alserrano/CLionProjects/CAjedrez/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_11) "Building CXX object CMakeFiles/proyecto.dir/Terrain/Terrain.cpp.o"
+	/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/proyecto.dir/Terrain/Terrain.cpp.o -c /home/alserrano/CLionProjects/CAjedrez/Terrain/Terrain.cpp
 
 CMakeFiles/proyecto.dir/Terrain/Terrain.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/proyecto.dir/Terrain/Terrain.cpp.i"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/fer/CLionProjects/CAjedrez/Terrain/Terrain.cpp > CMakeFiles/proyecto.dir/Terrain/Terrain.cpp.i
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/alserrano/CLionProjects/CAjedrez/Terrain/Terrain.cpp > CMakeFiles/proyecto.dir/Terrain/Terrain.cpp.i
 
 CMakeFiles/proyecto.dir/Terrain/Terrain.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/proyecto.dir/Terrain/Terrain.cpp.s"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/fer/CLionProjects/CAjedrez/Terrain/Terrain.cpp -o CMakeFiles/proyecto.dir/Terrain/Terrain.cpp.s
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/alserrano/CLionProjects/CAjedrez/Terrain/Terrain.cpp -o CMakeFiles/proyecto.dir/Terrain/Terrain.cpp.s
 
 CMakeFiles/proyecto.dir/Terrain/Terrain.cpp.o.requires:
 
@@ -323,16 +323,16 @@ CMakeFiles/proyecto.dir/Terrain/Terrain.cpp.o.provides.build: CMakeFiles/proyect
 
 CMakeFiles/proyecto.dir/Terrain/Types/Plains.cpp.o: CMakeFiles/proyecto.dir/flags.make
 CMakeFiles/proyecto.dir/Terrain/Types/Plains.cpp.o: ../Terrain/Types/Plains.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/fer/CLionProjects/CAjedrez/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_12) "Building CXX object CMakeFiles/proyecto.dir/Terrain/Types/Plains.cpp.o"
-	/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/proyecto.dir/Terrain/Types/Plains.cpp.o -c /home/fer/CLionProjects/CAjedrez/Terrain/Types/Plains.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/alserrano/CLionProjects/CAjedrez/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_12) "Building CXX object CMakeFiles/proyecto.dir/Terrain/Types/Plains.cpp.o"
+	/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/proyecto.dir/Terrain/Types/Plains.cpp.o -c /home/alserrano/CLionProjects/CAjedrez/Terrain/Types/Plains.cpp
 
 CMakeFiles/proyecto.dir/Terrain/Types/Plains.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/proyecto.dir/Terrain/Types/Plains.cpp.i"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/fer/CLionProjects/CAjedrez/Terrain/Types/Plains.cpp > CMakeFiles/proyecto.dir/Terrain/Types/Plains.cpp.i
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/alserrano/CLionProjects/CAjedrez/Terrain/Types/Plains.cpp > CMakeFiles/proyecto.dir/Terrain/Types/Plains.cpp.i
 
 CMakeFiles/proyecto.dir/Terrain/Types/Plains.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/proyecto.dir/Terrain/Types/Plains.cpp.s"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/fer/CLionProjects/CAjedrez/Terrain/Types/Plains.cpp -o CMakeFiles/proyecto.dir/Terrain/Types/Plains.cpp.s
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/alserrano/CLionProjects/CAjedrez/Terrain/Types/Plains.cpp -o CMakeFiles/proyecto.dir/Terrain/Types/Plains.cpp.s
 
 CMakeFiles/proyecto.dir/Terrain/Types/Plains.cpp.o.requires:
 
@@ -347,16 +347,16 @@ CMakeFiles/proyecto.dir/Terrain/Types/Plains.cpp.o.provides.build: CMakeFiles/pr
 
 CMakeFiles/proyecto.dir/Terrain/Types/Rocks.cpp.o: CMakeFiles/proyecto.dir/flags.make
 CMakeFiles/proyecto.dir/Terrain/Types/Rocks.cpp.o: ../Terrain/Types/Rocks.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/fer/CLionProjects/CAjedrez/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_13) "Building CXX object CMakeFiles/proyecto.dir/Terrain/Types/Rocks.cpp.o"
-	/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/proyecto.dir/Terrain/Types/Rocks.cpp.o -c /home/fer/CLionProjects/CAjedrez/Terrain/Types/Rocks.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/alserrano/CLionProjects/CAjedrez/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_13) "Building CXX object CMakeFiles/proyecto.dir/Terrain/Types/Rocks.cpp.o"
+	/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/proyecto.dir/Terrain/Types/Rocks.cpp.o -c /home/alserrano/CLionProjects/CAjedrez/Terrain/Types/Rocks.cpp
 
 CMakeFiles/proyecto.dir/Terrain/Types/Rocks.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/proyecto.dir/Terrain/Types/Rocks.cpp.i"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/fer/CLionProjects/CAjedrez/Terrain/Types/Rocks.cpp > CMakeFiles/proyecto.dir/Terrain/Types/Rocks.cpp.i
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/alserrano/CLionProjects/CAjedrez/Terrain/Types/Rocks.cpp > CMakeFiles/proyecto.dir/Terrain/Types/Rocks.cpp.i
 
 CMakeFiles/proyecto.dir/Terrain/Types/Rocks.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/proyecto.dir/Terrain/Types/Rocks.cpp.s"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/fer/CLionProjects/CAjedrez/Terrain/Types/Rocks.cpp -o CMakeFiles/proyecto.dir/Terrain/Types/Rocks.cpp.s
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/alserrano/CLionProjects/CAjedrez/Terrain/Types/Rocks.cpp -o CMakeFiles/proyecto.dir/Terrain/Types/Rocks.cpp.s
 
 CMakeFiles/proyecto.dir/Terrain/Types/Rocks.cpp.o.requires:
 
@@ -403,7 +403,7 @@ proyecto: CMakeFiles/proyecto.dir/Terrain/Types/Plains.cpp.o
 proyecto: CMakeFiles/proyecto.dir/Terrain/Types/Rocks.cpp.o
 proyecto: CMakeFiles/proyecto.dir/build.make
 proyecto: CMakeFiles/proyecto.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/fer/CLionProjects/CAjedrez/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_14) "Linking CXX executable proyecto"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/alserrano/CLionProjects/CAjedrez/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_14) "Linking CXX executable proyecto"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/proyecto.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
@@ -432,6 +432,6 @@ CMakeFiles/proyecto.dir/clean:
 .PHONY : CMakeFiles/proyecto.dir/clean
 
 CMakeFiles/proyecto.dir/depend:
-	cd /home/fer/CLionProjects/CAjedrez/cmake-build-debug && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/fer/CLionProjects/CAjedrez /home/fer/CLionProjects/CAjedrez /home/fer/CLionProjects/CAjedrez/cmake-build-debug /home/fer/CLionProjects/CAjedrez/cmake-build-debug /home/fer/CLionProjects/CAjedrez/cmake-build-debug/CMakeFiles/proyecto.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/alserrano/CLionProjects/CAjedrez/cmake-build-debug && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/alserrano/CLionProjects/CAjedrez /home/alserrano/CLionProjects/CAjedrez /home/alserrano/CLionProjects/CAjedrez/cmake-build-debug /home/alserrano/CLionProjects/CAjedrez/cmake-build-debug /home/alserrano/CLionProjects/CAjedrez/cmake-build-debug/CMakeFiles/proyecto.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : CMakeFiles/proyecto.dir/depend
 

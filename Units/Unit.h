@@ -38,6 +38,7 @@ public:
 
     void setAttP(int attP);
 
+    //Devuelve true si la ud esta muerta (cHealth == 0);
     virtual bool isDead();
 
     //string con info ud
@@ -72,6 +73,7 @@ public:
 
     const string &getName() const;
 
+    //Reduce el cHealth de la unidad
     void takeDamage(int damageTaken);
 
     //devuelve puntos de atq y mov a 1
@@ -85,6 +87,7 @@ public:
 
     char getIcon();
 
+    //Report del ID y la pos de la ud.
     string miniReport();
 };
 
