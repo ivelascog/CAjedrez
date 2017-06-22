@@ -143,6 +143,8 @@ bool UnitMap::checkLoss(int team) {
 
     if (wipeIsLoss[team] && armies[team]->getSize() <= 0) {
         teamActive[team] = false;
+        armies[team]->killAll();
+        massRemove(team);
         return true;
     }
 
@@ -150,14 +152,11 @@ bool UnitMap::checkLoss(int team) {
         for (Unit *ut : essentials[team]) {
             if (ut->isDead()) {
                 teamActive[team] = false;
+                armies[team]->killAll();
+                massRemove(team);
                 return true;
             }
         }
-    }
-
-    if (lossAfterXTurns[team] && turnsToLose[team] <= currentTurn) {
-        teamActive[team] = false;
-        return true;
     }
 
     if (defendPos[team]) {
@@ -165,12 +164,23 @@ bool UnitMap::checkLoss(int team) {
             auto pos = uMap[posToDefend[team][i][0]][posToDefend[team][i][1]];
             if (pos != nullptr && pos->getTeam() != team) {
                 teamActive[team] = false;
+                armies[team]->killAll();
+                massRemove(team);
                 return true;
             }
         }
     }
 
     return false;
+}
+
+bool UnitMap::checkTurnLoss(int team) {
+    if (lossAfterXTurns[team] && turnsToLose[team] <= currentTurn) {
+        teamActive[team] = false;
+        armies[team]->killAll();
+        massRemove(team);
+        return true;
+    }
 }
 
 void UnitMap::advanceTurn() {
@@ -339,4 +349,26 @@ void UnitMap::checkLossAll() {
     for (int i = 0; i < teams; i++) {
         checkLoss(i);
     }
+}
+
+string UnitMap::completeMiniReport() {
+    string s = "";
+    for (Army *a : armies) {
+        s += a->fullMiniReport();
+    }
+    return s;
+}
+
+string UnitMap::consultUnitByID(int id) {
+    for (Army *a : armies) {
+        if (a->getUnitByID(id) != nullptr)
+            return a->getUnitByID(id)->report() + "\n" + a->getUnitByID(id)->typeStats() + "\n";
+    }
+    return "No such unit.";
+}
+
+string UnitMap::placeboAttack(Unit *att, Unit *def) {
+    return def->getName() + "(ID: " + to_string(def->getId()) + ")\t" + to_string(def->getCHealth()) +
+           "/" + to_string(def->getHealth()) + " -> " + to_string(max((def->getCHealth() - att->getDamage()), 0)) +
+           "/" + to_string(def->getHealth());
 }

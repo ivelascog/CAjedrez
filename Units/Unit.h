@@ -45,8 +45,6 @@ public:
 
     virtual void setTeam(int team);
 
-    virtual void setID(int id);
-
     virtual void setPos(int x, int y);
 
     virtual void setName(string n);
@@ -86,6 +84,8 @@ public:
     void reduceMovP();
 
     char getIcon();
+
+    string miniReport();
 };
 
 

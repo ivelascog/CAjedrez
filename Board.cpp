@@ -18,7 +18,23 @@ void Board::loadMap1() {
 
 string Board::printMap(int team) {
     string s = "";
+
+    s += "  ";
+
+    for (int i = 0; i < width; i++) {
+        if (i < 100) {
+            s += " ";
+        }
+        s += to_string(i);
+        if (i < 10) {
+            s += " ";
+        }
+    }
+
+    s += "\n";
+
     for (int i = 0; i < height; i++) {
+        s += to_string(i) + " ";
         for (int j = 0; j < width; j++) {
             s += "[";
             if (terrain->getTMap(j, i)->isObstacle()) {
@@ -181,7 +197,23 @@ string Board::printUnitActions(Unit *u) {
         }
     }
     string s = "";
+
+    s += "  ";
+
+    for (int i = 0; i < width; i++) {
+        if (i < 100) {
+            s += " ";
+        }
+        s += to_string(i);
+        if (i < 10) {
+            s += " ";
+        }
+    }
+
+    s += "\n";
+
     for (int i = 0; i < height; i++) {
+        s += to_string(i) + " ";
         for (int j = 0; j < width; j++) {
             s += "[";
             if (terrain->getTMap(j, i)->isObstacle()) {
@@ -367,103 +399,203 @@ vector<vector<bool>> Board::rangeNoClipHostile(int x, int y, int range, Unit *u)
 }
 
 bool Board::turn(int t) {
+    string input;
     if (t < 0 || t >= units->getTeams()) {
         throw runtime_error("No such team");
     }
 
-    cout << "Turn " + to_string(units->getCurrentTurn()) + " / team " + to_string(t) << endl;
+    cout << "-------------------" << endl;
+    cout << "||TURN " + to_string(units->getCurrentTurn()) + " / TEAM " + to_string(t) + "||" << endl;
+    cout << "-------------------" << endl;
     units->getArmies(t)->actionReset();
 
+
     while (units->getArmies(t)->getAvailableActions() > 0) {
-        int aux;
         cout << printMap(t) << endl;
         cout << units->getArmies(t)->fullReport() << endl;
-        string input;
         cout << "Remaining actions this turn: " + to_string(units->getArmies(t)->getAvailableActions()) << endl;
-        cout << "Select any unit by ID: " << endl;
+
+        cout << "1 - Play" << endl;
+        cout << "2 - Skip" << endl;
+        cout << "3 - Consult units" << endl;
         getline(cin, input);
-        Unit *u = units->getArmies(t)->getUnitByID(atoi(const_cast<char *>(input.c_str())));
-        if (u != nullptr) {
-            if (u->getAttP() <= 0 && u->getMoveP() <= 0) {
-                cout << "No available action points for selected unit." << endl;
-            } else {
-                while ((u->getAttP() > 0 || u->getMoveP() > 0) && aux != 3) {
-                    cout << printUnitActions(u) << endl;
-                    cout << "Choose an action:" << endl;
-                    if (u->getMoveP() > 0) {
-                        cout << "1 - Move" << endl;
-                    }
-                    if (u->getAttP() > 0) {
-                        cout << "2 - Attack" << endl;
-                    }
-                    cout << "3 - End actions with selected unit" << endl;
-                    getline(cin, input);
+        int aux = atoi(const_cast<char *>(input.c_str()));
 
-                    switch (atoi(const_cast<char *>(input.c_str()))) {
-                        case 1:
-                            if (u->getMoveP() <= 0) {
-                                cout << "No such action available." << endl;
-                            } else {
-                                cout << "Select destination (\"x, y\"):" << endl;
-                                int x;
-                                int y;
-                                getline(cin, input);
-                                x = atoi(strtok((const_cast<char *>(input.c_str())), ","));
-                                y = atoi(strtok(NULL, ","));
-                                if (x < width && x >= 0 && y < height && y >= 0) {
-                                    if (accessible(u)[x][y] > 0) {
-                                        units->move(u->getPosX(), u->getPosY(), x, y);
-                                    } else {
-                                        cout << "Destination is not valid." << endl;
-                                    }
-                                } else {
-                                    cout << "Destination not in bounds." << endl;
-                                }
-                            }
-                            break;
+        int aux2 = 0;
 
-                        case 2:
-                            if (u->getAttP() <= 0) {
-                                cout << "No such action available." << endl;
-                            } else {
-                                cout << "Select target (\"x, y\"):" << endl;
-                                int x;
-                                int y;
-                                getline(cin, input);
-                                x = atoi(strtok((const_cast<char *>(input.c_str())), ","));
-                                y = atoi(strtok(NULL, ","));
-                                if (x < width && x >= 0 && y < height && y >= 0) {
-                                    if (inRangeHostile(u)[x][y]) {
-                                        units->attack(u, units->getUMap(x, y));
-                                    } else {
-                                        cout << "Target is not valid." << endl;
-                                    }
-                                } else {
-                                    cout << "Target not in bounds." << endl;
-                                }
-                            }
-
-                            break;
-
-                        case 3:
-                            aux = 3;
-                            break;
-
-                        default:
-                            cout << "No such action available." << endl;
-                            break;
-                    }
-                }
-
-                u->setMoveP(0);
-                u->setAttP(0);
-                units->getArmies(t)->reduceActions();
-            }
+        if (aux == 2) {
+            units->getArmies(t)->actionsToZero();
+        } else if (aux == 3) {
+            consultVisibleUnits(t);
         } else {
-            cout << "No such unit exists." << endl << endl;
+            cout << "Select any unit by ID: " << endl;
+            getline(cin, input);
+            Unit *u = units->getArmies(t)->getUnitByID(atoi(const_cast<char *>(input.c_str())));
+            if (u != nullptr) {
+                if (u->getAttP() <= 0 && u->getMoveP() <= 0) {
+                    cout << "No available action points for selected unit." << endl;
+                } else {
+                    bool virgin = true;
+                    aux = 0;
+                    while ((u->getAttP() > 0 || u->getMoveP() > 0) && aux != 3 && aux != 4) {
+                        cout << printUnitActions(u) << endl;
+                        cout << u->report() << endl;
+                        cout << u->typeStats() << endl;
+                        cout << "Choose an action:" << endl;
+                        if (u->getMoveP() > 0) {
+                            cout << "1 - Move" << endl;
+                        }
+                        if (u->getAttP() > 0) {
+                            cout << "2 - Attack" << endl;
+                        }
+                        cout << "3 - End actions with selected unit" << endl;
+                        if (virgin) {
+                            cout << "4 - Undo selection" << endl;
+                        }
+                        getline(cin, input);
+
+                        switch (atoi(const_cast<char *>(input.c_str()))) {
+                            case 1:
+                                if (u->getMoveP() <= 0) {
+                                    cout << "No such action available." << endl;
+                                } else {
+                                    cout << "Select destination (\"x, y\"):" << endl;
+                                    int x;
+                                    int y;
+                                    getline(cin, input);
+                                    x = atoi(strtok((const_cast<char *>(input.c_str())), ","));
+                                    y = atoi(strtok(NULL, ","));
+                                    if (x < width && x >= 0 && y < height && y >= 0) {
+                                        if (accessible(u)[x][y] > 0) {
+                                            cout << "Path: " + walkAndPrint(u, x, y) << endl;
+                                            cout << "1 - Confirm" << endl;
+                                            cout << "2 - Cancel" << endl;
+                                            getline(cin, input);
+                                            aux2 = atoi(const_cast<char *>(input.c_str()));
+                                            if (aux2 == 1 || aux2 == 0/*= enter*/) {
+                                                units->move(u->getPosX(), u->getPosY(), x, y);
+                                                virgin = false;
+                                            }
+                                        } else {
+                                            cout << "Destination is not valid." << endl;
+                                        }
+                                    } else {
+                                        cout << "Destination not in bounds." << endl;
+                                    }
+                                }
+                                break;
+
+                            case 2:
+                                if (u->getAttP() <= 0) {
+                                    cout << "No such action available." << endl;
+                                } else {
+                                    if (targetsExist(u)) {
+                                        cout << "Select target (\"x, y\"):" << endl;
+                                        int x;
+                                        int y;
+                                        getline(cin, input);
+                                        x = atoi(strtok((const_cast<char *>(input.c_str())), ","));
+                                        y = atoi(strtok(NULL, ","));
+                                        if (x < width && x >= 0 && y < height && y >= 0) {
+                                            if (inRangeHostile(u)[x][y]) {
+                                                cout << units->placeboAttack(u, units->getUMap(x, y)) << endl;
+                                                cout << "1 - Confirm" << endl;
+                                                cout << "2 - Cancel" << endl;
+                                                getline(cin, input);
+                                                aux2 = atoi(const_cast<char *>(input.c_str()));
+                                                if (aux2 == 1 || aux2 == 0/*= enter*/) {
+                                                    units->attack(u, units->getUMap(x, y));
+                                                    virgin = false;
+                                                }
+                                            } else {
+                                                cout << "Target is not valid." << endl;
+                                            }
+
+                                        } else {
+                                            cout << "Target not in bounds." << endl;
+                                        }
+                                    } else {
+                                        cout << "No targets available." << endl;
+                                    }
+                                }
+                                break;
+
+                            case 3:
+                                aux = 3;
+                                break;
+
+                            case 4:
+                                if (virgin) {
+                                    aux = 4;
+                                } else {
+                                    cout << "No such action available." << endl;
+                                }
+                                break;
+
+                            default:
+                                cout << "No such action available." << endl;
+                                break;
+                        }
+                    }
+                    if (aux != 4 && (aux2 == 1 || aux2 == 0)) {
+                        u->setMoveP(0);
+                        u->setAttP(0);
+                        units->getArmies(t)->reduceActions();
+                    }
+                    units->massRemoveComplete();
+                }
+            } else {
+                cout << "No such unit exists." << endl << endl;
+            }
         }
     }
 
     units->checkLossAll();
     return (units->checkWin() != -1);
+}
+
+bool Board::targetsExist(Unit *u) {
+    auto map = inRangeHostile(u);
+    for (int i = 0; i < height; i++) {
+        for (int j = 0; j < width; j++) {
+            if (map[j][i]) {
+                return true;
+            }
+        }
+    }
+    return false;
+}
+
+void Board::consultVisibleUnits(int team) {
+    int aux = 0;
+    string input;
+    while (aux != -1) {
+        cout << units->completeMiniReport() << endl;
+        cout << "Select any unit by ID (or -1 to return): " << endl;
+
+        getline(cin, input);
+        aux = atoi(const_cast<char *>(input.c_str()));
+
+        cout << units->consultUnitByID(aux) << endl;
+
+        cout << "Press enter to continue..." << endl;
+        getline(cin, input);
+    }
+}
+
+string Board::walkAndPrint(Unit *u, int destX, int destY) {
+    stack<array<int, 2>> path = walk(u, destX, destY);
+    string s = "";
+
+    while (!path.empty()) {
+        s += to_string(path.top()[0]) + ", " + to_string(path.top()[1]);
+        path.pop();
+        if (!path.empty()) {
+            s += " / ";
+        }
+    }
+
+    s += "\n";
+
+    return s;
 }

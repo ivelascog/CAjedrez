@@ -49,7 +49,7 @@ public:
     bool reduceActions();
 
     //resetear acciones
-    bool actionReset();
+    void actionReset();
 
     int getAlliance() const;
 
@@ -57,11 +57,13 @@ public:
 
     int killAll();
 
-    bool actionsToZero();
+    void actionsToZero();
 
     vector<std::list<Unit *>> getRanks();
 
     virtual ~Army();
+
+    string fullMiniReport();
 };
 
 

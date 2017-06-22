@@ -100,6 +100,14 @@ public:
     int getAlliance(int team);
 
     void checkLossAll();
+
+    bool checkTurnLoss(int team);
+
+    string completeMiniReport();
+
+    string consultUnitByID(int id);
+
+    string placeboAttack(Unit *att, Unit *def);
 };
 
 #endif //PROYECTO_UNITMAP_H

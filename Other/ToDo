@@ -1,13 +1,1 @@
-turn(int player)
-	do 2 veces
-		if hay peones moveP > 1
-			list peones moveP > 1
-			while attP > 1
-			moveAndAttack(peon)
-
-	lo mismo con los otros, 1 vez
-
-startGame
-
-
-Board.loadArmy();
+juego

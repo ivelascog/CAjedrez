@@ -27,6 +27,9 @@ private:
 public:
     Board();
 
+    //report, seleccionar y ver info
+    void consultVisibleUnits(int team);
+
     //carga nivel 1
     void loadMap1();
 
@@ -67,6 +70,10 @@ public:
     vector<vector<bool>> rangeNoClipHostile(int x, int y, int range, Unit *u);
 
     bool turn(int team);
+
+    bool targetsExist(Unit *u);
+
+    string walkAndPrint(Unit *u, int destX, int destY);
 };
 
 
