@@ -67,6 +67,8 @@ public:
     vector<vector<bool>> rangeNoClipHostile(int x, int y, int range, Unit *u);
 
     bool turn(int team);
+
+    bool targetsExist(Unit *u);
 };
 
 

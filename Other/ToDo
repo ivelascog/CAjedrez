@@ -1,13 +1,5 @@
-turn(int player)
-	do 2 veces
-		if hay peones moveP > 1
-			list peones moveP > 1
-			while attP > 1
-			moveAndAttack(peon)
+skip turn
+consult unit
 
-	lo mismo con los otros, 1 vez
-
-startGame
-
-
-Board.loadArmy();
+placebo movement + confirm + walk
+placebo attack + confirm
