@@ -398,7 +398,7 @@ vector<vector<bool>> Board::rangeNoClipHostile(int x, int y, int range, Unit *u)
     return map;
 }
 
-bool Board::turn(int t) {
+int Board::turn(int t) {
     string input;
     if (t < 0 || t >= units->getTeams()) {
         throw runtime_error("No such team");
@@ -410,7 +410,7 @@ bool Board::turn(int t) {
     units->getArmies(t)->actionReset();
 
 
-    while (units->getArmies(t)->getAvailableActions() > 0) {
+    while (units->getArmies(t)->getAvailableActions() > 0 && units->checkWin() == -1) {
         cout << printMap(t) << endl;
         cout << units->getArmies(t)->fullReport() << endl;
         cout << "Remaining actions this turn: " + to_string(units->getArmies(t)->getAvailableActions()) << endl;
@@ -437,7 +437,7 @@ bool Board::turn(int t) {
                 } else {
                     bool virgin = true;
                     aux = 0;
-                    while ((u->getAttP() > 0 || u->getMoveP() > 0) && aux != 3 && aux != 4) {
+                    while ((u->getAttP() > 0 || u->getMoveP() > 0) && aux != 3 && aux != 4 && units->checkWin() == -1) {
                         cout << printUnitActions(u) << endl;
                         cout << u->report() << endl;
                         cout << u->typeStats() << endl;
@@ -506,6 +506,7 @@ bool Board::turn(int t) {
                                                 if (aux2 == 1 || aux2 == 0/*= enter*/) {
                                                     units->attack(u, units->getUMap(x, y));
                                                     virgin = false;
+                                                    units->massRemoveComplete();
                                                 }
                                             } else {
                                                 cout << "Target is not valid." << endl;
@@ -550,8 +551,7 @@ bool Board::turn(int t) {
         }
     }
 
-    units->checkLossAll();
-    return (units->checkWin() != -1);
+    return units->checkWin();
 }
 
 bool Board::targetsExist(Unit *u) {
@@ -598,4 +598,9 @@ string Board::walkAndPrint(Unit *u, int destX, int destY) {
     s += "\n";
 
     return s;
+}
+
+Board::~Board() {
+    delete (units);
+    delete (terrain);
 }

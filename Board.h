@@ -33,6 +33,8 @@ public:
     //carga nivel 1
     void loadMap1();
 
+    virtual ~Board();
+
     //devuelve unitmap
     UnitMap *getUnits() const;
 
@@ -69,7 +71,7 @@ public:
     //devuelve mapa con casillas hostiles a u en x, y para rango range
     vector<vector<bool>> rangeNoClipHostile(int x, int y, int range, Unit *u);
 
-    bool turn(int team);
+    int turn(int team);
 
     bool targetsExist(Unit *u);
 

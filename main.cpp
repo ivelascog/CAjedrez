@@ -1,9 +1,8 @@
 
-#include "Board.h"
+#include "Game.h"
 
 int main() {
-    Board b = Board();
-    b.loadMap1();
-    b.turn(0);
+    Game g = Game();
+    g.runGame1();
     return 0;
 }

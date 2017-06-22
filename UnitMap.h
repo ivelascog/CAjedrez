@@ -101,7 +101,7 @@ public:
 
     void checkLossAll();
 
-    bool checkTurnLoss(int team);
+    void checkTurnLoss();
 
     string completeMiniReport();
 

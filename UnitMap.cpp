@@ -127,7 +127,6 @@ bool UnitMap::dealDamage(Unit *atta, Unit *defe) {
     if (atta->getTeam() != defe->getTeam() && atta->getAttP() > 0) {
         if (!allianceActive || armies[atta->getTeam()]->getAlliance() != armies[defe->getTeam()]->getAlliance()) {
             defe->takeDamage(atta->getDamage());
-            atta->reduceAttP();
             return true;
         }
         return false;
@@ -174,12 +173,13 @@ bool UnitMap::checkLoss(int team) {
     return false;
 }
 
-bool UnitMap::checkTurnLoss(int team) {
-    if (lossAfterXTurns[team] && turnsToLose[team] <= currentTurn) {
-        teamActive[team] = false;
-        armies[team]->killAll();
-        massRemove(team);
-        return true;
+void UnitMap::checkTurnLoss() {
+    for (int team = 0; team < teams; team++) {
+        if (lossAfterXTurns[team] && turnsToLose[team] <= currentTurn) {
+            teamActive[team] = false;
+            armies[team]->killAll();
+            massRemove(team);
+        }
     }
 }
 
@@ -194,6 +194,8 @@ int UnitMap::getCurrentTurn() const {
 int UnitMap::checkWin() {
     int countAlive = 0;
     int teamAlive = -1;
+
+    checkLossAll();
 
     if (allianceActive) {
         for (int i = 0; i < teams; i++) {
