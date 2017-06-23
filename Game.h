@@ -19,6 +19,8 @@ public:
     void runGame1();
 
     virtual ~Game();
+
+    int gameLoop();
 };
 
 

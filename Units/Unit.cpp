@@ -126,6 +126,7 @@ char Unit::getIcon() {
 }
 
 string Unit::miniReport() {
-    return name + " (ID " + to_string(id) + ")\tPos: (" + to_string(getPosX()) + ", " + to_string(getPosY()) + ")\n";
+    return name + " (ID " + to_string(id) + ")\tPos: (" + to_string(getPosX()) + ", " + to_string(getPosY()) +
+           ")\tHealth: " + to_string(cHealth) + "/" + to_string(health) + "\n";
 }
 

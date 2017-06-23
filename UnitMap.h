@@ -56,9 +56,6 @@ public:
     //Devuelve true si el team enviado está activo en ese momento.
     bool getTeamActive(int team);
 
-    //Inicializa el mapa de uds.
-    void loadUnitMap1();
-
     //reduce attP y hace daño si corresponde
     bool dealDamage(Unit *att, Unit *def);
 
@@ -123,6 +120,13 @@ public:
 
     //Devueelve un string con el estado de la unidad defensora tras haber recibido el ataque.
     string placeboAttack(Unit *att, Unit *def);
+
+    Unit *getUnitByID(int id);
+
+    //Inicializa el mapa de uds.
+    void loadUnitMap1();
+
+    void loadUnitMap1AllianceTest();
 };
 
 #endif //PROYECTO_UNITMAP_H

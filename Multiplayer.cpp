@@ -11,6 +11,7 @@
 #include <netdb.h>
 #include <arpa/inet.h>
 #include <string>
+#include <iostream>
 #include "Multiplayer.h"
 
 
@@ -102,4 +103,8 @@ string Multiplayer::read() {
 int Multiplayer::write(string msg) {
     const char *buff = msg.c_str();
     return (int) send(clientSocket, buff, msg.size(), 0);
+}
+
+void Multiplayer::closeConecction() {
+    close(clientSocket);
 }

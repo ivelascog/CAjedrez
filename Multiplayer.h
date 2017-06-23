@@ -14,6 +14,7 @@ class Multiplayer {
     int clientSocket;
     bool isServer;
 public:
+    static const int DEFAULT_PORT = 15468;
     int startServer(int puerto);
 
     int startClient(int puerto, string ip);
@@ -21,6 +22,8 @@ public:
     string read();
 
     int write(string msg);
+
+    void closeConecction();
 
 
 };

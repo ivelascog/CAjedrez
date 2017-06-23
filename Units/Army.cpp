@@ -123,7 +123,7 @@ void Army::setAlliance(int alliance) {
 }
 
 void Army::actionReset() {
-    availableActions = (size / 3) + 1;
+    availableActions = (size / 3) + 1 + actionHandicap;
     if (size == 0) {
         availableActions = 0;
     }
@@ -167,4 +167,8 @@ string Army::fullMiniReport() {
         }
     }
     return s;
+}
+
+void Army::setActionHandicap(int actionHandicap) {
+    Army::actionHandicap = actionHandicap;
 }
