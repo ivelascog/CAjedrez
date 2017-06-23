@@ -11,7 +11,7 @@
 #include <netdb.h>
 #include <arpa/inet.h>
 #include <string>
-#include "multiplayer.h"
+#include "Multiplayer.h"
 
 
 void error(const char *msg) {
@@ -19,7 +19,7 @@ void error(const char *msg) {
     exit(1);
 }
 
-int multiplayer::startServer(int puerto) {
+int Multiplayer::startServer(int puerto) {
     int sockfd, newsockfd, portno;
     socklen_t clilen;
     char buffer[256];
@@ -48,7 +48,7 @@ int multiplayer::startServer(int puerto) {
     return 0;
 }
 
-int multiplayer::startClient(int puerto, std::string ip) {
+int Multiplayer::startClient(int puerto, std::string ip) {
     int sockfd, portno;
     struct sockaddr_in serv_addr;
     struct in_addr ipStruct;
@@ -87,7 +87,7 @@ int multiplayer::startClient(int puerto, std::string ip) {
     return 0;
 }
 
-string multiplayer::read() {
+string Multiplayer::read() {
     string msg = "";
     char buff[1024];
 
@@ -98,7 +98,7 @@ string multiplayer::read() {
 
 }
 
-int multiplayer::write(string msg) {
+int Multiplayer::write(string msg) {
     const char *buff = msg.c_str();
     return (int) send(clientSocket, buff, msg.size(), 0);
 }

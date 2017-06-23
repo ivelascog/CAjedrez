@@ -9,7 +9,7 @@
 
 using namespace std;
 
-class multiplayer {
+class Multiplayer {
     char buffer[256];
     int clientSocket;
     bool isServer;

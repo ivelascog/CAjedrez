@@ -7,5 +7,5 @@ set(SOURCE_FILES main.cpp Units/Unit.h Units/Classes/Archer.cpp Units/Classes/Ar
         Units/Classes/Soldier.h Units/Classes/Horse.cpp Units/Classes/Horse.h Units/Classes/King.cpp Units/Classes/King.h
         Units/Army.cpp Units/Army.h Units/UnitList.h Board.cpp Board.h UnitMap.cpp UnitMap.h TerrainMap.cpp TerrainMap.h
         Terrain/Terrain.cpp Terrain/Terrain.h Terrain/TerrainList.h Terrain/Types/Plains.cpp Terrain/Types/Plains.h
-        Terrain/Types/Rocks.cpp Terrain/Types/Rocks.h Units/UnitNames.h Terrain/TerrainNames.h multiplayer.cpp multiplayer.hGame.cpp Game.h)
+        Terrain/Types/Rocks.cpp Terrain/Types/Rocks.h Units/UnitNames.h Terrain/TerrainNames.h Multiplayer.cpp Multiplayer.h Game.cpp Game.h)
 add_executable(proyecto ${SOURCE_FILES})

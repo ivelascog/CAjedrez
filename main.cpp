@@ -1,8 +1,10 @@
 
 #include "Game.h"
+#include "Multiplayer.h"
 
 int main() {
-    Game g = Game();
-    g.runGame1();
+    Multiplayer m = Multiplayer();
+    m.startServer(4545);
+    m.write("HOlA");
     return 0;
 }
