@@ -59,7 +59,7 @@ int Multiplayer::startClient(int puerto, std::string ip) {
     if (sockfd < 0)
         error("ERROR opening socket");
 
-    inet_aton("192.0.2.34", &ipStruct);
+    inet_aton(ip.c_str(), &ipStruct);
     server = gethostbyaddr(&ipStruct, sizeof(ipStruct), AF_INET);
 
     if (server == NULL) {
@@ -90,6 +90,7 @@ int Multiplayer::startClient(int puerto, std::string ip) {
 string Multiplayer::read() {
     string msg = "";
     char buff[1024];
+    bzero(&buff, 1024);
 
     int leidos = (int) recv(clientSocket, &buff, 1024, 0);
 

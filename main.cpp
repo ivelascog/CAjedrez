@@ -1,10 +1,12 @@
 
-#include "Game.h"
+#include <iostream>
 #include "Multiplayer.h"
 
 int main() {
     Multiplayer m = Multiplayer();
-    m.startServer(4545);
-    m.write("HOlA");
+    m.startClient(6666, "193.147.56.245");
+    cout << m.read();
+    cout << m.read();
+
     return 0;
 }

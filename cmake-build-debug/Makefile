@@ -150,6 +150,60 @@ Board.cpp.s:
 	$(MAKE) -f CMakeFiles/proyecto.dir/build.make CMakeFiles/proyecto.dir/Board.cpp.s
 .PHONY : Board.cpp.s
 
+Game.o: Game.cpp.o
+
+.PHONY : Game.o
+
+# target to build an object file
+Game.cpp.o:
+	$(MAKE) -f CMakeFiles/proyecto.dir/build.make CMakeFiles/proyecto.dir/Game.cpp.o
+.PHONY : Game.cpp.o
+
+Game.i: Game.cpp.i
+
+.PHONY : Game.i
+
+# target to preprocess a source file
+Game.cpp.i:
+	$(MAKE) -f CMakeFiles/proyecto.dir/build.make CMakeFiles/proyecto.dir/Game.cpp.i
+.PHONY : Game.cpp.i
+
+Game.s: Game.cpp.s
+
+.PHONY : Game.s
+
+# target to generate assembly for a file
+Game.cpp.s:
+	$(MAKE) -f CMakeFiles/proyecto.dir/build.make CMakeFiles/proyecto.dir/Game.cpp.s
+.PHONY : Game.cpp.s
+
+Multiplayer.o: Multiplayer.cpp.o
+
+.PHONY : Multiplayer.o
+
+# target to build an object file
+Multiplayer.cpp.o:
+	$(MAKE) -f CMakeFiles/proyecto.dir/build.make CMakeFiles/proyecto.dir/Multiplayer.cpp.o
+.PHONY : Multiplayer.cpp.o
+
+Multiplayer.i: Multiplayer.cpp.i
+
+.PHONY : Multiplayer.i
+
+# target to preprocess a source file
+Multiplayer.cpp.i:
+	$(MAKE) -f CMakeFiles/proyecto.dir/build.make CMakeFiles/proyecto.dir/Multiplayer.cpp.i
+.PHONY : Multiplayer.cpp.i
+
+Multiplayer.s: Multiplayer.cpp.s
+
+.PHONY : Multiplayer.s
+
+# target to generate assembly for a file
+Multiplayer.cpp.s:
+	$(MAKE) -f CMakeFiles/proyecto.dir/build.make CMakeFiles/proyecto.dir/Multiplayer.cpp.s
+.PHONY : Multiplayer.cpp.s
+
 Terrain/Terrain.o: Terrain/Terrain.cpp.o
 
 .PHONY : Terrain/Terrain.o
@@ -486,6 +540,12 @@ help:
 	@echo "... Board.o"
 	@echo "... Board.i"
 	@echo "... Board.s"
+	@echo "... Game.o"
+	@echo "... Game.i"
+	@echo "... Game.s"
+	@echo "... Multiplayer.o"
+	@echo "... Multiplayer.i"
+	@echo "... Multiplayer.s"
 	@echo "... Terrain/Terrain.o"
 	@echo "... Terrain/Terrain.i"
 	@echo "... Terrain/Terrain.s"

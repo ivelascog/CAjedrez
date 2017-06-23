@@ -90,6 +90,18 @@
 		<Unit filename="/home/alserrano/CLionProjects/CAjedrez/Board.h">
 			<Option target="proyecto"/>
 		</Unit>
+		<Unit filename="/home/alserrano/CLionProjects/CAjedrez/Game.cpp">
+			<Option target="proyecto"/>
+		</Unit>
+		<Unit filename="/home/alserrano/CLionProjects/CAjedrez/Game.h">
+			<Option target="proyecto"/>
+		</Unit>
+		<Unit filename="/home/alserrano/CLionProjects/CAjedrez/Multiplayer.cpp">
+			<Option target="proyecto"/>
+		</Unit>
+		<Unit filename="/home/alserrano/CLionProjects/CAjedrez/Multiplayer.h">
+			<Option target="proyecto"/>
+		</Unit>
 		<Unit filename="/home/alserrano/CLionProjects/CAjedrez/Terrain/Terrain.cpp">
 			<Option target="proyecto"/>
 		</Unit>

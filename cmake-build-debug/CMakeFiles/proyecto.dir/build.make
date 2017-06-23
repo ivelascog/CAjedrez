@@ -369,6 +369,54 @@ CMakeFiles/proyecto.dir/Terrain/Types/Rocks.cpp.o.provides: CMakeFiles/proyecto.
 CMakeFiles/proyecto.dir/Terrain/Types/Rocks.cpp.o.provides.build: CMakeFiles/proyecto.dir/Terrain/Types/Rocks.cpp.o
 
 
+CMakeFiles/proyecto.dir/Multiplayer.cpp.o: CMakeFiles/proyecto.dir/flags.make
+CMakeFiles/proyecto.dir/Multiplayer.cpp.o: ../Multiplayer.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/alserrano/CLionProjects/CAjedrez/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_14) "Building CXX object CMakeFiles/proyecto.dir/Multiplayer.cpp.o"
+	/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/proyecto.dir/Multiplayer.cpp.o -c /home/alserrano/CLionProjects/CAjedrez/Multiplayer.cpp
+
+CMakeFiles/proyecto.dir/Multiplayer.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/proyecto.dir/Multiplayer.cpp.i"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/alserrano/CLionProjects/CAjedrez/Multiplayer.cpp > CMakeFiles/proyecto.dir/Multiplayer.cpp.i
+
+CMakeFiles/proyecto.dir/Multiplayer.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/proyecto.dir/Multiplayer.cpp.s"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/alserrano/CLionProjects/CAjedrez/Multiplayer.cpp -o CMakeFiles/proyecto.dir/Multiplayer.cpp.s
+
+CMakeFiles/proyecto.dir/Multiplayer.cpp.o.requires:
+
+.PHONY : CMakeFiles/proyecto.dir/Multiplayer.cpp.o.requires
+
+CMakeFiles/proyecto.dir/Multiplayer.cpp.o.provides: CMakeFiles/proyecto.dir/Multiplayer.cpp.o.requires
+	$(MAKE) -f CMakeFiles/proyecto.dir/build.make CMakeFiles/proyecto.dir/Multiplayer.cpp.o.provides.build
+.PHONY : CMakeFiles/proyecto.dir/Multiplayer.cpp.o.provides
+
+CMakeFiles/proyecto.dir/Multiplayer.cpp.o.provides.build: CMakeFiles/proyecto.dir/Multiplayer.cpp.o
+
+
+CMakeFiles/proyecto.dir/Game.cpp.o: CMakeFiles/proyecto.dir/flags.make
+CMakeFiles/proyecto.dir/Game.cpp.o: ../Game.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/alserrano/CLionProjects/CAjedrez/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_15) "Building CXX object CMakeFiles/proyecto.dir/Game.cpp.o"
+	/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/proyecto.dir/Game.cpp.o -c /home/alserrano/CLionProjects/CAjedrez/Game.cpp
+
+CMakeFiles/proyecto.dir/Game.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/proyecto.dir/Game.cpp.i"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/alserrano/CLionProjects/CAjedrez/Game.cpp > CMakeFiles/proyecto.dir/Game.cpp.i
+
+CMakeFiles/proyecto.dir/Game.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/proyecto.dir/Game.cpp.s"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/alserrano/CLionProjects/CAjedrez/Game.cpp -o CMakeFiles/proyecto.dir/Game.cpp.s
+
+CMakeFiles/proyecto.dir/Game.cpp.o.requires:
+
+.PHONY : CMakeFiles/proyecto.dir/Game.cpp.o.requires
+
+CMakeFiles/proyecto.dir/Game.cpp.o.provides: CMakeFiles/proyecto.dir/Game.cpp.o.requires
+	$(MAKE) -f CMakeFiles/proyecto.dir/build.make CMakeFiles/proyecto.dir/Game.cpp.o.provides.build
+.PHONY : CMakeFiles/proyecto.dir/Game.cpp.o.provides
+
+CMakeFiles/proyecto.dir/Game.cpp.o.provides.build: CMakeFiles/proyecto.dir/Game.cpp.o
+
+
 # Object files for target proyecto
 proyecto_OBJECTS = \
 "CMakeFiles/proyecto.dir/main.cpp.o" \
@@ -383,7 +431,9 @@ proyecto_OBJECTS = \
 "CMakeFiles/proyecto.dir/TerrainMap.cpp.o" \
 "CMakeFiles/proyecto.dir/Terrain/Terrain.cpp.o" \
 "CMakeFiles/proyecto.dir/Terrain/Types/Plains.cpp.o" \
-"CMakeFiles/proyecto.dir/Terrain/Types/Rocks.cpp.o"
+"CMakeFiles/proyecto.dir/Terrain/Types/Rocks.cpp.o" \
+"CMakeFiles/proyecto.dir/Multiplayer.cpp.o" \
+"CMakeFiles/proyecto.dir/Game.cpp.o"
 
 # External object files for target proyecto
 proyecto_EXTERNAL_OBJECTS =
@@ -401,9 +451,11 @@ proyecto: CMakeFiles/proyecto.dir/TerrainMap.cpp.o
 proyecto: CMakeFiles/proyecto.dir/Terrain/Terrain.cpp.o
 proyecto: CMakeFiles/proyecto.dir/Terrain/Types/Plains.cpp.o
 proyecto: CMakeFiles/proyecto.dir/Terrain/Types/Rocks.cpp.o
+proyecto: CMakeFiles/proyecto.dir/Multiplayer.cpp.o
+proyecto: CMakeFiles/proyecto.dir/Game.cpp.o
 proyecto: CMakeFiles/proyecto.dir/build.make
 proyecto: CMakeFiles/proyecto.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/alserrano/CLionProjects/CAjedrez/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_14) "Linking CXX executable proyecto"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/alserrano/CLionProjects/CAjedrez/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_16) "Linking CXX executable proyecto"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/proyecto.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
@@ -424,6 +476,8 @@ CMakeFiles/proyecto.dir/requires: CMakeFiles/proyecto.dir/TerrainMap.cpp.o.requi
 CMakeFiles/proyecto.dir/requires: CMakeFiles/proyecto.dir/Terrain/Terrain.cpp.o.requires
 CMakeFiles/proyecto.dir/requires: CMakeFiles/proyecto.dir/Terrain/Types/Plains.cpp.o.requires
 CMakeFiles/proyecto.dir/requires: CMakeFiles/proyecto.dir/Terrain/Types/Rocks.cpp.o.requires
+CMakeFiles/proyecto.dir/requires: CMakeFiles/proyecto.dir/Multiplayer.cpp.o.requires
+CMakeFiles/proyecto.dir/requires: CMakeFiles/proyecto.dir/Game.cpp.o.requires
 
 .PHONY : CMakeFiles/proyecto.dir/requires
 
