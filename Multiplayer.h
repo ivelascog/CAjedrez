@@ -22,6 +22,8 @@ public:
 
     int write(string msg);
 
+    void closeConecction();
+
 
 };
 

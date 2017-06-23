@@ -4,7 +4,9 @@
 
 int main() {
     Multiplayer m = Multiplayer();
-    m.startServer(4545);
-    m.write("HOlA");
+    m.startServer(15468);
+    m.write("HOlA, Pues parece que rula la cosa");
+    m.write("turuuuuulaaaaa");
+    m.closeConecction();
     return 0;
 }
