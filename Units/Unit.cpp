@@ -27,19 +27,15 @@ void Unit::setPos(int x, int y) {
     posY = y;
 }
 
-void Unit::setID(int id) {
-    this->id = id;
-}
-
 void Unit::setTeam(int team) {
     this->team = team;
 }
 
 string Unit::report() {
-    return "Unit " + to_string(id) + ": " + name + "\tHealth: " + to_string(cHealth) + "/" + to_string(health) +
+    return name + " (ID " + to_string(id) + "):\tHealth: " + to_string(cHealth) + "/" + to_string(health) +
            "\tPos: (" +
            to_string(posX) +
-           ", " + to_string(posY) + ")";
+           ", " + to_string(posY) + ")  /\tAP: Mov = " + to_string(moveP) + " Att = " + to_string(attP);
 }
 
 const int Unit::getMovm() const {
@@ -99,8 +95,8 @@ void Unit::setMoveP(int moveP) {
 }
 
 void Unit::resetAP() {
-    moveP = 1;
-    attP = 1;
+    moveP = maxMoveP;
+    attP = maxAttP;
 }
 
 void Unit::reduceAttP() {
@@ -112,7 +108,7 @@ void Unit::reduceMovP() {
 }
 
 string Unit::typeStats() {
-    return unitNames[type] + " Unit:\tMov: " + to_string(movm) + "\tHealth: " + to_string(health) + "\tDamage: " +
+    return "\t\t\t\tMov: " + to_string(movm) + "\tHealth: " + to_string(health) + "\tDamage: " +
            to_string(damage) +
            "\tRange: " + to_string(range);
 }
@@ -127,5 +123,9 @@ void Unit::setCHealth(int cHealth) {
 
 char Unit::getIcon() {
     return icon;
+}
+
+string Unit::miniReport() {
+    return name + " (ID " + to_string(id) + ")\tPos: (" + to_string(getPosX()) + ", " + to_string(getPosY()) + ")\n";
 }
 

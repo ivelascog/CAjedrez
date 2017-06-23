@@ -17,4 +17,6 @@ King::King(int x, int y, int t) {
     id = uId;
     uId += 1;
     icon = 'K';
+    maxAttP = 2;
+    name = "King";
 }

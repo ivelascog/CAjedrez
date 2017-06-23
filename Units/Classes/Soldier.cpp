@@ -17,4 +17,5 @@ Soldier::Soldier(int x, int y, int t) {
     id = uId;
     uId += 1;
     icon = 'S';
+    name = "Soldier";
 }

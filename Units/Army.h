@@ -19,6 +19,8 @@ class Army {
 public:
     Army(int team);
 
+    int getAvailableActions() const;
+
     //añade ud por puntero; si team difiere, devuelve false y no hace nada
     bool add(Unit *ut);
 
@@ -44,22 +46,29 @@ public:
     string typeReport(Types uType);
 
     //reducir acciones
-    bool actionDown();
+    bool reduceActions();
 
     //resetear acciones
-    bool actionReset();
+    void actionReset();
 
+    //Devuelve si hay alianza
     int getAlliance() const;
 
     void setAlliance(int alliance);
 
+    //Mata a todas las unidades del army invocante.
     int killAll();
 
-    bool actionsToZero();
+    //Sets las acciones de todas las unidades del army invocante a 0;
+    void actionsToZero();
 
+    //Devuelve la lista de unidades del army.
     vector<std::list<Unit *>> getRanks();
 
     virtual ~Army();
+
+    //Realiza un minireport del army.
+    string fullMiniReport();
 };
 
 

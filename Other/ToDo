@@ -1,20 +1,20 @@
-board:
-aux[2] pos;
-uMap
-tMap
+Class map:
+int teams
+init: armies, size
+populate() -> default
+vector<army>
+addUnit
 
-public:
-string printMap();
-string showRange(unit); //print checkValidMoves(); o print checkTargetsStatic();
-int[][] checkValidMoves(unit);  -1 para obstaculos y otras unidades,
-                                0 para el resto, contamos de mov hacia atrás hasta llegar a 1
-                                -2 para targets validos
-
-bool[][] checkTargetsStatic(unit);
-
-
+showRange(unit)
+checkValidMove
+checkValidAttack
+undoMove
+move(unit, x, y) (err if movP <1)
+attack (err if attP <1)
+moveAndAttack
 
 check end
+
 
 turn(int player)
 	do 2 veces
@@ -26,6 +26,3 @@ turn(int player)
 	lo mismo con los otros, 1 vez
 
 startGame
-
-
-Board.loadArmy();

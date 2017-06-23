@@ -20,6 +20,8 @@ protected:
     static int uId;
     int movm, health, damage, range;
     int posX, posY, cHealth, id, team, moveP, attP;
+    int maxMoveP = 1;
+    int maxAttP = 1;
     string name;
     Types type;
     char icon = '?';
@@ -36,14 +38,13 @@ public:
 
     void setAttP(int attP);
 
+    //Devuelve true si la ud esta muerta (cHealth == 0);
     virtual bool isDead();
 
     //string con info ud
     virtual string report();
 
     virtual void setTeam(int team);
-
-    virtual void setID(int id);
 
     virtual void setPos(int x, int y);
 
@@ -72,6 +73,7 @@ public:
 
     const string &getName() const;
 
+    //Reduce el cHealth de la unidad
     void takeDamage(int damageTaken);
 
     //devuelve puntos de atq y mov a 1
@@ -84,6 +86,9 @@ public:
     void reduceMovP();
 
     char getIcon();
+
+    //Report del ID y la pos de la ud.
+    string miniReport();
 };
 
 

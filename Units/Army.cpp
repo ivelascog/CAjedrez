@@ -106,7 +106,7 @@ Unit *Army::getUnitByID(int id) {
     return nullptr;
 }
 
-bool Army::actionDown() {
+bool Army::reduceActions() {
     if (availableActions > 0) {
         availableActions--;
         return true;
@@ -122,8 +122,11 @@ void Army::setAlliance(int alliance) {
     Army::alliance = alliance;
 }
 
-bool Army::actionReset() {
-    availableActions = size / 3;
+void Army::actionReset() {
+    availableActions = (size / 3) + 1;
+    if (size == 0) {
+        availableActions = 0;
+    }
     for (std::list<Unit *> r : ranks) {
         for (Unit *ut : r) {
             ut->resetAP();
@@ -131,7 +134,7 @@ bool Army::actionReset() {
     }
 }
 
-bool Army::actionsToZero() {
+void Army::actionsToZero() {
     availableActions = 0;
     for (std::list<Unit *> r : ranks) {
         for (Unit *ut : r) {
@@ -150,4 +153,18 @@ Army::~Army() {
         v.clear();
     }
     ranks.clear();
+}
+
+int Army::getAvailableActions() const {
+    return availableActions;
+}
+
+string Army::fullMiniReport() {
+    string s = "";
+    for (std::list<Unit *> v : ranks) {
+        for (Unit *u : v) {
+            s += u->miniReport();
+        }
+    }
+    return s;
 }
