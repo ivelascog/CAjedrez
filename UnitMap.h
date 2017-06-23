@@ -126,7 +126,9 @@ public:
     //Inicializa el mapa de uds.
     void loadUnitMap1();
 
-    void loadUnitMap1AllianceTest();
+    void initMap(int width, int height);
+
+    void addEssential(Unit *u);
 };
 
 #endif //PROYECTO_UNITMAP_H

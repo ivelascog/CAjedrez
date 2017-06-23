@@ -112,9 +112,4 @@ void Multiplayer::closeConecction() {
 }
 
 string Multiplayer::getIP(int i) {
-    char aux[1024];
-    sockaddr *auxSocket;
-    bzero((char *) &auxSocket, sizeof(auxSocket));
-    inet_ntop(AF_INET, (const void *) getsockname(i, auxSocket, (socklen_t *) sizeof(auxSocket)), aux, 1024);
-    cout << aux << endl;
 }

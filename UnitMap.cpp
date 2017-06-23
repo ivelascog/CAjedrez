@@ -337,10 +337,21 @@ Unit *UnitMap::getUnitByID(int id) {
     return nullptr;
 }
 
-void UnitMap::loadUnitMap1() {
-    width = 15;
-    height = 10;
+void UnitMap::initMap(int w, int h) {
+    width = w;
+    height = h;
     uMap = std::vector<std::vector<Unit *>>((unsigned long) width, vector<Unit *>((unsigned long) height));
+}
+
+void UnitMap::addEssential(Unit *u) {
+    if (!unitIsEssential[u->getTeam()]) {
+        unitIsEssential[u->getTeam()] = true;
+        essentials;
+    }
+}
+
+void UnitMap::loadUnitMap1() {
+    initMap(15, 10);
     teams = 2;
     currentTurn = 0;
     condInit();
@@ -382,61 +393,4 @@ void UnitMap::loadUnitMap1() {
     addUnit(9, 0, archer, 1);
     addUnit(3, 0, horse, 1);
     addUnit(11, 0, horse, 1);
-}
-
-void UnitMap::loadUnitMap1AllianceTest() {
-
-    width = 15;
-    height = 10;
-    uMap = std::vector<std::vector<Unit *>>((unsigned long) width, vector<Unit *>((unsigned long) height));
-    teams = 3;
-    currentTurn = 0;
-    condInit();
-    unitIsEssential = vector<bool>((unsigned long) teams, true);
-    essentials = vector<vector<Unit *>>((unsigned long) teams);
-    /*
-    defendPos[1] = true;
-    posToDefend = vector<vector<array<int, 2>>>((unsigned long) teams);
-    posToDefend[1].push_back({4, 6}); */
-    armies = vector<Army *>((unsigned long) teams);
-    cemetery = vector<Army *>((unsigned long) teams);
-    allianceActive = true;
-    armies[0] = new Army(0);
-    armies[0]->setAlliance(1);
-    armies[1] = new Army(1);
-    armies[1]->setAlliance(1);
-    armies[2] = new Army(2);
-    armies[2]->setAlliance(2);
-    cemetery[0] = new Army(0);
-    cemetery[1] = new Army(1);
-    cemetery[2] = new Army(2);
-
-    //Army 0
-    addUnit(7, 9, king, 0);
-    essentials[0].push_back(getUMap(7, 9));
-    addUnit(3, 8, soldier, 0);
-    addUnit(5, 8, soldier, 0);
-    addUnit(7, 8, soldier, 0);
-    addUnit(9, 8, soldier, 0);
-    addUnit(11, 8, soldier, 0);
-    addUnit(5, 9, archer, 0);
-    addUnit(9, 9, archer, 0);
-    addUnit(3, 9, horse, 0);
-    addUnit(11, 9, horse, 0);
-
-    //Army 1
-    addUnit(7, 0, king, 1);
-    essentials[1].push_back(getUMap(7, 0));
-    addUnit(3, 1, soldier, 1);
-    addUnit(5, 1, soldier, 1);
-    addUnit(7, 1, soldier, 1);
-    addUnit(9, 1, soldier, 1);
-    addUnit(11, 1, soldier, 1);
-    addUnit(5, 0, archer, 1);
-    addUnit(9, 0, archer, 1);
-    addUnit(3, 0, horse, 1);
-    addUnit(11, 0, horse, 1);
-
-    //Army 2
-    addUnit(7, 6, king, 2);
 }
