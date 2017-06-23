@@ -12,6 +12,7 @@
 #include <arpa/inet.h>
 #include <string>
 #include <iostream>
+#include <ifaddrs.h>
 #include "Multiplayer.h"
 
 
@@ -38,8 +39,6 @@ int Multiplayer::startServer(int puerto) {
              sizeof(serv_addr)) < 0)
         error("ERROR on binding");
     listen(sockfd, 5);
-    clilen = sizeof(cli_addr);
-    getIP(sockfd);
     newsockfd = accept(sockfd,
                        (struct sockaddr *) &cli_addr,
                        &clilen);
@@ -111,5 +110,29 @@ void Multiplayer::closeConecction() {
     close(clientSocket);
 }
 
-string Multiplayer::getIP(int i) {
+string Multiplayer::getIP() {
+    struct ifaddrs *ifAddrStruct = NULL;
+    struct ifaddrs *ifa = NULL;
+    void *tmpAddrPtr = NULL;
+
+    getifaddrs(&ifAddrStruct);
+
+    for (ifa = ifAddrStruct; ifa != NULL; ifa = ifa->ifa_next) {
+        if (!ifa->ifa_addr) {
+            continue;
+        }
+        if (ifa->ifa_addr->sa_family == AF_INET) { // check it is IP4
+            // is a valid IP4 Address
+            tmpAddrPtr = &((struct sockaddr_in *) ifa->ifa_addr)->sin_addr;
+            char addressBuffer[INET_ADDRSTRLEN];
+            inet_ntop(AF_INET, tmpAddrPtr, addressBuffer, INET_ADDRSTRLEN);
+            string ip = addressBuffer;
+            if (ip != "127.0.0.1") {
+                return ip;
+            }
+        }
+    }
+    return nullptr;
 }
+
+

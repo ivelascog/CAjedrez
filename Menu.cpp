@@ -21,7 +21,11 @@ Multiplayer *Menu::showMenu() {
             return NULL;
 
         case 2:
+            cout << "waiting for connections" << endl;
+            cout << "Your IP is " + m->getIP() << endl;
+            flush(cout);
             m->startServer(m->DEFAULT_PORT);
+            cout << "Conection complete ";
             return m;
 
         case 3:
