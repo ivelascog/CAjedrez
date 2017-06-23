@@ -24,6 +24,12 @@ private:
     TerrainMap *terrain;
     int width;
     int height;
+    int currentPlayerTeam;
+public:
+    int getCurrentPlayerTeam() const;
+
+    void setCurrentPlayerTeam(int currentPlayerTeam);
+
 public:
     Board();
 

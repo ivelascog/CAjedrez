@@ -417,16 +417,16 @@ int Board::turn(int t) {
         cout << "Remaining actions this turn: " + to_string(units->getArmies(t)->getAvailableActions()) << endl;
 
         cout << "1 - Play" << endl;
-        cout << "2 - Skip" << endl;
-        cout << "3 - Consult units" << endl;
+        cout << "2 - Consult units" << endl;
+        cout << "5 - Skip" << endl;
         getline(cin, input);
         int aux = atoi(const_cast<char *>(input.c_str()));
 
-        int aux2 = 0;
+        int aux2;
 
-        if (aux == 2) {
+        if (aux == 5) {
             units->getArmies(t)->actionsToZero();
-        } else if (aux == 3) {
+        } else if (aux == 2) {
             consultVisibleUnits(t);
         } else {
             cout << "Select any unit by ID: " << endl;
@@ -439,6 +439,7 @@ int Board::turn(int t) {
                     bool virgin = true;
                     aux = 0;
                     while ((u->getAttP() > 0 || u->getMoveP() > 0) && aux != 3 && aux != 4 && units->checkWin() == -1) {
+                        aux2 = 0;
                         cout << printUnitActions(u) << endl;
                         cout << u->report() << endl;
                         cout << u->typeStats() << endl;
@@ -585,10 +586,22 @@ void Board::consultVisibleUnits(int team) {
         getline(cin, input);
         aux = atoi(const_cast<char *>(input.c_str()));
 
-        cout << units->consultUnitByID(aux) << endl;
+        if (aux != -1) {
+            cout << units->consultUnitByID(aux) << endl;
+            if (units->getUnitByID(aux)->getTeam() != currentPlayerTeam) {
+                units->getUnitByID(aux)->resetAP();
+            }
+            cout << printUnitActions(units->getUnitByID(aux)) << endl;
 
-        cout << "Press enter to continue..." << endl;
-        getline(cin, input);
+            if (units->getUnitByID(aux)->getTeam() != currentPlayerTeam) {
+                units->getUnitByID(aux)->setMoveP(0);
+                units->getUnitByID(aux)->setAttP(0);
+            }
+
+            cout << "Press enter to continue..." << endl;
+            getline(cin, input);
+
+        }
     }
 }
 
@@ -612,4 +625,12 @@ string Board::walkAndPrint(Unit *u, int destX, int destY) {
 Board::~Board() {
     delete (units);
     delete (terrain);
+}
+
+int Board::getCurrentPlayerTeam() const {
+    return currentPlayerTeam;
+}
+
+void Board::setCurrentPlayerTeam(int currentPlayerTeam) {
+    Board::currentPlayerTeam = currentPlayerTeam;
 }

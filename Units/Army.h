@@ -13,6 +13,11 @@ class Army {
     vector<std::list<Unit *>> ranks;
     int team;
     int availableActions = 0;
+    int actionHandicap = 0;
+public:
+    void setActionHandicap(int actionHandicap);
+
+private:
     int alliance = -1;
     int size = 0;
 
