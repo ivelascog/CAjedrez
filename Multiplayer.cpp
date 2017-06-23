@@ -39,6 +39,7 @@ int Multiplayer::startServer(int puerto) {
         error("ERROR on binding");
     listen(sockfd, 5);
     clilen = sizeof(cli_addr);
+    getIP(sockfd);
     newsockfd = accept(sockfd,
                        (struct sockaddr *) &cli_addr,
                        &clilen);
@@ -54,6 +55,7 @@ int Multiplayer::startClient(int puerto, std::string ip) {
     struct sockaddr_in serv_addr;
     struct in_addr ipStruct;
     struct hostent *server;
+    isServer = false;
 
     portno = puerto;
     sockfd = socket(AF_INET, SOCK_STREAM, 0);
@@ -107,4 +109,12 @@ int Multiplayer::write(string msg) {
 
 void Multiplayer::closeConecction() {
     close(clientSocket);
+}
+
+string Multiplayer::getIP(int i) {
+    char aux[1024];
+    sockaddr *auxSocket;
+    bzero((char *) &auxSocket, sizeof(auxSocket));
+    inet_ntop(AF_INET, (const void *) getsockname(i, auxSocket, (socklen_t *) sizeof(auxSocket)), aux, 1024);
+    cout << aux << endl;
 }

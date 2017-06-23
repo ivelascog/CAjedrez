@@ -3,6 +3,7 @@
 //
 
 #include <iostream>
+#include <arpa/inet.h>
 #include "Menu.h"
 
 using namespace std;
@@ -13,22 +14,21 @@ Multiplayer *Menu::showMenu() {
     cout << "3 - Connect game" << endl;
     string aux;
     getline(cin, aux);
-    int option = atoi(aux);
+    Multiplayer *m = new Multiplayer();
+    int option = atoi(const_cast<char *>(aux.c_str()));
     switch (option) {
         case 1 :
             return NULL;
 
         case 2:
-            Multiplayer *m = new Multiplayer();
             m->startServer(m->DEFAULT_PORT);
             return m;
 
         case 3:
-            Multiplayer *mc = new Multiplayer();
             cout << "Please introduce host IP:" << endl;
             getline(cin, aux);
-            mc->startClient(mc->DEFAULT_PORT, aux);
-            return mc;
+            m->startClient(m->DEFAULT_PORT, aux);
+            return m;
 
         default:
             break;

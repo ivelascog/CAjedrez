@@ -26,6 +26,7 @@ public:
     void closeConecction();
 
 
+    string getIP(int i);
 };
 
 
