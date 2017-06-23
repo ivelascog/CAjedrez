@@ -198,11 +198,21 @@ bool UnitMap::getTeamActive(int team) {
 }
 
 void UnitMap::condInit() {
+    armies = vector<Army *>((unsigned long) teams);
+    cemetery = vector<Army *>((unsigned long) teams);
+    for (int i = 0; i < teams; i++) {
+        armies[i] = new Army(i);
+        cemetery[i] = new Army(i);
+    }
+    currentTurn = 0;
     wipeIsLoss = vector<bool>((unsigned long) teams, true);
     unitIsEssential = vector<bool>((unsigned long) teams, false);
     lossAfterXTurns = vector<bool>((unsigned long) teams, false);
     defendPos = vector<bool>((unsigned long) teams, false);
     teamActive = vector<bool>((unsigned long) teams, true);
+    essentials = vector<vector<Unit *>>((unsigned long) teams);
+    posToDefend = vector<vector<array<int, 2>>>((unsigned long) teams);
+    turnsToLose = vector<int>((unsigned long) teams);
 }
 
 string UnitMap::showUMap() {
@@ -343,34 +353,43 @@ void UnitMap::initMap(int w, int h) {
     uMap = std::vector<std::vector<Unit *>>((unsigned long) width, vector<Unit *>((unsigned long) height));
 }
 
-void UnitMap::addEssential(Unit *u) {
-    if (!unitIsEssential[u->getTeam()]) {
-        unitIsEssential[u->getTeam()] = true;
-        essentials;
+void UnitMap::addEssential(Unit *u, int team) {
+    if (!unitIsEssential[team]) {
+        unitIsEssential[team] = true;
     }
+    essentials[team].push_back(u);
 }
+
+void UnitMap::addPosToDefend(int x, int y, int team) {
+    if (!defendPos[team]) {
+        defendPos[team] = true;
+    }
+    posToDefend[team].push_back({x, y});
+}
+
+void UnitMap::wipeIsNotLoss(int team) {
+    wipeIsLoss[team] = false;
+};
+
+void UnitMap::turnLimit(int turn, int team) {
+    if (!lossAfterXTurns[team]) {
+        lossAfterXTurns[team] = true;
+    }
+    turnsToLose[team] = turn;
+}
+
+void UnitMap::addToAlliance(int team, int alliance) {
+    armies[team]->setAlliance(alliance);
+};
 
 void UnitMap::loadUnitMap1() {
     initMap(15, 10);
     teams = 2;
-    currentTurn = 0;
     condInit();
-    unitIsEssential = vector<bool>((unsigned long) teams, true);
-    essentials = vector<vector<Unit *>>((unsigned long) teams);
-    /*
-    defendPos[1] = true;
-    posToDefend = vector<vector<array<int, 2>>>((unsigned long) teams);
-    posToDefend[1].push_back({4, 6}); */
-    armies = vector<Army *>((unsigned long) teams);
-    cemetery = vector<Army *>((unsigned long) teams);
-    armies[0] = new Army(0);
-    armies[1] = new Army(1);
-    cemetery[0] = new Army(0);
-    cemetery[1] = new Army(1);
 
     //Army 0
     addUnit(7, 9, king, 0);
-    essentials[0].push_back(getUMap(7, 9));
+    addEssential(getUMap(7, 9), 0);
     addUnit(3, 8, soldier, 0);
     addUnit(5, 8, soldier, 0);
     addUnit(7, 8, soldier, 0);
@@ -383,7 +402,7 @@ void UnitMap::loadUnitMap1() {
 
     //Army 1
     addUnit(7, 0, king, 1);
-    essentials[1].push_back(getUMap(7, 0));
+    addEssential(getUMap(7, 0), 0);
     addUnit(3, 1, soldier, 1);
     addUnit(5, 1, soldier, 1);
     addUnit(7, 1, soldier, 1);

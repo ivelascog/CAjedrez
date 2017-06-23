@@ -128,7 +128,15 @@ public:
 
     void initMap(int width, int height);
 
-    void addEssential(Unit *u);
+    void addEssential(Unit *u, int team);
+
+    void addPosToDefend(int x, int y, int team);
+
+    void wipeIsNotLoss(int t);
+
+    void turnLimit(int turn, int team);
+
+    void addToAlliance(int team, int alliance);
 };
 
 #endif //PROYECTO_UNITMAP_H
