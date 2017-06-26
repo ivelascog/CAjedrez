@@ -5,11 +5,11 @@
 #ifndef PROYECTO_MENU_H
 #define PROYECTO_MENU_H
 
-#include "Multiplayer.h"
+#include "SocketHelper.h"
 
 class Menu {
 public:
-    Multiplayer *showMenu();
+    SocketHelper *showMenu();
 
 };
 

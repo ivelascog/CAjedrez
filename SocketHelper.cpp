@@ -13,20 +13,18 @@
 #include <string>
 #include <iostream>
 #include <ifaddrs.h>
-#include "Multiplayer.h"
+#include "SocketHelper.h"
 
-
-void error(const char *msg) {
+static void error(const char *msg) {
     perror(msg);
     exit(1);
 }
 
-int Multiplayer::startServer(int puerto) {
+int SocketHelper::startServer(int puerto) {
     int sockfd, newsockfd, portno;
     socklen_t clilen;
     char buffer[256];
     struct sockaddr_in serv_addr, cli_addr;
-    isServer = true;
     sockfd = socket(AF_INET, SOCK_STREAM, 0);
     if (sockfd < 0)
         error("ERROR opening socket");
@@ -39,22 +37,14 @@ int Multiplayer::startServer(int puerto) {
              sizeof(serv_addr)) < 0)
         error("ERROR on binding");
     listen(sockfd, 5);
-    newsockfd = accept(sockfd,
-                       (struct sockaddr *) &cli_addr,
-                       &clilen);
-    if (newsockfd < 0)
-        error("ERROR on accept");
-    bzero(buffer, 256);
-    this->clientSocket = newsockfd;
-    return 0;
+    return sockfd;
 }
 
-int Multiplayer::startClient(int puerto, std::string ip) {
+int SocketHelper::startClient(int puerto, std::string ip) {
     int sockfd, portno;
     struct sockaddr_in serv_addr;
     struct in_addr ipStruct;
     struct hostent *server;
-    isServer = false;
 
     portno = puerto;
     sockfd = socket(AF_INET, SOCK_STREAM, 0);
@@ -66,7 +56,6 @@ int Multiplayer::startClient(int puerto, std::string ip) {
 
     if (server == NULL) {
         fprintf(stderr, "ERROR, no such host\n");
-        this->clientSocket = -1;
         return -1;
     }
 
@@ -79,38 +68,35 @@ int Multiplayer::startClient(int puerto, std::string ip) {
 
     if (connect(sockfd, (struct sockaddr *) &serv_addr, sizeof(serv_addr)) < 0) {
         error("ERROR connecting");
-        this->clientSocket = -1;
         return -1;
 
     }
 
-    bzero(buffer, 256);
-    this->clientSocket = sockfd;
-    return 0;
+    return sockfd;
 }
 
-string Multiplayer::read() {
+string SocketHelper::read(int sock) {
     string msg = "";
     char buff[1024];
     bzero(&buff, 1024);
 
-    int leidos = (int) recv(clientSocket, &buff, 1024, 0);
+    int leidos = (int) recv(sock, &buff, 1024, 0);
 
     msg = buff;
     return msg;
 
 }
 
-int Multiplayer::write(string msg) {
+int SocketHelper::write(int sock, string msg) {
     const char *buff = msg.c_str();
-    return (int) send(clientSocket, buff, msg.size(), 0);
+    return (int) send(sock, buff, msg.size(), 0);
 }
 
-void Multiplayer::closeConecction() {
-    close(clientSocket);
+void SocketHelper::closeConnection(int sock) {
+    close(sock);
 }
 
-string Multiplayer::getIP() {
+string SocketHelper::getIP() {
     struct ifaddrs *ifAddrStruct = NULL;
     struct ifaddrs *ifa = NULL;
     void *tmpAddrPtr = NULL;
@@ -133,6 +119,30 @@ string Multiplayer::getIP() {
         }
     }
     return nullptr;
+}
+
+int SocketHelper::receiveClient(int serverSocket) {
+    int sockfd, newsockfd, portno;
+    socklen_t clilen;
+    char buffer[256];
+    struct sockaddr_in serv_addr, cli_addr;
+    newsockfd = accept(serverSocket,
+                       (struct sockaddr *) &cli_addr,
+                       &clilen);
+    if (newsockfd < 0)
+        error("ERROR on accept");
+    return newsockfd;
+}
+
+bool SocketHelper::isOver(string msg) {
+    return msg == ENDMSG;
+}
+
+void SocketHelper::sendOver(int sock) {
+    write(sock, ENDMSG);
+}
+
+SocketHelper::SocketHelper() {
 }
 
 

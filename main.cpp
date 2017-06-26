@@ -1,7 +1,16 @@
 
-#include "Game.h"
+#include <iostream>
+#include "Client.h"
 
 int main() {
-    Game g = Game();
-    g.runGame1();
+    string ip;
+    cout << "Introduza dirrecion IP del server" << endl;
+    getline(cin, ip);
+    cout << "Elige un team" << endl;
+    string team;
+    getline(cin, team);
+    Client client = Client(ip);
+    client.initializeClient(atoi(const_cast<char *>(team.c_str())));
+
+
 }
