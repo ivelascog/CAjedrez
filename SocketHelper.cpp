@@ -98,9 +98,10 @@ string SocketHelper::read(int sock) {
 
 int SocketHelper::write(int sock, string msg) {
     const char *buff = msg.c_str();
-    unsigned long size = msg.size();
-    send(sock, &size, sizeof(unsigned long), 0);
 
+    int size = (int) msg.size();
+    const char *bytes = (const char *) &size;
+    send(sock, bytes, sizeof(size), 0);
     int result = (int) send(sock, buff, msg.size(), 0);
     return result;
 }
