@@ -3,7 +3,6 @@
 //
 
 #include <stdio.h>
-#include <stdlib.h>
 #include <string.h>
 #include <unistd.h>
 #include <sys/socket.h>
@@ -17,7 +16,6 @@
 
 static void error(const char *msg) {
     perror(msg);
-    exit(1);
 }
 
 int SocketHelper::startServer(int puerto) {
@@ -34,8 +32,15 @@ int SocketHelper::startServer(int puerto) {
     serv_addr.sin_addr.s_addr = INADDR_ANY;
     serv_addr.sin_port = htons((uint16_t) portno);
     if (bind(sockfd, (struct sockaddr *) &serv_addr,
-             sizeof(serv_addr)) < 0)
+             sizeof(serv_addr)) < 0) {
         error("ERROR on binding");
+        closeConnection(sockfd);
+        sockfd = socket(AF_INET, SOCK_STREAM, 0);
+        if (bind(sockfd, (struct sockaddr *) &serv_addr,
+                 sizeof(serv_addr)) < 0) {
+            error("ERROR on binding (unsuccessful socket reset)");
+        }
+    }
     listen(sockfd, 5);
     return sockfd;
 }
@@ -89,10 +94,13 @@ string SocketHelper::read(int sock) {
 
 int SocketHelper::write(int sock, string msg) {
     const char *buff = msg.c_str();
-    return (int) send(sock, buff, msg.size(), 0);
+    int result = (int) send(sock, buff, msg.size(), 0);
+    fsync(sock);
+    return result;
 }
 
 void SocketHelper::closeConnection(int sock) {
+    shutdown(sock, 2);
     close(sock);
 }
 
@@ -135,7 +143,7 @@ int SocketHelper::receiveClient(int serverSocket) {
 }
 
 bool SocketHelper::isOver(string msg) {
-    return msg == ENDMSG;
+    return msg.find(ENDMSG) != std::string::npos;
 }
 
 void SocketHelper::sendOver(int sock) {

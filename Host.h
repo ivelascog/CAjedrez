@@ -16,6 +16,8 @@ class Host {
     vector<int> clients;
 public:
     Host(int teams, int hostTeam);
+
+    void close();
 };
 
 

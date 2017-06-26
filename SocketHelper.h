@@ -13,6 +13,9 @@ using namespace std;
 class SocketHelper {
     static int mySocket;
 public:
+
+    string endMsg = ENDMSG;
+
     static const int DEFAULT_PORT = 15468;
 
     static int startServer(int puerto);
