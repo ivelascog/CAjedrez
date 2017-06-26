@@ -85,11 +85,9 @@ string SocketHelper::read(int sock) {
     char buff[1024];
     bzero(&buff, 1024);
 
-    recv(sock, &buff, sizeof(unsigned long), 0);
+    recv(sock, &buff, sizeof(int), 0);
 
-    unsigned long length = strtoul(buff, nullptr, 10);
-
-    cout << to_string(length) << endl;
+    int length = (int) buff[0];
 
     recv(sock, &buff, length, 0);
 
