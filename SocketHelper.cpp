@@ -85,7 +85,13 @@ string SocketHelper::read(int sock) {
     char buff[1024];
     bzero(&buff, 1024);
 
-    int leidos = (int) recv(sock, &buff, 1024, 0);
+    recv(sock, &buff, sizeof(unsigned long), 0);
+
+    unsigned long length = strtoul(buff, nullptr, 10);
+
+    cout << to_string(length) << endl;
+
+    recv(sock, &buff, length, 0);
 
     msg = buff;
     return msg;
@@ -94,8 +100,10 @@ string SocketHelper::read(int sock) {
 
 int SocketHelper::write(int sock, string msg) {
     const char *buff = msg.c_str();
+    unsigned long size = msg.size();
+    send(sock, &size, sizeof(unsigned long), 0);
+
     int result = (int) send(sock, buff, msg.size(), 0);
-    fsync(sock);
     return result;
 }
 
