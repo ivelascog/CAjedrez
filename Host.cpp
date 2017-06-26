@@ -2,12 +2,14 @@
 // Created by ivelascog on 26/06/17.
 //
 
+#include <iostream>
 #include "Host.h"
 
 Host::Host(int teams, int hostTeam) {
     clients = vector<int>((unsigned long) teams, -1);
     clients[hostTeam] = -2;
     team = hostTeam;
+    int clientCount = 0;
     serverSocket = SocketHelper::startServer(SocketHelper::DEFAULT_PORT);
 
     bool aux = true;
@@ -20,13 +22,17 @@ Host::Host(int teams, int hostTeam) {
         if (rTeam < teams && clients[rTeam] == -1) {
             clients[rTeam] = sock;
             SocketHelper::write(sock, "Connection successful");
+            clientCount++;
+            cout << to_string(clientCount) + " clients connected" << endl;
         } else {
-            SocketHelper::write(sock, "Team not valid; available teams are ");
+            cout << "Connection failed: incorrect team sent by client" << endl;
+            string s = "Team not valid; available teams are: ";
             for (int j = 0; j < teams; j++) {
                 if (clients[j] == -1) {
-                    SocketHelper::write(sock, to_string(j) + " ");
+                    s += to_string(j) + " ";
                 }
             }
+            SocketHelper::write(sock, s);
         }
         SocketHelper::sendOver(sock);
 
@@ -39,3 +45,9 @@ Host::Host(int teams, int hostTeam) {
         }
     }
 }
+
+void Host::close() {
+    SocketHelper::closeConnection(serverSocket);
+}
+
+
