@@ -6,6 +6,8 @@
 #define PROYECTO_GAME_H
 
 #include "Board.h"
+#include "Host.h"
+#include "Client.h"
 
 class Game {
     Board *board;
