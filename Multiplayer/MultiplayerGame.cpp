@@ -37,6 +37,7 @@ void MultiplayerGame::hostInit() {
             cout << "Error: not a valid number" << endl;
         }
     }
+    cout << "Your IP is: " + SocketHelper::getIP() << endl;
     host = new Host(board->getUnits()->getTeams(), myTeam);
 }
 
