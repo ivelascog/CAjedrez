@@ -9,7 +9,7 @@ bool Client::initializeClient(int team) {
     SocketHelper::write(this->mySocket, to_string(team));
     string msg = SocketHelper::read(this->mySocket);
 
-    bool isConnected = (msg == "Connection Successful");
+    bool isConnected = (msg == "Connection successful");
 
     while (!SocketHelper::isOver(msg)) {
         cout << msg << endl;

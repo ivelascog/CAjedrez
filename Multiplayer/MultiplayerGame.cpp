@@ -45,9 +45,9 @@ void MultiplayerGame::clientInit() {
     isHost = false;
     bool loop = true;
 
+    string aux;
     while (loop) {
         cout << "Introduce host IP:" << endl;
-        string aux;
         getline(cin, aux);
         try {
             client = new Client(aux);
@@ -60,13 +60,18 @@ void MultiplayerGame::clientInit() {
     loop = true;
     while (loop) {
         cout << "Choose a team to join the game (0 to " + to_string(board->getUnits()->getTeams() - 1) + "):" << endl;
-        string aux;
-        getline(cin, aux);
+        string aux2;
+        getline(cin, aux2);
         try {
-            myTeam = stoi(aux);
+            myTeam = stoi(aux2);
             loop = !client->initializeClient(myTeam);
+            if (loop) {
+                delete (client);
+                client = new Client(aux);
+            }
         } catch (exception &e) {
             cout << "Error: not a valid number" << endl;
         }
     }
+    cout << "Connection established" << endl;
 }
