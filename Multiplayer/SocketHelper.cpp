@@ -165,5 +165,3 @@ void SocketHelper::sendOver(int sock) {
 
 SocketHelper::SocketHelper() {
 }
-
-

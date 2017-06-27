@@ -9,10 +9,14 @@ bool Client::initializeClient(int team) {
     SocketHelper::write(this->mySocket, to_string(team));
     string msg = SocketHelper::read(this->mySocket);
 
+    bool isConnected = (msg == "Connection Successful");
+
     while (!SocketHelper::isOver(msg)) {
         cout << msg << endl;
         msg = SocketHelper::read(mySocket);
     }
+
+    return isConnected;
 }
 
 Client::Client(string hostIP) {
