@@ -82,16 +82,22 @@ int SocketHelper::startClient(int puerto, std::string ip) {
 
 string SocketHelper::read(int sock) {
     string msg = "";
-    char buff[1024];
-    bzero(&buff, 1024);
+    char buff[4];
+    bzero(&buff, 4);
 
     recv(sock, &buff, sizeof(int), 0);
 
-    int length = (int) buff[0];
+    int length = int((unsigned char) (buff[0]) |
+                     (unsigned char) (buff[1]) << 8 |
+                     (unsigned char) (buff[2]) << 16 |
+                     (unsigned char) (buff[3]) << 24);
 
-    recv(sock, &buff, length, 0);
+    char buff2[length + 1];
+    bzero(&buff2, length + 1);
 
-    msg = buff;
+    recv(sock, &buff2, length, 0);
+
+    msg = buff2;
     return msg;
 
 }

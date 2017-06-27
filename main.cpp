@@ -1,11 +1,14 @@
 
 #include <iostream>
 #include "Client.h"
-#include "Host.h"
 
 int main() {
-    cout << "Your IP is: " + SocketHelper::getIP() << endl;
-    Host host = Host(3, 0);
-    host.close();
-
+    string ip;
+    cout << "Introduza dirrecion IP del server" << endl;
+    getline(cin, ip);
+    cout << "Elige un team" << endl;
+    string team;
+    getline(cin, team);
+    Client client = Client(ip);
+    client.initializeClient(atoi(const_cast<char *>(team.c_str())));
 }
