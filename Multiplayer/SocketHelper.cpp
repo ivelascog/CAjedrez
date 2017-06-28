@@ -16,30 +16,24 @@
 
 static void error(const char *msg) {
     perror(msg);
+    exit(1);
 }
 
 int SocketHelper::startServer(int puerto) {
-    int sockfd, newsockfd, portno;
-    socklen_t clilen;
-    char buffer[256];
-    struct sockaddr_in serv_addr, cli_addr;
+    int sockfd;
+    struct sockaddr_in serv_addr;
     sockfd = socket(AF_INET, SOCK_STREAM, 0);
     if (sockfd < 0)
         error("ERROR opening socket");
     bzero((char *) &serv_addr, sizeof(serv_addr));
-    portno = puerto;
     serv_addr.sin_family = AF_INET;
     serv_addr.sin_addr.s_addr = INADDR_ANY;
-    serv_addr.sin_port = htons((uint16_t) portno);
+    serv_addr.sin_port = htons((uint16_t) puerto);
+    int enable = 1;
+    setsockopt(sockfd, SOL_SOCKET, SO_REUSEADDR, &enable, sizeof(int));
     if (bind(sockfd, (struct sockaddr *) &serv_addr,
              sizeof(serv_addr)) < 0) {
         error("ERROR on binding");
-        closeConnection(sockfd);
-        sockfd = socket(AF_INET, SOCK_STREAM, 0);
-        if (bind(sockfd, (struct sockaddr *) &serv_addr,
-                 sizeof(serv_addr)) < 0) {
-            error("ERROR on binding (unsuccessful socket reset)");
-        }
     }
     listen(sockfd, 5);
     return sockfd;
@@ -143,15 +137,14 @@ string SocketHelper::getIP() {
 }
 
 int SocketHelper::receiveClient(int serverSocket) {
-    int sockfd, newsockfd, portno;
+    int newsockfd;
     socklen_t clilen;
-    char buffer[256];
-    struct sockaddr_in serv_addr, cli_addr;
+    struct sockaddr_in cli_addr;
     newsockfd = accept(serverSocket,
                        (struct sockaddr *) &cli_addr,
                        &clilen);
     if (newsockfd < 0)
-        error("ERROR on accept");
+        error("ERROR on accept" + errno);
     return newsockfd;
 }
 

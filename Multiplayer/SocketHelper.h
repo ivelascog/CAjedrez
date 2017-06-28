@@ -11,7 +11,6 @@
 using namespace std;
 
 class SocketHelper {
-    static int mySocket;
 public:
 
     static const int DEFAULT_PORT = 15468;
