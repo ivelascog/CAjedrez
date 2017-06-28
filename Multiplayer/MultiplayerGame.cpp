@@ -40,6 +40,7 @@ void MultiplayerGame::hostInit() {
     }
     cout << "Your IP is: " + SocketHelper::getIP() << endl;
     host = new Host(board->getUnits()->getTeams(), myTeam);
+    host->close();
 }
 
 void MultiplayerGame::clientInit() {
