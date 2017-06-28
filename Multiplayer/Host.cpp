@@ -70,8 +70,8 @@ string Host::readAndBroadcast(int team) {
     }
     string msg = SocketHelper::read(clients[team]);
 
-    for (int i : clients) {
-        if (i != -1 && i != -2 && i != clients[team]) {
+    for (int i = 0; i < clients.size(); i++) {
+        if (clients[i] != -1 && clients[i] != -2 && i != team) {
             write(msg, i);
         }
     }
@@ -79,8 +79,8 @@ string Host::readAndBroadcast(int team) {
 }
 
 void Host::broadcast(string msg) {
-    for (int i : clients) {
-        if (i != -1 && i != -2) {
+    for (int i = 0; i < clients.size(); i++) {
+        if (clients[i] != -1 && clients[i] != -2) {
             write(msg, i);
         }
     }
