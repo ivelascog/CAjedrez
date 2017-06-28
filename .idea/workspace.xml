@@ -11,14 +11,9 @@
     </configurations>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="901c2ed4-9ef0-480d-9d4e-60acbcfb889b" name="Default" comment="Multiplayer test ready 2">
+    <list default="true" id="901c2ed4-9ef0-480d-9d4e-60acbcfb889b" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Game.cpp" afterPath="$PROJECT_DIR$/Game.cpp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Game.h" afterPath="$PROJECT_DIR$/Game.h" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Multiplayer/Host.cpp" afterPath="$PROJECT_DIR$/Multiplayer/Host.cpp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Multiplayer/Host.h" afterPath="$PROJECT_DIR$/Multiplayer/Host.h" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Multiplayer/MultiplayerGame.cpp" afterPath="$PROJECT_DIR$/Multiplayer/MultiplayerGame.cpp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Multiplayer/MultiplayerGame.h" afterPath="$PROJECT_DIR$/Multiplayer/MultiplayerGame.h" />
     </list>
     <ignored path="$PROJECT_DIR$/cmake-build-debug/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -104,8 +99,8 @@
       <file leaf-file-name="Host.cpp" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Multiplayer/Host.cpp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="481">
-              <caret line="89" column="19" lean-forward="false" selection-start-line="89" selection-start-column="19" selection-end-line="89" selection-end-column="19" />
+            <state relative-caret-position="521">
+              <caret line="90" column="1" lean-forward="false" selection-start-line="90" selection-start-column="1" selection-end-line="90" selection-end-column="1" />
               <folding>
                 <element signature="e#0#2#0" expanded="false" />
                 <element signature="e#83#1372#0" expanded="false" />
@@ -626,7 +621,7 @@
       <workItem from="1498472360196" duration="6571000" />
       <workItem from="1498552015314" duration="11558000" />
       <workItem from="1498564178006" duration="667000" />
-      <workItem from="1498637835558" duration="2350000" />
+      <workItem from="1498637835558" duration="2369000" />
     </task>
     <task id="LOCAL-00001" summary="Generic Unit in">
       <created>1496919315384</created>
@@ -901,11 +896,18 @@
       <option name="project" value="LOCAL" />
       <updated>1498639855673</updated>
     </task>
-    <option name="localTasksCounter" value="40" />
+    <task id="LOCAL-00040" summary="Multiplayer test ready 2">
+      <created>1498640198744</created>
+      <option name="number" value="00040" />
+      <option name="presentableId" value="LOCAL-00040" />
+      <option name="project" value="LOCAL" />
+      <updated>1498640198744</updated>
+    </task>
+    <option name="localTasksCounter" value="41" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="160483000" />
+    <option name="totallyTimeSpent" value="160502000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="64" y="-11" width="1857" height="1092" extended-state="6" />
@@ -1441,8 +1443,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/Multiplayer/Host.cpp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="481">
-          <caret line="89" column="19" lean-forward="false" selection-start-line="89" selection-start-column="19" selection-end-line="89" selection-end-column="19" />
+        <state relative-caret-position="521">
+          <caret line="90" column="1" lean-forward="false" selection-start-line="90" selection-start-column="1" selection-end-line="90" selection-end-column="1" />
           <folding>
             <element signature="e#0#2#0" expanded="false" />
             <element signature="e#83#1372#0" expanded="false" />
