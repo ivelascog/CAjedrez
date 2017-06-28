@@ -10,17 +10,16 @@ void Game::advanceTurn() {
     board->getUnits()->advanceTurn();
 }
 
-void Game::runGame1() {
+void Game::loadGame1() {
     board = new Board();
     board->loadMap1();
-    gameLoop();
 }
 
 Game::~Game() {
     delete (board);
 }
 
-int Game::gameLoop() {
+void Game::runGame() {
     int winner = -1;
     turn = 0;
 

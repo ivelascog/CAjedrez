@@ -26,3 +26,11 @@ Client::Client(string hostIP) {
         throw runtime_error("Error: could not establish connection with host");
     }
 }
+
+void Client::write(string msg) {
+    SocketHelper::write(mySocket, msg);
+}
+
+string Client::read() {
+    return SocketHelper::read(mySocket);
+}

@@ -18,6 +18,14 @@ public:
     Host(int teams, int hostTeam);
 
     void close();
+
+    string read(int team);
+
+    void write(string msg, int team);
+
+    string readAndBroadcast(int team);
+
+    void broadcast(string msg);
 };
 
 

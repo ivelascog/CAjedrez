@@ -384,7 +384,7 @@ void UnitMap::addToAlliance(int team, int alliance) {
 
 void UnitMap::loadUnitMap1() {
     initMap(15, 10);
-    teams = 3;
+    teams = 2;
     condInit();
 
     //Army 0

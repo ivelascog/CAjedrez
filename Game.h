@@ -17,11 +17,11 @@ public:
     void advanceTurn();
 
     //Funciçón encargada de la gestión integral del juego.
-    void runGame1();
+    void loadGame1();
 
     virtual ~Game();
 
-    int gameLoop();
+    virtual void runGame();
 };
 
 

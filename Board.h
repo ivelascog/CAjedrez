@@ -19,7 +19,7 @@
 #include <stack>
 
 class Board {
-private:
+protected:
     UnitMap *units;
     TerrainMap *terrain;
     int width;
@@ -30,7 +30,6 @@ public:
 
     void setCurrentPlayerTeam(int currentPlayerTeam);
 
-public:
     Board();
 
     //report, seleccionar y ver info

@@ -50,4 +50,38 @@ void Host::close() {
     SocketHelper::closeConnection(serverSocket);
 }
 
+string Host::read(int team) {
+    if (clients[team] == -1 || team == this->team || team >= clients.size()) {
+        throw runtime_error("Error: read from wrong team");
+    }
+    return SocketHelper::read(clients[team]);
+}
 
+void Host::write(string msg, int team) {
+    if (clients[team] == -1 || team == this->team || team >= clients.size()) {
+        throw runtime_error("Error: wrote on wrong team");
+    }
+    SocketHelper::write(clients[team], msg);
+}
+
+string Host::readAndBroadcast(int team) {
+    if (clients[team] == -1 || team == this->team || team >= clients.size()) {
+        throw runtime_error("Error: read from wrong team");
+    }
+    string msg = SocketHelper::read(clients[team]);
+
+    for (int i : clients) {
+        if (i != -1 && i != -2 && i != clients[team]) {
+            write(msg, i);
+        }
+    }
+    return msg;
+}
+
+void Host::broadcast(string msg) {
+    for (int i : clients) {
+        if (i != -1 && i != -2) {
+            write(msg, i);
+        }
+    }
+}

@@ -15,6 +15,10 @@ public:
     bool initializeClient(int team);
 
     Client(string hostIP);
+
+    string read();
+
+    void write(string msg);
 };
 
 

@@ -422,7 +422,7 @@ int Board::turn(int t) {
         getline(cin, input);
         int aux = atoi(const_cast<char *>(input.c_str()));
 
-        int aux2;
+        int aux2 = 0;
 
         if (aux == 5) {
             units->getArmies(t)->actionsToZero();
