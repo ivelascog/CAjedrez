@@ -15,7 +15,7 @@ class MultiplayerGame : public Game {
     bool isHost = false;
     Host *host;
     Client *client;
-    MultiplayerBoard *board;
+    MultiplayerBoard *boardM;
 public:
 
     void hostGame1();

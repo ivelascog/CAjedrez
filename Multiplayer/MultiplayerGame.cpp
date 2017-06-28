@@ -6,14 +6,14 @@
 #include "MultiplayerGame.h"
 
 void MultiplayerGame::hostGame1() {
-    board = new MultiplayerBoard();
-    board->loadMap1();
+    boardM = new MultiplayerBoard();
+    boardM->loadMap1();
     hostInit();
 }
 
 void MultiplayerGame::joinGame1() {
-    board = new MultiplayerBoard();
-    board->loadMap1();
+    boardM = new MultiplayerBoard();
+    boardM->loadMap1();
     clientInit();
 }
 
@@ -27,7 +27,7 @@ void MultiplayerGame::hostInit() {
     bool loop = true;
 
     while (loop) {
-        cout << "Choose a team (0 to " + to_string(board->getUnits()->getTeams() - 1) + "):" << endl;
+        cout << "Choose a team (0 to " + to_string(boardM->getUnits()->getTeams() - 1) + "):" << endl;
         string aux;
         getline(cin, aux);
         try {
@@ -38,7 +38,7 @@ void MultiplayerGame::hostInit() {
         }
     }
     cout << "Your IP is: " + SocketHelper::getIP() << endl;
-    host = new Host(board->getUnits()->getTeams(), myTeam);
+    host = new Host(boardM->getUnits()->getTeams(), myTeam);
 }
 
 void MultiplayerGame::clientInit() {
@@ -59,7 +59,7 @@ void MultiplayerGame::clientInit() {
 
     loop = true;
     while (loop) {
-        cout << "Choose a team to join the game (0 to " + to_string(board->getUnits()->getTeams() - 1) + "):" << endl;
+        cout << "Choose a team to join the game (0 to " + to_string(boardM->getUnits()->getTeams() - 1) + "):" << endl;
         string aux2;
         getline(cin, aux2);
         try {
@@ -84,14 +84,14 @@ void MultiplayerGame::runGame() {
         winner = clientLoop();
     }
     cout << "WINNER IS ";
-    if (board->getUnits()->isAllianceActive()) {
+    if (boardM->getUnits()->isAllianceActive()) {
         cout << "ALLIANCE ";
     } else {
         cout << "TEAM ";
     }
     cout << to_string(winner) + ":" << endl;
-    board->getUnits()->massRemoveComplete();
-    cout << board->printMap(winner) << endl;
+    boardM->getUnits()->massRemoveComplete();
+    cout << boardM->printMap(winner) << endl;
 }
 
 int MultiplayerGame::clientLoop() {
@@ -100,19 +100,19 @@ int MultiplayerGame::clientLoop() {
 
     while (winner == -1) {
         advanceTurn();
-        for (int t = 0; t < board->getUnits()->getTeams(); t++) {
-            if (winner == -1 && board->getUnits()->getTeamActive(t)) {
-                board->setCurrentPlayerTeam(t);
+        for (int t = 0; t < boardM->getUnits()->getTeams(); t++) {
+            if (winner == -1 && boardM->getUnits()->getTeamActive(t)) {
+                boardM->setCurrentPlayerTeam(t);
                 if (t == myTeam) {
-                    winner = board->clientTurn(t, client);
+                    winner = boardM->clientTurn(t, client);
                 } else {
-                    winner = board->clientPassive(t, client);
+                    winner = boardM->clientPassive(t, client);
                 }
             }
         }
         if (winner == -1) {
-            board->getUnits()->checkTurnLoss();
-            winner = board->getUnits()->checkWin();
+            boardM->getUnits()->checkTurnLoss();
+            winner = boardM->getUnits()->checkWin();
         }
     }
 
@@ -125,19 +125,19 @@ int MultiplayerGame::hostLoop() {
 
     while (winner == -1) {
         advanceTurn();
-        for (int t = 0; t < board->getUnits()->getTeams(); t++) {
-            if (winner == -1 && board->getUnits()->getTeamActive(t)) {
-                board->setCurrentPlayerTeam(t);
+        for (int t = 0; t < boardM->getUnits()->getTeams(); t++) {
+            if (winner == -1 && boardM->getUnits()->getTeamActive(t)) {
+                boardM->setCurrentPlayerTeam(t);
                 if (t == myTeam) {
-                    winner = board->hostTurn(t, host);
+                    winner = boardM->hostTurn(t, host);
                 } else {
-                    winner = board->hostPassive(t, host);
+                    winner = boardM->hostPassive(t, host);
                 }
             }
         }
         if (winner == -1) {
-            board->getUnits()->checkTurnLoss();
-            winner = board->getUnits()->checkWin();
+            boardM->getUnits()->checkTurnLoss();
+            winner = boardM->getUnits()->checkWin();
         }
     }
 
