@@ -16,7 +16,9 @@ void Game::loadGame1() {
 }
 
 Game::~Game() {
-    delete (board);
+    if (board != nullptr) {
+        delete (board);
+    }
 }
 
 void Game::runGame() {

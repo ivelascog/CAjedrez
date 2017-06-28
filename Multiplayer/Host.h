@@ -15,6 +15,8 @@ class Host {
     int serverSocket;
     vector<int> clients;
 public:
+    virtual ~Host();
+
     Host(int teams, int hostTeam);
 
     void close();

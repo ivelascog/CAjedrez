@@ -14,7 +14,7 @@ protected:
 
 public:
     //Aumenta el turno actual por 1.
-    void advanceTurn();
+    virtual void advanceTurn();
 
     //Funciçón encargada de la gestión integral del juego.
     void loadGame1();

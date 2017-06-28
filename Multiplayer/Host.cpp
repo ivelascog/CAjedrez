@@ -85,3 +85,7 @@ void Host::broadcast(string msg) {
         }
     }
 }
+
+Host::~Host() {
+    clients.clear();
+}
