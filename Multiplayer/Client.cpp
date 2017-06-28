@@ -34,3 +34,7 @@ void Client::write(string msg) {
 string Client::read() {
     return SocketHelper::read(mySocket);
 }
+
+int Client::getTeam() const {
+    return team;
+}

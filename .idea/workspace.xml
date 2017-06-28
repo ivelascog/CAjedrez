@@ -13,7 +13,11 @@
   <component name="ChangeListManager">
     <list default="true" id="901c2ed4-9ef0-480d-9d4e-60acbcfb889b" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Multiplayer/Client.cpp" afterPath="$PROJECT_DIR$/Multiplayer/Client.cpp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Multiplayer/Client.h" afterPath="$PROJECT_DIR$/Multiplayer/Client.h" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Multiplayer/Host.cpp" afterPath="$PROJECT_DIR$/Multiplayer/Host.cpp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Multiplayer/Host.h" afterPath="$PROJECT_DIR$/Multiplayer/Host.h" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Multiplayer/MultiplayerBoard.cpp" afterPath="$PROJECT_DIR$/Multiplayer/MultiplayerBoard.cpp" />
     </list>
     <ignored path="$PROJECT_DIR$/cmake-build-debug/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -26,81 +30,36 @@
   <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="Board.cpp" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Board.cpp">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="260">
-              <caret line="134" column="18" lean-forward="true" selection-start-line="134" selection-start-column="18" selection-end-line="134" selection-end-column="18" />
-              <folding>
-                <element signature="e#79#114#0" expanded="false" />
-                <element signature="e#119#196#0" expanded="false" />
-                <element signature="e#198#347#0" expanded="false" />
-                <element signature="e#349#1631#0" expanded="false" />
-                <element signature="e#1633#4656#0" expanded="false" />
-                <element signature="e#4658#4772#0" expanded="false" />
-                <element signature="e#4830#4891#0" expanded="false" />
-                <element signature="e#4893#5025#0" expanded="false" />
-                <element signature="e#5027#5517#0" expanded="false" />
-                <element signature="e#5519#6296#0" expanded="false" />
-                <element signature="e#6298#8665#0" expanded="false" />
-                <element signature="e#8667#9496#0" expanded="false" />
-                <element signature="e#9498#13396#0" expanded="false" />
-                <element signature="e#13398#13997#0" expanded="false" />
-                <element signature="e#22177#22435#0" expanded="false" />
-                <element signature="e#22437#23349#0" expanded="false" />
-                <element signature="e#23351#23708#0" expanded="false" />
-                <element signature="e#23710#23771#0" expanded="false" />
-                <element signature="e#23773#23846#0" expanded="false" />
-                <element signature="e#23848#23957#0" expanded="false" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Game.cpp" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Game.cpp">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="240">
-              <caret line="18" column="27" lean-forward="false" selection-start-line="18" selection-start-column="27" selection-end-line="19" selection-end-column="23" />
-              <folding>
-                <element signature="e#0#2#0" expanded="false" />
-                <element signature="e#157#231#0" expanded="false" />
-                <element signature="e#310#1098#0" expanded="false" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="MultiplayerBoard.cpp" pinned="false" current-in-tab="false">
+      <file leaf-file-name="MultiplayerBoard.cpp" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Multiplayer/MultiplayerBoard.cpp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="860">
-              <caret line="682" column="1" lean-forward="false" selection-start-line="682" selection-start-column="1" selection-end-line="682" selection-end-column="1" />
+            <state relative-caret-position="20">
+              <caret line="266" column="41" lean-forward="true" selection-start-line="266" selection-start-column="41" selection-end-line="266" selection-end-column="41" />
               <folding>
                 <element signature="e#0#2#0" expanded="false" />
-                <element signature="e#108#8693#0" expanded="false" />
-                <element signature="e#8695#17000#0" expanded="false" />
-                <element signature="e#17002#25577#0" expanded="false" />
+                <element signature="e#108#8694#0" expanded="false" />
+                <element signature="e#14756#23333#0" expanded="false" />
+                <element signature="e#23335#31568#0" expanded="false" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="main.cpp" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/main.cpp">
+      <file leaf-file-name="Host.h" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Multiplayer/Host.h">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="140">
-              <caret line="7" column="0" lean-forward="false" selection-start-line="7" selection-start-column="0" selection-end-line="7" selection-end-column="0" />
+            <state relative-caret-position="141">
+              <caret line="13" column="10" lean-forward="false" selection-start-line="13" selection-start-column="10" selection-end-line="13" selection-end-column="10" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Host.cpp" pinned="false" current-in-tab="true">
+      <file leaf-file-name="Host.cpp" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Multiplayer/Host.cpp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="521">
-              <caret line="90" column="1" lean-forward="false" selection-start-line="90" selection-start-column="1" selection-end-line="90" selection-end-column="1" />
+            <state relative-caret-position="387">
+              <caret line="93" column="4" lean-forward="false" selection-start-line="93" selection-start-column="4" selection-end-line="93" selection-end-column="16" />
               <folding>
                 <element signature="e#0#2#0" expanded="false" />
                 <element signature="e#83#1372#0" expanded="false" />
@@ -112,50 +71,65 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="UnitMap.cpp" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/UnitMap.cpp">
+      <file leaf-file-name="Client.h" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Multiplayer/Client.h">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="2340">
-              <caret line="384" column="29" lean-forward="false" selection-start-line="384" selection-start-column="29" selection-end-line="384" selection-end-column="29" />
+            <state relative-caret-position="207">
+              <caret line="14" column="9" lean-forward="false" selection-start-line="14" selection-start-column="9" selection-end-line="14" selection-end-column="9" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Client.cpp" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Multiplayer/Client.cpp">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="487">
+              <caret line="38" column="4" lean-forward="false" selection-start-line="38" selection-start-column="4" selection-end-line="38" selection-end-column="16" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="SocketHelper.cpp" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Multiplayer/SocketHelper.cpp">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="200">
+              <caret line="82" column="36" lean-forward="false" selection-start-line="82" selection-start-column="36" selection-end-line="82" selection-end-column="36" />
               <folding>
                 <element signature="e#0#2#0" expanded="false" />
-                <element signature="e#945#1389#0" expanded="false" />
-                <element signature="e#1391#1902#0" expanded="false" />
-                <element signature="e#1904#2270#0" expanded="false" />
-                <element signature="e#2272#3253#0" expanded="false" />
-                <element signature="e#3255#3529#0" expanded="false" />
-                <element signature="e#3531#3581#0" expanded="false" />
-                <element signature="e#3583#3646#0" expanded="false" />
-                <element signature="e#3648#4296#0" expanded="false" />
-                <element signature="e#4298#4449#0" expanded="false" />
-                <element signature="e#4451#4622#0" expanded="false" />
-                <element signature="e#4624#4791#0" expanded="false" />
-                <element signature="e#4793#5562#0" expanded="false" />
-                <element signature="e#5564#5933#0" expanded="false" />
-                <element signature="e#5935#6134#0" expanded="false" />
-                <element signature="e#6136#6426#0" expanded="false" />
-                <element signature="e#6428#6590#0" expanded="false" />
-                <element signature="e#6592#6775#0" expanded="false" />
-                <element signature="e#6777#7013#0" expanded="false" />
-                <element signature="e#7015#7068#0" expanded="false" />
-                <element signature="e#7070#7121#0" expanded="false" />
-                <element signature="e#7123#7192#0" expanded="false" />
-                <element signature="e#7194#7274#0" expanded="false" />
-                <element signature="e#7276#7579#0" expanded="false" />
-                <element signature="e#7581#7632#0" expanded="false" />
-                <element signature="e#7634#7732#0" expanded="false" />
-                <element signature="e#7734#7876#0" expanded="false" />
-                <element signature="e#7878#8124#0" expanded="false" />
-                <element signature="e#8126#8446#0" expanded="false" />
-                <element signature="e#8448#8623#0" expanded="false" />
-                <element signature="e#8625#8803#0" expanded="false" />
-                <element signature="e#8805#8967#0" expanded="false" />
-                <element signature="e#8969#9132#0" expanded="false" />
-                <element signature="e#9134#9205#0" expanded="false" />
-                <element signature="e#9208#9363#0" expanded="false" />
-                <element signature="e#9365#9461#0" expanded="false" />
-                <element signature="e#9464#10254#0" expanded="false" />
+                <element signature="e#279#334#0" expanded="false" />
+                <element signature="e#336#1247#0" expanded="false" />
+                <element signature="e#1249#2182#0" expanded="false" />
+                <element signature="e#2184#2668#0" expanded="false" />
+                <element signature="e#2670#2950#0" expanded="false" />
+                <element signature="e#2952#3040#0" expanded="false" />
+                <element signature="e#3042#3798#0" expanded="false" />
+                <element signature="e#3800#4179#0" expanded="false" />
+                <element signature="e#4181#4272#0" expanded="false" />
+                <element signature="e#4274#4340#0" expanded="false" />
+                <element signature="e#4342#4374#0" expanded="false" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="main.cpp" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/main.cpp">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="100">
+              <caret line="5" column="6" lean-forward="false" selection-start-line="5" selection-start-column="6" selection-end-line="5" selection-end-column="6" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Board.h" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Board.h">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="310">
+              <caret line="35" column="4" lean-forward="false" selection-start-line="35" selection-start-column="4" selection-end-line="35" selection-end-column="4" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -180,28 +154,6 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Host.h" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Multiplayer/Host.h">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="221">
-              <caret line="17" column="15" lean-forward="true" selection-start-line="17" selection-start-column="15" selection-end-line="17" selection-end-column="15" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="MultiplayerBoard.h" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Multiplayer/MultiplayerBoard.h">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="260">
-              <caret line="13" column="22" lean-forward="false" selection-start-line="13" selection-start-column="22" selection-end-line="13" selection-end-column="34" />
-              <folding>
-                <element signature="e#111#132#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
     </leaf>
   </component>
   <component name="FindInProjectRecents">
@@ -222,8 +174,8 @@
       <find>aux</find>
       <find>Error</find>
       <find>aux2</find>
-      <find>cin</find>
       <find>board</find>
+      <find>cin</find>
     </findStrings>
     <replaceStrings>
       <replace>-&gt;horizontal()</replace>
@@ -279,20 +231,20 @@
         <option value="$PROJECT_DIR$/.gitignore" />
         <option value="$PROJECT_DIR$/UnitMap.cpp" />
         <option value="$PROJECT_DIR$/Multiplayer/Client.h" />
-        <option value="$PROJECT_DIR$/Multiplayer/Client.cpp" />
         <option value="$PROJECT_DIR$/Units/Classes/Horse.cpp" />
         <option value="$PROJECT_DIR$/Game.h" />
         <option value="$PROJECT_DIR$/CMakeLists.txt" />
-        <option value="$PROJECT_DIR$/Board.h" />
-        <option value="$PROJECT_DIR$/Multiplayer/MultiplayerBoard.h" />
         <option value="$PROJECT_DIR$/Board.cpp" />
-        <option value="$PROJECT_DIR$/Multiplayer/MultiplayerBoard.cpp" />
-        <option value="$PROJECT_DIR$/main.cpp" />
         <option value="$PROJECT_DIR$/Multiplayer/MultiplayerGame.h" />
         <option value="$PROJECT_DIR$/Game.cpp" />
         <option value="$PROJECT_DIR$/Multiplayer/MultiplayerGame.cpp" />
         <option value="$PROJECT_DIR$/Multiplayer/Host.h" />
+        <option value="$PROJECT_DIR$/Multiplayer/MultiplayerBoard.h" />
+        <option value="$PROJECT_DIR$/Board.h" />
+        <option value="$PROJECT_DIR$/main.cpp" />
         <option value="$PROJECT_DIR$/Multiplayer/Host.cpp" />
+        <option value="$PROJECT_DIR$/Multiplayer/Client.cpp" />
+        <option value="$PROJECT_DIR$/Multiplayer/MultiplayerBoard.cpp" />
       </list>
     </option>
   </component>
@@ -334,6 +286,20 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="CAjedrez" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="proyecto" />
+              <option name="myItemType" value="com.jetbrains.cidr.projectView.CidrFilesViewHelper$MyProjectTreeStructure$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="CAjedrez" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Units" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -621,7 +587,7 @@
       <workItem from="1498472360196" duration="6571000" />
       <workItem from="1498552015314" duration="11558000" />
       <workItem from="1498564178006" duration="667000" />
-      <workItem from="1498637835558" duration="2369000" />
+      <workItem from="1498637835558" duration="11680000" />
     </task>
     <task id="LOCAL-00001" summary="Generic Unit in">
       <created>1496919315384</created>
@@ -903,11 +869,25 @@
       <option name="project" value="LOCAL" />
       <updated>1498640198744</updated>
     </task>
-    <option name="localTasksCounter" value="41" />
+    <task id="LOCAL-00041" summary="Multiplayer test ready 2">
+      <created>1498640216567</created>
+      <option name="number" value="00041" />
+      <option name="presentableId" value="LOCAL-00041" />
+      <option name="project" value="LOCAL" />
+      <updated>1498640216567</updated>
+    </task>
+    <task id="LOCAL-00042" summary="Multiplayer test 0.3">
+      <created>1498640618684</created>
+      <option name="number" value="00042" />
+      <option name="presentableId" value="LOCAL-00042" />
+      <option name="project" value="LOCAL" />
+      <updated>1498640618684</updated>
+    </task>
+    <option name="localTasksCounter" value="43" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="160502000" />
+    <option name="totallyTimeSpent" value="169813000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="64" y="-11" width="1857" height="1092" extended-state="6" />
@@ -919,11 +899,11 @@
       <window_info id="CMake" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32925585" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3282365" sideWeight="0.5018868" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3361169" sideWeight="0.49811321" order="8" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.302714" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.40083507" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32985386" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.55741125" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.22860125" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Data View" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -943,7 +923,7 @@
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3282365" sideWeight="0.5018868" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3361169" sideWeight="0.49811321" order="8" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.302714" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3058455" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32985386" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.13875069" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
@@ -951,7 +931,7 @@
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.5575943" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.22860125" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Data View" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
     </layout-to-restore>
   </component>
@@ -962,7 +942,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="TerrainMap WIP" />
     <MESSAGE value="tMap done" />
     <MESSAGE value="testing needed" />
     <MESSAGE value="to do" />
@@ -987,25 +966,19 @@
     <MESSAGE value="3 team test" />
     <MESSAGE value="Multiplayer test ready" />
     <MESSAGE value="Multiplayer test ready 2" />
-    <option name="LAST_COMMIT_MESSAGE" value="Multiplayer test ready 2" />
+    <MESSAGE value="Multiplayer test 0.3" />
+    <option name="LAST_COMMIT_MESSAGE" value="Multiplayer test 0.3" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="REFORMAT_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="REARRANGE_BEFORE_PROJECT_COMMIT" value="true" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <option name="time" value="97" />
+      <option name="time" value="100" />
     </breakpoint-manager>
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/Units/UnitNames.h">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="180">
-          <caret line="10" column="29" lean-forward="false" selection-start-line="10" selection-start-column="29" selection-end-line="10" selection-end-column="29" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file:///usr/include/c++/5/bits/list.tcc">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="318">
@@ -1165,27 +1138,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Multiplayer/SocketHelper.cpp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="480">
-          <caret line="166" column="1" lean-forward="false" selection-start-line="166" selection-start-column="1" selection-end-line="166" selection-end-column="1" />
-          <folding>
-            <element signature="e#0#2#0" expanded="false" />
-            <element signature="e#279#334#0" expanded="false" />
-            <element signature="e#336#1247#0" expanded="false" />
-            <element signature="e#1249#2182#0" expanded="false" />
-            <element signature="e#2184#2668#0" expanded="false" />
-            <element signature="e#2670#2950#0" expanded="false" />
-            <element signature="e#2952#3040#0" expanded="false" />
-            <element signature="e#3042#3798#0" expanded="false" />
-            <element signature="e#3800#4179#0" expanded="false" />
-            <element signature="e#4181#4272#0" expanded="false" />
-            <element signature="e#4274#4340#0" expanded="false" />
-            <element signature="e#4342#4374#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Other/ToDo">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="80">
@@ -1197,6 +1149,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="260">
           <caret line="15" column="21" lean-forward="false" selection-start-line="15" selection-start-column="21" selection-end-line="15" selection-end-column="21" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1218,22 +1171,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="627">
           <caret line="152" column="0" lean-forward="true" selection-start-line="152" selection-start-column="0" selection-end-line="152" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Multiplayer/Client.h">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="360">
-          <caret line="18" column="14" lean-forward="true" selection-start-line="18" selection-start-column="14" selection-end-line="18" selection-end-column="14" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Multiplayer/Client.cpp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="461">
-          <caret line="29" column="0" lean-forward="false" selection-start-line="29" selection-start-column="0" selection-end-line="35" selection-end-column="1" />
           <folding />
         </state>
       </provider>
@@ -1289,66 +1226,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Board.h">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="591">
-          <caret line="79" column="10" lean-forward="false" selection-start-line="79" selection-start-column="10" selection-end-line="79" selection-end-column="10" />
-          <folding>
-            <element signature="e#232#252#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Multiplayer/MultiplayerBoard.cpp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="860">
-          <caret line="682" column="1" lean-forward="false" selection-start-line="682" selection-start-column="1" selection-end-line="682" selection-end-column="1" />
-          <folding>
-            <element signature="e#0#2#0" expanded="false" />
-            <element signature="e#108#8693#0" expanded="false" />
-            <element signature="e#8695#17000#0" expanded="false" />
-            <element signature="e#17002#25577#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/main.cpp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="140">
-          <caret line="7" column="0" lean-forward="false" selection-start-line="7" selection-start-column="0" selection-end-line="7" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Board.cpp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="260">
-          <caret line="134" column="18" lean-forward="true" selection-start-line="134" selection-start-column="18" selection-end-line="134" selection-end-column="18" />
-          <folding>
-            <element signature="e#79#114#0" expanded="false" />
-            <element signature="e#119#196#0" expanded="false" />
-            <element signature="e#198#347#0" expanded="false" />
-            <element signature="e#349#1631#0" expanded="false" />
-            <element signature="e#1633#4656#0" expanded="false" />
-            <element signature="e#4658#4772#0" expanded="false" />
-            <element signature="e#4830#4891#0" expanded="false" />
-            <element signature="e#4893#5025#0" expanded="false" />
-            <element signature="e#5027#5517#0" expanded="false" />
-            <element signature="e#5519#6296#0" expanded="false" />
-            <element signature="e#6298#8665#0" expanded="false" />
-            <element signature="e#8667#9496#0" expanded="false" />
-            <element signature="e#9498#13396#0" expanded="false" />
-            <element signature="e#13398#13997#0" expanded="false" />
-            <element signature="e#22177#22435#0" expanded="false" />
-            <element signature="e#22437#23349#0" expanded="false" />
-            <element signature="e#23351#23708#0" expanded="false" />
-            <element signature="e#23710#23771#0" expanded="false" />
-            <element signature="e#23773#23846#0" expanded="false" />
-            <element signature="e#23848#23957#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Game.cpp">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="240">
@@ -1358,22 +1235,6 @@
             <element signature="e#157#231#0" expanded="false" />
             <element signature="e#310#1098#0" expanded="false" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Multiplayer/MultiplayerGame.cpp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="253">
-          <caret line="21" column="13" lean-forward="true" selection-start-line="21" selection-start-column="13" selection-end-line="21" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Multiplayer/MultiplayerGame.h">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="193">
-          <caret line="15" column="6" lean-forward="true" selection-start-line="15" selection-start-column="6" selection-end-line="15" selection-end-column="6" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1423,34 +1284,132 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/Board.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="360">
+          <caret line="578" column="25" lean-forward="true" selection-start-line="578" selection-start-column="25" selection-end-line="578" selection-end-column="25" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/Multiplayer/MultiplayerBoard.h">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="260">
-          <caret line="13" column="22" lean-forward="false" selection-start-line="13" selection-start-column="22" selection-end-line="13" selection-end-column="34" />
+        <state relative-caret-position="400">
+          <caret line="20" column="0" lean-forward="false" selection-start-line="20" selection-start-column="0" selection-end-line="20" selection-end-column="0" />
           <folding>
             <element signature="e#111#132#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
+    <entry file="file:///usr/include/c++/5/bits/postypes.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="936">
+          <caret line="97" column="20" lean-forward="false" selection-start-line="97" selection-start-column="20" selection-end-line="97" selection-end-column="20" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/main.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="100">
+          <caret line="5" column="6" lean-forward="false" selection-start-line="5" selection-start-column="6" selection-end-line="5" selection-end-column="6" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Board.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="310">
+          <caret line="35" column="4" lean-forward="false" selection-start-line="35" selection-start-column="4" selection-end-line="35" selection-end-column="4" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Multiplayer/MultiplayerGame.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="253">
+          <caret line="21" column="13" lean-forward="true" selection-start-line="21" selection-start-column="13" selection-end-line="21" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Multiplayer/MultiplayerGame.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="193">
+          <caret line="15" column="6" lean-forward="true" selection-start-line="15" selection-start-column="6" selection-end-line="15" selection-end-column="6" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Multiplayer/SocketHelper.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="200">
+          <caret line="82" column="36" lean-forward="false" selection-start-line="82" selection-start-column="36" selection-end-line="82" selection-end-column="36" />
+          <folding>
+            <element signature="e#0#2#0" expanded="false" />
+            <element signature="e#279#334#0" expanded="false" />
+            <element signature="e#336#1247#0" expanded="false" />
+            <element signature="e#1249#2182#0" expanded="false" />
+            <element signature="e#2184#2668#0" expanded="false" />
+            <element signature="e#2670#2950#0" expanded="false" />
+            <element signature="e#2952#3040#0" expanded="false" />
+            <element signature="e#3042#3798#0" expanded="false" />
+            <element signature="e#3800#4179#0" expanded="false" />
+            <element signature="e#4181#4272#0" expanded="false" />
+            <element signature="e#4274#4340#0" expanded="false" />
+            <element signature="e#4342#4374#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/Multiplayer/Host.h">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="221">
-          <caret line="17" column="15" lean-forward="true" selection-start-line="17" selection-start-column="15" selection-end-line="17" selection-end-column="15" />
+        <state relative-caret-position="141">
+          <caret line="13" column="10" lean-forward="false" selection-start-line="13" selection-start-column="10" selection-end-line="13" selection-end-column="10" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Multiplayer/Host.cpp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="521">
-          <caret line="90" column="1" lean-forward="false" selection-start-line="90" selection-start-column="1" selection-end-line="90" selection-end-column="1" />
+        <state relative-caret-position="387">
+          <caret line="93" column="4" lean-forward="false" selection-start-line="93" selection-start-column="4" selection-end-line="93" selection-end-column="16" />
           <folding>
             <element signature="e#0#2#0" expanded="false" />
             <element signature="e#83#1372#0" expanded="false" />
             <element signature="e#1374#1445#0" expanded="false" />
             <element signature="e#1447#1669#0" expanded="false" />
             <element signature="e#1671#1902#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Multiplayer/Client.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="207">
+          <caret line="14" column="9" lean-forward="false" selection-start-line="14" selection-start-column="9" selection-end-line="14" selection-end-column="9" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Multiplayer/Client.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="487">
+          <caret line="38" column="4" lean-forward="false" selection-start-line="38" selection-start-column="4" selection-end-line="38" selection-end-column="16" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Multiplayer/MultiplayerBoard.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="20">
+          <caret line="266" column="41" lean-forward="true" selection-start-line="266" selection-start-column="41" selection-end-line="266" selection-end-column="41" />
+          <folding>
+            <element signature="e#0#2#0" expanded="false" />
+            <element signature="e#108#8694#0" expanded="false" />
+            <element signature="e#14756#23333#0" expanded="false" />
+            <element signature="e#23335#31568#0" expanded="false" />
           </folding>
         </state>
       </provider>

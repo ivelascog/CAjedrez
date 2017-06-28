@@ -9,6 +9,7 @@
 int MultiplayerBoard::hostTurn(int t, Host *host) {
 
     string input;
+
     if (t < 0 || t >= units->getTeams()) {
         throw runtime_error("No such team");
     }
@@ -182,6 +183,7 @@ int MultiplayerBoard::hostTurn(int t, Host *host) {
 
 int MultiplayerBoard::hostPassive(int t, Host *host) {
     string input;
+    string auxStorage;
     if (t < 0 || t >= units->getTeams()) {
         throw runtime_error("No such team");
     }
@@ -193,13 +195,9 @@ int MultiplayerBoard::hostPassive(int t, Host *host) {
 
 
     while (units->getArmies(t)->getAvailableActions() > 0 && units->checkWin() == -1) {
-        cout << printMap(t) << endl;
-        cout << units->getArmies(t)->fullReport() << endl;
+        cout << printMap(host->getTeam()) << endl;
         cout << "Remaining actions this turn: " + to_string(units->getArmies(t)->getAvailableActions()) << endl;
 
-        cout << "1 - Play" << endl;
-        cout << "2 - Consult units" << endl;
-        cout << "5 - Skip" << endl;
         input = host->readAndBroadcast(t);
         int aux = atoi(const_cast<char *>(input.c_str()));
 
@@ -208,14 +206,12 @@ int MultiplayerBoard::hostPassive(int t, Host *host) {
         if (aux == 5) {
             units->getArmies(t)->actionsToZero();
         } else if (aux == 2) {
-            consultVisibleUnits(t);
+            //should not show consult units!
         } else {
-            cout << "Select any unit by ID: " << endl;
             input = host->readAndBroadcast(t);
             Unit *u = units->getArmies(t)->getUnitByID(atoi(const_cast<char *>(input.c_str())));
             if (u != nullptr) {
                 if (u->getAttP() <= 0 && u->getMoveP() <= 0) {
-                    cout << "No available action points for selected unit." << endl;
                 } else {
                     bool virgin = true;
                     aux = 0;
@@ -224,25 +220,12 @@ int MultiplayerBoard::hostPassive(int t, Host *host) {
                         cout << printUnitActions(u) << endl;
                         cout << u->report() << endl;
                         cout << u->typeStats() << endl;
-                        cout << "Choose an action:" << endl;
-                        if (u->getMoveP() > 0) {
-                            cout << "1 - Move" << endl;
-                        }
-                        if (u->getAttP() > 0) {
-                            cout << "2 - Attack" << endl;
-                        }
-                        cout << "3 - End actions with selected unit" << endl;
-                        if (virgin) {
-                            cout << "4 - Undo selection" << endl;
-                        }
-                        input = host->readAndBroadcast(t);;
+                        input = host->readAndBroadcast(t);
 
                         switch (atoi(const_cast<char *>(input.c_str()))) {
                             case 1:
                                 if (u->getMoveP() <= 0) {
-                                    cout << "No such action available." << endl;
                                 } else {
-                                    cout << "Select destination (\"x, y\"):" << endl;
                                     int x;
                                     int y;
                                     input = host->readAndBroadcast(t);
@@ -254,30 +237,23 @@ int MultiplayerBoard::hostPassive(int t, Host *host) {
                                     y = atoi(const_cast<char *>(tok.c_str()));
                                     if (x < width && x >= 0 && y < height && y >= 0) {
                                         if (accessible(u)[x][y] > 0) {
-                                            cout << "Path: " + walkAndPrint(u, x, y) << endl;
-                                            cout << "1 - Confirm" << endl;
-                                            cout << "2 - Cancel" << endl;
+                                            auxStorage = "Path: " + walkAndPrint(u, x, y);
                                             input = host->readAndBroadcast(t);
                                             aux2 = atoi(const_cast<char *>(input.c_str()));
                                             if (aux2 == 1 || aux2 == 0/*= enter*/) {
+                                                cout << auxStorage << endl;
                                                 units->move(u->getPosX(), u->getPosY(), x, y);
                                                 virgin = false;
                                             }
-                                        } else {
-                                            cout << "Destination is not valid." << endl;
                                         }
-                                    } else {
-                                        cout << "Destination not in bounds." << endl;
                                     }
                                 }
                                 break;
 
                             case 2:
                                 if (u->getAttP() <= 0) {
-                                    cout << "No such action available." << endl;
                                 } else {
                                     if (targetsExist(u)) {
-                                        cout << "Select target (\"x, y\"):" << endl;
                                         int x;
                                         int y;
                                         input = host->readAndBroadcast(t);
@@ -289,25 +265,17 @@ int MultiplayerBoard::hostPassive(int t, Host *host) {
                                         y = atoi(const_cast<char *>(tok.c_str()));
                                         if (x < width && x >= 0 && y < height && y >= 0) {
                                             if (inRangeHostile(u)[x][y]) {
-                                                cout << units->placeboAttack(u, units->getUMap(x, y)) << endl;
-                                                cout << "1 - Confirm" << endl;
-                                                cout << "2 - Cancel" << endl;
+                                                auxStorage = units->placeboAttack(u, units->getUMap(x, y));
                                                 input = host->readAndBroadcast(t);
                                                 aux2 = atoi(const_cast<char *>(input.c_str()));
                                                 if (aux2 == 1 || aux2 == 0/*= enter*/) {
+                                                    cout << auxStorage << endl;
                                                     units->attack(u, units->getUMap(x, y));
                                                     virgin = false;
                                                     units->massRemoveComplete();
                                                 }
-                                            } else {
-                                                cout << "Target is not valid." << endl;
                                             }
-
-                                        } else {
-                                            cout << "Target not in bounds." << endl;
                                         }
-                                    } else {
-                                        cout << "No targets available." << endl;
                                     }
                                 }
                                 break;
@@ -319,13 +287,10 @@ int MultiplayerBoard::hostPassive(int t, Host *host) {
                             case 4:
                                 if (virgin) {
                                     aux = 4;
-                                } else {
-                                    cout << "No such action available." << endl;
                                 }
                                 break;
 
                             default:
-                                cout << "No such action available." << endl;
                                 break;
                         }
                     }
@@ -336,8 +301,6 @@ int MultiplayerBoard::hostPassive(int t, Host *host) {
                     }
                     units->massRemoveComplete();
                 }
-            } else {
-                cout << "No such unit exists." << endl << endl;
             }
         }
     }
@@ -346,7 +309,9 @@ int MultiplayerBoard::hostPassive(int t, Host *host) {
 }
 
 int MultiplayerBoard::clientTurn(int t, Client *client) {
+
     string input;
+
     if (t < 0 || t >= units->getTeams()) {
         throw runtime_error("No such team");
     }

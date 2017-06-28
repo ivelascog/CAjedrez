@@ -14,6 +14,8 @@ class Client {
 public:
     bool initializeClient(int team);
 
+    int getTeam() const;
+
     Client(string hostIP);
 
     string read();

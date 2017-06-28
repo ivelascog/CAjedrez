@@ -12,6 +12,10 @@ using namespace std;
 
 class Host {
     int team;
+public:
+    int getTeam() const;
+
+private:
     int serverSocket;
     vector<int> clients;
 public:
