@@ -70,6 +70,8 @@ public:
     //muestra el mapa de acciones posibles para u (bg verde para movimientos posibles y roja para enemigos en rango).
     string printUnitActions(Unit *u);
 
+    string printUnitActions(Unit *u, int team);
+
     //devuelve un mapa con casillas correspondientes a rango range en x, y
     vector<vector<int>> rangeNoClip(int x, int y, int range);
 
