@@ -75,6 +75,7 @@ void MultiplayerGame::clientInit() {
             cout << "Error: not a valid number" << endl;
         }
     }
+    client->setTeam(myTeam);
     cout << "Connection established" << endl;
 }
 

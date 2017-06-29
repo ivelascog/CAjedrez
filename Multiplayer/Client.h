@@ -21,6 +21,8 @@ public:
     string read();
 
     void write(string msg);
+
+    void setTeam(int team);
 };
 
 

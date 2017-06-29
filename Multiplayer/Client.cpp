@@ -38,3 +38,7 @@ string Client::read() {
 int Client::getTeam() const {
     return team;
 }
+
+void Client::setTeam(int team) {
+    Client::team = team;
+}
