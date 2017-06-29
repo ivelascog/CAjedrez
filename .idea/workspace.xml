@@ -13,10 +13,7 @@
   <component name="ChangeListManager">
     <list default="true" id="901c2ed4-9ef0-480d-9d4e-60acbcfb889b" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Multiplayer/MultiplayerBoard.cpp" afterPath="$PROJECT_DIR$/Multiplayer/MultiplayerBoard.cpp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Multiplayer/MultiplayerGame.cpp" afterPath="$PROJECT_DIR$/Multiplayer/MultiplayerGame.cpp" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/UnitMap.cpp" afterPath="$PROJECT_DIR$/UnitMap.cpp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Units/Classes/Horse.cpp" afterPath="$PROJECT_DIR$/Units/Classes/Horse.cpp" />
     </list>
     <ignored path="$PROJECT_DIR$/cmake-build-debug/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -92,8 +89,8 @@
       <file leaf-file-name="UnitMap.cpp" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/UnitMap.cpp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="400">
-              <caret line="408" column="33" lean-forward="false" selection-start-line="408" selection-start-column="33" selection-end-line="408" selection-end-column="33" />
+            <state relative-caret-position="360">
+              <caret line="394" column="17" lean-forward="false" selection-start-line="394" selection-start-column="17" selection-end-line="394" selection-end-column="17" />
               <folding>
                 <element signature="e#0#2#0" expanded="false" />
                 <element signature="e#81#943#0" expanded="false" />
@@ -221,8 +218,8 @@
   <component name="Git.Settings">
     <option name="PREVIOUS_COMMIT_AUTHORS">
       <list>
-        <option value="fer &lt;feriostio@gmail.com&gt;" />
         <option value="Fernando Lucas &lt;feriostio@gmail.com&gt;" />
+        <option value="fer &lt;feriostio@gmail.com&gt;" />
       </list>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -738,14 +735,7 @@
       <workItem from="1498552015314" duration="11558000" />
       <workItem from="1498564178006" duration="667000" />
       <workItem from="1498637835558" duration="13173000" />
-      <workItem from="1498724276597" duration="8878000" />
-    </task>
-    <task id="LOCAL-00002" summary="Generic Unit in">
-      <created>1496919451038</created>
-      <option name="number" value="00002" />
-      <option name="presentableId" value="LOCAL-00002" />
-      <option name="project" value="LOCAL" />
-      <updated>1496919451038</updated>
+      <workItem from="1498724276597" duration="8937000" />
     </task>
     <task id="LOCAL-00003" summary="Generic Unit in">
       <created>1496919607618</created>
@@ -1083,11 +1073,18 @@
       <option name="project" value="LOCAL" />
       <updated>1498733021864</updated>
     </task>
-    <option name="localTasksCounter" value="51" />
+    <task id="LOCAL-00051" summary="passive update 4">
+      <created>1498734280845</created>
+      <option name="number" value="00051" />
+      <option name="presentableId" value="LOCAL-00051" />
+      <option name="project" value="LOCAL" />
+      <updated>1498734280846</updated>
+    </task>
+    <option name="localTasksCounter" value="52" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="180184000" />
+    <option name="totallyTimeSpent" value="180243000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="65" y="-4" width="1855" height="1084" extended-state="6" />
@@ -1142,7 +1139,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="walk added" />
     <MESSAGE value="stuff" />
     <MESSAGE value="Kinda works" />
     <MESSAGE value="Missing placebo, game, skip turn, consult unit" />
@@ -1167,7 +1163,8 @@
     <MESSAGE value="passive update 2 - fixes" />
     <MESSAGE value="passive update 2 - final fixes (hopefully)" />
     <MESSAGE value="passive update 3" />
-    <option name="LAST_COMMIT_MESSAGE" value="passive update 3" />
+    <MESSAGE value="passive update 4" />
+    <option name="LAST_COMMIT_MESSAGE" value="passive update 4" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="REFORMAT_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="REARRANGE_BEFORE_PROJECT_COMMIT" value="true" />
@@ -1605,8 +1602,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/UnitMap.cpp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="400">
-          <caret line="408" column="33" lean-forward="false" selection-start-line="408" selection-start-column="33" selection-end-line="408" selection-end-column="33" />
+        <state relative-caret-position="360">
+          <caret line="394" column="17" lean-forward="false" selection-start-line="394" selection-start-column="17" selection-end-line="394" selection-end-column="17" />
           <folding>
             <element signature="e#0#2#0" expanded="false" />
             <element signature="e#81#943#0" expanded="false" />
