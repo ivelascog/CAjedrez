@@ -695,7 +695,7 @@ string Board::printUnitActionsEnemy(Unit *u, int team) {
                 s += "\033[" + to_string(REDBG) + "m \033[0m";
             } else if (units->getUMap(j, i) != nullptr) {
                 s += "\033[";
-                if (units->isHostile(u->getTeam(), team)) {
+                if (units->isHostile(u->getTeam(), units->getUMap(j, i)->getTeam())) {
                     if (acc[j][i] == -3) {
                         s += "1;";
                         s += to_string(REDBG);
