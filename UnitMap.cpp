@@ -406,7 +406,7 @@ void UnitMap::loadUnitMap1() {
 
     //Army 1
     addUnit(7, 0, king, 1);
-    addEssential(getUMap(7, 0), 0);
+    addEssential(getUMap(7, 0), 1);
     addUnit(3, 1, soldier, 1);
     addUnit(5, 1, soldier, 1);
     addUnit(7, 1, soldier, 1);

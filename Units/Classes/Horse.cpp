@@ -5,9 +5,9 @@
 #include "Horse.h"
 
 Horse::Horse(int x, int y, int t) {
-    movm = 3;
+    movm = 20;
     health = 5;
-    damage = 2;
+    damage = 10;
     range = 1;
     posX = x;
     posY = y;

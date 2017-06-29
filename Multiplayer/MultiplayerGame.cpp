@@ -94,7 +94,7 @@ void MultiplayerGame::runGame() {
     }
     cout << to_string(winner) + ":" << endl;
     board->getUnits()->massRemoveComplete();
-    cout << board->printMap(winner) << endl;
+    cout << board->printMap(myTeam) << endl;
 }
 
 int MultiplayerGame::clientLoop() {
