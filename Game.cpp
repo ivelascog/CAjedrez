@@ -15,6 +15,11 @@ void Game::loadGame1() {
     board->loadMap1();
 }
 
+void Game::loadGameCastleAssault() {
+    board = new Board();
+    board->loadCastleAssault();
+}
+
 Game::~Game() {
     if (board != nullptr) {
         delete (board);

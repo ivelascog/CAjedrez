@@ -29,6 +29,8 @@ public:
 
 
     virtual ~TerrainMap();
+
+    void loadTerrainCastleAssault();
 };
 
 

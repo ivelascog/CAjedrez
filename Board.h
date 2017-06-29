@@ -90,6 +90,8 @@ public:
     string printUnitActionsEnemy(Unit *u, int team);
 
     string printUnitActionsAlly(Unit *u, int team);
+
+    void loadCastleAssault();
 };
 
 

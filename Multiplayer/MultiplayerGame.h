@@ -35,6 +35,10 @@ public:
     int clientLoop();
 
     void advanceTurn();
+
+    void hostGameCastleAssault();
+
+    void joinGameCastleAssault();
 };
 
 

@@ -17,6 +17,18 @@ void MultiplayerGame::joinGame1() {
     clientInit();
 }
 
+void MultiplayerGame::hostGameCastleAssault() {
+    board = new MultiplayerBoard();
+    board->loadCastleAssault();
+    hostInit();
+}
+
+void MultiplayerGame::joinGameCastleAssault() {
+    board = new MultiplayerBoard();
+    board->loadCastleAssault();
+    clientInit();
+}
+
 MultiplayerGame::~MultiplayerGame() {
     delete (host);
     delete (client);

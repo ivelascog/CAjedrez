@@ -139,6 +139,8 @@ public:
     void addToAlliance(int team, int alliance);
 
     bool isHostile(int team1, int team2);
+
+    void loadUnitMapCastleAssault();
 };
 
 #endif //PROYECTO_UNITMAP_H

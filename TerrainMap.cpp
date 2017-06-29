@@ -5,6 +5,47 @@
 #include <stdexcept>
 #include "TerrainMap.h"
 
+void TerrainMap::loadTerrainCastleAssault() {
+    width = 25;
+    height = 15;
+    tMap = std::vector<std::vector<Terrain *>>((unsigned long) width,
+                                               vector<Terrain *>((unsigned long) height));
+    for (int i = 0; i < height; i++) {
+        for (int j = 0; j < width; j++) {
+            tMap[j][i] = new Plains();
+        }
+    }
+
+    setTMap(6, 0, rocks);
+    setTMap(18, 0, rocks);
+    setTMap(6, 1, rocks);
+    setTMap(18, 1, rocks);
+    setTMap(6, 2, rocks);
+    setTMap(18, 2, rocks);
+    setTMap(6, 3, rocks);
+    setTMap(18, 3, rocks);
+    setTMap(6, 4, rocks);
+    setTMap(18, 4, rocks);
+    setTMap(6, 6, rocks);
+    setTMap(18, 6, rocks);
+    setTMap(6, 7, rocks);
+    setTMap(18, 7, rocks);
+    setTMap(6, 8, rocks);
+    setTMap(18, 8, rocks);
+    setTMap(6, 9, rocks);
+    setTMap(18, 9, rocks);
+    setTMap(6, 10, rocks);
+    setTMap(18, 10, rocks);
+    setTMap(7, 10, rocks);
+    setTMap(8, 10, rocks);
+    setTMap(9, 10, rocks);
+    setTMap(10, 10, rocks);
+    setTMap(14, 10, rocks);
+    setTMap(15, 10, rocks);
+    setTMap(16, 10, rocks);
+    setTMap(17, 10, rocks);
+}
+
 void TerrainMap::loadTerrainMap1() {
     width = 15;
     height = 10;

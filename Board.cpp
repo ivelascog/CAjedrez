@@ -17,17 +17,24 @@ void Board::loadMap1() {
     width = units->getWidth();
 }
 
+void Board::loadCastleAssault() {
+    units->loadUnitMapCastleAssault();
+    terrain->loadTerrainCastleAssault();
+    height = units->getHeight();
+    width = units->getWidth();
+}
+
 string Board::printMap(int team) {
     string s = "";
 
-    s += "  ";
+    s += "\t";
 
     for (int i = 0; i < width; i++) {
         if (i < 100) {
             s += " ";
         }
         s += to_string(i);
-        if (i < 10) {
+        if (i < 9) {
             s += " ";
         }
     }
@@ -35,7 +42,7 @@ string Board::printMap(int team) {
     s += "\n";
 
     for (int i = 0; i < height; i++) {
-        s += to_string(i) + " ";
+        s += to_string(i) + "\t";
         for (int j = 0; j < width; j++) {
             s += "[";
             if (terrain->getTMap(j, i)->isObstacle()) {
@@ -597,14 +604,14 @@ string Board::printUnitActionsAlly(Unit *u, int team) {
     }
     string s = "";
 
-    s += "  ";
+    s += "\t";
 
     for (int i = 0; i < width; i++) {
         if (i < 100) {
             s += " ";
         }
         s += to_string(i);
-        if (i < 10) {
+        if (i < 9) {
             s += " ";
         }
     }
@@ -612,7 +619,7 @@ string Board::printUnitActionsAlly(Unit *u, int team) {
     s += "\n";
 
     for (int i = 0; i < height; i++) {
-        s += to_string(i) + " ";
+        s += to_string(i) + "\t";
         for (int j = 0; j < width; j++) {
             s += "[";
             if (terrain->getTMap(j, i)->isObstacle()) {
@@ -671,14 +678,14 @@ string Board::printUnitActionsEnemy(Unit *u, int team) {
     }
     string s = "";
 
-    s += "  ";
+    s += "\t";
 
     for (int i = 0; i < width; i++) {
         if (i < 100) {
             s += " ";
         }
         s += to_string(i);
-        if (i < 10) {
+        if (i < 9) {
             s += " ";
         }
     }
@@ -686,7 +693,7 @@ string Board::printUnitActionsEnemy(Unit *u, int team) {
     s += "\n";
 
     for (int i = 0; i < height; i++) {
-        s += to_string(i) + " ";
+        s += to_string(i) + "\t";
         for (int j = 0; j < width; j++) {
             s += "[";
             if (terrain->getTMap(j, i)->isObstacle()) {

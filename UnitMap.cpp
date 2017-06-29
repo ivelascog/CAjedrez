@@ -173,6 +173,10 @@ int UnitMap::checkWin() {
         return teamAlive;
     }
 
+    if (countAlive == 0) {
+        throw runtime_error("Error: all teams have lost");
+    }
+
     return -1;
 }
 
@@ -391,8 +395,6 @@ void UnitMap::loadUnitMap1() {
     teams = 2;
     condInit();
 
-    turnLimit(1, 1);
-
     //Army 0
     addUnit(7, 9, king, 0);
     addEssential(getUMap(7, 9), 0);
@@ -418,4 +420,50 @@ void UnitMap::loadUnitMap1() {
     addUnit(9, 0, archer, 1);
     addUnit(3, 0, horse, 1);
     addUnit(11, 0, horse, 1);
+}
+
+void UnitMap::loadUnitMapCastleAssault() {
+    initMap(25, 15);
+    teams = 3;
+    condInit();
+
+    addToAlliance(1, 1);
+    addToAlliance(2, 1);
+
+    addPosToDefend(12, 2, 0);
+    turnLimit(10, 1);
+    turnLimit(10, 2);
+
+    addUnit(12, 5, king, 0);
+    addUnit(12, 8, horse, 0);
+    addUnit(11, 9, soldier, 0);
+    addUnit(13, 9, soldier, 0);
+    addUnit(7, 5, soldier, 0);
+    addUnit(17, 5, soldier, 0);
+    addUnit(16, 8, archer, 0);
+    addUnit(8, 8, archer, 0);
+    addUnit(15, 6, archer, 0);
+    addUnit(9, 6, archer, 0);
+
+    addUnit(1, 9, horse, 1);
+    addUnit(2, 10, horse, 1);
+    addUnit(3, 11, horse, 1);
+    addUnit(4, 12, horse, 1);
+    addUnit(4, 4, soldier, 1);
+    addUnit(4, 6, soldier, 1);
+    addUnit(9, 12, soldier, 1);
+    addUnit(11, 12, soldier, 1);
+    addUnit(10, 13, archer, 1);
+    addUnit(3, 5, archer, 1);
+
+    addUnit(23, 9, horse, 2);
+    addUnit(22, 10, horse, 2);
+    addUnit(21, 11, horse, 2);
+    addUnit(20, 12, horse, 2);
+    addUnit(20, 4, soldier, 2);
+    addUnit(20, 6, soldier, 2);
+    addUnit(13, 12, soldier, 2);
+    addUnit(15, 12, soldier, 2);
+    addUnit(14, 13, archer, 2);
+    addUnit(21, 5, archer, 2);
 }

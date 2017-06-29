@@ -8,7 +8,7 @@ Soldier::Soldier(int x, int y, int t) {
     movm = 3;
     health = 4;
     cHealth = 4;
-    damage = 1;
+    damage = 2;
     range = 1;
     posX = x;
     posY = y;

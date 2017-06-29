@@ -22,6 +22,8 @@ public:
     virtual ~Game();
 
     virtual void runGame();
+
+    void loadGameCastleAssault();
 };
 
 
