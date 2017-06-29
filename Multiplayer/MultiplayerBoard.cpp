@@ -203,8 +203,8 @@ int MultiplayerBoard::hostPassive(int t, Host *host) {
             cout << printMap(host->getTeam()) << endl;
             cout << "Remaining actions this turn: " + to_string(units->getArmies(t)->getAvailableActions()) << endl;
             printM = false;
-            printU = true;
         }
+        printU = true;
 
         input = host->readAndBroadcast(t);
         int aux = atoi(const_cast<char *>(input.c_str()));

@@ -29,13 +29,13 @@
       <file leaf-file-name="MultiplayerBoard.cpp" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Multiplayer/MultiplayerBoard.cpp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="560">
-              <caret line="235" column="0" lean-forward="true" selection-start-line="235" selection-start-column="0" selection-end-line="235" selection-end-column="0" />
+            <state relative-caret-position="250">
+              <caret line="206" column="22" lean-forward="false" selection-start-line="206" selection-start-column="22" selection-end-line="206" selection-end-column="22" />
               <folding>
                 <element signature="e#0#2#0" expanded="false" />
                 <element signature="e#108#8694#0" expanded="false" />
-                <element signature="e#15418#23995#0" expanded="false" />
-                <element signature="e#23997#32265#0" expanded="false" />
+                <element signature="e#15391#23968#0" expanded="false" />
+                <element signature="e#23970#32238#0" expanded="false" />
               </folding>
             </state>
           </provider>
@@ -754,7 +754,7 @@
       <workItem from="1498552015314" duration="11558000" />
       <workItem from="1498564178006" duration="667000" />
       <workItem from="1498637835558" duration="13173000" />
-      <workItem from="1498724276597" duration="7218000" />
+      <workItem from="1498724276597" duration="7638000" />
     </task>
     <task id="LOCAL-00001" summary="Generic Unit in">
       <created>1496919315384</created>
@@ -1085,11 +1085,25 @@
       <option name="project" value="LOCAL" />
       <updated>1498731836056</updated>
     </task>
-    <option name="localTasksCounter" value="48" />
+    <task id="LOCAL-00048" summary="passive update 3">
+      <created>1498732614000</created>
+      <option name="number" value="00048" />
+      <option name="presentableId" value="LOCAL-00048" />
+      <option name="project" value="LOCAL" />
+      <updated>1498732614000</updated>
+    </task>
+    <task id="LOCAL-00049" summary="passive update 3">
+      <created>1498732747808</created>
+      <option name="number" value="00049" />
+      <option name="presentableId" value="LOCAL-00049" />
+      <option name="project" value="LOCAL" />
+      <updated>1498732747808</updated>
+    </task>
+    <option name="localTasksCounter" value="50" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="178524000" />
+    <option name="totallyTimeSpent" value="178944000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="65" y="-4" width="1855" height="1084" extended-state="6" />
@@ -1101,7 +1115,7 @@
       <window_info id="CMake" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32925585" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3282365" sideWeight="0.5018868" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3361169" sideWeight="0.49811321" order="8" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.6691023" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.6691023" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32985386" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
@@ -1144,7 +1158,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="inRange &amp; accessible" />
     <MESSAGE value="walk added" />
     <MESSAGE value="stuff" />
     <MESSAGE value="Kinda works" />
@@ -1169,7 +1182,8 @@
     <MESSAGE value="passive update 2" />
     <MESSAGE value="passive update 2 - fixes" />
     <MESSAGE value="passive update 2 - final fixes (hopefully)" />
-    <option name="LAST_COMMIT_MESSAGE" value="passive update 2 - final fixes (hopefully)" />
+    <MESSAGE value="passive update 3" />
+    <option name="LAST_COMMIT_MESSAGE" value="passive update 3" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="REFORMAT_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="REARRANGE_BEFORE_PROJECT_COMMIT" value="true" />
@@ -1626,13 +1640,13 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/Multiplayer/MultiplayerBoard.cpp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="560">
-          <caret line="235" column="0" lean-forward="true" selection-start-line="235" selection-start-column="0" selection-end-line="235" selection-end-column="0" />
+        <state relative-caret-position="250">
+          <caret line="206" column="22" lean-forward="false" selection-start-line="206" selection-start-column="22" selection-end-line="206" selection-end-column="22" />
           <folding>
             <element signature="e#0#2#0" expanded="false" />
             <element signature="e#108#8694#0" expanded="false" />
-            <element signature="e#15418#23995#0" expanded="false" />
-            <element signature="e#23997#32265#0" expanded="false" />
+            <element signature="e#15391#23968#0" expanded="false" />
+            <element signature="e#23970#32238#0" expanded="false" />
           </folding>
         </state>
       </provider>
