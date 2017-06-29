@@ -392,7 +392,6 @@ void UnitMap::loadUnitMap1() {
     condInit();
 
     turnLimit(1, 1);
-    turnLimit(1, 0);
 
     //Army 0
     addUnit(7, 9, king, 0);
