@@ -387,7 +387,7 @@ void UnitMap::turnLimit(int turn, int team) {
 }
 
 void UnitMap::addToAlliance(int team, int alliance) {
-    alliance = true;
+    allianceActive = true;
     armies[team]->setAlliance(alliance);
 };
 
