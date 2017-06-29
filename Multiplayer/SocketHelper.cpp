@@ -85,6 +85,9 @@ string SocketHelper::read(int sock) {
                      (unsigned char) (buff[1]) << 8 |
                      (unsigned char) (buff[2]) << 16 |
                      (unsigned char) (buff[3]) << 24);
+    if (length == 0) {
+        return msg;
+    }
 
     char buff2[length + 1];
     bzero(&buff2, length + 1);
@@ -98,11 +101,17 @@ string SocketHelper::read(int sock) {
 
 int SocketHelper::write(int sock, string msg) {
     const char *buff = msg.c_str();
+    int result;
 
     int size = (int) msg.size();
     const char *bytes = (const char *) &size;
-    send(sock, bytes, sizeof(size), 0);
-    int result = (int) send(sock, buff, msg.size(), 0);
+    result = (int) send(sock, bytes, sizeof(size), 0);
+
+    if (size == 0) {
+        return result;
+    }
+
+    result = (int) send(sock, buff, msg.size(), 0);
     return result;
 }
 
