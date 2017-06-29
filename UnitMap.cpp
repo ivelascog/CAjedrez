@@ -428,6 +428,7 @@ void UnitMap::loadUnitMapCastleAssault() {
     teams = 3;
     condInit();
 
+    addToAlliance(0, 0);
     addToAlliance(1, 1);
     addToAlliance(2, 1);
 
