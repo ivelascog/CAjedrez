@@ -217,7 +217,7 @@ int MultiplayerBoard::hostPassive(int t, Host *host) {
                     aux = 0;
                     while ((u->getAttP() > 0 || u->getMoveP() > 0) && aux != 3 && aux != 4 && units->checkWin() == -1) {
                         aux2 = 0;
-                        cout << printUnitActions(u) << endl;
+                        cout << printUnitActions(u, host->getTeam()) << endl;
                         cout << u->report() << endl;
                         cout << u->typeStats() << endl;
                         input = host->readAndBroadcast(t);
@@ -495,7 +495,7 @@ int MultiplayerBoard::clientPassive(int t, Client *client) {
 
 
     while (units->getArmies(t)->getAvailableActions() > 0 && units->checkWin() == -1) {
-        cout << printMap(t) << endl;
+        cout << printMap(client->getTeam()) << endl;
         cout << units->getArmies(t)->fullReport() << endl;
         cout << "Remaining actions this turn: " + to_string(units->getArmies(t)->getAvailableActions()) << endl;
 
@@ -523,7 +523,7 @@ int MultiplayerBoard::clientPassive(int t, Client *client) {
                     aux = 0;
                     while ((u->getAttP() > 0 || u->getMoveP() > 0) && aux != 3 && aux != 4 && units->checkWin() == -1) {
                         aux2 = 0;
-                        cout << printUnitActions(u) << endl;
+                        cout << printUnitActions(u, client->getTeam()) << endl;
                         cout << u->report() << endl;
                         cout << u->typeStats() << endl;
                         cout << "Choose an action:" << endl;

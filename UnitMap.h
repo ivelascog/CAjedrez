@@ -137,6 +137,8 @@ public:
     void turnLimit(int turn, int team);
 
     void addToAlliance(int team, int alliance);
+
+    bool isHostile(int team1, int team2);
 };
 
 #endif //PROYECTO_UNITMAP_H

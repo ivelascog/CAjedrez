@@ -86,6 +86,10 @@ public:
 
     //Devuelve un string con el camino seguido por la ud al moverse.
     string walkAndPrint(Unit *u, int destX, int destY);
+
+    string printUnitActionsEnemy(Unit *u, int team);
+
+    string printUnitActionsAlly(Unit *u, int team);
 };
 
 

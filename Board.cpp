@@ -567,6 +567,17 @@ void Board::setCurrentPlayerTeam(int currentPlayerTeam) {
 }
 
 string Board::printUnitActions(Unit *u, int team) {
+    if (u->getTeam() == team) {
+        return printUnitActionsAlly(u, team);
+    } else if (units->isAllianceActive() && units->getAlliance(team) ==
+                                            units->getAlliance(u->getTeam())) {
+        printUnitActionsAlly(u, team);
+    } else {
+        return printUnitActionsEnemy(u, team);
+    }
+}
+
+string Board::printUnitActionsAlly(Unit *u, int team) {
 
     vector<vector<int>> acc = std::vector<std::vector<int>>
             ((unsigned long) width, vector<int>((unsigned long) height, 0));
@@ -624,6 +635,82 @@ string Board::printUnitActions(Unit *u, int team) {
                     } else {
                         s += to_string(RED);
                     }
+                }
+                s += "m";
+                s += units->getUMap(j, i)->getIcon();
+                s += "\033[" + to_string(RESET) + "m";
+            } else if (acc[j][i] > 0) {
+                s += "\033[" + to_string(GREENBG) + "m \033[0m";
+            } else {
+                s += " ";
+            }
+            s += "]";
+        }
+        s += "\n";
+    }
+    return s;
+}
+
+string Board::printUnitActionsEnemy(Unit *u, int team) {
+
+    vector<vector<int>> acc = std::vector<std::vector<int>>
+            ((unsigned long) width, vector<int>((unsigned long) height, 0));
+    if (u->getMoveP() > 0 && u->getAttP() > 0) {
+        acc = accessibleAttacks(u);
+    } else if (u->getMoveP() > 0) {
+        acc = accessible(u);
+    } else if (u->getAttP() > 0) {
+        acc = inRange(u);
+        for (int i = 0; i < height; i++) {
+            for (int j = 0; j < width; j++) {
+                if (acc[j][i] > 0) {
+                    acc[j][i] = -3;
+                }
+            }
+        }
+    }
+    string s = "";
+
+    s += "  ";
+
+    for (int i = 0; i < width; i++) {
+        if (i < 100) {
+            s += " ";
+        }
+        s += to_string(i);
+        if (i < 10) {
+            s += " ";
+        }
+    }
+
+    s += "\n";
+
+    for (int i = 0; i < height; i++) {
+        s += to_string(i) + " ";
+        for (int j = 0; j < width; j++) {
+            s += "[";
+            if (terrain->getTMap(j, i)->isObstacle()) {
+                s += "\033[" + to_string(YELLOWBG) + "m \033[0m";
+            } else if (acc[j][i] == -3 && units->getUMap(j, i) == nullptr) {
+                s += "\033[" + to_string(REDBG) + "m \033[0m";
+            } else if (units->getUMap(j, i) != nullptr) {
+                s += "\033[";
+                if (units->isHostile(u->getTeam(), team)) {
+                    if (acc[j][i] == -3) {
+                        s += "1;";
+                        s += to_string(REDBG);
+                        s += ";";
+                    }
+                    if (units->getUMap(j, i)->getTeam() == team) {
+                        s += to_string(GREEN);
+                    } else if (units->isAllianceActive() &&
+                               units->getAlliance(team) == units->getAlliance(units->getUMap(j, i)->getTeam())) {
+                        s += to_string(BLUE);
+                    } else {
+                        s += to_string(BLACK);
+                    }
+                } else {
+                    s += to_string(RED);
                 }
                 s += "m";
                 s += units->getUMap(j, i)->getIcon();
