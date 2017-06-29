@@ -182,6 +182,9 @@ int MultiplayerBoard::hostTurn(int t, Host *host) {
 }
 
 int MultiplayerBoard::hostPassive(int t, Host *host) {
+    bool printMap = true;
+    bool printUnit;
+
     string input;
     string auxStorage;
     if (t < 0 || t >= units->getTeams()) {
@@ -195,8 +198,13 @@ int MultiplayerBoard::hostPassive(int t, Host *host) {
 
 
     while (units->getArmies(t)->getAvailableActions() > 0 && units->checkWin() == -1) {
-        cout << printMap(host->getTeam()) << endl;
-        cout << "Remaining actions this turn: " + to_string(units->getArmies(t)->getAvailableActions()) << endl;
+        if (printMap) {
+            cout << "Waiting for player " + to_string(currentPlayerTeam) + "..." << endl
+            cout << printMap(host->getTeam()) << endl;
+            cout << "Remaining actions this turn: " + to_string(units->getArmies(t)->getAvailableActions()) << endl;
+            printMap = false;
+            printUnit = true;
+        }
 
         input = host->readAndBroadcast(t);
         int aux = atoi(const_cast<char *>(input.c_str()));
@@ -217,9 +225,13 @@ int MultiplayerBoard::hostPassive(int t, Host *host) {
                     aux = 0;
                     while ((u->getAttP() > 0 || u->getMoveP() > 0) && aux != 3 && aux != 4 && units->checkWin() == -1) {
                         aux2 = 0;
-                        cout << printUnitActions(u, host->getTeam()) << endl;
-                        cout << u->report() << endl;
-                        cout << u->typeStats() << endl;
+                        if (printUnit) {
+                            cout << "Waiting for player " + to_string(currentPlayerTeam) + "..." << endl
+                            cout << printUnitActions(u, host->getTeam()) << endl;
+                            cout << u->report() << endl;
+                            cout << u->typeStats() << endl;
+                            printUnit = false;
+                        }
                         input = host->readAndBroadcast(t);
 
                         switch (atoi(const_cast<char *>(input.c_str()))) {
@@ -241,7 +253,8 @@ int MultiplayerBoard::hostPassive(int t, Host *host) {
                                             input = host->readAndBroadcast(t);
                                             aux2 = atoi(const_cast<char *>(input.c_str()));
                                             if (aux2 == 1 || aux2 == 0/*= enter*/) {
-                                                cout << auxStorage << endl;
+                                                cout << auxStorage << endl
+                                                printUnit = true;
                                                 units->move(u->getPosX(), u->getPosY(), x, y);
                                                 virgin = false;
                                             }
@@ -270,6 +283,7 @@ int MultiplayerBoard::hostPassive(int t, Host *host) {
                                                 aux2 = atoi(const_cast<char *>(input.c_str()));
                                                 if (aux2 == 1 || aux2 == 0/*= enter*/) {
                                                     cout << auxStorage << endl;
+                                                    printUnit = true;
                                                     units->attack(u, units->getUMap(x, y));
                                                     virgin = false;
                                                     units->massRemoveComplete();
@@ -295,6 +309,7 @@ int MultiplayerBoard::hostPassive(int t, Host *host) {
                         }
                     }
                     if (aux != 4 && (aux2 == 1 || aux2 == 0)) {
+                        printMap = true;
                         u->setMoveP(0);
                         u->setAttP(0);
                         units->getArmies(t)->reduceActions();

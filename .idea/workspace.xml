@@ -13,9 +13,7 @@
   <component name="ChangeListManager">
     <list default="true" id="901c2ed4-9ef0-480d-9d4e-60acbcfb889b" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Multiplayer/Client.cpp" afterPath="$PROJECT_DIR$/Multiplayer/Client.cpp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Multiplayer/Client.h" afterPath="$PROJECT_DIR$/Multiplayer/Client.h" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Multiplayer/MultiplayerGame.cpp" afterPath="$PROJECT_DIR$/Multiplayer/MultiplayerGame.cpp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Multiplayer/MultiplayerBoard.cpp" afterPath="$PROJECT_DIR$/Multiplayer/MultiplayerBoard.cpp" />
     </list>
     <ignored path="$PROJECT_DIR$/cmake-build-debug/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -28,16 +26,16 @@
   <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="MultiplayerBoard.cpp" pinned="false" current-in-tab="false">
+      <file leaf-file-name="MultiplayerBoard.cpp" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Multiplayer/MultiplayerBoard.cpp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="459">
-              <caret line="497" column="31" lean-forward="false" selection-start-line="497" selection-start-column="25" selection-end-line="497" selection-end-column="31" />
+            <state relative-caret-position="560">
+              <caret line="235" column="0" lean-forward="true" selection-start-line="235" selection-start-column="0" selection-end-line="235" selection-end-column="0" />
               <folding>
                 <element signature="e#0#2#0" expanded="false" />
                 <element signature="e#108#8694#0" expanded="false" />
-                <element signature="e#8696#14771#0" expanded="false" />
-                <element signature="e#14773#23350#0" expanded="false" />
+                <element signature="e#15418#23995#0" expanded="false" />
+                <element signature="e#23997#32265#0" expanded="false" />
               </folding>
             </state>
           </provider>
@@ -56,8 +54,8 @@
       <file leaf-file-name="Board.cpp" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Board.cpp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="551">
-              <caret line="713" column="17" lean-forward="false" selection-start-line="713" selection-start-column="17" selection-end-line="713" selection-end-column="17" />
+            <state relative-caret-position="100">
+              <caret line="17" column="1" lean-forward="true" selection-start-line="17" selection-start-column="1" selection-end-line="17" selection-end-column="1" />
               <folding>
                 <element signature="e#79#114#0" expanded="false" />
                 <element signature="e#119#196#0" expanded="false" />
@@ -81,7 +79,9 @@
                 <element signature="e#21432#21493#0" expanded="false" />
                 <element signature="e#21495#21568#0" expanded="false" />
                 <element signature="e#21570#21679#0" expanded="false" />
+                <element signature="e#21681#22069#0" expanded="false" />
                 <element signature="e#22071#24437#0" expanded="false" />
+                <element signature="e#24439#26931#0" expanded="false" />
               </folding>
             </state>
           </provider>
@@ -164,11 +164,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="MultiplayerGame.cpp" pinned="false" current-in-tab="true">
+      <file leaf-file-name="MultiplayerGame.cpp" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Multiplayer/MultiplayerGame.cpp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="431">
-              <caret line="76" column="5" lean-forward="false" selection-start-line="76" selection-start-column="5" selection-end-line="76" selection-end-column="5" />
+            <state relative-caret-position="531">
+              <caret line="81" column="33" lean-forward="true" selection-start-line="81" selection-start-column="33" selection-end-line="81" selection-end-column="33" />
               <folding />
             </state>
           </provider>
@@ -283,10 +283,10 @@
         <option value="$PROJECT_DIR$/Other/ToDo" />
         <option value="$PROJECT_DIR$/Board.h" />
         <option value="$PROJECT_DIR$/UnitMap.cpp" />
-        <option value="$PROJECT_DIR$/Board.cpp" />
-        <option value="$PROJECT_DIR$/Multiplayer/MultiplayerBoard.cpp" />
         <option value="$PROJECT_DIR$/Multiplayer/Client.cpp" />
         <option value="$PROJECT_DIR$/Multiplayer/MultiplayerGame.cpp" />
+        <option value="$PROJECT_DIR$/Board.cpp" />
+        <option value="$PROJECT_DIR$/Multiplayer/MultiplayerBoard.cpp" />
       </list>
     </option>
   </component>
@@ -754,7 +754,7 @@
       <workItem from="1498552015314" duration="11558000" />
       <workItem from="1498564178006" duration="667000" />
       <workItem from="1498637835558" duration="13173000" />
-      <workItem from="1498724276597" duration="6068000" />
+      <workItem from="1498724276597" duration="7218000" />
     </task>
     <task id="LOCAL-00001" summary="Generic Unit in">
       <created>1496919315384</created>
@@ -1071,11 +1071,25 @@
       <option name="project" value="LOCAL" />
       <updated>1498730934208</updated>
     </task>
-    <option name="localTasksCounter" value="46" />
+    <task id="LOCAL-00046" summary="passive update 2 - fixes">
+      <created>1498731453674</created>
+      <option name="number" value="00046" />
+      <option name="presentableId" value="LOCAL-00046" />
+      <option name="project" value="LOCAL" />
+      <updated>1498731453674</updated>
+    </task>
+    <task id="LOCAL-00047" summary="passive update 2 - final fixes (hopefully)">
+      <created>1498731836056</created>
+      <option name="number" value="00047" />
+      <option name="presentableId" value="LOCAL-00047" />
+      <option name="project" value="LOCAL" />
+      <updated>1498731836056</updated>
+    </task>
+    <option name="localTasksCounter" value="48" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="177374000" />
+    <option name="totallyTimeSpent" value="178524000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="65" y="-4" width="1855" height="1084" extended-state="6" />
@@ -1087,7 +1101,7 @@
       <window_info id="CMake" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32925585" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3282365" sideWeight="0.5018868" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3361169" sideWeight="0.49811321" order="8" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.8559499" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.6691023" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32985386" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
@@ -1130,8 +1144,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="board missing" />
-    <MESSAGE value="board started" />
     <MESSAGE value="inRange &amp; accessible" />
     <MESSAGE value="walk added" />
     <MESSAGE value="stuff" />
@@ -1155,7 +1167,9 @@
     <MESSAGE value="PassiveHost updated" />
     <MESSAGE value="passive host update 1" />
     <MESSAGE value="passive update 2" />
-    <option name="LAST_COMMIT_MESSAGE" value="passive update 2" />
+    <MESSAGE value="passive update 2 - fixes" />
+    <MESSAGE value="passive update 2 - final fixes (hopefully)" />
+    <option name="LAST_COMMIT_MESSAGE" value="passive update 2 - final fixes (hopefully)" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="REFORMAT_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="REARRANGE_BEFORE_PROJECT_COMMIT" value="true" />
@@ -1483,51 +1497,11 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Other/ToDo">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Board.h">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="261">
           <caret line="72" column="23" lean-forward="true" selection-start-line="72" selection-start-column="23" selection-end-line="72" selection-end-column="23" />
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Board.cpp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="551">
-          <caret line="713" column="17" lean-forward="false" selection-start-line="713" selection-start-column="17" selection-end-line="713" selection-end-column="17" />
-          <folding>
-            <element signature="e#79#114#0" expanded="false" />
-            <element signature="e#119#196#0" expanded="false" />
-            <element signature="e#198#347#0" expanded="false" />
-            <element signature="e#349#1631#0" expanded="false" />
-            <element signature="e#1633#4656#0" expanded="false" />
-            <element signature="e#4658#4772#0" expanded="false" />
-            <element signature="e#4774#4828#0" expanded="false" />
-            <element signature="e#4830#4891#0" expanded="false" />
-            <element signature="e#4893#5025#0" expanded="false" />
-            <element signature="e#5027#5517#0" expanded="false" />
-            <element signature="e#5519#6296#0" expanded="false" />
-            <element signature="e#6298#6387#0" expanded="false" />
-            <element signature="e#6389#7218#0" expanded="false" />
-            <element signature="e#7220#11118#0" expanded="false" />
-            <element signature="e#11120#11719#0" expanded="false" />
-            <element signature="e#11721#19897#0" expanded="false" />
-            <element signature="e#19899#20157#0" expanded="false" />
-            <element signature="e#20159#21071#0" expanded="false" />
-            <element signature="e#21073#21430#0" expanded="false" />
-            <element signature="e#21432#21493#0" expanded="false" />
-            <element signature="e#21495#21568#0" expanded="false" />
-            <element signature="e#21570#21679#0" expanded="false" />
-            <element signature="e#22071#24437#0" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1584,19 +1558,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Multiplayer/MultiplayerBoard.cpp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="459">
-          <caret line="497" column="31" lean-forward="false" selection-start-line="497" selection-start-column="25" selection-end-line="497" selection-end-column="31" />
-          <folding>
-            <element signature="e#0#2#0" expanded="false" />
-            <element signature="e#108#8694#0" expanded="false" />
-            <element signature="e#8696#14771#0" expanded="false" />
-            <element signature="e#14773#23350#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Multiplayer/Client.h">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="200">
@@ -1615,9 +1576,64 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/Multiplayer/MultiplayerGame.cpp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="431">
-          <caret line="76" column="5" lean-forward="false" selection-start-line="76" selection-start-column="5" selection-end-line="76" selection-end-column="5" />
+        <state relative-caret-position="531">
+          <caret line="81" column="33" lean-forward="true" selection-start-line="81" selection-start-column="33" selection-end-line="81" selection-end-column="33" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Other/ToDo">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Board.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="100">
+          <caret line="17" column="1" lean-forward="true" selection-start-line="17" selection-start-column="1" selection-end-line="17" selection-end-column="1" />
+          <folding>
+            <element signature="e#79#114#0" expanded="false" />
+            <element signature="e#119#196#0" expanded="false" />
+            <element signature="e#198#347#0" expanded="false" />
+            <element signature="e#349#1631#0" expanded="false" />
+            <element signature="e#1633#4656#0" expanded="false" />
+            <element signature="e#4658#4772#0" expanded="false" />
+            <element signature="e#4774#4828#0" expanded="false" />
+            <element signature="e#4830#4891#0" expanded="false" />
+            <element signature="e#4893#5025#0" expanded="false" />
+            <element signature="e#5027#5517#0" expanded="false" />
+            <element signature="e#5519#6296#0" expanded="false" />
+            <element signature="e#6298#6387#0" expanded="false" />
+            <element signature="e#6389#7218#0" expanded="false" />
+            <element signature="e#7220#11118#0" expanded="false" />
+            <element signature="e#11120#11719#0" expanded="false" />
+            <element signature="e#11721#19897#0" expanded="false" />
+            <element signature="e#19899#20157#0" expanded="false" />
+            <element signature="e#20159#21071#0" expanded="false" />
+            <element signature="e#21073#21430#0" expanded="false" />
+            <element signature="e#21432#21493#0" expanded="false" />
+            <element signature="e#21495#21568#0" expanded="false" />
+            <element signature="e#21570#21679#0" expanded="false" />
+            <element signature="e#21681#22069#0" expanded="false" />
+            <element signature="e#22071#24437#0" expanded="false" />
+            <element signature="e#24439#26931#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Multiplayer/MultiplayerBoard.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="560">
+          <caret line="235" column="0" lean-forward="true" selection-start-line="235" selection-start-column="0" selection-end-line="235" selection-end-column="0" />
+          <folding>
+            <element signature="e#0#2#0" expanded="false" />
+            <element signature="e#108#8694#0" expanded="false" />
+            <element signature="e#15418#23995#0" expanded="false" />
+            <element signature="e#23997#32265#0" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
