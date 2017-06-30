@@ -122,7 +122,7 @@ TerrainMap::~TerrainMap() {
         for (Terrain *t : v) {
             delete (t);
         }
-        //v.clear();
+        v.clear();
     }
     tMap.clear();
 }
