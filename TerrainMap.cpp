@@ -86,7 +86,7 @@ Terrain *TerrainMap::getTMap(int x, int y) {
 
 void TerrainMap::setTMap(int x, int y, TerrainTypes type) {
     if (x < width && y < height) {
-        //delete (getTMap(x, y));
+        delete (getTMap(x, y));
         switch (type) {
             case plains:
                 tMap[x][y] = new Plains();
@@ -120,7 +120,7 @@ TerrainMap::~TerrainMap() {
     //destruimos tMap
     for (vector<Terrain *> v : tMap) {
         for (Terrain *t : v) {
-            //delete (t);
+            delete (t);
         }
         //v.clear();
     }
