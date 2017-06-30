@@ -439,14 +439,11 @@ void UnitMap::loadUnitMapCastleAssault() {
 
     addUnit(12, 5, king, 0);
     addEssential(getUMap(12, 5), 0);
-    addUnit(12, 8, horse, 0);
     addUnit(11, 8, horse, 0);
     addUnit(13, 8, horse, 0);
     addUnit(11, 9, soldier, 0);
     addUnit(12, 9, soldier, 0);
     addUnit(13, 9, soldier, 0);
-    addUnit(14, 9, soldier, 0);
-    addUnit(10, 9, soldier, 0);
     addUnit(7, 5, soldier, 0);
     addUnit(17, 5, soldier, 0);
     addUnit(16, 8, archer, 0);
