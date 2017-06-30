@@ -87,7 +87,9 @@ void Host::broadcast(string msg) {
 }
 
 Host::~Host() {
+    /*
     clients.clear();
+     */
 }
 
 int Host::getTeam() const {
