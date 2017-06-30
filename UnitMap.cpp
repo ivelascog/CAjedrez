@@ -433,15 +433,20 @@ void UnitMap::loadUnitMapCastleAssault() {
     addToAlliance(2, 1);
 
     addPosToDefend(12, 2, 0);
-    armies[0]->setActionHandicap(1);
+    getArmies(0)->setActionHandicap(1);
     turnLimit(10, 1);
     turnLimit(10, 2);
 
     addUnit(12, 5, king, 0);
     addEssential(getUMap(12, 5), 0);
     addUnit(12, 8, horse, 0);
+    addUnit(11, 8, horse, 0);
+    addUnit(10, 8, horse, 0);
     addUnit(11, 9, soldier, 0);
+    addUnit(12, 9, soldier, 0);
     addUnit(13, 9, soldier, 0);
+    addUnit(14, 9, soldier, 0);
+    addUnit(10, 9, soldier, 0);
     addUnit(7, 5, soldier, 0);
     addUnit(17, 5, soldier, 0);
     addUnit(16, 8, archer, 0);
@@ -470,4 +475,25 @@ void UnitMap::loadUnitMapCastleAssault() {
     addUnit(15, 12, soldier, 2);
     addUnit(14, 13, archer, 2);
     addUnit(21, 5, archer, 2);
+}
+
+int UnitMap::isPosToDefend(int x, int y, int team) {
+    for (int j = 0; j < posToDefend.size(); j++) {
+        for (int i = 0; i < posToDefend[j].size(); i++) {
+            if (posToDefend[j][i][0] == x && posToDefend[j][i][1] == y) {
+                if (j == team) {
+                    //to defend return 1
+                    return 1;
+                } else if (isHostile(team, j)) {
+                    //to attack return 2
+                    return 2;
+                } else {
+                    //ally return 3
+                    return 3;
+                }
+            }
+        }
+    }
+    //else return 0
+    return 0;
 }

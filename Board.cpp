@@ -49,6 +49,17 @@ string Board::printMap(int team) {
                 s += "\033[5;" + to_string(YELLOWBG) + "m \033[0m";
             } else if (units->getUMap(j, i) != nullptr) {
                 s += "\033[";
+                switch (units->isPosToDefend(i, j, team)) {
+                    case 1:
+                        s += to_string(CYANBG) + ";";
+                        break;
+                    case 2:
+                        s += to_string(BLUEBG) + ";";
+                        break;
+                    case 3:
+                        s += to_string(PINKBG) + ";";
+                        break;
+                }
                 if (units->getUMap(j, i)->getTeam() == team) {
                     s += to_string(GREEN);
                 } else if (units->isAllianceActive() &&

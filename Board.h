@@ -12,6 +12,9 @@
 #define BLUE 34
 #define GREEN 32
 #define BLACK 30
+#define PINKBG 45
+#define CYANBG 46
+#define BLUEBG 44
 #define RESET 0
 
 #include "UnitMap.h"

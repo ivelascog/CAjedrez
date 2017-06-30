@@ -141,6 +141,8 @@ public:
     bool isHostile(int team1, int team2);
 
     void loadUnitMapCastleAssault();
+
+    int isPosToDefend(int x, int y, int team);
 };
 
 #endif //PROYECTO_UNITMAP_H
