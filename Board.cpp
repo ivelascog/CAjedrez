@@ -59,6 +59,8 @@ string Board::printMap(int team) {
                     case 3:
                         s += to_string(PINKBG) + ";";
                         break;
+                    default:
+                        break;
                 }
                 if (units->getUMap(j, i)->getTeam() == team) {
                     s += to_string(GREEN);
@@ -72,6 +74,19 @@ string Board::printMap(int team) {
                 s += units->getUMap(j, i)->getIcon();
                 s += "\033[" + to_string(RESET) + "m";
             } else {
+                switch (units->isPosToDefend(i, j, team)) {
+                    case 1:
+                        s += "\033[5;" + to_string(CYANBG) + "m \033[0m";
+                        break;
+                    case 2:
+                        s += "\033[5;" + to_string(BLUEBG) + "m \033[0m";
+                        break;
+                    case 3:
+                        s += "\033[5;" + to_string(PINKBG) + "m \033[0m";
+                        break;
+                    default:
+                        break;
+                }
                 s += " ";
             }
             s += "]";
