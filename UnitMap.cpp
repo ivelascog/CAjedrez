@@ -433,10 +433,12 @@ void UnitMap::loadUnitMapCastleAssault() {
     addToAlliance(2, 1);
 
     addPosToDefend(12, 2, 0);
+    armies[0]->setActionHandicap(1);
     turnLimit(10, 1);
     turnLimit(10, 2);
 
     addUnit(12, 5, king, 0);
+    addEssential(getUMap(12, 5), 0);
     addUnit(12, 8, horse, 0);
     addUnit(11, 9, soldier, 0);
     addUnit(13, 9, soldier, 0);
