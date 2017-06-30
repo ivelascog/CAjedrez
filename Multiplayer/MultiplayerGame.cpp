@@ -30,9 +30,11 @@ void MultiplayerGame::joinGameCastleAssault() {
 }
 
 MultiplayerGame::~MultiplayerGame() {
+    /*
     delete (host);
     delete (client);
     delete (board);
+     */
 }
 
 void MultiplayerGame::hostInit() {
@@ -80,7 +82,7 @@ void MultiplayerGame::clientInit() {
             myTeam = stoi(aux2);
             loop = !client->initializeClient(myTeam);
             if (loop) {
-                delete (client);
+                // delete (client);
                 client = new Client(aux);
             }
         } catch (exception &e) {
