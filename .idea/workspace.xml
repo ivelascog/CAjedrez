@@ -13,10 +13,6 @@
   <component name="ChangeListManager">
     <list default="true" id="901c2ed4-9ef0-480d-9d4e-60acbcfb889b" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Board.cpp" afterPath="$PROJECT_DIR$/Board.cpp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Game.cpp" afterPath="$PROJECT_DIR$/Game.cpp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/TerrainMap.cpp" afterPath="$PROJECT_DIR$/TerrainMap.cpp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/UnitMap.cpp" afterPath="$PROJECT_DIR$/UnitMap.cpp" />
     </list>
     <ignored path="$PROJECT_DIR$/cmake-build-debug/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -821,14 +817,7 @@
       <workItem from="1498637835558" duration="13173000" />
       <workItem from="1498724276597" duration="13285000" />
       <workItem from="1498757242839" duration="131000" />
-      <workItem from="1498811057816" duration="1053000" />
-    </task>
-    <task id="LOCAL-00010" summary="Compiles :D">
-      <created>1497009378597</created>
-      <option name="number" value="00010" />
-      <option name="presentableId" value="LOCAL-00010" />
-      <option name="project" value="LOCAL" />
-      <updated>1497009378597</updated>
+      <workItem from="1498811057816" duration="1203000" />
     </task>
     <task id="LOCAL-00011" summary="Multiple changes">
       <created>1497268319077</created>
@@ -1166,11 +1155,18 @@
       <option name="project" value="LOCAL" />
       <updated>1498811700682</updated>
     </task>
-    <option name="localTasksCounter" value="59" />
+    <task id="LOCAL-00059" summary="destructors">
+      <created>1498812170438</created>
+      <option name="number" value="00059" />
+      <option name="presentableId" value="LOCAL-00059" />
+      <option name="project" value="LOCAL" />
+      <updated>1498812170438</updated>
+    </task>
+    <option name="localTasksCounter" value="60" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="185775000" />
+    <option name="totallyTimeSpent" value="185925000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="64" y="-11" width="1857" height="1092" extended-state="6" />
@@ -1225,7 +1221,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Missing runGame" />
     <MESSAGE value="WORKS!!!!" />
     <MESSAGE value="Debugged" />
     <MESSAGE value="multiplayer begun" />
@@ -1250,7 +1245,8 @@
     <MESSAGE value="conditions test" />
     <MESSAGE value="2v1 test" />
     <MESSAGE value="destructors removed" />
-    <option name="LAST_COMMIT_MESSAGE" value="destructors removed" />
+    <MESSAGE value="destructors" />
+    <option name="LAST_COMMIT_MESSAGE" value="destructors" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="REFORMAT_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="REARRANGE_BEFORE_PROJECT_COMMIT" value="true" />
@@ -1539,7 +1535,6 @@
             <element signature="e#202#316#0" expanded="false" />
             <element signature="e#318#451#0" expanded="false" />
             <element signature="e#453#588#0" expanded="false" />
-            <element signature="e#4080#4169#0" expanded="false" />
           </folding>
         </state>
       </provider>
