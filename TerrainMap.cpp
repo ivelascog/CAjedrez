@@ -120,9 +120,9 @@ TerrainMap::~TerrainMap() {
     //destruimos tMap
     for (vector<Terrain *> v : tMap) {
         for (Terrain *t : v) {
-            delete (t);
+            //delete (t);
         }
-        v.clear();
+        //v.clear();
     }
     tMap.clear();
 }
