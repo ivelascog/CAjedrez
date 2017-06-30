@@ -655,6 +655,19 @@ string Board::printUnitActionsAlly(Unit *u, int team) {
                 s += "\033[" + to_string(REDBG) + "m \033[0m";
             } else if (units->getUMap(j, i) != nullptr) {
                 s += "\033[";
+                switch (units->isPosToDefend(j, i, team)) {
+                    case 1:
+                        s += to_string(CYANBG) + ";";
+                        break;
+                    case 2:
+                        s += to_string(PINKBG) + ";";
+                        break;
+                    case 3:
+                        s += to_string(BLUEBG) + ";";
+                        break;
+                    default:
+                        break;
+                }
                 if (units->getUMap(j, i)->getTeam() == team) {
                     s += to_string(GREEN);
                 } else if (units->isAllianceActive() &&
@@ -676,7 +689,20 @@ string Board::printUnitActionsAlly(Unit *u, int team) {
             } else if (acc[j][i] > 0) {
                 s += "\033[" + to_string(GREENBG) + "m \033[0m";
             } else {
-                s += " ";
+                switch (units->isPosToDefend(j, i, team)) {
+                    case 1:
+                        s += "\033[5;" + to_string(CYANBG) + "m \033[0m";
+                        break;
+                    case 2:
+                        s += "\033[5;" + to_string(PINKBG) + "m \033[0m";
+                        break;
+                    case 3:
+                        s += "\033[5;" + to_string(BLUEBG) + "m \033[0m";
+                        break;
+                    default:
+                        s += " ";
+                        break;
+                }
             }
             s += "]";
         }
@@ -729,6 +755,19 @@ string Board::printUnitActionsEnemy(Unit *u, int team) {
                 s += "\033[" + to_string(REDBG) + "m \033[0m";
             } else if (units->getUMap(j, i) != nullptr) {
                 s += "\033[";
+                switch (units->isPosToDefend(j, i, team)) {
+                    case 1:
+                        s += to_string(CYANBG) + ";";
+                        break;
+                    case 2:
+                        s += to_string(PINKBG) + ";";
+                        break;
+                    case 3:
+                        s += to_string(BLUEBG) + ";";
+                        break;
+                    default:
+                        break;
+                }
                 if (units->isHostile(u->getTeam(), units->getUMap(j, i)->getTeam())) {
                     if (acc[j][i] == -3) {
                         s += "1;";
@@ -752,7 +791,19 @@ string Board::printUnitActionsEnemy(Unit *u, int team) {
             } else if (acc[j][i] > 0) {
                 s += "\033[" + to_string(GREENBG) + "m \033[0m";
             } else {
-                s += " ";
+                switch (units->isPosToDefend(j, i, team)) {
+                    case 1:
+                        s += "\033[5;" + to_string(CYANBG) + "m \033[0m";
+                        break;
+                    case 2:
+                        s += "\033[5;" + to_string(PINKBG) + "m \033[0m";
+                        break;
+                    case 3:
+                        s += "\033[5;" + to_string(BLUEBG) + "m \033[0m";
+                        break;
+                    default:
+                        s += " ";
+                        break;
             }
             s += "]";
         }

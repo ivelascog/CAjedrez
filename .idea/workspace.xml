@@ -49,8 +49,8 @@
       <file leaf-file-name="Board.cpp" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Board.cpp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="200">
-              <caret line="51" column="49" lean-forward="false" selection-start-line="51" selection-start-column="49" selection-end-line="51" selection-end-column="49" />
+            <state relative-caret-position="711">
+              <caret line="769" column="17" lean-forward="false" selection-start-line="769" selection-start-column="17" selection-end-line="769" selection-end-column="17" />
               <folding>
                 <element signature="e#79#114#0" expanded="false" />
                 <element signature="e#119#196#0" expanded="false" />
@@ -75,8 +75,6 @@
                 <element signature="e#22699#22772#0" expanded="false" />
                 <element signature="e#22774#22883#0" expanded="false" />
                 <element signature="e#22885#23280#0" expanded="false" />
-                <element signature="e#23282#25648#0" expanded="false" />
-                <element signature="e#25650#28142#0" expanded="false" />
               </folding>
             </state>
           </provider>
@@ -158,8 +156,8 @@
       <file leaf-file-name="UnitMap.cpp" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/UnitMap.cpp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="400">
-              <caret line="476" column="13" lean-forward="false" selection-start-line="476" selection-start-column="13" selection-end-line="476" selection-end-column="13" />
+            <state relative-caret-position="340">
+              <caret line="495" column="0" lean-forward="false" selection-start-line="495" selection-start-column="0" selection-end-line="495" selection-end-column="0" />
               <folding>
                 <element signature="e#0#2#0" expanded="false" />
                 <element signature="e#952#1396#0" expanded="false" />
@@ -763,21 +761,7 @@
       <workItem from="1498637835558" duration="13173000" />
       <workItem from="1498724276597" duration="13285000" />
       <workItem from="1498757242839" duration="131000" />
-      <workItem from="1498811057816" duration="8704000" />
-    </task>
-    <task id="LOCAL-00019" summary="board missing">
-      <created>1497872892257</created>
-      <option name="number" value="00019" />
-      <option name="presentableId" value="LOCAL-00019" />
-      <option name="project" value="LOCAL" />
-      <updated>1497872892257</updated>
-    </task>
-    <task id="LOCAL-00020" summary="board started">
-      <created>1497954738026</created>
-      <option name="number" value="00020" />
-      <option name="presentableId" value="LOCAL-00020" />
-      <option name="project" value="LOCAL" />
-      <updated>1497954738026</updated>
+      <workItem from="1498811057816" duration="9136000" />
     </task>
     <task id="LOCAL-00021" summary="inRange &amp; accessible">
       <created>1497958066251</created>
@@ -1108,11 +1092,25 @@
       <option name="project" value="LOCAL" />
       <updated>1498821056230</updated>
     </task>
-    <option name="localTasksCounter" value="68" />
+    <task id="LOCAL-00068" summary="Colors test">
+      <created>1498821382904</created>
+      <option name="number" value="00068" />
+      <option name="presentableId" value="LOCAL-00068" />
+      <option name="project" value="LOCAL" />
+      <updated>1498821382904</updated>
+    </task>
+    <task id="LOCAL-00069" summary="Colors test">
+      <created>1498821579154</created>
+      <option name="number" value="00069" />
+      <option name="presentableId" value="LOCAL-00069" />
+      <option name="project" value="LOCAL" />
+      <updated>1498821579155</updated>
+    </task>
+    <option name="localTasksCounter" value="70" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="193426000" />
+    <option name="totallyTimeSpent" value="193858000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="64" y="-11" width="1857" height="1092" extended-state="6" />
@@ -1202,16 +1200,11 @@
       <breakpoints>
         <line-breakpoint enabled="true" type="com.jetbrains.cidr.execution.debugger.OCBreakpointType">
           <url>file://$PROJECT_DIR$/UnitMap.cpp</url>
-          <line>479</line>
-          <option name="timeStamp" value="111" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="com.jetbrains.cidr.execution.debugger.OCBreakpointType">
-          <url>file://$PROJECT_DIR$/Board.cpp</url>
-          <line>76</line>
-          <option name="timeStamp" value="112" />
+          <line>480</line>
+          <option name="timeStamp" value="113" />
         </line-breakpoint>
       </breakpoints>
-      <option name="time" value="113" />
+      <option name="time" value="115" />
     </breakpoint-manager>
     <watches-manager />
   </component>
@@ -1647,8 +1640,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/UnitMap.cpp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="400">
-          <caret line="476" column="13" lean-forward="false" selection-start-line="476" selection-start-column="13" selection-end-line="476" selection-end-column="13" />
+        <state relative-caret-position="340">
+          <caret line="495" column="0" lean-forward="false" selection-start-line="495" selection-start-column="0" selection-end-line="495" selection-end-column="0" />
           <folding>
             <element signature="e#0#2#0" expanded="false" />
             <element signature="e#952#1396#0" expanded="false" />
@@ -1693,8 +1686,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/Board.cpp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="200">
-          <caret line="51" column="49" lean-forward="false" selection-start-line="51" selection-start-column="49" selection-end-line="51" selection-end-column="49" />
+        <state relative-caret-position="711">
+          <caret line="769" column="17" lean-forward="false" selection-start-line="769" selection-start-column="17" selection-end-line="769" selection-end-column="17" />
           <folding>
             <element signature="e#79#114#0" expanded="false" />
             <element signature="e#119#196#0" expanded="false" />
@@ -1719,8 +1712,6 @@
             <element signature="e#22699#22772#0" expanded="false" />
             <element signature="e#22774#22883#0" expanded="false" />
             <element signature="e#22885#23280#0" expanded="false" />
-            <element signature="e#23282#25648#0" expanded="false" />
-            <element signature="e#25650#28142#0" expanded="false" />
           </folding>
         </state>
       </provider>
