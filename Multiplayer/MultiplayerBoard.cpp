@@ -227,7 +227,8 @@ int MultiplayerBoard::hostPassive(int t, Host *host) {
                         aux2 = 0;
                         if (printU) {
                             cout << "\n\nWaiting for player " + to_string(currentPlayerTeam) + "..." << endl;
-                            cout << printUnitActions(u, host->getTeam()) << endl;
+                            string s = printUnitActions(u, host->getTeam());
+                            cout << s << endl;
                             cout << u->report() << endl;
                             cout << u->typeStats() << endl;
                             printU = false;

@@ -579,7 +579,7 @@ string Board::printUnitActions(Unit *u, int team) {
         return printUnitActionsAlly(u, team);
     } else if (units->isAllianceActive() && units->getAlliance(team) ==
                                             units->getAlliance(u->getTeam())) {
-        printUnitActionsAlly(u, team);
+        return printUnitActionsAlly(u, team);
     } else {
         return printUnitActionsEnemy(u, team);
     }
