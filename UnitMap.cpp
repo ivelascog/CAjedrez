@@ -5,7 +5,7 @@
 #include <stdexcept>
 #include "UnitMap.h"
 
-UnitMap::~UnitMap() {
+UnitMap::~UnitMap() {/*
     //destruimos uMap
     for (vector<Unit *> v : uMap) {
         //se destruyen Unit en armies (y cemetery)
@@ -45,7 +45,7 @@ UnitMap::~UnitMap() {
     defendPos.clear();
     teamActive.clear();
     wipeIsLoss.clear();
-    unitIsEssential.clear();
+    unitIsEssential.clear();*/
 }
 
 bool UnitMap::forceMove(int x1, int y1, int x2, int y2) {

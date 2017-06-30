@@ -560,6 +560,7 @@ string Board::walkAndPrint(Unit *u, int destX, int destY) {
     return s;
 }
 
+/
 Board::~Board() {
     //delete (units);
     //delete (terrain);
