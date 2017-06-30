@@ -16,7 +16,6 @@
 
 static void error(const char *msg) {
     perror(msg);
-    exit(1);
 }
 
 int SocketHelper::startServer(int puerto) {
