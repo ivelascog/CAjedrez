@@ -804,6 +804,7 @@ string Board::printUnitActionsEnemy(Unit *u, int team) {
                     default:
                         s += " ";
                         break;
+                }
             }
             s += "]";
         }
