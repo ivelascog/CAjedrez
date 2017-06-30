@@ -466,7 +466,7 @@ void UnitMap::loadUnitMapCastleAssault() {
     addUnit(3, 5, archer, 1);
 
     addUnit(23, 9, horse, 2);
-    addUnit(22, 10, horse, 2);
+    addUnit(22, 13, horse, 2);
     addUnit(21, 11, horse, 2);
     addUnit(20, 12, horse, 2);
     addUnit(20, 4, soldier, 2);
