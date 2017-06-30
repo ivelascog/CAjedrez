@@ -30,9 +30,11 @@ void MultiplayerGame::joinGameCastleAssault() {
 }
 
 MultiplayerGame::~MultiplayerGame() {
+    /*
     delete (host);
     delete (client);
     delete (board);
+     */
 }
 
 void MultiplayerGame::hostInit() {
