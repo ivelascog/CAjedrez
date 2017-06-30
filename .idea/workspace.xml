@@ -12,8 +12,16 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="901c2ed4-9ef0-480d-9d4e-60acbcfb889b" name="Default" comment="">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/proyecto.dir/build.make" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/proyecto.dir/link.txt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/cmake-build-debug/Makefile" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/cmake-build-debug/proyecto.cbp" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Board.cpp" afterPath="$PROJECT_DIR$/Board.cpp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Game.cpp" afterPath="$PROJECT_DIR$/Game.cpp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/TerrainMap.cpp" afterPath="$PROJECT_DIR$/TerrainMap.cpp" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/UnitMap.cpp" afterPath="$PROJECT_DIR$/UnitMap.cpp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/main.cpp" afterPath="$PROJECT_DIR$/main.cpp" />
     </list>
     <ignored path="$PROJECT_DIR$/cmake-build-debug/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -26,161 +34,23 @@
   <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="Board.cpp" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Board.cpp">
+      <file leaf-file-name="Board.h" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Board.h">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="351">
-              <caret line="36" column="18" lean-forward="false" selection-start-line="36" selection-start-column="8" selection-end-line="36" selection-end-column="18" />
-              <folding>
-                <element signature="e#79#114#0" expanded="false" />
-                <element signature="e#119#196#0" expanded="false" />
-                <element signature="e#198#347#0" expanded="false" />
-                <element signature="e#1814#4837#0" expanded="false" />
-                <element signature="e#4839#4953#0" expanded="false" />
-                <element signature="e#4955#5009#0" expanded="false" />
-                <element signature="e#5011#5072#0" expanded="false" />
-                <element signature="e#5074#5206#0" expanded="false" />
-                <element signature="e#5208#5698#0" expanded="false" />
-                <element signature="e#5700#6477#0" expanded="false" />
-                <element signature="e#6479#6568#0" expanded="false" />
-                <element signature="e#6570#7399#0" expanded="false" />
-                <element signature="e#7401#11299#0" expanded="false" />
-                <element signature="e#11301#11900#0" expanded="false" />
-                <element signature="e#11902#20078#0" expanded="false" />
-                <element signature="e#20080#20338#0" expanded="false" />
-                <element signature="e#20340#21252#0" expanded="false" />
-                <element signature="e#21254#21611#0" expanded="false" />
-                <element signature="e#21613#21674#0" expanded="false" />
-                <element signature="e#21676#21749#0" expanded="false" />
-                <element signature="e#21751#21860#0" expanded="false" />
-                <element signature="e#21862#22250#0" expanded="false" />
-                <element signature="e#22252#24618#0" expanded="false" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="UnitMap.cpp" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/UnitMap.cpp">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="186">
-              <caret line="430" column="21" lean-forward="false" selection-start-line="430" selection-start-column="21" selection-end-line="430" selection-end-column="21" />
-              <folding>
-                <element signature="e#0#2#0" expanded="false" />
-                <element signature="e#81#943#0" expanded="false" />
-                <element signature="e#945#1389#0" expanded="false" />
-                <element signature="e#1391#1902#0" expanded="false" />
-                <element signature="e#1904#2270#0" expanded="false" />
-                <element signature="e#2272#3253#0" expanded="false" />
-                <element signature="e#3255#3529#0" expanded="false" />
-                <element signature="e#3531#3581#0" expanded="false" />
-                <element signature="e#3583#3646#0" expanded="false" />
-                <element signature="e#4391#4542#0" expanded="false" />
-                <element signature="e#4544#4715#0" expanded="false" />
-                <element signature="e#4717#4884#0" expanded="false" />
-                <element signature="e#4886#5655#0" expanded="false" />
-                <element signature="e#5657#6026#0" expanded="false" />
-                <element signature="e#6028#6227#0" expanded="false" />
-                <element signature="e#6229#6519#0" expanded="false" />
-                <element signature="e#6521#6683#0" expanded="false" />
-                <element signature="e#6685#6868#0" expanded="false" />
-                <element signature="e#6870#6969#0" expanded="false" />
-                <element signature="e#6971#7177#0" expanded="false" />
-                <element signature="e#7179#7232#0" expanded="false" />
-                <element signature="e#7234#7285#0" expanded="false" />
-                <element signature="e#7287#7356#0" expanded="false" />
-                <element signature="e#7358#7438#0" expanded="false" />
-                <element signature="e#7440#7743#0" expanded="false" />
-                <element signature="e#7745#7796#0" expanded="false" />
-                <element signature="e#7798#7896#0" expanded="false" />
-                <element signature="e#7898#8040#0" expanded="false" />
-                <element signature="e#8042#8288#0" expanded="false" />
-                <element signature="e#8290#8610#0" expanded="false" />
-                <element signature="e#8612#8787#0" expanded="false" />
-                <element signature="e#8789#8967#0" expanded="false" />
-                <element signature="e#8969#9131#0" expanded="false" />
-                <element signature="e#9133#9296#0" expanded="false" />
-                <element signature="e#9298#9369#0" expanded="false" />
-                <element signature="e#9372#9527#0" expanded="false" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Army.cpp" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Units/Army.cpp">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="330">
-              <caret line="121" column="14" lean-forward="false" selection-start-line="121" selection-start-column="14" selection-end-line="121" selection-end-column="14" />
+            <state relative-caret-position="211">
+              <caret line="48" column="30" lean-forward="false" selection-start-line="48" selection-start-column="30" selection-end-line="48" selection-end-column="30" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Army.h" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Units/Army.h">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-910">
-              <caret line="20" column="8" lean-forward="false" selection-start-line="20" selection-start-column="8" selection-end-line="20" selection-end-column="8" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Archer.cpp" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Units/Classes/Archer.cpp">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="200">
-              <caret line="10" column="14" lean-forward="false" selection-start-line="10" selection-start-column="14" selection-end-line="10" selection-end-column="14" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Soldier.cpp" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Units/Classes/Soldier.cpp">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="260">
-              <caret line="13" column="13" lean-forward="true" selection-start-line="13" selection-start-column="13" selection-end-line="13" selection-end-column="13" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Horse.h" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Units/Classes/Horse.h">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="220">
-              <caret line="11" column="22" lean-forward="true" selection-start-line="11" selection-start-column="22" selection-end-line="11" selection-end-column="22" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Horse.cpp" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Units/Classes/Horse.cpp">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="180">
-              <caret line="9" column="14" lean-forward="false" selection-start-line="9" selection-start-column="14" selection-end-line="9" selection-end-column="14" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="MultiplayerGame.cpp" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Multiplayer/MultiplayerGame.cpp">
+      <file leaf-file-name="Game.h" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Game.h">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="360">
-              <caret line="21" column="30" lean-forward="false" selection-start-line="21" selection-start-column="30" selection-end-line="21" selection-end-column="30" />
+              <caret line="18" column="58" lean-forward="false" selection-start-line="18" selection-start-column="58" selection-end-line="18" selection-end-column="58" />
               <folding>
-                <element signature="e#0#2#0" expanded="false" />
-                <element signature="e#590#689#0" expanded="false" />
-                <element signature="e#691#1254#0" expanded="false" />
-                <element signature="e#1256#2243#0" expanded="false" />
-                <element signature="e#2245#2676#0" expanded="false" />
-                <element signature="e#2678#3373#0" expanded="false" />
-                <element signature="e#3375#4060#0" expanded="false" />
-                <element signature="e#4062#4151#0" expanded="false" />
+                <marker date="1498736963371" expanded="true" signature="130:410" ph="{...}" />
               </folding>
             </state>
           </provider>
@@ -196,108 +66,155 @@
           </provider>
         </entry>
       </file>
+      <file leaf-file-name="Menu.cpp" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Menu.cpp">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="273">
+              <caret line="25" column="54" lean-forward="false" selection-start-line="25" selection-start-column="54" selection-end-line="25" selection-end-column="54" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="TerrainMap.cpp" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/TerrainMap.cpp">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="393">
+              <caret line="122" column="14" lean-forward="false" selection-start-line="122" selection-start-column="14" selection-end-line="122" selection-end-column="14" />
+              <folding>
+                <element signature="e#38#58#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Board.cpp" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Board.cpp">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-249">
+              <caret line="564" column="6" lean-forward="false" selection-start-line="564" selection-start-column="6" selection-end-line="564" selection-end-column="6" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="CMakeLists.txt" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/CMakeLists.txt">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="260">
+              <caret line="13" column="28" lean-forward="false" selection-start-line="13" selection-start-column="28" selection-end-line="13" selection-end-column="28" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="UnitMap.cpp" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/UnitMap.cpp">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="40">
+              <caret line="17" column="16" lean-forward="false" selection-start-line="17" selection-start-column="10" selection-end-line="17" selection-end-column="16" />
+              <folding>
+                <element signature="e#0#2#0" expanded="false" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="TerrainMap.h" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/TerrainMap.h">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="500">
+              <caret line="25" column="0" lean-forward="false" selection-start-line="25" selection-start-column="0" selection-end-line="25" selection-end-column="0" />
+              <folding>
+                <element signature="e#100#132#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Game.cpp" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Game.cpp">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="211">
+              <caret line="24" column="9" lean-forward="false" selection-start-line="24" selection-start-column="9" selection-end-line="24" selection-end-column="9" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
     </leaf>
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
       <find>getumap</find>
-      <find>switch</find>
-      <find>uMap</find>
-      <find>N</find>
-      <find>NU</find>
-      <find>NUL</find>
-      <find>NULL</find>
-      <find>teamActive</find>
-      <find>\</find>
-      <find>\n</find>
-      <find>show</find>
-      <find>checkLossAll</find>
-      <find>aux</find>
-      <find>Error</find>
-      <find>aux2</find>
-      <find>board</find>
-      <find>cin</find>
-      <find>getline</find>
-      <find>printUnitActions</find>
-      <find>print</find>
-      <find>s += to_string(i) + &quot; &quot;;</find>
-      <find>s += &quot;  &quot;;</find>
-      <find>s += &quot;\t &quot;;</find>
-      <find>if (i &lt; 10)</find>
-      <find>checkwi</find>
+      <find>delete</find>
     </findStrings>
-    <replaceStrings>
-      <replace>-&gt;horizontal()</replace>
-      <replace>boardM</replace>
-      <replace>s += to_string(i) + &quot;\t&quot;;</replace>
-      <replace>s += &quot; \t&quot;;</replace>
-      <replace>s += &quot;\t &quot;;</replace>
-      <replace>s += &quot;\t&quot;;</replace>
-      <replace>if (i &lt; 9)</replace>
-    </replaceStrings>
   </component>
   <component name="Git.Settings">
     <option name="PREVIOUS_COMMIT_AUTHORS">
       <list>
+        <option value="Angel &lt;angel3531@hotmail.es&gt;" />
+        <option value="Ángel Serrano &lt;angel3531@hotmail.es&gt;" />
         <option value="fer &lt;feriostio@gmail.com&gt;" />
         <option value="Fernando Lucas &lt;feriostio@gmail.com&gt;" />
       </list>
     </option>
+    <option name="UPDATE_TYPE" value="MERGE" />
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
+        <option value="$PROJECT_DIR$/cosospahacer" />
+        <option value="$PROJECT_DIR$/premadeMaps.h" />
+        <option value="$PROJECT_DIR$/PremadeMaps.h" />
+        <option value="$PROJECT_DIR$/Unit.cpp" />
+        <option value="$PROJECT_DIR$/unitMap.h" />
+        <option value="$PROJECT_DIR$/unitMap.cpp" />
+        <option value="$PROJECT_DIR$/Unit.h" />
+        <option value="$PROJECT_DIR$/Army.cpp" />
+        <option value="$PROJECT_DIR$/Army.h" />
+        <option value="$PROJECT_DIR$/UnitList.h" />
+        <option value="$PROJECT_DIR$/Terrain/Types/Rock.h" />
         <option value="$PROJECT_DIR$/Terrain/Types/Plain.h" />
         <option value="$PROJECT_DIR$/Terrain/Types/Plain.cpp" />
         <option value="$PROJECT_DIR$/Terrain/Types/Rock.cpp" />
+        <option value="$PROJECT_DIR$/Units/Classes/Soldier.cpp" />
         <option value="$PROJECT_DIR$/Units/Classes/Soldier.h" />
         <option value="$PROJECT_DIR$/Units/UnitNames.h" />
         <option value="$PROJECT_DIR$/Units/UnitList.h" />
         <option value="$PROJECT_DIR$/Units/Classes/Archer.h" />
+        <option value="$PROJECT_DIR$/Units/Classes/Archer.cpp" />
         <option value="$PROJECT_DIR$/Units/Classes/King.h" />
+        <option value="$PROJECT_DIR$/Units/Classes/King.cpp" />
         <option value="$PROJECT_DIR$/Units/Classes/Horse.h" />
+        <option value="$PROJECT_DIR$/Units/Classes/Horse.cpp" />
         <option value="$PROJECT_DIR$/Terrain/Types/UnitNames.h" />
         <option value="$PROJECT_DIR$/Terrain/TerrainNames.h" />
-        <option value="$PROJECT_DIR$/Terrain/Types/Plains.h" />
-        <option value="$PROJECT_DIR$/Terrain/Types/Rocks.h" />
-        <option value="$PROJECT_DIR$/Terrain/TerrainList.h" />
-        <option value="$PROJECT_DIR$/Terrain/Types/Rocks.cpp" />
         <option value="$PROJECT_DIR$/Terrain/Types/Plains.cpp" />
+        <option value="$PROJECT_DIR$/Terrain/Types/Plains.h" />
+        <option value="$PROJECT_DIR$/Units/Unit.cpp" />
+        <option value="$PROJECT_DIR$/Terrain/Terrain.cpp" />
+        <option value="$PROJECT_DIR$/Terrain/Types/Rocks.h" />
+        <option value="$PROJECT_DIR$/Terrain/Types/Rocks.cpp" />
+        <option value="$PROJECT_DIR$/Terrain/TerrainList.h" />
+        <option value="$PROJECT_DIR$/Units/Army.cpp" />
+        <option value="$PROJECT_DIR$/Units/Army.h" />
+        <option value="$PROJECT_DIR$/Units/Unit.h" />
+        <option value="$PROJECT_DIR$/Board.h" />
         <option value="$PROJECT_DIR$/TerrainMap.h" />
         <option value="$PROJECT_DIR$/Terrain/Terrain.h" />
-        <option value="$PROJECT_DIR$/Terrain/Terrain.cpp" />
-        <option value="$PROJECT_DIR$/Units/Classes/King.cpp" />
-        <option value="$PROJECT_DIR$/Units/Unit.h" />
-        <option value="$PROJECT_DIR$/Units/Unit.cpp" />
-        <option value="$PROJECT_DIR$/Units/Army.h" />
-        <option value="$PROJECT_DIR$/Units/Army.cpp" />
-        <option value="$PROJECT_DIR$/Menu.h" />
-        <option value="$PROJECT_DIR$/Menu.cpp" />
+        <option value="$PROJECT_DIR$/Game.h" />
+        <option value="$PROJECT_DIR$/UnitMap.h" />
         <option value="$PROJECT_DIR$/Multiplayer.h" />
+        <option value="$PROJECT_DIR$/CMakeLists.txt" />
         <option value="$PROJECT_DIR$/Multiplayer.cpp" />
         <option value="$PROJECT_DIR$/SocketHelper.cpp" />
-        <option value="$PROJECT_DIR$/.gitignore" />
-        <option value="$PROJECT_DIR$/Multiplayer/Client.h" />
-        <option value="$PROJECT_DIR$/Game.h" />
-        <option value="$PROJECT_DIR$/CMakeLists.txt" />
-        <option value="$PROJECT_DIR$/Multiplayer/MultiplayerGame.h" />
-        <option value="$PROJECT_DIR$/Multiplayer/Host.h" />
-        <option value="$PROJECT_DIR$/Multiplayer/MultiplayerBoard.h" />
-        <option value="$PROJECT_DIR$/Multiplayer/Host.cpp" />
-        <option value="$PROJECT_DIR$/Other/ToDo" />
-        <option value="$PROJECT_DIR$/Board.h" />
-        <option value="$PROJECT_DIR$/Multiplayer/Client.cpp" />
-        <option value="$PROJECT_DIR$/Multiplayer/MultiplayerBoard.cpp" />
-        <option value="$PROJECT_DIR$/Units/Classes/Horse.cpp" />
-        <option value="$PROJECT_DIR$/UnitMap.h" />
-        <option value="$PROJECT_DIR$/TerrainMap.cpp" />
-        <option value="$PROJECT_DIR$/Game.cpp" />
-        <option value="$PROJECT_DIR$/Board.cpp" />
-        <option value="$PROJECT_DIR$/Units/Classes/Archer.cpp" />
-        <option value="$PROJECT_DIR$/Units/Classes/Soldier.cpp" />
-        <option value="$PROJECT_DIR$/Multiplayer/MultiplayerGame.cpp" />
         <option value="$PROJECT_DIR$/main.cpp" />
+        <option value="$PROJECT_DIR$/Board.cpp" />
+        <option value="$PROJECT_DIR$/Game.cpp" />
+        <option value="$PROJECT_DIR$/Menu.cpp" />
+        <option value="$PROJECT_DIR$/TerrainMap.cpp" />
         <option value="$PROJECT_DIR$/UnitMap.cpp" />
       </list>
     </option>
@@ -310,10 +227,10 @@
   </component>
   <component name="OCFindUsagesOptions" text="true" ivars="false" properties="true" derivedClasses="false" />
   <component name="ProjectFrameBounds">
-    <option name="x" value="65" />
-    <option name="y" value="-4" />
-    <option name="width" value="1855" />
-    <option name="height" value="1084" />
+    <option name="x" value="1088" />
+    <option name="y" value="-11" />
+    <option name="width" value="1217" />
+    <option name="height" value="1036" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
@@ -353,7 +270,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="Units" />
+              <option name="myItemId" value="Terrain" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -367,11 +284,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="Units" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Classes" />
+              <option name="myItemId" value="cmake-build-debug" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -383,15 +296,14 @@
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="add_unversioned_files" value="$PROJECT_DIR$/.idea/workspace.xml" />
     <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
-    <property name="run.code.analysis.last.selected.profile" value="pProject Default" />
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/Multiplayer" />
       <recent name="$PROJECT_DIR$/Terrain/Types" />
       <recent name="$PROJECT_DIR$" />
       <recent name="$PROJECT_DIR$/Other" />
       <recent name="$PROJECT_DIR$/Terrain" />
+      <recent name="$PROJECT_DIR$/Units" />
     </key>
   </component>
   <component name="RestoreUpdateTree" date="Moments ago" ActionInfo="_Update">
@@ -408,7 +320,7 @@
           <option name="mySupportsDeletion" value="false" />
           <option name="myCanBeAbsent" value="false" />
           <option name="myId" value="UPDATED" />
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/Multiplayer/SocketHelper.cpp</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/main.cpp</PATH>
         </FILE-GROUP>
         <FILE-GROUP>
           <option name="myUpdateName" value="Created" />
@@ -715,6 +627,9 @@
   <component name="ShelveChangesManager" show_recycled="false">
     <option name="remove_strategy" value="false" />
   </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
       <changelist id="901c2ed4-9ef0-480d-9d4e-60acbcfb889b" name="Default" comment="" />
@@ -740,23 +655,62 @@
       <workItem from="1497528363000" duration="469000" />
       <workItem from="1497601580108" duration="53000" />
       <workItem from="1497601886631" duration="6057000" />
-      <workItem from="1497608417902" duration="1484000" />
-      <workItem from="1497609912261" duration="4500000" />
-      <workItem from="1497614424880" duration="309000" />
-      <workItem from="1497860279053" duration="5207000" />
-      <workItem from="1497866397903" duration="318000" />
-      <workItem from="1497866728789" duration="6862000" />
-      <workItem from="1497946789251" duration="13052000" />
-      <workItem from="1498032842343" duration="13508000" />
-      <workItem from="1498050589413" duration="15468000" />
-      <workItem from="1498155403174" duration="4504000" />
-      <workItem from="1498207734550" duration="4116000" />
-      <workItem from="1498212430641" duration="7067000" />
-      <workItem from="1498472360196" duration="6571000" />
-      <workItem from="1498552015314" duration="11558000" />
-      <workItem from="1498564178006" duration="667000" />
-      <workItem from="1498637835558" duration="13173000" />
-      <workItem from="1498724276597" duration="12231000" />
+      <workItem from="1497608417902" duration="5000" />
+      <workItem from="1498122511896" duration="4216000" />
+      <workItem from="1498207133145" duration="1547000" />
+      <workItem from="1498209416661" duration="4490000" />
+      <workItem from="1498472502094" duration="3602000" />
+      <workItem from="1498559547521" duration="3852000" />
+      <workItem from="1498738000717" duration="985000" />
+    </task>
+    <task id="LOCAL-00001" summary="Generic Unit in">
+      <created>1496919315384</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1496919315384</updated>
+    </task>
+    <task id="LOCAL-00002" summary="Generic Unit in">
+      <created>1496919451038</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1496919451038</updated>
+    </task>
+    <task id="LOCAL-00003" summary="Generic Unit in">
+      <created>1496919607618</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1496919607618</updated>
+    </task>
+    <task id="LOCAL-00004" summary="Unit and Archer classes">
+      <created>1496998103567</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1496998103567</updated>
+    </task>
+    <task id="LOCAL-00005" summary="Unit and Archer classes">
+      <created>1496998188887</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1496998188887</updated>
+    </task>
+    <task id="LOCAL-00006" summary="Horse, Soldier">
+      <created>1496998845067</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1496998845067</updated>
+    </task>
+    <task id="LOCAL-00007" summary="Ignore updated">
+      <created>1496999085706</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1496999085706</updated>
     </task>
     <task id="LOCAL-00008" summary="Unit &amp; reformat">
       <created>1496999459526</created>
@@ -807,321 +761,42 @@
       <option name="project" value="LOCAL" />
       <updated>1497520903051</updated>
     </task>
-    <task id="LOCAL-00015" summary="TerrainMap WIP">
-      <created>1497608470281</created>
+    <task id="LOCAL-00015" summary="Cosos.">
+      <created>1498216037765</created>
       <option name="number" value="00015" />
       <option name="presentableId" value="LOCAL-00015" />
       <option name="project" value="LOCAL" />
-      <updated>1497608470281</updated>
+      <updated>1498216037765</updated>
     </task>
-    <task id="LOCAL-00016" summary="tMap done">
-      <created>1497609884478</created>
-      <option name="number" value="00016" />
-      <option name="presentableId" value="LOCAL-00016" />
-      <option name="project" value="LOCAL" />
-      <updated>1497609884478</updated>
-    </task>
-    <task id="LOCAL-00017" summary="testing needed">
-      <created>1497614725355</created>
-      <option name="number" value="00017" />
-      <option name="presentableId" value="LOCAL-00017" />
-      <option name="project" value="LOCAL" />
-      <updated>1497614725356</updated>
-    </task>
-    <task id="LOCAL-00018" summary="to do">
-      <created>1497860388102</created>
-      <option name="number" value="00018" />
-      <option name="presentableId" value="LOCAL-00018" />
-      <option name="project" value="LOCAL" />
-      <updated>1497860388102</updated>
-    </task>
-    <task id="LOCAL-00019" summary="board missing">
-      <created>1497872892257</created>
-      <option name="number" value="00019" />
-      <option name="presentableId" value="LOCAL-00019" />
-      <option name="project" value="LOCAL" />
-      <updated>1497872892257</updated>
-    </task>
-    <task id="LOCAL-00020" summary="board started">
-      <created>1497954738026</created>
-      <option name="number" value="00020" />
-      <option name="presentableId" value="LOCAL-00020" />
-      <option name="project" value="LOCAL" />
-      <updated>1497954738026</updated>
-    </task>
-    <task id="LOCAL-00021" summary="inRange &amp; accessible">
-      <created>1497958066251</created>
-      <option name="number" value="00021" />
-      <option name="presentableId" value="LOCAL-00021" />
-      <option name="project" value="LOCAL" />
-      <updated>1497958066251</updated>
-    </task>
-    <task id="LOCAL-00022" summary="walk added">
-      <created>1497960589273</created>
-      <option name="number" value="00022" />
-      <option name="presentableId" value="LOCAL-00022" />
-      <option name="project" value="LOCAL" />
-      <updated>1497960589273</updated>
-    </task>
-    <task id="LOCAL-00023" summary="stuff">
-      <created>1498040478285</created>
-      <option name="number" value="00023" />
-      <option name="presentableId" value="LOCAL-00023" />
-      <option name="project" value="LOCAL" />
-      <updated>1498040478285</updated>
-    </task>
-    <task id="LOCAL-00024" summary="Kinda works">
-      <created>1498046916088</created>
-      <option name="number" value="00024" />
-      <option name="presentableId" value="LOCAL-00024" />
-      <option name="project" value="LOCAL" />
-      <updated>1498046916089</updated>
-    </task>
-    <task id="LOCAL-00025" summary="Missing placebo, game, skip turn, consult unit">
-      <created>1498119840874</created>
-      <option name="number" value="00025" />
-      <option name="presentableId" value="LOCAL-00025" />
-      <option name="project" value="LOCAL" />
-      <updated>1498119840874</updated>
-    </task>
-    <task id="LOCAL-00026" summary="Missing game, ~Board">
-      <created>1498128120533</created>
-      <option name="number" value="00026" />
-      <option name="presentableId" value="LOCAL-00026" />
-      <option name="project" value="LOCAL" />
-      <updated>1498128120533</updated>
-    </task>
-    <task id="LOCAL-00027" summary="WORKS!!!!">
-      <created>1498131129370</created>
-      <option name="number" value="00027" />
-      <option name="presentableId" value="LOCAL-00027" />
-      <option name="project" value="LOCAL" />
-      <updated>1498131129370</updated>
-    </task>
-    <task id="LOCAL-00028" summary="Debugged">
-      <created>1498133355428</created>
-      <option name="number" value="00028" />
-      <option name="presentableId" value="LOCAL-00028" />
-      <option name="project" value="LOCAL" />
-      <updated>1498133355428</updated>
-    </task>
-    <task id="LOCAL-00029" summary="multiplayer begun">
-      <created>1498214985544</created>
-      <option name="number" value="00029" />
-      <option name="presentableId" value="LOCAL-00029" />
-      <option name="project" value="LOCAL" />
-      <updated>1498214985544</updated>
-    </task>
-    <task id="LOCAL-00030" summary="3.2.1">
-      <created>1498216946645</created>
-      <option name="number" value="00030" />
-      <option name="presentableId" value="LOCAL-00030" />
-      <option name="project" value="LOCAL" />
-      <updated>1498216946645</updated>
-    </task>
-    <task id="LOCAL-00031" summary="Missing game, ~Board">
-      <created>1498218322509</created>
-      <option name="number" value="00031" />
-      <option name="presentableId" value="LOCAL-00031" />
-      <option name="project" value="LOCAL" />
-      <updated>1498218322509</updated>
-    </task>
-    <task id="LOCAL-00032" summary="Clearer new map">
-      <created>1498219582296</created>
-      <option name="number" value="00032" />
-      <option name="presentableId" value="LOCAL-00032" />
-      <option name="project" value="LOCAL" />
-      <updated>1498219582296</updated>
-    </task>
-    <task id="LOCAL-00033" summary="readf">
-      <created>1498478803757</created>
-      <option name="number" value="00033" />
-      <option name="presentableId" value="LOCAL-00033" />
-      <option name="project" value="LOCAL" />
-      <updated>1498478803757</updated>
-    </task>
-    <task id="LOCAL-00034" summary="communication protocol updated -read">
-      <created>1498553452219</created>
-      <option name="number" value="00034" />
-      <option name="presentableId" value="LOCAL-00034" />
-      <option name="project" value="LOCAL" />
-      <updated>1498553452219</updated>
-    </task>
-    <task id="LOCAL-00035" summary="test mp connection">
-      <created>1498559395225</created>
-      <option name="number" value="00035" />
-      <option name="presentableId" value="LOCAL-00035" />
-      <option name="project" value="LOCAL" />
-      <updated>1498559395225</updated>
-    </task>
-    <task id="LOCAL-00036" summary="mp tests client">
-      <created>1498560500211</created>
-      <option name="number" value="00036" />
-      <option name="presentableId" value="LOCAL-00036" />
-      <option name="project" value="LOCAL" />
-      <updated>1498560500211</updated>
-    </task>
-    <task id="LOCAL-00037" summary="3 team test">
-      <created>1498560932432</created>
-      <option name="number" value="00037" />
-      <option name="presentableId" value="LOCAL-00037" />
-      <option name="project" value="LOCAL" />
-      <updated>1498560932432</updated>
-    </task>
-    <task id="LOCAL-00038" summary="Multiplayer test ready">
-      <created>1498639316066</created>
-      <option name="number" value="00038" />
-      <option name="presentableId" value="LOCAL-00038" />
-      <option name="project" value="LOCAL" />
-      <updated>1498639316066</updated>
-    </task>
-    <task id="LOCAL-00039" summary="Multiplayer test ready 2">
-      <created>1498639855673</created>
-      <option name="number" value="00039" />
-      <option name="presentableId" value="LOCAL-00039" />
-      <option name="project" value="LOCAL" />
-      <updated>1498639855673</updated>
-    </task>
-    <task id="LOCAL-00040" summary="Multiplayer test ready 2">
-      <created>1498640198744</created>
-      <option name="number" value="00040" />
-      <option name="presentableId" value="LOCAL-00040" />
-      <option name="project" value="LOCAL" />
-      <updated>1498640198744</updated>
-    </task>
-    <task id="LOCAL-00041" summary="Multiplayer test ready 2">
-      <created>1498640216567</created>
-      <option name="number" value="00041" />
-      <option name="presentableId" value="LOCAL-00041" />
-      <option name="project" value="LOCAL" />
-      <updated>1498640216567</updated>
-    </task>
-    <task id="LOCAL-00042" summary="Multiplayer test 0.3">
-      <created>1498640618684</created>
-      <option name="number" value="00042" />
-      <option name="presentableId" value="LOCAL-00042" />
-      <option name="project" value="LOCAL" />
-      <updated>1498640618684</updated>
-    </task>
-    <task id="LOCAL-00043" summary="PassiveHost updated">
-      <created>1498649923445</created>
-      <option name="number" value="00043" />
-      <option name="presentableId" value="LOCAL-00043" />
-      <option name="project" value="LOCAL" />
-      <updated>1498649923445</updated>
-    </task>
-    <task id="LOCAL-00044" summary="passive host update 1">
-      <created>1498729300455</created>
-      <option name="number" value="00044" />
-      <option name="presentableId" value="LOCAL-00044" />
-      <option name="project" value="LOCAL" />
-      <updated>1498729300455</updated>
-    </task>
-    <task id="LOCAL-00045" summary="passive update 2">
-      <created>1498730934208</created>
-      <option name="number" value="00045" />
-      <option name="presentableId" value="LOCAL-00045" />
-      <option name="project" value="LOCAL" />
-      <updated>1498730934208</updated>
-    </task>
-    <task id="LOCAL-00046" summary="passive update 2 - fixes">
-      <created>1498731453674</created>
-      <option name="number" value="00046" />
-      <option name="presentableId" value="LOCAL-00046" />
-      <option name="project" value="LOCAL" />
-      <updated>1498731453674</updated>
-    </task>
-    <task id="LOCAL-00047" summary="passive update 2 - final fixes (hopefully)">
-      <created>1498731836056</created>
-      <option name="number" value="00047" />
-      <option name="presentableId" value="LOCAL-00047" />
-      <option name="project" value="LOCAL" />
-      <updated>1498731836056</updated>
-    </task>
-    <task id="LOCAL-00048" summary="passive update 3">
-      <created>1498732614000</created>
-      <option name="number" value="00048" />
-      <option name="presentableId" value="LOCAL-00048" />
-      <option name="project" value="LOCAL" />
-      <updated>1498732614000</updated>
-    </task>
-    <task id="LOCAL-00049" summary="passive update 3">
-      <created>1498732747808</created>
-      <option name="number" value="00049" />
-      <option name="presentableId" value="LOCAL-00049" />
-      <option name="project" value="LOCAL" />
-      <updated>1498732747808</updated>
-    </task>
-    <task id="LOCAL-00050" summary="passive update 3">
-      <created>1498733021863</created>
-      <option name="number" value="00050" />
-      <option name="presentableId" value="LOCAL-00050" />
-      <option name="project" value="LOCAL" />
-      <updated>1498733021864</updated>
-    </task>
-    <task id="LOCAL-00051" summary="passive update 4">
-      <created>1498734280845</created>
-      <option name="number" value="00051" />
-      <option name="presentableId" value="LOCAL-00051" />
-      <option name="project" value="LOCAL" />
-      <updated>1498734280846</updated>
-    </task>
-    <task id="LOCAL-00052" summary="conditions test">
-      <created>1498734319825</created>
-      <option name="number" value="00052" />
-      <option name="presentableId" value="LOCAL-00052" />
-      <option name="project" value="LOCAL" />
-      <updated>1498734319825</updated>
-    </task>
-    <task id="LOCAL-00053" summary="conditions test">
-      <created>1498734425680</created>
-      <option name="number" value="00053" />
-      <option name="presentableId" value="LOCAL-00053" />
-      <option name="project" value="LOCAL" />
-      <updated>1498734425680</updated>
-    </task>
-    <task id="LOCAL-00054" summary="2v1 test">
-      <created>1498736934482</created>
-      <option name="number" value="00054" />
-      <option name="presentableId" value="LOCAL-00054" />
-      <option name="project" value="LOCAL" />
-      <updated>1498736934482</updated>
-    </task>
-    <task id="LOCAL-00055" summary="2v1 test">
-      <created>1498737222557</created>
-      <option name="number" value="00055" />
-      <option name="presentableId" value="LOCAL-00055" />
-      <option name="project" value="LOCAL" />
-      <updated>1498737222557</updated>
-    </task>
-    <task id="LOCAL-00056" summary="2v1 test">
-      <created>1498737294894</created>
-      <option name="number" value="00056" />
-      <option name="presentableId" value="LOCAL-00056" />
-      <option name="project" value="LOCAL" />
-      <updated>1498737294894</updated>
-    </task>
-    <option name="localTasksCounter" value="57" />
+    <option name="localTasksCounter" value="16" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="183537000" />
+    <option name="totallyTimeSpent" value="82276000" />
+  </component>
+  <component name="TodoView">
+    <todo-panel id="selected-file">
+      <is-autoscroll-to-source value="true" />
+    </todo-panel>
+    <todo-panel id="all">
+      <are-packages-shown value="true" />
+      <is-autoscroll-to-source value="true" />
+    </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="65" y="-4" width="1855" height="1084" extended-state="6" />
-    <editor active="true" />
+    <frame x="1088" y="-11" width="1217" height="1036" extended-state="6" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.14040907" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3162839" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
-      <window_info id="CMake" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32925585" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3282365" sideWeight="0.5018868" order="7" side_tool="true" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3361169" sideWeight="0.49811321" order="8" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.6691023" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.14798974" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3292683" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3181818" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="CMake" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32815966" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32705098" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.23392461" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32985386" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3292683" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.45929018" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3991131" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Data View" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -1134,210 +809,233 @@
     <layout-to-restore>
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3162839" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3181818" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="CMake" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32925585" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
+      <window_info id="CMake" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32925585" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3282365" sideWeight="0.5018868" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="true" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3361169" sideWeight="0.49811321" order="8" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3058455" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32985386" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.13875069" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32815966" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32925585" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33027524" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.13515826" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32925585" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.22860125" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.39959225" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Data View" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
     </layout-to-restore>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="processedProjectFiles" value="true" />
   </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State>
+              <option name="RECENTLY_FILTERED_USER_GROUPS">
+                <collection />
+              </option>
+              <option name="RECENTLY_FILTERED_BRANCH_GROUPS">
+                <collection />
+              </option>
+              <option name="COLUMN_ORDER">
+                <list>
+                  <option value="0" />
+                  <option value="1" />
+                  <option value="2" />
+                  <option value="3" />
+                </list>
+              </option>
+            </State>
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
   <component name="VcsContentAnnotationSettings">
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Missing placebo, game, skip turn, consult unit" />
-    <MESSAGE value="Missing runGame" />
-    <MESSAGE value="WORKS!!!!" />
-    <MESSAGE value="Debugged" />
-    <MESSAGE value="multiplayer begun" />
-    <MESSAGE value="3.2.1" />
-    <MESSAGE value="Missing game, ~Board" />
-    <MESSAGE value="Clearer new map" />
-    <MESSAGE value="readf" />
-    <MESSAGE value="communication protocol updated -read" />
-    <MESSAGE value="test mp connection" />
-    <MESSAGE value="mp tests client" />
-    <MESSAGE value="3 team test" />
-    <MESSAGE value="Multiplayer test ready" />
-    <MESSAGE value="Multiplayer test ready 2" />
-    <MESSAGE value="Multiplayer test 0.3" />
-    <MESSAGE value="PassiveHost updated" />
-    <MESSAGE value="passive host update 1" />
-    <MESSAGE value="passive update 2" />
-    <MESSAGE value="passive update 2 - fixes" />
-    <MESSAGE value="passive update 2 - final fixes (hopefully)" />
-    <MESSAGE value="passive update 3" />
-    <MESSAGE value="passive update 4" />
-    <MESSAGE value="conditions test" />
-    <MESSAGE value="2v1 test" />
-    <option name="LAST_COMMIT_MESSAGE" value="2v1 test" />
+    <MESSAGE value="Generic Unit in" />
+    <MESSAGE value="Unit and Archer classes" />
+    <MESSAGE value="Horse, Soldier" />
+    <MESSAGE value="Unit &amp; reformat" />
+    <MESSAGE value="Ignore updated" />
+    <MESSAGE value="Compiles :D" />
+    <MESSAGE value="Multiple changes" />
+    <MESSAGE value="Works!" />
+    <MESSAGE value="before board" />
+    <MESSAGE value="actually compilable" />
+    <MESSAGE value="Unit Map with vector&lt;Bool&gt;" />
+    <MESSAGE value="Comments" />
+    <MESSAGE value="Cosos." />
+    <option name="LAST_COMMIT_MESSAGE" value="Cosos." />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="REFORMAT_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="REARRANGE_BEFORE_PROJECT_COMMIT" value="true" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="com.jetbrains.cidr.execution.debugger.OCBreakpointType">
-          <url>file://$PROJECT_DIR$/UnitMap.cpp</url>
-          <line>153</line>
-          <option name="timeStamp" value="108" />
-        </line-breakpoint>
-      </breakpoints>
-      <option name="time" value="109" />
+      <option name="time" value="31" />
     </breakpoint-manager>
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file:///usr/include/c++/5/bits/stl_uninitialized.h">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="214">
-          <caret line="280" column="36" lean-forward="false" selection-start-line="280" selection-start-column="36" selection-end-line="280" selection-end-column="36" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file:///usr/include/c++/5/bits/stl_construct.h">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="214">
-          <caret line="74" column="6" lean-forward="false" selection-start-line="74" selection-start-column="6" selection-end-line="74" selection-end-column="6" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/TerrainMap.h">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="200">
-          <caret line="12" column="7" lean-forward="true" selection-start-line="12" selection-start-column="7" selection-end-line="12" selection-end-column="7" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file:///usr/include/c++/5/bits/allocator.h">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="214">
-          <caret line="45" column="0" lean-forward="false" selection-start-line="45" selection-start-column="0" selection-end-line="45" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file:///usr/include/c++/5/string">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="223">
-          <caret line="40" column="0" lean-forward="false" selection-start-line="40" selection-start-column="0" selection-end-line="40" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file:///usr/include/c++/5/stdexcept">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="214">
-          <caret line="38" column="0" lean-forward="false" selection-start-line="38" selection-start-column="0" selection-end-line="38" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file:///usr/include/c++/5/bits/alloc_traits.h">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="214">
-          <caret line="541" column="6" lean-forward="false" selection-start-line="541" selection-start-column="6" selection-end-line="541" selection-end-column="6" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file:///usr/include/c++/5/bits/vector.tcc">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="214">
-          <caret line="429" column="32" lean-forward="false" selection-start-line="429" selection-start-column="32" selection-end-line="429" selection-end-column="32" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file:///usr/include/c++/5/ext/new_allocator.h">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="214">
-          <caret line="119" column="6" lean-forward="false" selection-start-line="119" selection-start-column="6" selection-end-line="119" selection-end-column="6" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file:///usr/include/x86_64-linux-gnu/c++/5/bits/c++allocator.h">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="214">
-          <caret line="32" column="0" lean-forward="false" selection-start-line="32" selection-start-column="0" selection-end-line="32" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file:///usr/include/c++/5/vector">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="263">
-          <caret line="68" column="0" lean-forward="false" selection-start-line="68" selection-start-column="0" selection-end-line="68" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Terrain/Terrain.cpp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="80">
-          <caret line="6" column="33" lean-forward="false" selection-start-line="6" selection-start-column="33" selection-end-line="6" selection-end-column="33" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Terrain/Terrain.h">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="220">
-          <caret line="27" column="15" lean-forward="false" selection-start-line="27" selection-start-column="15" selection-end-line="27" selection-end-column="15" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file:///usr/include/c++/5/bits/stl_vector.h">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="318">
-          <caret line="276" column="6" lean-forward="false" selection-start-line="276" selection-start-column="6" selection-end-line="276" selection-end-column="6" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Menu.cpp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="303">
-          <caret line="24" column="12" lean-forward="false" selection-start-line="24" selection-start-column="12" selection-end-line="24" selection-end-column="12" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Multiplayer.cpp" />
-    <entry file="file://$PROJECT_DIR$/Menu.h">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="220">
-          <caret line="11" column="23" lean-forward="false" selection-start-line="11" selection-start-column="23" selection-end-line="11" selection-end-column="23" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Multiplayer.h" />
-    <entry file="file://$PROJECT_DIR$/Units/Unit.cpp">
+    <entry file="file://$PROJECT_DIR$/cmake-build-debug/GenericUnit.h" />
+    <entry file="file://$PROJECT_DIR$/.gitignore">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Multiplayer/SocketHelper.h">
+    <entry file="file://$PROJECT_DIR$/CMakeLists.txt">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="320">
-          <caret line="16" column="38" lean-forward="false" selection-start-line="16" selection-start-column="38" selection-end-line="16" selection-end-column="38" />
-          <folding />
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Units/Unit.h">
+    <entry file="file://$PROJECT_DIR$/main.cpp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="940">
-          <caret line="49" column="0" lean-forward="true" selection-start-line="49" selection-start-column="0" selection-end-line="49" selection-end-column="0" />
+        <state relative-caret-position="100">
+          <caret line="5" column="0" lean-forward="true" selection-start-line="5" selection-start-column="0" selection-end-line="5" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/cmake-build-debug/GenericUnit.cpp" />
+    <entry file="file://$PROJECT_DIR$/cmake-build-debug/GenericUnit.h" />
+    <entry file="file://$PROJECT_DIR$/GenericUnit.cpp" />
+    <entry file="file://$PROJECT_DIR$/cmake-build-debug/Makefile">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-120">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/cmake-build-debug/proyecto.cbp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.idea/workspace.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-620">
+          <caret line="361" column="39" lean-forward="false" selection-start-line="361" selection-start-column="39" selection-end-line="361" selection-end-column="39" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.gitignore">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="3000">
+          <caret line="150" column="1" lean-forward="false" selection-start-line="150" selection-start-column="1" selection-end-line="150" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file:///usr/include/c++/5/bits/list.tcc">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1113">
+          <caret line="291" column="19" lean-forward="false" selection-start-line="291" selection-start-column="19" selection-end-line="291" selection-end-column="19" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Other/ToDo">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="20">
+          <caret line="1" column="9" lean-forward="false" selection-start-line="1" selection-start-column="9" selection-end-line="1" selection-end-column="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/PremadeMaps.h" />
+    <entry file="file://$PROJECT_DIR$/Units/Classes/King.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="220">
+          <caret line="11" column="30" lean-forward="false" selection-start-line="11" selection-start-column="30" selection-end-line="11" selection-end-column="30" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Units/Classes/King.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="80">
+          <caret line="4" column="17" lean-forward="false" selection-start-line="4" selection-start-column="17" selection-end-line="4" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Units/Classes/Horse.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="220">
+          <caret line="11" column="31" lean-forward="false" selection-start-line="11" selection-start-column="31" selection-end-line="11" selection-end-column="31" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Units/Classes/Horse.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="80">
+          <caret line="4" column="18" lean-forward="false" selection-start-line="4" selection-start-column="18" selection-end-line="4" selection-end-column="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Terrain/Types/UnitNames.h" />
+    <entry file="file://$PROJECT_DIR$/Units/Classes/Soldier.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="80">
+          <caret line="4" column="0" lean-forward="false" selection-start-line="4" selection-start-column="0" selection-end-line="4" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Terrain/Types/Rocks.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="200">
+          <caret line="10" column="0" lean-forward="true" selection-start-line="10" selection-start-column="0" selection-end-line="10" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Terrain/Types/Plains.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="120">
+          <caret line="6" column="18" lean-forward="true" selection-start-line="6" selection-start-column="18" selection-end-line="8" selection-end-column="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Terrain/Types/Rocks.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="220">
+          <caret line="11" column="12" lean-forward="false" selection-start-line="11" selection-start-column="12" selection-end-line="11" selection-end-column="12" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Terrain/Types/Plains.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="180">
+          <caret line="9" column="6" lean-forward="false" selection-start-line="9" selection-start-column="6" selection-end-line="9" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Terrain/Terrain.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="80">
+          <caret line="4" column="20" lean-forward="false" selection-start-line="4" selection-start-column="20" selection-end-line="4" selection-end-column="20" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Terrain/TerrainNames.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="220">
+          <caret line="12" column="14" lean-forward="false" selection-start-line="12" selection-start-column="14" selection-end-line="12" selection-end-column="14" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Units/Classes/Archer.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="80">
+          <caret line="4" column="19" lean-forward="false" selection-start-line="4" selection-start-column="19" selection-end-line="4" selection-end-column="19" />
         </state>
       </provider>
     </entry>
@@ -1348,266 +1046,130 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/.gitignore">
+    <entry file="file://$PROJECT_DIR$/Units/Classes/Soldier.h">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="627">
-          <caret line="152" column="0" lean-forward="true" selection-start-line="152" selection-start-column="0" selection-end-line="152" selection-end-column="0" />
-          <folding />
+        <state relative-caret-position="140">
+          <caret line="7" column="0" lean-forward="false" selection-start-line="7" selection-start-column="0" selection-end-line="7" selection-end-column="0" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Units/Classes/King.cpp">
+    <entry file="file://$PROJECT_DIR$/Units/Army.cpp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="400">
-          <caret line="20" column="18" lean-forward="false" selection-start-line="20" selection-start-column="18" selection-end-line="20" selection-end-column="18" />
+        <state relative-caret-position="655">
+          <caret line="165" column="28" lean-forward="false" selection-start-line="165" selection-start-column="28" selection-end-line="165" selection-end-column="28" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Game.h">
+    <entry file="file://$PROJECT_DIR$/Units/Unit.cpp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="460">
-          <caret line="23" column="16" lean-forward="false" selection-start-line="23" selection-start-column="16" selection-end-line="23" selection-end-column="16" />
-          <folding />
+        <state relative-caret-position="1320">
+          <caret line="127" column="13" lean-forward="false" selection-start-line="127" selection-start-column="13" selection-end-line="127" selection-end-column="13" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/CMakeLists.txt">
+    <entry file="file://$PROJECT_DIR$/Terrain/Terrain.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="575">
+          <caret line="41" column="4" lean-forward="false" selection-start-line="41" selection-start-column="4" selection-end-line="41" selection-end-column="4" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Terrain/TerrainList.h">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="240">
-          <caret line="12" column="8" lean-forward="false" selection-start-line="12" selection-start-column="8" selection-end-line="12" selection-end-column="8" />
-          <folding />
+          <caret line="12" column="25" lean-forward="false" selection-start-line="12" selection-start-column="25" selection-end-line="12" selection-end-column="25" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Multiplayer/MultiplayerBoard.h">
+    <entry file="file://$PROJECT_DIR$/Units/Army.h">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="400">
-          <caret line="20" column="0" lean-forward="false" selection-start-line="20" selection-start-column="0" selection-end-line="20" selection-end-column="0" />
-          <folding>
-            <element signature="e#111#132#0" expanded="false" />
-          </folding>
+        <state relative-caret-position="1380">
+          <caret line="69" column="37" lean-forward="false" selection-start-line="69" selection-start-column="37" selection-end-line="69" selection-end-column="37" />
         </state>
       </provider>
     </entry>
-    <entry file="file:///usr/include/c++/5/bits/postypes.h">
+    <entry file="file://$PROJECT_DIR$/Units/Unit.h">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="936">
-          <caret line="97" column="20" lean-forward="false" selection-start-line="97" selection-start-column="20" selection-end-line="97" selection-end-column="20" />
+        <state relative-caret-position="320">
+          <caret line="16" column="0" lean-forward="false" selection-start-line="16" selection-start-column="0" selection-end-line="16" selection-end-column="0" />
         </state>
       </provider>
     </entry>
-    <entry file="file:///usr/include/c++/5/bits/basic_string.h">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="331">
-          <caret line="5194" column="11" lean-forward="false" selection-start-line="5194" selection-start-column="4" selection-end-line="5194" selection-end-column="11" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Multiplayer/SocketHelper.cpp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="260">
-          <caret line="135" column="75" lean-forward="true" selection-start-line="135" selection-start-column="75" selection-end-line="135" selection-end-column="75" />
-          <folding>
-            <element signature="e#0#2#0" expanded="false" />
-            <element signature="e#4019#4110#0" expanded="false" />
-            <element signature="e#4112#4178#0" expanded="false" />
-            <marker date="1498726476517" expanded="true" signature="1971:2287" ph="{...}" />
-            <marker date="1498726476517" expanded="true" signature="2760:2829" ph="{...}" />
-            <marker date="1498726476517" expanded="true" signature="2876:2919" ph="{...}" />
-            <marker date="1498726476517" expanded="true" signature="2950:3677" ph="{...}" />
-            <marker date="1498726476517" expanded="true" signature="3729:4017" ph="{...}" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Multiplayer/Host.cpp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="387">
-          <caret line="93" column="4" lean-forward="false" selection-start-line="93" selection-start-column="4" selection-end-line="93" selection-end-column="16" />
-          <folding>
-            <element signature="e#0#2#0" expanded="false" />
-            <element signature="e#83#1372#0" expanded="false" />
-            <element signature="e#1374#1445#0" expanded="false" />
-            <element signature="e#1447#1669#0" expanded="false" />
-            <element signature="e#1671#1902#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Multiplayer/Host.h">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="141">
-          <caret line="13" column="10" lean-forward="false" selection-start-line="13" selection-start-column="10" selection-end-line="13" selection-end-column="10" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Board.h">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="261">
-          <caret line="72" column="23" lean-forward="false" selection-start-line="72" selection-start-column="23" selection-end-line="72" selection-end-column="23" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Multiplayer/Client.h">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="200">
-          <caret line="10" column="6" lean-forward="false" selection-start-line="10" selection-start-column="6" selection-end-line="10" selection-end-column="6" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Multiplayer/Client.cpp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="820">
-          <caret line="42" column="4" lean-forward="false" selection-start-line="42" selection-start-column="4" selection-end-line="42" selection-end-column="24" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Other/ToDo">
+    <entry file="file://$PROJECT_DIR$/Units/UnitList.h">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
+          <caret line="0" column="2" lean-forward="false" selection-start-line="0" selection-start-column="2" selection-end-line="0" selection-end-column="2" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Units/UnitNames.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="200">
+          <caret line="10" column="29" lean-forward="false" selection-start-line="10" selection-start-column="29" selection-end-line="10" selection-end-column="29" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/UnitMap.h">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="871">
-          <caret line="142" column="22" lean-forward="false" selection-start-line="142" selection-start-column="22" selection-end-line="142" selection-end-column="22" />
+        <state relative-caret-position="1580">
+          <caret line="79" column="22" lean-forward="false" selection-start-line="79" selection-start-column="22" selection-end-line="79" selection-end-column="22" />
+          <folding>
+            <element signature="e#93#116#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/CMakeLists.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="260">
+          <caret line="13" column="28" lean-forward="false" selection-start-line="13" selection-start-column="28" selection-end-line="13" selection-end-column="28" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/TerrainMap.cpp">
+    <entry file="file://$PROJECT_DIR$/TerrainMap.h">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="460">
-          <caret line="27" column="26" lean-forward="false" selection-start-line="27" selection-start-column="26" selection-end-line="27" selection-end-column="26" />
+        <state relative-caret-position="500">
+          <caret line="25" column="0" lean-forward="false" selection-start-line="25" selection-start-column="0" selection-end-line="25" selection-end-column="0" />
           <folding>
-            <element signature="e#0#2#0" expanded="false" />
-            <element signature="e#1217#2060#0" expanded="false" />
-            <element signature="e#2062#2239#0" expanded="false" />
-            <element signature="e#2241#2756#0" expanded="false" />
-            <element signature="e#2758#3024#0" expanded="false" />
-            <element signature="e#3026#3224#0" expanded="false" />
+            <element signature="e#100#132#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Multiplayer/MultiplayerBoard.cpp">
+    <entry file="file://$PROJECT_DIR$/Multiplayer.h" />
+    <entry file="file://$PROJECT_DIR$/Multiplayer.cpp" />
+    <entry file="file://$PROJECT_DIR$/SocketHelper.cpp" />
+    <entry file="file://$PROJECT_DIR$/Board.h">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="200">
-          <caret line="499" column="59" lean-forward="false" selection-start-line="499" selection-start-column="59" selection-end-line="499" selection-end-column="59" />
-          <folding>
-            <element signature="e#0#2#0" expanded="false" />
-            <element signature="e#108#8694#0" expanded="false" />
-            <element signature="e#8696#15397#0" expanded="false" />
-            <element signature="e#15399#23976#0" expanded="false" />
-            <element signature="e#23978#30612#0" expanded="false" />
-          </folding>
+        <state relative-caret-position="211">
+          <caret line="48" column="30" lean-forward="false" selection-start-line="48" selection-start-column="30" selection-end-line="48" selection-end-column="30" />
+          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Multiplayer/MultiplayerGame.h">
+    <entry file="file://$PROJECT_DIR$/Board.cpp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="380">
-          <caret line="22" column="15" lean-forward="false" selection-start-line="22" selection-start-column="15" selection-end-line="22" selection-end-column="15" />
+        <state relative-caret-position="-249">
+          <caret line="564" column="6" lean-forward="false" selection-start-line="564" selection-start-column="6" selection-end-line="564" selection-end-column="6" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Game.cpp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="320">
-          <caret line="19" column="19" lean-forward="true" selection-start-line="19" selection-start-column="19" selection-end-line="19" selection-end-column="19" />
-          <folding>
-            <element signature="e#0#2#0" expanded="false" />
-            <element signature="e#407#1195#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Board.cpp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="351">
-          <caret line="36" column="18" lean-forward="false" selection-start-line="36" selection-start-column="8" selection-end-line="36" selection-end-column="18" />
-          <folding>
-            <element signature="e#79#114#0" expanded="false" />
-            <element signature="e#119#196#0" expanded="false" />
-            <element signature="e#198#347#0" expanded="false" />
-            <element signature="e#1814#4837#0" expanded="false" />
-            <element signature="e#4839#4953#0" expanded="false" />
-            <element signature="e#4955#5009#0" expanded="false" />
-            <element signature="e#5011#5072#0" expanded="false" />
-            <element signature="e#5074#5206#0" expanded="false" />
-            <element signature="e#5208#5698#0" expanded="false" />
-            <element signature="e#5700#6477#0" expanded="false" />
-            <element signature="e#6479#6568#0" expanded="false" />
-            <element signature="e#6570#7399#0" expanded="false" />
-            <element signature="e#7401#11299#0" expanded="false" />
-            <element signature="e#11301#11900#0" expanded="false" />
-            <element signature="e#11902#20078#0" expanded="false" />
-            <element signature="e#20080#20338#0" expanded="false" />
-            <element signature="e#20340#21252#0" expanded="false" />
-            <element signature="e#21254#21611#0" expanded="false" />
-            <element signature="e#21613#21674#0" expanded="false" />
-            <element signature="e#21676#21749#0" expanded="false" />
-            <element signature="e#21751#21860#0" expanded="false" />
-            <element signature="e#21862#22250#0" expanded="false" />
-            <element signature="e#22252#24618#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Units/Classes/Archer.cpp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="200">
-          <caret line="10" column="14" lean-forward="false" selection-start-line="10" selection-start-column="14" selection-end-line="10" selection-end-column="14" />
+        <state relative-caret-position="211">
+          <caret line="24" column="9" lean-forward="false" selection-start-line="24" selection-start-column="9" selection-end-line="24" selection-end-column="9" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Units/Classes/Soldier.cpp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="260">
-          <caret line="13" column="13" lean-forward="true" selection-start-line="13" selection-start-column="13" selection-end-line="13" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Units/Classes/Horse.h">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="220">
-          <caret line="11" column="22" lean-forward="true" selection-start-line="11" selection-start-column="22" selection-end-line="11" selection-end-column="22" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Units/Classes/Horse.cpp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="180">
-          <caret line="9" column="14" lean-forward="false" selection-start-line="9" selection-start-column="14" selection-end-line="9" selection-end-column="14" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Multiplayer/MultiplayerGame.cpp">
+    <entry file="file://$PROJECT_DIR$/Game.h">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="360">
-          <caret line="21" column="30" lean-forward="false" selection-start-line="21" selection-start-column="30" selection-end-line="21" selection-end-column="30" />
+          <caret line="18" column="58" lean-forward="false" selection-start-line="18" selection-start-column="58" selection-end-line="18" selection-end-column="58" />
           <folding>
-            <element signature="e#0#2#0" expanded="false" />
-            <element signature="e#590#689#0" expanded="false" />
-            <element signature="e#691#1254#0" expanded="false" />
-            <element signature="e#1256#2243#0" expanded="false" />
-            <element signature="e#2245#2676#0" expanded="false" />
-            <element signature="e#2678#3373#0" expanded="false" />
-            <element signature="e#3375#4060#0" expanded="false" />
-            <element signature="e#4062#4151#0" expanded="false" />
+            <marker date="1498736963371" expanded="true" signature="130:410" ph="{...}" />
           </folding>
         </state>
       </provider>
@@ -1620,63 +1182,30 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Units/Army.cpp">
+    <entry file="file://$PROJECT_DIR$/Menu.cpp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="330">
-          <caret line="121" column="14" lean-forward="false" selection-start-line="121" selection-start-column="14" selection-end-line="121" selection-end-column="14" />
+        <state relative-caret-position="273">
+          <caret line="25" column="54" lean-forward="false" selection-start-line="25" selection-start-column="54" selection-end-line="25" selection-end-column="54" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Units/Army.h">
+    <entry file="file://$PROJECT_DIR$/TerrainMap.cpp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-910">
-          <caret line="20" column="8" lean-forward="false" selection-start-line="20" selection-start-column="8" selection-end-line="20" selection-end-column="8" />
-          <folding />
+        <state relative-caret-position="393">
+          <caret line="122" column="14" lean-forward="false" selection-start-line="122" selection-start-column="14" selection-end-line="122" selection-end-column="14" />
+          <folding>
+            <element signature="e#38#58#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/UnitMap.cpp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="186">
-          <caret line="430" column="21" lean-forward="false" selection-start-line="430" selection-start-column="21" selection-end-line="430" selection-end-column="21" />
+        <state relative-caret-position="40">
+          <caret line="17" column="16" lean-forward="false" selection-start-line="17" selection-start-column="10" selection-end-line="17" selection-end-column="16" />
           <folding>
             <element signature="e#0#2#0" expanded="false" />
-            <element signature="e#81#943#0" expanded="false" />
-            <element signature="e#945#1389#0" expanded="false" />
-            <element signature="e#1391#1902#0" expanded="false" />
-            <element signature="e#1904#2270#0" expanded="false" />
-            <element signature="e#2272#3253#0" expanded="false" />
-            <element signature="e#3255#3529#0" expanded="false" />
-            <element signature="e#3531#3581#0" expanded="false" />
-            <element signature="e#3583#3646#0" expanded="false" />
-            <element signature="e#4391#4542#0" expanded="false" />
-            <element signature="e#4544#4715#0" expanded="false" />
-            <element signature="e#4717#4884#0" expanded="false" />
-            <element signature="e#4886#5655#0" expanded="false" />
-            <element signature="e#5657#6026#0" expanded="false" />
-            <element signature="e#6028#6227#0" expanded="false" />
-            <element signature="e#6229#6519#0" expanded="false" />
-            <element signature="e#6521#6683#0" expanded="false" />
-            <element signature="e#6685#6868#0" expanded="false" />
-            <element signature="e#6870#6969#0" expanded="false" />
-            <element signature="e#6971#7177#0" expanded="false" />
-            <element signature="e#7179#7232#0" expanded="false" />
-            <element signature="e#7234#7285#0" expanded="false" />
-            <element signature="e#7287#7356#0" expanded="false" />
-            <element signature="e#7358#7438#0" expanded="false" />
-            <element signature="e#7440#7743#0" expanded="false" />
-            <element signature="e#7745#7796#0" expanded="false" />
-            <element signature="e#7798#7896#0" expanded="false" />
-            <element signature="e#7898#8040#0" expanded="false" />
-            <element signature="e#8042#8288#0" expanded="false" />
-            <element signature="e#8290#8610#0" expanded="false" />
-            <element signature="e#8612#8787#0" expanded="false" />
-            <element signature="e#8789#8967#0" expanded="false" />
-            <element signature="e#8969#9131#0" expanded="false" />
-            <element signature="e#9133#9296#0" expanded="false" />
-            <element signature="e#9298#9369#0" expanded="false" />
-            <element signature="e#9372#9527#0" expanded="false" />
           </folding>
         </state>
       </provider>

@@ -15,20 +15,20 @@ UnitMap::~UnitMap() {
 
     //destruimos armies
     for (Army *a : armies) {
-        delete (a);
+        //delete (a);
     }
     armies.clear();
 
     //destruimos cemetery
     for (Army *a : cemetery) {
-        delete (a);
+        //delete (a);
     }
     cemetery.clear();
 
     //destruimos essentials
     for (vector<Unit *> v : essentials) {
         for (Unit *u : v) {
-            delete (u);
+            // delete (u);
         }
         v.clear();
     }

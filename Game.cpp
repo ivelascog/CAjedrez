@@ -22,7 +22,7 @@ void Game::loadGameCastleAssault() {
 
 Game::~Game() {
     if (board != nullptr) {
-        delete (board);
+        // delete (board);
     }
 }
 

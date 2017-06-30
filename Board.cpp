@@ -561,8 +561,8 @@ string Board::walkAndPrint(Unit *u, int destX, int destY) {
 }
 
 Board::~Board() {
-    delete (units);
-    delete (terrain);
+    //delete (units);
+    //delete (terrain);
 }
 
 int Board::getCurrentPlayerTeam() const {
