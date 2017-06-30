@@ -54,10 +54,10 @@ string Board::printMap(int team) {
                         s += to_string(CYANBG) + ";";
                         break;
                     case 2:
-                        s += to_string(BLUEBG) + ";";
+                        s += to_string(PINKBG) + ";";
                         break;
                     case 3:
-                        s += to_string(PINKBG) + ";";
+                        s += to_string(BLUEBG) + ";";
                         break;
                     default:
                         break;
@@ -79,10 +79,10 @@ string Board::printMap(int team) {
                         s += "\033[5;" + to_string(CYANBG) + "m \033[0m";
                         break;
                     case 2:
-                        s += "\033[5;" + to_string(BLUEBG) + "m \033[0m";
+                        s += "\033[5;" + to_string(PINKBG) + "m \033[0m";
                         break;
                     case 3:
-                        s += "\033[5;" + to_string(PINKBG) + "m \033[0m";
+                        s += "\033[5;" + to_string(BLUEBG) + "m \033[0m";
                         break;
                     default:
                         s += " ";
