@@ -3,7 +3,7 @@
 
 int main() {
     MultiplayerGame mg = MultiplayerGame();
-    //mg.hostGameCastleAssault();
-    mg.joinGameCastleAssault();
+    mg.hostGame1();
+    //mg.joinGameCastleAssault();
     mg.runGame();
 }
