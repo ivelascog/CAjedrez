@@ -24,6 +24,8 @@ public:
     virtual void runGame();
 
     void loadGameCastleAssault();
+
+    virtual Board *getBoard();
 };
 
 

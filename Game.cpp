@@ -54,3 +54,7 @@ void Game::runGame() {
     board->getUnits()->massRemoveComplete();
     cout << board->printMap(winner) << endl;
 };
+
+Board *Game::getBoard() {
+    return board;
+}
