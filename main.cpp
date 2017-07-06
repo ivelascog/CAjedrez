@@ -1,9 +1,11 @@
+#include "mainwindow.h"
+#include <QApplication>
 
-#include "Multiplayer/MultiplayerGame.h"
+int main(int argc, char *argv[])
+{
+    QApplication a(argc, argv);
+    MainWindow w;
+    w.show();
 
-int main() {
-    MultiplayerGame mg = MultiplayerGame();
-    mg.hostGame1();
-    //mg.joinGameCastleAssault();
-    mg.runGame();
+    return a.exec();
 }
