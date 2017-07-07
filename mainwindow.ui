@@ -46,18 +46,7 @@
      <number>0</number>
     </property>
     <item row="0" column="0">
-     <layout class="QGridLayout" name="BoardUI">
-      <item row="0" column="0">
-       <widget class="QPushButton" name="dummy">
-        <property name="enabled">
-         <bool>false</bool>
-        </property>
-        <property name="text">
-         <string>PushButton</string>
-        </property>
-       </widget>
-      </item>
-     </layout>
+     <layout class="QGridLayout" name="BoardUI"/>
     </item>
    </layout>
   </widget>

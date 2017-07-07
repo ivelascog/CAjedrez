@@ -11,6 +11,7 @@
 #include "MultiplayerBoard.h"
 
 class MultiplayerGame : public Game {
+protected:
     int myTeam;
     bool isHost = false;
     Host *host;
@@ -22,11 +23,11 @@ public:
 
     virtual ~MultiplayerGame();
 
-    void hostInit();
+    virtual void hostInit();
 
     void joinGame1();
 
-    void clientInit();
+    virtual void clientInit();
 
     void runGame();
 

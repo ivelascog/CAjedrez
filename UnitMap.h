@@ -10,40 +10,35 @@
 #include <array>
 
 class UnitMap {
-    vector <vector<Unit *>> uMap;
+    vector<vector<Unit *>> uMap;
     vector<Army *> armies;
     vector<Army *> cemetery;
     vector<bool> teamActive;
     int height;
     int width;
     int teams;
-public:
-    int getTeams() const;
-
-private:
     bool allianceActive = false;
     int currentTurn;
+    string mapIdentifier = "";
+    vector<string> teamNames;
 
     //losscons
     vector<bool> wipeIsLoss;
-
     vector<bool> unitIsEssential;
-    vector <vector<Unit *>> essentials;
-
+    vector<vector<Unit *>> essentials;
     vector<bool> lossAfterXTurns;
     vector<int> turnsToLose;
-public:
-    bool isAllianceActive() const;
-
-private:
-
     vector<bool> defendPos;
-    vector <vector<std::array<int, 2>>> posToDefend;
+    vector<vector<std::array<int, 2>>> posToDefend;
 
     //default cond init
     void condInit();
 
 public:
+    int getTeams() const;
+
+    bool isAllianceActive() const;
+
     //Devuelve la ud que hay en la pos enviada como atributo.
     Unit *getUMap(int x, int y);
 
@@ -143,6 +138,10 @@ public:
     void loadUnitMapCastleAssault();
 
     int isPosToDefend(int x, int y, int team);
+
+    vector<string> getTeamNames() const;
+
+    string getMapIdentifier() const;
 };
 
 #endif //PROYECTO_UNITMAP_H

@@ -46,6 +46,7 @@ UnitMap::~UnitMap() {
     teamActive.clear();
     wipeIsLoss.clear();
     unitIsEssential.clear();
+    teamNames.clear();
 }
 
 bool UnitMap::forceMove(int x1, int y1, int x2, int y2) {
@@ -199,6 +200,16 @@ bool UnitMap::getTeamActive(int team) {
         return teamActive[team];
     }
     throw std::runtime_error("Index out of bounds exception");
+}
+
+vector<string> UnitMap::getTeamNames() const
+{
+    return teamNames;
+}
+
+string UnitMap::getMapIdentifier() const
+{
+    return mapIdentifier;
 }
 
 void UnitMap::condInit() {
@@ -421,6 +432,9 @@ void UnitMap::loadUnitMap1() {
     addUnit(9, 0, archer, 1);
     addUnit(3, 0, horse, 1);
     addUnit(11, 0, horse, 1);
+
+    teamNames  = {"GNU army", "Friendly Merchants"};
+    mapIdentifier = "Battle for free software";
 }
 
 void UnitMap::loadUnitMapCastleAssault() {
@@ -472,6 +486,9 @@ void UnitMap::loadUnitMapCastleAssault() {
     addUnit(15, 12, soldier, 2);
     addUnit(14, 13, archer, 2);
     addUnit(21, 5, archer, 2);
+
+    teamNames = {"Defenders", "Siege team 1", "Siege team 2"};
+    mapIdentifier = "Castle siege";
 }
 
 int UnitMap::isPosToDefend(int x, int y, int team) {

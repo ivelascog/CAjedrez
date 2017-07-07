@@ -12,16 +12,14 @@ using namespace std;
 
 class Host {
     int team;
-public:
-    int getTeam() const;
-
-private:
     int serverSocket;
     vector<int> clients;
 public:
     virtual ~Host();
 
     Host(int teams, int hostTeam);
+
+    Host(int teams, int hostTeam, string ip, string mapID);
 
     void close();
 
@@ -32,6 +30,8 @@ public:
     string readAndBroadcast(int team);
 
     void broadcast(string msg);
+
+    int getTeam() const;
 };
 
 

@@ -1,17 +1,15 @@
 #include "mainwindow.h"
 #include "ui_mainwindow.h"
-#include "Multiplayer/MultiplayerGame.h"
 
 MainWindow::MainWindow(QWidget *parent) :
     QMainWindow(parent),
     ui(new Ui::MainWindow)
 {
-    MultiplayerGame *g = new MultiplayerGame();
+    UIGame *g = new UIGame();
     g->joinGame1();
+    ui->setupUi(this);
     int h = g->getBoard()->getUnits()->getHeight();
     int w = g->getBoard()->getUnits()->getWidth();
-    ui->setupUi(this);
-    ui->dummy->hide();
     for (int i = 0; i < w; i++) {
         for (int j = 0; j < h; j++){
             auto button = new QPushButton();

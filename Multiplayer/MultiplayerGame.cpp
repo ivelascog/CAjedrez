@@ -80,7 +80,7 @@ void MultiplayerGame::clientInit() {
             myTeam = stoi(aux2);
             loop = !client->initializeClient(myTeam);
             if (loop) {
-                // delete (client);
+                delete (client);
                 client = new Client(aux);
             }
         } catch (exception &e) {

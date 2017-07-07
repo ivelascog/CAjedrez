@@ -2,6 +2,8 @@
 #define MAINWINDOW_H
 
 #include <QMainWindow>
+#include "UI/UIGame.h"
+#include <QPushButton>
 
 namespace Ui {
 class MainWindow;
@@ -17,6 +19,8 @@ public:
 
 private:
     Ui::MainWindow *ui;
+    void clientSetUp(UIGame *g);
+
 };
 
 #endif // MAINWINDOW_H

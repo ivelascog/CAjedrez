@@ -46,6 +46,59 @@ Host::Host(int teams, int hostTeam) {
     }
 }
 
+Host::Host(int teams, int hostTeam, string ip, string mapID)
+{
+    clients = vector<int>((unsigned long) teams, -1);
+    clients[hostTeam] = -2;
+    team = hostTeam;
+    int clientCount = 0;
+    serverSocket = SocketHelper::startServer(SocketHelper::DEFAULT_PORT);
+
+    bool aux = true;
+
+    while (aux) {
+
+        int sock = SocketHelper::receiveClient(serverSocket);
+        SocketHelper::write(sock, mapID);
+
+        if (SocketHelper::read(sock) == mapID) {
+
+            for (int i = 0; i < teams; i++) {
+                SocketHelper::write(sock, to_string(clients[i] == -1);
+            }
+
+            string team = SocketHelper::read(sock);
+            int rTeam = atoi(const_cast<char *> (team.c_str()));
+            if (rTeam < teams && clients[rTeam] == -1) {
+                clients[rTeam] = sock;
+                SocketHelper::write(sock, "Connection successful");
+                clientCount++;
+                cout << to_string(clientCount) + " clients connected" << endl;
+            } else {
+                cout << "Connection failed: incorrect team sent by client" << endl;
+                string s = "Team not valid; available teams are: ";
+                for (int j = 0; j < teams; j++) {
+                    if (clients[j] == -1) {
+                        s += to_string(j) + " ";
+                    }
+                }
+                SocketHelper::write(sock, s);
+            }
+            SocketHelper::sendOver(sock);
+
+            aux = false;
+
+            for (int i = 0; i < teams && !aux; i++) {
+                if (clients[i] == -1) {
+                    aux = true;
+                }
+            }
+        } else {
+            SocketHelper::closeConnection(sock);
+        }
+    }
+}
+
 void Host::close() {
     SocketHelper::closeConnection(serverSocket);
 }
