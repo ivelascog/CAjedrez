@@ -29,6 +29,11 @@ void MultiplayerGame::joinGameCastleAssault() {
     clientInit();
 }
 
+MultiPlayerBoard *MultiplayerGame::getBoard()
+{
+    return board;
+}
+
 MultiplayerGame::~MultiplayerGame() {
     delete (host);
     delete (client);

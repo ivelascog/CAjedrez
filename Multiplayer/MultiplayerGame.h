@@ -40,6 +40,8 @@ public:
     void hostGameCastleAssault();
 
     void joinGameCastleAssault();
+
+    virtual MultiPlayerBoard *getBoard();
 };
 
 

@@ -64,7 +64,7 @@ Host::Host(int teams, int hostTeam, string ip, string mapID)
         if (SocketHelper::read(sock) == mapID) {
 
             for (int i = 0; i < teams; i++) {
-                SocketHelper::write(sock, to_string(clients[i] == -1);
+                SocketHelper::write(sock, to_string(clients[i] == -1));
             }
 
             string team = SocketHelper::read(sock);
