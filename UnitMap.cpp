@@ -15,20 +15,20 @@ UnitMap::~UnitMap() {
 
     //destruimos armies
     for (Army *a : armies) {
-        //delete (a);
+        delete (a);
     }
     armies.clear();
 
     //destruimos cemetery
     for (Army *a : cemetery) {
-        //delete (a);
+        delete (a);
     }
     cemetery.clear();
 
     //destruimos essentials
     for (vector<Unit *> v : essentials) {
         for (Unit *u : v) {
-            // delete (u);
+            delete (u);
         }
         v.clear();
     }
@@ -294,6 +294,26 @@ bool UnitMap::isHostile(int team1, int team2) {
     } else {
         return (team1 != team2);
     }
+}
+
+bool UnitMap::isAlly(Unit *u1, Unit *u2) {
+    return isAlly(u1->getTeam(), u2->getTeam());
+}
+
+bool UnitMap::isAlly(int team1, int team2) {
+    if (allianceActive) {
+        return (armies[team1]->getAlliance() == armies[team2]->getAlliance());
+    } else {
+        return false;
+    }
+}
+
+bool UnitMap::isFriendly(Unit *u1, Unit *u2) {
+    return isFriendly(u1->getTeam(), u2->getTeam());
+}
+
+bool UnitMap::isFriendly(int team1, int team2) {
+        return (team1 == team2);
 }
 
 int UnitMap::getHeight() const {

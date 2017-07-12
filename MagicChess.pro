@@ -45,7 +45,9 @@ SOURCES += \
     Menu.cpp \
     TerrainMap.cpp \
     UnitMap.cpp \
-    UI/UIGame.cpp
+    UI/UIGame.cpp \
+    UI/UIButtonLogic.cpp \
+    UI/UIBoard.cpp
 
 HEADERS += \
         mainwindow.h \
@@ -73,7 +75,9 @@ HEADERS += \
     TerrainMap.h \
     UnitMap.h \
     mainwindow.h \
-    UI/UIGame.h
+    UI/UIGame.h \
+    UI/UIButtonLogic.h \
+    UI/UIBoard.h
 
 FORMS += \
         mainwindow.ui

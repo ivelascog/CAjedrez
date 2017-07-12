@@ -19,13 +19,11 @@ protected:
     MultiplayerBoard *board;
 public:
 
-    void hostGame1();
 
     virtual ~MultiplayerGame();
 
     virtual void hostInit();
 
-    void joinGame1();
 
     virtual void clientInit();
 
@@ -37,11 +35,15 @@ public:
 
     void advanceTurn();
 
-    void hostGameCastleAssault();
+    virtual void joinGame1();
 
-    void joinGameCastleAssault();
+    virtual void hostGame1();
 
-    virtual MultiPlayerBoard *getBoard();
+    virtual void hostGameCastleAssault();
+
+    virtual void joinGameCastleAssault();
+
+    virtual MultiplayerBoard *getBoard();
 };
 
 

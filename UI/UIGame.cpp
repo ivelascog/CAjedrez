@@ -97,6 +97,72 @@ void UIGame::hostInit() {
     host->close();
 }
 
+UIBoard *UIGame::getBoard()
+{
+    return board;
+}
+
+BGColor UIGame::getBG(int x, int y)
+{
+    return board->getUIMap(x,y)->getBg();
+}
+
+FGColor UIGame::getFG(int x, int y)
+{
+    return board->getUIMap(x,y)->getFg();
+}
+
+BorderColor UIGame::getBorder(int x, int y)
+{
+    return board->getUIMap(x,y)->getBorder();
+}
+
+char UIGame::getIcon(int x, int y)
+{
+    if (board->getUnits()->getUMap(x, y) != nullptr) {
+        return board->getUnits()->getUMap(x, y)->getIcon();
+    } else {
+        return ' ';
+    }
+}
+
+float UIGame::getHealth(int x, int y)
+{
+    if (board->getUnits()->getUMap(x, y) != nullptr) {
+        return (board->getUnits()->getUMap(x, y)->getCHealth()/board->getUnits()->getUMap(x, y)->getHealth());
+    } else {
+        return 0;
+    }
+}
+
+void UIGame::hostGame1() {
+    board = new UIBoard();
+    board->loadMap1();
+    hostInit();
+    board->initUI(myTeam);
+}
+
+void UIGame::joinGame1() {
+    board = new UIBoard();
+    board->loadMap1();
+    clientInit();
+    board->initUI(myTeam);
+}
+
+void UIGame::hostGameCastleAssault() {
+    board = new UIBoard();
+    board->loadCastleAssault();
+    hostInit();
+    board->initUI(myTeam);
+}
+
+void UIGame::joinGameCastleAssault() {
+    board = new UIBoard();
+    board->loadCastleAssault();
+    clientInit();
+    board->initUI(myTeam);
+}
+
 void UIGame::promptMessage (string s) {
     QMessageBox ErrDialog;
     ErrDialog.setText(QString::fromStdString(s));

@@ -29,7 +29,7 @@ void MultiplayerGame::joinGameCastleAssault() {
     clientInit();
 }
 
-MultiPlayerBoard *MultiplayerGame::getBoard()
+MultiplayerBoard *MultiplayerGame::getBoard()
 {
     return board;
 }

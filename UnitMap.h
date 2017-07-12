@@ -142,6 +142,14 @@ public:
     vector<string> getTeamNames() const;
 
     string getMapIdentifier() const;
+
+    bool isFriendly(int team1, int team2);
+
+    bool isFriendly(Unit *u1, Unit *u2);
+
+    bool isAlly(int team1, int team2);
+
+    bool isAlly(Unit *u1, Unit *u2);
 };
 
 #endif //PROYECTO_UNITMAP_H
