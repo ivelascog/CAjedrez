@@ -95,6 +95,10 @@ public:
     string printUnitActionsAlly(Unit *u, int team);
 
     void loadCastleAssault();
+
+    vector<vector<int> > accessibleAttacks(Unit *u, int moveExhaust);
+
+    vector<vector<int> > accessible(Unit *u, int moveExhaust);
 };
 
 

@@ -117,6 +117,11 @@ Types Unit::getType() const {
     return type;
 }
 
+string Unit::getIconName() const
+{
+    return iconName;
+}
+
 void Unit::setCHealth(int cHealth) {
     Unit::cHealth = cHealth;
 }

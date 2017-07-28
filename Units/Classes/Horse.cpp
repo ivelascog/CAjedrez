@@ -19,4 +19,5 @@ Horse::Horse(int x, int y, int t) {
     icon = 'H';
     maxMoveP = 2;
     name = "Knight";
+    iconName = "horse";
 }

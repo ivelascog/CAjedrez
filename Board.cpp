@@ -96,7 +96,12 @@ string Board::printMap(int team) {
     return s;
 }
 
+
 vector<vector<int>> Board::accessible(Unit *u) {
+    return accessible(u, 0);
+}
+
+vector<vector<int>> Board::accessible(Unit *u, int moveExhaust) {
     int aux;
 
     vector<vector<int>> map = std::vector<std::vector<int>>
@@ -111,9 +116,9 @@ vector<vector<int>> Board::accessible(Unit *u) {
         }
     }
 
-    map[u->getPosX()][u->getPosY()] = u->getMovm() + 1;
+    map[u->getPosX()][u->getPosY()] = u->getMovm() - moveExhaust + 1;
 
-    for (int l = (u->getMovm() + 1); l > 1; l--) {
+    for (int l = (u->getMovm() - moveExhaust + 1); l > 1; l--) {
         for (int i = 0; i < height; i++) {
             for (int j = 0; j < width; j++) {
                 if (map[j][i] == l) {
@@ -218,7 +223,11 @@ string Board::printUnitActions(Unit *u) {
 }
 
 vector<vector<int>> Board::accessibleAttacks(Unit *u) {
-    vector<vector<int>> map = accessible(u);
+    return accessibleAttacks(u, 0);
+}
+
+vector<vector<int>> Board::accessibleAttacks(Unit *u, int moveExhaust) {
+    vector<vector<int>> map = accessible(u, moveExhaust);
     vector<vector<int>> auxMap;
 
     for (int i = 0; i < height; i++) {
@@ -239,6 +248,7 @@ vector<vector<int>> Board::accessibleAttacks(Unit *u) {
     }
     return map;
 }
+
 
 vector<vector<int>> Board::rangeNoClip(int x, int y, int range) {
     int ux = x;

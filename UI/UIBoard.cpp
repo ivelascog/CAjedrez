@@ -48,25 +48,30 @@ void UIBoard::updateButtonLogic()
 
 void UIBoard::updateButtonLogic(int x, int y)
 {
+    return updateButtonLogic(x, y, 0);
+}
+
+void UIBoard::updateButtonLogic(int x, int y, int moveExhaust)
+{
     updateButtonLogic();
     if (units->getUMap(x, y) == nullptr) {
         return;
     }
     if (units->isHostile(units->getUMap(x, y)->getTeam(), myTeam)) {
-        updateEnemy(x, y);
+        updateEnemy(x, y, moveExhaust);
     } else {
-        updateAlly(x, y);
+        updateAlly(x, y, moveExhaust);
     }
 }
 
-void UIBoard::updateAlly(int x, int y) {
+void UIBoard::updateAlly(int x, int y, int moveExhaust) {
     Unit *u = units->getUMap(x, y);
     vector<vector<int>> acc = std::vector<std::vector<int>>
             ((unsigned long) width, vector<int>((unsigned long) height, 0));
     if (u->getMoveP() > 0 && u->getAttP() > 0) {
-        acc = accessibleAttacks(u);
+        acc = accessibleAttacks(u, moveExhaust);
     } else if (u->getMoveP() > 0) {
-        acc = accessible(u);
+        acc = accessible(u, moveExhaust);
     } else if (u->getAttP() > 0) {
         acc = inRange(u);
         for (int i = 0; i < height; i++) {
@@ -107,14 +112,14 @@ void UIBoard::updateAlly(int x, int y) {
     getUIMap(x, y)->setBg(selected);
 }
 
-void UIBoard::updateEnemy(int x, int y) {
+void UIBoard::updateEnemy(int x, int y, int moveExhaust) {
     Unit *u = units->getUMap(x, y);
     vector<vector<int>> acc = std::vector<std::vector<int>>
             ((unsigned long) width, vector<int>((unsigned long) height, 0));
     if (u->getMoveP() > 0 && u->getAttP() > 0) {
-        acc = accessibleAttacks(u);
+        acc = accessibleAttacks(u, moveExhaust);
     } else if (u->getMoveP() > 0) {
-        acc = accessible(u);
+        acc = accessible(u, moveExhaust);
     } else if (u->getAttP() > 0) {
         acc = inRange(u);
         for (int i = 0; i < height; i++) {

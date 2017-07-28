@@ -20,9 +20,11 @@ public:
 
     ~UIBoard();
 
-    void updateAlly(int x, int y);
+    void updateAlly(int x, int y, int moveExhaust);
 
-    void updateEnemy(int x, int y);
+    void updateEnemy(int x, int y, int moveExhaust);
+
+    void updateButtonLogic(int x, int y, int moveExhaust);
 };
 
 #endif // UIBOARD_H

@@ -18,4 +18,5 @@ Archer::Archer(int x, int y, int t) {
     uId += 1;
     icon = 'A';
     name = "Archer";
+    iconName = "archer";
 }

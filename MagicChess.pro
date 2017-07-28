@@ -84,3 +84,6 @@ FORMS += \
 
 DISTFILES += \
     Other/ToDo
+
+RESOURCES += \
+    resources.qrc

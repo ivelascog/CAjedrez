@@ -25,6 +25,7 @@ protected:
     string name;
     Types type;
     char icon = '?';
+    string iconName;
 public:
     void setCHealth(int cHealth);
 
@@ -89,6 +90,7 @@ public:
 
     //Report del ID y la pos de la ud.
     string miniReport();
+    string getIconName() const;
 };
 
 

@@ -1,0 +1,8 @@
+<RCC>
+    <qresource prefix="/unitIcons">
+        <file>archer.jpg</file>
+        <file>horse.jpg</file>
+        <file>king.jpg</file>
+        <file>soldier.jpg</file>
+    </qresource>
+</RCC>
