@@ -48,19 +48,19 @@ MainWindow::MainWindow(QWidget *parent) :
     if (g->getIsHost()) {
         for (int i = 0; i < g->getBoard()->getUnits()->getTeams(); i++) {
             if (i != g->getMyTeam()) {
-                ListenerThread thread = ListenerThread(g->getHost(), i);
-                connect(&thread, &ListenerThread::move, &this, &MainWindow::moveRead);
-                connect(&thread, &ListenerThread::attack, &this, &MainWindow::attackRead);
-                connect(&thread, &ListenerThread::select, &this, &MainWindow::selectRead);
-                thread.start();
+                ListenerThread* thread = new ListenerThread(g->getHost(), i);
+                connect(thread, SIGNAL(move(int,int)), this, SLOT(moveRead(int,int)));
+                connect(thread, SIGNAL(attack(int,int)), this, SLOT(attackRead(int,int)));
+                connect(thread, SIGNAL(select(int,int)), this, SLOT(selectRead(int,int)));
+                thread->start();
             }
         }
     } else {
-        ListenerThread thread = ListenerThread(g->getClient());
-        connect(&thread, &ListenerThread::move, &this, &MainWindow::moveRead);
-        connect(&thread, &ListenerThread::attack, &this, &MainWindow::attackRead);
-        connect(&thread, &ListenerThread::select, &this, &MainWindow::selectRead);
-        thread.start();
+        ListenerThread* thread = new ListenerThread(g->getClient());
+        connect(thread, SIGNAL(move(int,int)), this, SLOT(moveRead(int,int)));
+        connect(thread, SIGNAL(attack(int,int)), this, SLOT(attackRead(int,int)));
+        connect(thread, SIGNAL(select(int,int)), this, SLOT(selectRead(int,int)));
+        thread->start();
     }
 
     if (g->getBoard()->getCurrentPlayerTeam() != g->getMyTeam()) {
@@ -356,17 +356,23 @@ void MainWindow::on_cancel_clicked()
 
 void MainWindow::moveRead(int x, int y)
 {
-    cout << "RESAIF MUF" << endl;
+    QMessageBox test;
+    test.setText(QString::fromStdString("Moved: " + to_string(x) + ", " + to_string(y)));
+    test.exec();
 }
 
 void MainWindow::attackRead(int x, int y)
 {
-    cout << "RESAIF ATTAS" << endl;
+    QMessageBox test;
+    test.setText(QString::fromStdString("Attacked: " + to_string(x) + ", " + to_string(y)));
+    test.exec();
 }
 
 void MainWindow::selectRead(int x, int y)
 {
-    cout << "RESAIF SELEJT" << endl;
+    QMessageBox test;
+    test.setText(QString::fromStdString("Selected: " + to_string(x) + ", " + to_string(y)));
+    test.exec();
 }
 
 void MainWindow::checkEnd() {
