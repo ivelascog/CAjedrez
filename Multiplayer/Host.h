@@ -7,6 +7,7 @@
 
 #include <vector>
 #include "SocketHelper.h"
+#include "CommProtocol.h"
 
 using namespace std;
 

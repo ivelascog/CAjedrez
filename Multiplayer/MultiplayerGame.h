@@ -44,6 +44,14 @@ public:
     virtual void joinGameCastleAssault();
 
     virtual MultiplayerBoard *getBoard();
+
+    int getMyTeam() const;
+
+    Client *getClient() const;
+
+    Host *getHost() const;
+
+    bool getIsHost() const;
 };
 
 

@@ -44,6 +44,28 @@ MainWindow::MainWindow(QWidget *parent) :
     connect(walkTimer, SIGNAL(timeout()), this, SLOT(walkAnim()));
 
     colorButtons();
+
+    if (g->getIsHost()) {
+        for (int i = 0; i < g->getBoard()->getUnits()->getTeams(); i++) {
+            if (i != g->getMyTeam()) {
+                ListenerThread thread = ListenerThread(g->getHost(), i);
+                connect(&thread, &ListenerThread::move, &this, &MainWindow::moveRead);
+                connect(&thread, &ListenerThread::attack, &this, &MainWindow::attackRead);
+                connect(&thread, &ListenerThread::select, &this, &MainWindow::selectRead);
+                thread.start();
+            }
+        }
+    } else {
+        ListenerThread thread = ListenerThread(g->getClient());
+        connect(&thread, &ListenerThread::move, &this, &MainWindow::moveRead);
+        connect(&thread, &ListenerThread::attack, &this, &MainWindow::attackRead);
+        connect(&thread, &ListenerThread::select, &this, &MainWindow::selectRead);
+        thread.start();
+    }
+
+    if (g->getBoard()->getCurrentPlayerTeam() != g->getMyTeam()) {
+        tilesAreActive = false;
+    }
 }
 
 MainWindow::~MainWindow()
@@ -144,10 +166,32 @@ void MainWindow::tileClicked(int x, int y)
     if(tilesAreActive) {
         if (g->getBG(x, y) == inMoveRange) {
             moveSelectedUnit(x, y);
+
+            if (g->getIsHost()) {
+                g->getHost()->broadcast(to_string(Move));
+                g->getHost()->broadcast(to_string(x));
+                g->getHost()->broadcast(to_string(y));
+            } else {
+                g->getClient()->write(to_string(Move));
+                g->getClient()->write(to_string(x));
+                g->getClient()->write(to_string(y));
+            }
+
         } else if (g->getBG(x, y) == inAttackRangeandHostile && g->getBoard()->inRange(selectedUnit)[x][y] > 0) {
             previewAttack(x,y);
         } else {
             selectedUnit = g->getBoard()->getUnits()->getUMap(x, y);
+
+            if (g->getIsHost()) {
+                g->getHost()->broadcast(to_string(Select));
+                g->getHost()->broadcast(to_string(x));
+                g->getHost()->broadcast(to_string(y));
+            } else {
+                g->getClient()->write(to_string(Select));
+                g->getClient()->write(to_string(x));
+                g->getClient()->write(to_string(y));
+            }
+
             if (selectedUnit != nullptr) {
                 displayUnitStats(selectedUnit);
             } else {
@@ -275,6 +319,17 @@ void MainWindow::colorBar(QProgressBar *bar)
 void MainWindow::on_confirm_clicked()
 {
     g->getBoard()->getUnits()->attack(selectedUnit, targetedUnit);
+
+    if (g->getIsHost()) {
+        g->getHost()->broadcast(to_string(Attack));
+        g->getHost()->broadcast(to_string(targetedUnit->getPosX()));
+        g->getHost()->broadcast(to_string(targetedUnit->getPosY()));
+    } else {
+        g->getClient()->write(to_string(Attack));
+        g->getClient()->write(to_string(targetedUnit->getPosX()));
+        g->getClient()->write(to_string(targetedUnit->getPosY()));
+    }
+
     g->getBoard()->updateButtonLogic(selectedUnit->getPosX(), selectedUnit->getPosY());
     g->getBoard()->getUnits()->massRemoveComplete();
     ui->confirmPanel->hide();
@@ -297,4 +352,25 @@ void MainWindow::on_cancel_clicked()
     buttonsOriginal.clear();
     targetedUnit = nullptr;
     tilesAreActive = true;
+}
+
+void MainWindow::moveRead(int x, int y)
+{
+    cout << "RESAIF MUF" << endl;
+}
+
+void MainWindow::attackRead(int x, int y)
+{
+    cout << "RESAIF ATTAS" << endl;
+}
+
+void MainWindow::selectRead(int x, int y)
+{
+    cout << "RESAIF SELEJT" << endl;
+}
+
+void MainWindow::checkEnd() {
+    if (g->getBoard()->getUnits()->checkWin() != -1) {
+        //TODO
+    }
 }

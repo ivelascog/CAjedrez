@@ -6,6 +6,7 @@
 #include <QPushButton>
 #include <QProgressBar>
 #include <QTimer>
+#include "ListenerThread.h"
 
 namespace Ui {
 class MainWindow;
@@ -24,6 +25,7 @@ public:
     void previewAttack(int x, int y);
     void colorBar(QProgressBar *bar);
     void moveSelectedUnit(int x, int y);
+    void checkEnd();
 private:
     Unit *selectedUnit;
     Unit *targetedUnit;
@@ -47,6 +49,9 @@ private slots:
     void walkAnim();
     void on_confirm_clicked();
     void on_cancel_clicked();
+    void moveRead(int x, int y);
+    void attackRead(int x, int y);
+    void selectRead(int x, int y);
 };
 
 #endif // MAINWINDOW_H

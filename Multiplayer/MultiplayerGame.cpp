@@ -34,6 +34,26 @@ MultiplayerBoard *MultiplayerGame::getBoard()
     return board;
 }
 
+int MultiplayerGame::getMyTeam() const
+{
+    return myTeam;
+}
+
+Client *MultiplayerGame::getClient() const
+{
+    return client;
+}
+
+Host *MultiplayerGame::getHost() const
+{
+    return host;
+}
+
+bool MultiplayerGame::getIsHost() const
+{
+    return isHost;
+}
+
 MultiplayerGame::~MultiplayerGame() {
     delete (host);
     delete (client);

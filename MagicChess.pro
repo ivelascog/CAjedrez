@@ -47,7 +47,8 @@ SOURCES += \
     UnitMap.cpp \
     UI/UIGame.cpp \
     UI/UIButtonLogic.cpp \
-    UI/UIBoard.cpp
+    UI/UIBoard.cpp \
+    ListenerThread.cpp
 
 HEADERS += \
         mainwindow.h \
@@ -77,7 +78,9 @@ HEADERS += \
     mainwindow.h \
     UI/UIGame.h \
     UI/UIButtonLogic.h \
-    UI/UIBoard.h
+    UI/UIBoard.h \
+    CommProtocol.h \
+    ListenerThread.h
 
 FORMS += \
         mainwindow.ui

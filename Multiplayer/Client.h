@@ -6,6 +6,7 @@
 #define PROYECTO_CLIENT_H
 
 #include "SocketHelper.h"
+#include "CommProtocol.h"
 
 
 class Client {
