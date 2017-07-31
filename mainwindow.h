@@ -35,6 +35,7 @@ private:
     UIGame * g;
     QTimer * timer;
     QTimer * walkTimer;
+    QTimer * timer3;
     int opacity = 0;
     bool grow = true;
     bool tilesAreActive = true;
@@ -47,6 +48,7 @@ private slots:
     void tileClicked(int x, int y);
     void toggleOpacity();
     void walkAnim();
+    void attWait();
     void on_confirm_clicked();
     void on_cancel_clicked();
     void moveRead(int x, int y);

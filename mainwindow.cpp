@@ -43,6 +43,9 @@ MainWindow::MainWindow(QWidget *parent) :
     walkTimer = new QTimer(this);
     connect(walkTimer, SIGNAL(timeout()), this, SLOT(walkAnim()));
 
+    timer3 = new QTimer(this);
+    connect(timer3, SIGNAL(timeout()), this, SLOT(attWait()));
+
     colorButtons();
 
     if (g->getIsHost()) {
@@ -81,6 +84,8 @@ MainWindow::~MainWindow()
 
     delete ui;
     delete timer;
+    delete walkTimer;
+    delete timer3;
     delete g;
 }
 
@@ -226,8 +231,9 @@ void MainWindow::walkAnim()
     path.pop();
     colorButtons();
     if(path.empty()) {
-        walkTimer->stop();
-        tilesAreActive = true;
+        walkTimer->stop();    if (g->getBoard()->getCurrentPlayerTeam() == g->getMyTeam()) {
+            tilesAreActive = true;
+        }
         g->getBoard()->updateButtonLogic(selectedUnit->getPosX(), selectedUnit->getPosY());
         colorButtons();
     }
@@ -362,7 +368,6 @@ void MainWindow::moveRead(int x, int y)
 
 void MainWindow::attackRead(int x, int y)
 {
-    previewAttack(x,y);
     Unit *u = g->getBoard()->getUnits()->getUMap(x,y);
     ui->previewName->setText(QString::fromStdString(u->getName() + " " + to_string(u->getId()) + ": "));
     ui->currentPreviewHealth->setMaximum(u->getHealth());
@@ -375,19 +380,22 @@ void MainWindow::attackRead(int x, int y)
     blinkingButtons.push_back(buttonMap[x][y]);
     buttonsOriginal.push_back(buttonMap[x][y]->styleSheet());
     timer->start(40);
-
-    sleep(1000);
-
     targetedUnit = g->getBoard()->getUnits()->getUMap(x,y);
     g->getBoard()->getUnits()->attack(selectedUnit, targetedUnit);
     g->getBoard()->updateButtonLogic(selectedUnit->getPosX(), selectedUnit->getPosY());
     g->getBoard()->getUnits()->massRemoveComplete();
+
+    timer3->start(3000);
+}
+
+void MainWindow::attWait() {
     ui->attackPreviewWidget->hide();
     timer->stop();
     colorButtons();
     blinkingButtons.clear();
     buttonsOriginal.clear();
     targetedUnit = nullptr;
+    timer3->stop();
 }
 
 void MainWindow::selectRead(int x, int y)
