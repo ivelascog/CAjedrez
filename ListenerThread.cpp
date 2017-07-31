@@ -3,12 +3,14 @@
 ListenerThread::ListenerThread(Host* host, int client)
 {
     this->host = host;
+    this->client = nullptr;
     teamListened = client;
 }
 
 ListenerThread::ListenerThread(Client* client)
 {
     this->client = client;
+    this->host = nullptr;
 }
 
 void ListenerThread::run()
