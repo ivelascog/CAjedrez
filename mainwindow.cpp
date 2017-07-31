@@ -356,23 +356,54 @@ void MainWindow::on_cancel_clicked()
 
 void MainWindow::moveRead(int x, int y)
 {
-    QMessageBox test;
-    test.setText(QString::fromStdString("Moved: " + to_string(x) + ", " + to_string(y)));
-    test.exec();
+    moveSelectedUnit(x, y);
+    colorButtons();
 }
 
 void MainWindow::attackRead(int x, int y)
 {
-    QMessageBox test;
-    test.setText(QString::fromStdString("Attacked: " + to_string(x) + ", " + to_string(y)));
-    test.exec();
+    previewAttack(x,y);
+    Unit *u = g->getBoard()->getUnits()->getUMap(x,y);
+    ui->previewName->setText(QString::fromStdString(u->getName() + " " + to_string(u->getId()) + ": "));
+    ui->currentPreviewHealth->setMaximum(u->getHealth());
+    ui->currentPreviewHealth->setValue(u->getCHealth());
+    ui->resultPreviewHealth->setMaximum(u->getHealth());
+    ui->resultPreviewHealth->setValue(u->getCHealth() - selectedUnit->getDamage());
+    colorBar(ui->currentPreviewHealth);
+    colorBar(ui->resultPreviewHealth);
+    ui->attackPreviewWidget->show();
+    blinkingButtons.push_back(buttonMap[x][y]);
+    buttonsOriginal.push_back(buttonMap[x][y]->styleSheet());
+    timer->start(40);
+
+    sleep(1000);
+
+    targetedUnit = g->getBoard()->getUnits()->getUMap(x,y);
+    g->getBoard()->getUnits()->attack(selectedUnit, targetedUnit);
+    g->getBoard()->updateButtonLogic(selectedUnit->getPosX(), selectedUnit->getPosY());
+    g->getBoard()->getUnits()->massRemoveComplete();
+    ui->attackPreviewWidget->hide();
+    timer->stop();
+    colorButtons();
+    blinkingButtons.clear();
+    buttonsOriginal.clear();
+    targetedUnit = nullptr;
 }
 
 void MainWindow::selectRead(int x, int y)
 {
-    QMessageBox test;
-    test.setText(QString::fromStdString("Selected: " + to_string(x) + ", " + to_string(y)));
-    test.exec();
+
+    selectedUnit = g->getBoard()->getUnits()->getUMap(x, y);
+
+    if (selectedUnit != nullptr) {
+        displayUnitStats(selectedUnit);
+    } else {
+        ui->unitStats_2->hide();
+    }
+
+    g->getBoard()->updateButtonLogic(x, y);
+
+    colorButtons();
 }
 
 void MainWindow::checkEnd() {
