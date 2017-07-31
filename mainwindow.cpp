@@ -10,8 +10,6 @@ MainWindow::MainWindow(QWidget *parent) :
     ui->setupUi(this);
     int h = g->getBoard()->getUnits()->getHeight();
     int w = g->getBoard()->getUnits()->getWidth();
-    g->getBoard()->getUnits()->getArmies(1)->actionReset();
-    g->getBoard()->getUnits()->getArmies(0)->actionReset();
     buttonMap = vector<vector<QPushButton *>> ((unsigned long) w, vector<QPushButton *> ((unsigned long) h));
     for (int i = 0; i < w; i++) {
         for (int j = 0; j < h; j++){
@@ -55,20 +53,33 @@ MainWindow::MainWindow(QWidget *parent) :
                 connect(thread, SIGNAL(move(int,int)), this, SLOT(moveRead(int,int)));
                 connect(thread, SIGNAL(attack(int,int)), this, SLOT(attackRead(int,int)));
                 connect(thread, SIGNAL(select(int,int)), this, SLOT(selectRead(int,int)));
+                connect(thread, SIGNAL(endTurn()), this, SLOT(endTurnRead()));
                 thread->start();
             }
         }
+        g->getHost()->broadcast(to_string(Move));
     } else {
         ListenerThread* thread = new ListenerThread(g->getClient());
         connect(thread, SIGNAL(move(int,int)), this, SLOT(moveRead(int,int)));
         connect(thread, SIGNAL(attack(int,int)), this, SLOT(attackRead(int,int)));
-        connect(thread, SIGNAL(select(int,int)), this, SLOT(selectRead(int,int)));
+        connect(thread, SIGNAL(select(int,int)), this, SLOT(selectRead(int,int)));;
+        connect(thread, SIGNAL(endTurn()), this, SLOT(endTurnRead()));
         thread->start();
     }
 
+    g->advanceTurn();
+    g->getBoard()->setCurrentPlayerTeam(0);
     if (g->getBoard()->getCurrentPlayerTeam() != g->getMyTeam()) {
         tilesAreActive = false;
+    } else {
+        tilesAreActive = true;
     }
+
+    for (int i = 0; i < g->getBoard()->getUnits()->getTeams(); i++) {
+        g->getBoard()->getUnits()->getArmies(g->getMyTeam())->actionsToZero();
+    }
+
+    g->getBoard()->getUnits()->getArmies(g->getBoard()->getCurrentPlayerTeam())->actionReset();
 }
 
 MainWindow::~MainWindow()
@@ -414,8 +425,44 @@ void MainWindow::selectRead(int x, int y)
     colorButtons();
 }
 
+void MainWindow::endTurnRead()
+{
+    nextTurn();
+}
+
 void MainWindow::checkEnd() {
     if (g->getBoard()->getUnits()->checkWin() != -1) {
         //TODO
     }
+}
+
+void MainWindow::on_endTurn_clicked()
+{
+    if (tilesAreActive) {
+        if (g->getIsHost()) {
+            g->getHost()->broadcast(to_string(EndTurn));
+        } else {
+            g->getClient()->write(to_string(EndTurn));
+        }
+    }
+    nextTurn();
+}
+
+void MainWindow::nextTurn() {
+    if (g->getBoard()->getCurrentPlayerTeam() == g->getBoard()->getUnits()->getTeams()) {
+        g->advanceTurn();
+    }
+
+    g->getBoard()->setCurrentPlayerTeam((g->getBoard()->getCurrentPlayerTeam() + 1) % g->getBoard()->getUnits()->getTeams());
+    if (g->getBoard()->getCurrentPlayerTeam() != g->getMyTeam()) {
+        tilesAreActive = false;
+    } else {
+        tilesAreActive = true;
+    }
+
+    for (int i = 0; i < g->getBoard()->getUnits()->getTeams(); i++) {
+        g->getBoard()->getUnits()->getArmies(g->getMyTeam())->actionsToZero();
+    }
+
+    g->getBoard()->getUnits()->getArmies(g->getBoard()->getCurrentPlayerTeam())->actionReset();
 }

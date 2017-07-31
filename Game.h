@@ -10,7 +10,7 @@
 class Game {
 protected:
     Board *board;
-    int turn;
+    int turn = 0;
 
 public:
     //Aumenta el turno actual por 1.

@@ -163,7 +163,7 @@ void UIGame::joinGameCastleAssault() {
     board->initUI(myTeam);
 }
 
-void UIGame::promptMessage (string s) {
+void UIGame::promptMessage(string s) {
     QMessageBox ErrDialog;
     ErrDialog.setText(QString::fromStdString(s));
     ErrDialog.exec();

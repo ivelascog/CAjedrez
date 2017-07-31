@@ -14,6 +14,7 @@ signals:
     void move(int x, int y);
     void attack(int x, int y);
     void select(int x, int y);
+    void endTurn();
 private:
     Host* host;
     Client* client;

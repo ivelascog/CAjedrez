@@ -26,6 +26,7 @@ public:
     void colorBar(QProgressBar *bar);
     void moveSelectedUnit(int x, int y);
     void checkEnd();
+    void nextTurn();
 private:
     Unit *selectedUnit;
     Unit *targetedUnit;
@@ -54,6 +55,9 @@ private slots:
     void moveRead(int x, int y);
     void attackRead(int x, int y);
     void selectRead(int x, int y);
+    void endTurnRead();
+    void on_pushButton_3_clicked();
+    void on_endTurn_clicked();
 };
 
 #endif // MAINWINDOW_H

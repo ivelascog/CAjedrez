@@ -36,6 +36,9 @@ void ListenerThread::run()
                     y = stoi(host->readAndBroadcast(teamListened));
                     emit select(x, y);
                     break;
+                case EndTurn:
+                    emit endTurn();
+                    break;
             }
         }
     } else {
@@ -57,6 +60,9 @@ void ListenerThread::run()
                     x = stoi(client->read());
                     y = stoi(client->read());
                     emit select(x, y);
+                    break;
+                case EndTurn:
+                    emit endTurn();
                     break;
             }
         }
