@@ -56,7 +56,6 @@ private slots:
     void attackRead(int x, int y);
     void selectRead(int x, int y);
     void endTurnRead();
-    void on_pushButton_3_clicked();
     void on_endTurn_clicked();
 };
 

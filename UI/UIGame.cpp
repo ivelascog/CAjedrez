@@ -168,3 +168,8 @@ void UIGame::promptMessage(string s) {
     ErrDialog.setText(QString::fromStdString(s));
     ErrDialog.exec();
 }
+
+void UIGame::advanceTurn() {
+    turn++;
+    board->getUnits()->advanceTurn();
+}

@@ -38,6 +38,7 @@ public:
 
     float getHealth(int x, int y);
 
+    void advanceTurn();
 };
 
 #endif // UIGAME_H
