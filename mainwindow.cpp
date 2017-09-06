@@ -449,6 +449,7 @@ void MainWindow::on_endTurn_clicked()
 
 void MainWindow::nextTurn() {
     selectedUnit = nullptr;
+    g->getBoard()->updateButtonLogic();
     colorButtons();
 
     if (g->getBoard()->getCurrentPlayerTeam() == g->getBoard()->getUnits()->getTeams()) {
