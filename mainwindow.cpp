@@ -57,7 +57,6 @@ MainWindow::MainWindow(QWidget *parent) :
                 thread->start();
             }
         }
-        g->getHost()->broadcast(to_string(Move));
     } else {
         ListenerThread* thread = new ListenerThread(g->getClient());
         connect(thread, SIGNAL(move(int,int)), this, SLOT(moveRead(int,int)));
@@ -76,7 +75,7 @@ MainWindow::MainWindow(QWidget *parent) :
     }
 
     for (int i = 0; i < g->getBoard()->getUnits()->getTeams(); i++) {
-        g->getBoard()->getUnits()->getArmies(g->getMyTeam())->actionsToZero();
+        g->getBoard()->getUnits()->getArmies(i)->actionsToZero();
     }
 
     g->getBoard()->getUnits()->getArmies(g->getBoard()->getCurrentPlayerTeam())->actionReset();
@@ -461,7 +460,7 @@ void MainWindow::nextTurn() {
     }
 
     for (int i = 0; i < g->getBoard()->getUnits()->getTeams(); i++) {
-        g->getBoard()->getUnits()->getArmies(g->getMyTeam())->actionsToZero();
+        g->getBoard()->getUnits()->getArmies(i)->actionsToZero();
     }
 
     g->getBoard()->getUnits()->getArmies(g->getBoard()->getCurrentPlayerTeam())->actionReset();
