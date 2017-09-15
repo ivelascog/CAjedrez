@@ -150,3 +150,5 @@ CTestTestfile.cmake
 /cmake-build-debug/
 /.idea/workspace.xml
 .idea/.name
+
+MagicChess\.pro\.user

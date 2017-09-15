@@ -215,6 +215,7 @@ void MainWindow::tileClicked(int x, int y)
             g->getBoard()->updateButtonLogic(x, y);
         }
         colorButtons();
+        endTurnTrigger();
     }
 }
 
@@ -437,6 +438,7 @@ void MainWindow::checkEnd() {
 
 void MainWindow::on_endTurn_clicked()
 {
+    ui->endTurn->setStyleSheet("");
     if (tilesAreActive) {
         if (g->getIsHost()) {
             g->getHost()->broadcast(to_string(EndTurn));
@@ -470,4 +472,11 @@ void MainWindow::nextTurn() {
     ui->unitStats_2->hide();
 
     g->getBoard()->getUnits()->getArmies(g->getBoard()->getCurrentPlayerTeam())->actionReset();
+}
+
+void MainWindow::endTurnTrigger() {
+    if (g->getBoard()->getUnits()->getArmies(g->getBoard()->getCurrentPlayerTeam())->getAvailableActions() <= 0) {
+        tilesAreActive = false;
+        ui->endTurn->setStyleSheet("background-color: rgb(0, 150, 0);");
+    }
 }
