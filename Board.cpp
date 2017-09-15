@@ -208,7 +208,7 @@ stack<array<int, 2>> Board::walk(Unit *u, int destX, int destY) {
             destX = destX + 1;
         } else if (destX - 1 >= 0 && map[destX - 1][destY] > map[destX][destY]) {
             destX = destX - 1;
-        } else if (destY + 1 >= height && map[destX][destY + 1] > map[destX][destY]) {
+        } else if (destY + 1 < height && map[destX][destY + 1] > map[destX][destY]) {
             destY = destY + 1;
         } else if (destY - 1 >= 0 && map[destX][destY - 1] > map[destX][destY]) {
             destY = destY - 1;
