@@ -27,6 +27,7 @@ public:
     void moveSelectedUnit(int x, int y);
     void checkEnd();
     void nextTurn();
+    void promptMessage(string s);
     void endTurnTrigger();
 private:
     Unit *selectedUnit;

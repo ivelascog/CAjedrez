@@ -6,7 +6,7 @@ MainWindow::MainWindow(QWidget *parent) :
     ui(new Ui::MainWindow)
 {
     g = new UIGame();
-    g->joinGame1();
+    g->hostGame1();
     ui->setupUi(this);
     int h = g->getBoard()->getUnits()->getHeight();
     int w = g->getBoard()->getUnits()->getWidth();
@@ -449,6 +449,13 @@ void MainWindow::on_endTurn_clicked()
     nextTurn();
 }
 
+
+void MainWindow::promptMessage(string s) {
+    QMessageBox ErrDialog;
+    ErrDialog.setText(QString::fromStdString(s));
+    ErrDialog.exec();
+}
+
 void MainWindow::nextTurn() {
     selectedUnit = nullptr;
     g->getBoard()->updateButtonLogic();
@@ -467,6 +474,12 @@ void MainWindow::nextTurn() {
 
     for (int i = 0; i < g->getBoard()->getUnits()->getTeams(); i++) {
         g->getBoard()->getUnits()->getArmies(i)->actionsToZero();
+    }
+
+    if (g->getBoard()->getCurrentPlayerTeam() == g->getMyTeam()) {
+        promptMessage("Your turn!");
+    } else {
+        promptMessage("Player "+to_string(g->getBoard()->getCurrentPlayerTeam())+ "'s turn");
     }
 
     ui->unitStats_2->hide();
