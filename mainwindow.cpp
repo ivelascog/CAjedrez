@@ -6,7 +6,7 @@ MainWindow::MainWindow(QWidget *parent) :
     ui(new Ui::MainWindow)
 {
     g = new UIGame();
-    g->hostGame1();
+    g->joinGame1();
     ui->setupUi(this);
     int h = g->getBoard()->getUnits()->getHeight();
     int w = g->getBoard()->getUnits()->getWidth();
@@ -68,6 +68,13 @@ MainWindow::MainWindow(QWidget *parent) :
 
     g->advanceTurn();
     g->getBoard()->setCurrentPlayerTeam(0);
+
+    if (g->getBoard()->getCurrentPlayerTeam() == g->getMyTeam()) {
+        promptMessage("Your turn!");
+    } else {
+        promptMessage("Current player: " + g->getBoard()->getUnits()->getTeamNames()[g->getBoard()->getCurrentPlayerTeam()]);
+    }
+
     if (g->getBoard()->getCurrentPlayerTeam() != g->getMyTeam()) {
         tilesAreActive = false;
     } else {
@@ -479,7 +486,7 @@ void MainWindow::nextTurn() {
     if (g->getBoard()->getCurrentPlayerTeam() == g->getMyTeam()) {
         promptMessage("Your turn!");
     } else {
-        promptMessage("Player "+to_string(g->getBoard()->getCurrentPlayerTeam())+ "'s turn");
+        promptMessage("Current player: " + g->getBoard()->getUnits()->getTeamNames()[g->getBoard()->getCurrentPlayerTeam()]);
     }
 
     ui->unitStats_2->hide();
@@ -490,6 +497,6 @@ void MainWindow::nextTurn() {
 void MainWindow::endTurnTrigger() {
     if (g->getBoard()->getUnits()->getArmies(g->getBoard()->getCurrentPlayerTeam())->getAvailableActions() <= 0) {
         tilesAreActive = false;
-        ui->endTurn->setStyleSheet("background-color: rgb(0, 150, 0);");
+        ui->endTurn->setStyleSheet("background-color: rgb(0, 230, 10);");
     }
 }
