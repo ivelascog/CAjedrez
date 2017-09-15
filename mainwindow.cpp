@@ -467,5 +467,7 @@ void MainWindow::nextTurn() {
         g->getBoard()->getUnits()->getArmies(i)->actionsToZero();
     }
 
+    ui->unitStats_2->hide();
+
     g->getBoard()->getUnits()->getArmies(g->getBoard()->getCurrentPlayerTeam())->actionReset();
 }
