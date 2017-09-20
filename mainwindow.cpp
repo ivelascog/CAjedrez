@@ -199,8 +199,6 @@ void MainWindow::tileClicked(int x, int y)
                 g->getClient()->write(to_string(y));
             }
 
-            endTurnTrigger();
-
         } else if (g->getBG(x, y) == inAttackRangeandHostile && g->getBoard()->inRange(selectedUnit)[x][y] > 0) {
             previewAttack(x,y);
         } else {
@@ -266,6 +264,8 @@ void MainWindow::walkAnim()
         g->getBoard()->updateButtonLogic(selectedUnit->getPosX(), selectedUnit->getPosY());
         colorButtons();
     }
+    endTurnTrigger();
+
 }
 
 void MainWindow::toggleOpacity()
