@@ -199,30 +199,38 @@ void MainWindow::tileClicked(int x, int y)
                 g->getClient()->write(to_string(y));
             }
 
+            endTurnTrigger();
+
         } else if (g->getBG(x, y) == inAttackRangeandHostile && g->getBoard()->inRange(selectedUnit)[x][y] > 0) {
             previewAttack(x,y);
         } else {
-            selectedUnit = g->getBoard()->getUnits()->getUMap(x, y);
+            if (g->getBoard()->getUnits()->getUMap(x, y) != selectedUnit) {
+                if (selectedUnit->getMoveP() < selectedUnit->getMaxMoveP()) {
+                    selectedUnit->setMoveP(0);
+                    selectedUnit->setAttP(0);
+                    g->getBoard()->getUnits()->getArmies(g->getBoard()->getCurrentPlayerTeam())->reduceActions();
+                }
+                selectedUnit = g->getBoard()->getUnits()->getUMap(x, y);
 
-            if (g->getIsHost()) {
-                g->getHost()->broadcast(to_string(Select));
-                g->getHost()->broadcast(to_string(x));
-                g->getHost()->broadcast(to_string(y));
-            } else {
-                g->getClient()->write(to_string(Select));
-                g->getClient()->write(to_string(x));
-                g->getClient()->write(to_string(y));
-            }
+                if (g->getIsHost()) {
+                    g->getHost()->broadcast(to_string(Select));
+                    g->getHost()->broadcast(to_string(x));
+                    g->getHost()->broadcast(to_string(y));
+                } else {
+                    g->getClient()->write(to_string(Select));
+                    g->getClient()->write(to_string(x));
+                    g->getClient()->write(to_string(y));
+                }
 
-            if (selectedUnit != nullptr) {
-                displayUnitStats(selectedUnit);
-            } else {
-                ui->unitStats_2->hide();
+                if (selectedUnit != nullptr) {
+                    displayUnitStats(selectedUnit);
+                } else {
+                    ui->unitStats_2->hide();
+                }
+                g->getBoard()->updateButtonLogic(x, y);
             }
-            g->getBoard()->updateButtonLogic(x, y);
         }
         colorButtons();
-        endTurnTrigger();
     }
 }
 
@@ -241,6 +249,9 @@ void MainWindow::walkAnim()
     int y2 = path.top()[1];
     if (path.size() == 1) {
         g->getBoard()->getUnits()->move(selectedUnit->getPosX(), selectedUnit->getPosY(), x2, y2);
+        if (selectedUnit->getMoveP() <= 0 || selectedUnit->getAttP() <= 0) {
+            g->getBoard()->getUnits()->getArmies(g->getBoard()->getCurrentPlayerTeam())->reduceActions();
+        }
     } else {
         g->getBoard()->getUnits()->forceMove(selectedUnit->getPosX(), selectedUnit->getPosY(), x2, y2);
     }
@@ -344,6 +355,10 @@ void MainWindow::on_confirm_clicked()
 {
     g->getBoard()->getUnits()->attack(selectedUnit, targetedUnit);
 
+    if (selectedUnit->getMoveP() <= 0 || selectedUnit->getAttP() <= 0) {
+        g->getBoard()->getUnits()->getArmies(g->getBoard()->getCurrentPlayerTeam())->reduceActions();
+    }
+
     if (g->getIsHost()) {
         g->getHost()->broadcast(to_string(Attack));
         g->getHost()->broadcast(to_string(targetedUnit->getPosX()));
@@ -364,6 +379,8 @@ void MainWindow::on_confirm_clicked()
     buttonsOriginal.clear();
     targetedUnit = nullptr;
     tilesAreActive = true;
+
+    endTurnTrigger();
 }
 
 void MainWindow::on_cancel_clicked()
