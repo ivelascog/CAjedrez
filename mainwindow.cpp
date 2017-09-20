@@ -469,8 +469,8 @@ void MainWindow::on_endTurn_clicked()
         } else {
             g->getClient()->write(to_string(EndTurn));
         }
+        nextTurn();
     }
-    nextTurn();
 }
 
 
