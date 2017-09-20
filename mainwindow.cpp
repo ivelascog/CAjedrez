@@ -247,9 +247,9 @@ void MainWindow::walkAnim()
     int y2 = path.top()[1];
     if (path.size() == 1) {
         g->getBoard()->getUnits()->move(selectedUnit->getPosX(), selectedUnit->getPosY(), x2, y2);
-        if (selectedUnit->getMoveP() <= 0 || selectedUnit->getAttP() <= 0) {
+        /*if (selectedUnit->getMoveP() <= 0 || selectedUnit->getAttP() <= 0) {
             g->getBoard()->getUnits()->getArmies(g->getBoard()->getCurrentPlayerTeam())->reduceActions();
-        }
+        }*/
     } else {
         g->getBoard()->getUnits()->forceMove(selectedUnit->getPosX(), selectedUnit->getPosY(), x2, y2);
     }
