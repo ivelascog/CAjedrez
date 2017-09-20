@@ -463,7 +463,7 @@ void MainWindow::checkEnd() {
 void MainWindow::on_endTurn_clicked()
 {
     ui->endTurn->setStyleSheet("");
-    if (tilesAreActive) {
+    if (g->getBoard()->getCurrentPlayerTeam() == g->getMyTeam()) {
         if (g->getIsHost()) {
             g->getHost()->broadcast(to_string(EndTurn));
         } else {
