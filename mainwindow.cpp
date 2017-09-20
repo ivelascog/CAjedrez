@@ -210,25 +210,25 @@ void MainWindow::tileClicked(int x, int y)
                     selectedUnit->setAttP(0);
                     g->getBoard()->getUnits()->getArmies(g->getBoard()->getCurrentPlayerTeam())->reduceActions();
                 }
-                selectedUnit = g->getBoard()->getUnits()->getUMap(x, y);
-
-                if (g->getIsHost()) {
-                    g->getHost()->broadcast(to_string(Select));
-                    g->getHost()->broadcast(to_string(x));
-                    g->getHost()->broadcast(to_string(y));
-                } else {
-                    g->getClient()->write(to_string(Select));
-                    g->getClient()->write(to_string(x));
-                    g->getClient()->write(to_string(y));
-                }
-
-                if (selectedUnit != nullptr) {
-                    displayUnitStats(selectedUnit);
-                } else {
-                    ui->unitStats_2->hide();
-                }
-                g->getBoard()->updateButtonLogic(x, y);
             }
+            selectedUnit = g->getBoard()->getUnits()->getUMap(x, y);
+
+            if (g->getIsHost()) {
+                g->getHost()->broadcast(to_string(Select));
+                g->getHost()->broadcast(to_string(x));
+                g->getHost()->broadcast(to_string(y));
+            } else {
+                g->getClient()->write(to_string(Select));
+                g->getClient()->write(to_string(x));
+                g->getClient()->write(to_string(y));
+            }
+
+            if (selectedUnit != nullptr) {
+                displayUnitStats(selectedUnit);
+            } else {
+                ui->unitStats_2->hide();
+            }
+            g->getBoard()->updateButtonLogic(x, y);
         }
         colorButtons();
     }
