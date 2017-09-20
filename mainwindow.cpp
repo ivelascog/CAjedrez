@@ -204,7 +204,7 @@ void MainWindow::tileClicked(int x, int y)
         } else if (g->getBG(x, y) == inAttackRangeandHostile && g->getBoard()->inRange(selectedUnit)[x][y] > 0) {
             previewAttack(x,y);
         } else {
-            if (g->getBoard()->getUnits()->getUMap(x, y) != selectedUnit) {
+            if (selectedUnit != nullptr && g->getBoard()->getUnits()->getUMap(x, y) != selectedUnit) {
                 if (selectedUnit->getMoveP() < selectedUnit->getMaxMoveP()) {
                     selectedUnit->setMoveP(0);
                     selectedUnit->setAttP(0);
