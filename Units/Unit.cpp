@@ -122,6 +122,11 @@ string Unit::getIconName() const
     return iconName;
 }
 
+int Unit::getMaxMoveP() const
+{
+    return maxMoveP;
+}
+
 void Unit::setCHealth(int cHealth) {
     Unit::cHealth = cHealth;
 }

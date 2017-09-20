@@ -152,3 +152,5 @@ CTestTestfile.cmake
 .idea/.name
 
 MagicChess\.pro\.user
+
+*.user

@@ -91,6 +91,7 @@ public:
     //Report del ID y la pos de la ud.
     string miniReport();
     string getIconName() const;
+    int getMaxMoveP() const;
 };
 
 
